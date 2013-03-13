@@ -26,9 +26,28 @@
 \usepackage{color, colortbl}
 \definecolor{myblue}{rgb}{0.6,.6,1}
 \definecolor{mydarkblue}{rgb}{0,0,0.5}
-
+\definecolor{mylightblue}{rgb}{0.8,0.8,1}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=mydarkblue, urlcolor=mydarkblue}
+
+
+
+
+%%%%% comments %%%%%
+% To allow MS Word style comments at the document margin we use the todonotes package. A comment is made as follows:
+
+%\mycomment[IN]{text}
+
+% The text in brackets should be your initials and the text in curly braces is your actual comment. Comments are numbered automatically. 
+\usepackage[textwidth=2.7cm,textsize=scriptsize,linecolor=green!40,backgroundcolor=green!40]{todonotes}
+
+\newcounter{mycommentcounter}
+\newcommand{\mycomment}[2][]
+{
+\refstepcounter{mycommentcounter}%
+\todo[color={red!100!green!33}]{
+\textbf{[\uppercase{#1} \themycommentcounter]:} #2}
+}
 
 
 
@@ -234,18 +253,15 @@ Rico Kaseroni (DB)\\\hline
 \newpage
 
 
-
 \section{Introduction}
 This software quality Assurance Document will cover the standards, processes, and procedures for the openETCS project in order to achieve a correct implementation.
-
 
 \subsection{openETCS Project Goals}
 The OpenETCS main objective is the development of an ``open proofs'' platform that integrates technologies from various stakeholders and enables the use of formal verification techniques in order to dramatically improve the software quality for embedded control systems in terms of reliability, maintainability, safety, and security.
 
 Following are openETCS Goals defined based on Project Co-operation Agreement:
-
 \begin{enumerate}
-\item Creating a \emph{formal specification} of the ETCS OBU functionality according to UNISIG Subset 026
+\item Creating a \emph{formal specification} of the ETCS OBU functionality according to UNISIG Subset~026
 
 \item An \emph{executable software package} generated from the formal specification and a \emph{non-vital implementation of that software} for laboratory test, simulation and reference purposes
 
