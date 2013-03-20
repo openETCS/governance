@@ -1,8 +1,8 @@
-government
+governance
 ==========
 
 part of WP1: information needed to run project management in openetcs, e.g., 
 * quality assurance plan, 
 * scrum meeting minutes
 * Full Project Proposal (FPP)
-* Project Cooperation Agreement
+* Project Cooperation Agreement --> currently poart of management repository
