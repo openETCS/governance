@@ -18,7 +18,7 @@
 \renewcommand\theIlustracin{\arabic{Ilustracin}}
 \title{openETCS}
 
-\setcounter{tocdepth}{3}
+%\setcounter{tocdepth}{3}
 
 \usepackage{hhline}
 \usepackage{booktabs}
@@ -112,11 +112,10 @@
 
 
 
-
 %\begin{document}
 
 
-\subsection*{Document History}
+\section*{Document History}
 
 \begin{flushleft}
 %\tablefirsthead{\hline Version & Date & Chapters modified & Reason & Name\\}
@@ -1180,132 +1179,15 @@ Refer to Merlins Document D2.2 {\dots}..
 
 Michael Jastram will deliver some input {\dots}
 
-
-\section{References and Abbreviation}
-\textcolor{red}{Peter will work on this part !!}
-
-\subsection{Referenced Standards, Directives and Regulations}
-
-\begin{flushleft}
+\section*{Abbreviations}
 \tablefirsthead{\hline
 \rowcolor{myblue}
-Nr. &
-Document &
-\centering\arraybslash Edition\\}
-\tablehead{\hline
-\rowcolor{myblue}
-Nr. &
-Document &
-\centering\arraybslash Edition\\}
-\tabletail{}
-\tablelasttail{}
-\begin{tabular}{|m{1cm}|m{10cm}|m{3cm}|}
-\hline
-\rowcolor{myblue}
-Nr. &
-Document &
-\centering\arraybslash Edition\\\hline
-
-[N01] &
-EN 50128 Railway applications -  Communication, signalling and processing systems -  Software for railway control and protection systems &
-\centering\arraybslash 2011-06\\\hline
-[N02] &
-EN 50126 Railway applications - The specification and demonstraticn of Reliability, Availability, Maintainability and Safety (RAMS) &
-\centering\arraybslash 2000-03\\\hline
-[N03] &
-EN 50129 Railway applications --  Communication, signalling and processing systems --  Safety related electronic systems for signalling &
-\centering\arraybslash 2003-12\\\hline
-[N04] &
-EN~61508 Functional safety of electrical/electronic/programmable electronic safety-related systems &
-{\centering 2010\par}
-
-\centering\arraybslash Edition 2.0\\\hline
-[N05] &
-2008/57/EC -- Interoperability Directive &
-\centering\arraybslash 17.06.2008\\\hline
-[N06] &
-2011/18/EU -- Interoperability Directive (change of annexes) &
-\centering\arraybslash 01.03.2011\\\hline
-[N07] &
-2012/88/EU -- TSI CCS
-
-technical  specification  for  interoperability  relating  to  the  control-command  and  signalling subsystems  of  the  trans-European  rail  system &
-\centering\arraybslash 25.12.2012\\\hline
-\end{tabular}
-\end{flushleft}
-
-
-
-\subsection{Referenced Documents}
-\begin{center}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-Doc. Nr.: &
-Title &
-Date\\}
-\tablehead{\hline
-Doc. Nr.: &
-Title &
-Date\\}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{2cm}|m{9cm}|m{3cm}|}
-\hline
-\centering [D01] &
-Full Project Proposal openETCS &
-11.04.2012\\\hline
-\centering [D02] &
-EN50128:2011 &
-~
-\\\hline
-\centering [D03] &
-TSI Subset 026 &
-~
-\\\hline
-\centering [D04] &
-TSI Subset 036 &
-~
-\\\hline
-\centering [D05] &
-TSI Subset 076 &
-~
-\\\hline
-[SCRUM] &
-Roman Pichler : Agile Product Management with Scrum &
-22.3.2010
-
-~
-\\\hline
-[SCRUM] &
-Ken Schwaber and Mike Beedle : Agile Software Development with Scrum, Pearson Studium &
-24.4.2008\\\hline
-\centering FM &
-Jean-Francois Monin : Understanding Formal Methods
-
-
-&
-17.1.2003\\\hline
-\centering [ECLIPSE] &
-t.b.d &
-~
-\\\hline
-\end{supertabular}
-\end{center}
-
-
-\subsection{Abbreviations}
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-Abb. &
+Abbreviation &
 Meaning\\}
-\tablehead{\hline
-\rowcolor{myblue}
-Abb. &
-Meaning\\}
+\tablehead{}
 \tabletail{}
 \tablelasttail{}
-\begin{supertabular}{|m{2cm}|m{12cm}|}
+\begin{supertabular}{|m{3cm}m{11cm}|}
 \hline
 ASR &
 Assessor\\\hline
@@ -1411,12 +1293,15 @@ IP &
 Intellectual Property\\\hline
 IP Clean &
 No IP without permission in writing \\\hline
-~
- &
-~
-\\\hline
 \end{supertabular}
-\end{flushleft}
 
+
+
+
+\nocite{EN50126,EN50128,EN50129,EN61508,200857EC,201118EU,201288EU}
+\nocite{pichler2010,monin2008,schwaber2008,subset026,subset036,subset076,fpp}
+
+\bibliography{QA_literature}
+\bibliographystyle{plain}
 
 \end{document}
