@@ -1,0 +1,129 @@
+
+\documentclass[a4paper]{article}
+\usepackage[ascii]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+
+% Page layout (geometry)
+\title{Meeting Minute openETCS WP4: V&\V}
+\author{Hekele, Bernd}
+\date{2013-04-19}
+
+\begin{document}
+\section*{\large{Meeting Minute openETCS WP4: Verification \& Validation 2013-04-19}}
+
+\emph{Called up by: \ Marc Behrens}\\
+\emph{Minutes by: \ \  Bernd Hekele}
+
+
+\subsection*{Participants:} WP4, 
+% Sylvain Baro,
+Benjamin Beichler,
+Marc Behrens, 
+Cyril Cornu, 
+%Michael Ditze,
+Jens Gerlach, 
+Frank Golatowski, 
+Klaus-Ruediger Hase, 
+Bernd Hekele,
+%Jonas Helming,
+Baseliyos Jacob,
+%Michael Jastram, 
+%Rico Kaseroni, 
+Roberto Kretschmer,
+%Peter Mahlmann, 
+Marielle Petit-Doche, 
+%Stan Pinte, 
+%Merlin Pokam, 
+%Stefan Rieger,
+%Uwe Steinke,
+%Joao Santos, 
+Jan Welte\\
+
+\subsection*{Meeting Time: from 10:00h \ to: \ 10:30h}
+
+\subsection*{Type of conference: Telco}
+
+\line(1,0){440}
+\section*{\underline{Agenda}}
+\begin{enumerate}
+\item First draft of the "Tool-Artifacts-Matrix"
+\begin{itemize}
+\item Concept and usage of the matrix
+\item Questions concerning the matrix
+\item The Matrix is planned to be filled out and reviewed in parallel until the 26th April.
+\end{itemize}
+\item At the 24th of April the SSRS Kick-off in Paris takes place
+\item What to do with the first findings of the verification? 
+\begin{itemize}
+\item How to verify the issues have not yet been discussed at ERTMS Users group level?
+\item Who should report the issues?
+\item How should the issues been reported?
+\end{itemize}
+\item Pre- qualification of the V\&V model 
+\begin{itemize}
+\item Which model to take from the model evaluation for the V\&V process qualification?
+\item Preparing the first V\&V phase coming up
+\item Open discussion on the V\&V concept
+\end{itemize}
+\end{enumerate}
+\line(1,0){440}
+\section*{\underline{Discussion}}
+\begin{enumerate}
+\item First draft of the "Tool-Artifacts-Matrix"
+has been distributed via E-Mail today. For further review and update Github is planned to be used. Address will be distributed as soon as the document is available for review.\\
+You will find more useful information about the process in the following Wiki:\\
+\url{https://github.com/openETCS/model-evaluation/wiki/Open-Question-for-Modeling-Benchmark}
+
+\item At the 24th of April the SSRS Kick-off in Paris takes place:
+\item A short walk through the agenda will be presented.
+For improving the performance of the upcoming activities the use of an own repository is highly recommended. The issue will be discussed on PMB.\\
+The repository is available here:\\
+\url{https://github.com/openETCS/SSRS.git}
+
+The following candidates for SSRS architecturew have been discussed:\\
+Graphical Architecture Modelling Tools
+\begin{itemize}
+\item EA (Entgerprise Architect) - commercial
+\item Artisan Studio    - commercial
+\item Visio      - commercial
+\item Scade      - commercial
+\item Papyrus/Eclipse (Topcased) - opensource
+\item Rodin-Editor (B-Event)  - opensource
+\item CPN-Tools     - GPL (opensource forseen)
+\end{itemize}
+
+Key features for qualification are:
+\begin{itemize}
+\item  needs multi-user capability
+\item  needs version control
+\end{itemize}
+
+The upcoming activity is taking effort. A first rough preliminary estimation is:
+ 
+\begin{itemize}
+\item estimate 15 requirements per person day
+\item ca. 6000 requirements in subset-026
+\item ==> 400 person days effort
+\end{itemize}
+
+\item What to do with the first findings of the verification? Following questions should be addressed:
+In principle, the DB representative in the ERTMS user group will act as an interface. Within openETCS, DB will set up a fra meworkto easily collect findings. Options discussed were own e-mail account for findings or Issue's linked with the new repository SSRS. Baseliyos (DB) will prepare the process and distribute/set-up the relevant information.
+
+\end{enumerate}
+
+\line(1,0){440}
+\section*{\underline{Notes}}
+
+\end{document}
