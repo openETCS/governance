@@ -132,7 +132,18 @@ This document presents the whole review process to follow when a document needs 
  
 The review process involves the creation of the following directories inside the structure of each repository. 
 
+\todo{BerndHekele: I propose to document the status of the documents also in the ReadMe of the repository. The following information is of value: Document, review status or review plan. This information can give guidance to the repository}
+
+\todo{BerndHekele: Abbreviation RC is missing and meaning is not clear even though the term is used all over the document}
 \begin{flushleft}
+
+\todo{BerndHekele: we need to support also reviews of different nature, e.g., MS-Word, MS-Project, MS-Excel. In this situation I propose to make the PDF file available and make use of the "traditional" review procedure. The decision on this alternative procedure must be part of the review process, i.e., part of the invitation.}
+
+\todo{BerndHekele: a traditional review procedure as used in the section of requirements documents should be the exception, but has to be possible for documents not reasonable in text structures.}
+
+\todo{BerndHekele: it might also be an option to introduce a light-weight review-process for not-critical documents. This process could be based on a slimmed procedure in the issue tracker (like voting or starting an issue on Git. This user guideline should show a little bit like a decision matrix how to select the right procedure.}
+
+\todo{BerndHekele: I propose we also define a section in each document (type) showing the status of the document and the documents history (like your "Document History")}
 
 \begin{tabular}{|m{3cm}|m{11cm}|}
 \hline
@@ -177,6 +188,10 @@ RC manager / Owner of the document &
 \item Open a review cycle for a document. To do this, create a git new branch ({\it TI.6.1.1. New RC branch}) 
 \item Open a new issue for the new RC linked to the document and the review. Only the owner of the document can close the issue and he/she also be in charge of conducting the discussions and comments below the issue.  ({\it TI.6.1.2. Open issue})
 \item Create the Control Sheet with the basic information related to the tasks to be done during the complete new cycle. ({\it TI.6.1.3. Complete the Control Sheet})
+\item BerndHekele: In each review cycle the manger has to decide who is mandatory contributor in the review. Mandatory Contributors have to be invited (per mail or phone) personally and need to confirm participation in the requested time period (effort is covered).
+
+\item BerndHekele: We should foresee the option of a personal meeting or a \"goto-meeting\" when inviting to intensive documents. This has to be decided at the start of the RC and may be requested later if intensive discussions are ongoing during the review.
+
 \end{itemize}
 \item Control Review Process
 \begin{itemize}
@@ -186,6 +201,8 @@ RC manager / Owner of the document &
 \begin{itemize}
 \item Use todonotes tool to add, verify and reject comments in the document being reviewed. ({\it TI.6.3.2 Add notes using todonotes})
 \item Make changes to the document.
+\item BerndHekele: after updating the document the owner shall distribute the document for a final confirmation of the changes. Typically, this process shall only allow a few days for final confirmation. This step is essential if criticial issues have been detected or discussed during the review.
+
 \end{itemize}
 \item Closing
 \begin{itemize}
@@ -197,6 +214,7 @@ RC manager / Owner of the document &
 \\\\\hline
 \end{tabular}
 \end{flushleft}
+\todo{BerndHekele: the valid options of the todonotes tool are not documented in the proposed location}
 
 \begin{flushleft}
 
@@ -244,6 +262,8 @@ Pdf documents &
 \begin{itemize}
 \item Adobe Acrobat Reader: Software package that allows to view, navigate and print pdf files.
 \item Diffpdf: Open source application that compares different PDF files for discrepancies. 
+\item BerndHekele: PDF Creator: Software for creating pdf files. Works like a printer on your PC.
+
 \end{itemize}\\\hline
 TeX documents &
 \begin{itemize}
@@ -252,12 +272,16 @@ TeX documents &
 \item GhostView.
 \item TexMaker.
 \item Todonotes package.
-\item Adobe Acrobat Reader: Software package that allows to view, navigate and print pdf files..
+\item Adobe Acrobat Reader: Software package that allows to view, navigate and print pdf files.
+\item BerndHekele: I would like to see in addition a tool to compare files (outside of SmartGit). I have seen no open source solution so far. But, maybe someone else knows a good solution.
+
 \end{itemize}\\\hline
 \end{tabular}
 \end{flushleft}
 
 \section{Review Process Overview}
+
+\todo{BerndHekele: I see this document as a good basis for textual documents in the process. However, we also need to decide how we live the process for other documents like Code of formal specifications. We need to be prepared for those kind of documents before actual reviews start. We do not have to much time.}
 
 This subject is concerned with the validation and verification of the documentation generated within the OpenETCS project.  The process shall aim to confirm that what has been produced is correct and meets the expectations of the committers as well as improving the quality of the document and its reliability; it also ensures the technical approach is appropriate before releasing the related documentation.
 
@@ -287,6 +311,8 @@ The key aspects of the review process include the following:
 \item A RC for a document starts when a need or objective to be fulfilled is identified.
 \item Such proposal can be done by the owner of the document or by any committer that can justify the need for a new cycle. 
 \item When a proposal is submitted by a person who is not the owner of the document, the review proposal shall be accepted by the owner of the document and the process shall begin.
+\item BerndHekele: review cycles are timeboxed. When starting the cycle the review plan and the end date for the review need to be confirmed.
+ 
 \end{itemize}
 \item \underline{The owner of the document shall be the RC manager}
 \begin{itemize}
