@@ -112,38 +112,143 @@
 
 \tabletail{}
 \tablelasttail{}
-\begin{supertabular}{m{1.1cm}m{1.8cm}m{2cm}m{5cm}m{4cm}lp{6cm}|}
+\begin{supertabular}{m{1.1cm}m{1.8cm}m{2cm}m{7cm}m{2cm}lp{6cm}|}
 \hline
 0.0.1 &
 09.04.2013 &
 All &
 First version &
 SQS
-
+\\\hline
+0.0.2 &
+12.04.2013 &
+Roles &
+Tables added to the 'Roles' section &
+SQS
+\\\hline
+0.0.3 &
+15.04.2013 &
+T.instructions &
+Technical instructions completed &
+SQS
+\\\hline
+0.0.4 &
+16.05.2013 &
+All &
+Comments of the reviewers analysed and some changes implemented &
+SQS
 \end{supertabular}
 \end{flushleft}
 
 \newpage
 
-\section[Introduction]{Purpose of the document}
-This document presents the whole review process to follow when a document needs revision. It aims to provide a set of guidelines as technical instructions for each review cycle launched that highlights the steps to take.The roles involved in the process are clearly identified as well as their responsibilities and tasks. And finally, the mechanisms needed to achieve the proposed objectives are also included, so the process can be carried out successfully.
+\section{Introduction}
 
-\section{Structure of the repository}
+\subsection[Introduction]{Purpose of the document}
+This document presents the whole review process to follow when documents need revision. It aims to provide a set of guidelines as technical instructions for each review cycle launched that highlights the steps to take.The roles involved in the process for each type of review are clearly identified as well as their responsibilities and tasks. And finally, the mechanisms needed to achieve the proposed objectives are also included, so the process can be carried out successfully.
+
+\subsection{Intended Audience}
+This document applies to the whole development life-cycle of the project and it addresses all the stakeholders involved. This document should be available to all of them in read access mode and it provides guidance about the Review process to follow anytime reviews of documents are needed.
+
+\subsection{Supporting documents}
+\tablefirsthead{\hline
+\rowcolor{myblue}
+Name &
+Path &
+Contents\\}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{2cm}m{3cm}m{9cm}|}
+\hline
+Todonotes package &
+governance/Review Process &
+Brief introduction to the todonotes packages with detailed descriptions about the available attributes. 
+\\\hline
+\end{supertabular}
+
+
+\subsection{Definitions and acronyms}
+\tablefirsthead{\hline
+\rowcolor{myblue}
+Abbreviation &
+Meaning\\}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{3cm}m{11cm}|}
+\hline
+RC &
+Review Cycle\\\hline
+\end{supertabular}
+
+\section{Tools}
+
+\begin{flushleft}
+
+\begin{tabular}{|m{3cm}|m{11cm}|}
+\hline
+\rowcolor{myblue}
+\multicolumn{2}{|c|}{Tools} \\\hline
+GIT &
+\begin{itemize}
+\item GitHub: A web-based hosting service for projects that use Git revision control system.
+\item SmartGit: A graphical front-end for Git distributed version control systems. 
+\end{itemize}\\\hline
+Pdf documents &
+\begin{itemize}
+\item Adobe Acrobat Reader: Software package that allows to view, navigate and print pdf files.
+\item Diffpdf: Open source application that compares different PDF files for discrepancies. 
+\item {PDF Creator: Software for creating pdf files. Works like a printer on your PC.}
+\begin{minipage}{9cm}\todo[color=yellow!20, inline]{BerndHekele: PDF Creator: Software for creating pdf files. Works like a printer on your PC.}\end{minipage}
+\begin{minipage}{9cm}\todo[color=green!20, inline]{AinhoaGracia: Ok, tool included}\end{minipage}
+
+
+\end{itemize}\\\hline
+TeX documents &
+\begin{itemize}
+\item MiKTeX : Provides the tools necessary to prepare documents using de TeX/LaTeX mark up language.
+\item GhostScript. 
+\item GhostView.
+\item TexMaker.
+\item Todonotes package.
+\item Adobe Acrobat Reader: Software package that allows to view, navigate and print pdf files.
+
+\begin{minipage}{9cm}\todo[color=yellow!20, inline]{BerndHekele: I would like to see in addition a tool to compare files (outside of SmartGit). I have seen no open source solution so far. But, maybe someone else knows a good solution.}\end{minipage}
+\begin{minipage}{9cm}\todo[color=green!20, inline]{AinhoaGracia: Ok!. We will look for it. We will include this in the backlog of QA.}\end{minipage}
+
+\end{itemize}\\\hline
+\end{tabular}
+\end{flushleft}
+
+\section{Review Process overview}
+\subsection{Structure of the repository}
  
 The review process involves the creation of the following directories inside the structure of each repository. 
 
-\todo{BerndHekele: I propose to document the status of the documents also in the ReadMe of the repository. The following information is of value: Document, review status or review plan. This information can give guidance to the repository}
+\todo[color=yellow!20, inline]{BerndHekele: I propose to document the status of the documents also in the ReadMe of the repository. The following information is of value: Document, review status or review plan. This information can give guidance to the repository}
 
-\todo{BerndHekele: Abbreviation RC is missing and meaning is not clear even though the term is used all over the document}
+\todo[color=green!20, inline]{AinhoaGracia: This suggestion has also been discussed in an issue. I agree with Michael Jastram and Jan Welte in using a Wiki page to provide all the details of the ongoing reviews and maybe put in the ReadMe the updates of that wiki so everybody is aware of that. The {\it TI.6.1.5. Supervision of the Review Process} section has been updated to include this.}
+
+\todo[color=yellow!20, inline]{BerndHekele: Abbreviation RC is missing and meaning is not clear even though the term is used all over the document}
+
+\todo[color=green!20, inline]{AinhoaGracia: Definitions and acronyms subsection has been added.}
+
 \begin{flushleft}
 
-\todo{BerndHekele: we need to support also reviews of different nature, e.g., MS-Word, MS-Project, MS-Excel. In this situation I propose to make the PDF file available and make use of the "traditional" review procedure. The decision on this alternative procedure must be part of the review process, i.e., part of the invitation.}
+\todo[color=yellow!20, inline]{BerndHekele: we need to support also reviews of different nature, e.g., MS-Word, MS-Project, MS-Excel. In this situation I propose to make the PDF file available and make use of the "traditional" review procedure. The decision on this alternative procedure must be part of the review process, i.e., part of the invitation.}
 
-\todo{BerndHekele: a traditional review procedure as used in the section of requirements documents should be the exception, but has to be possible for documents not reasonable in text structures.}
+\todo[color=yellow!20, inline]{BerndHekele: a traditional review procedure as used in the section of requirements documents should be the exception, but has to be possible for documents not reasonable in text structures.}
 
-\todo{BerndHekele: it might also be an option to introduce a light-weight review-process for not-critical documents. This process could be based on a slimmed procedure in the issue tracker (like voting or starting an issue on Git. This user guideline should show a little bit like a decision matrix how to select the right procedure.}
+\todo[color=orange, inline]{AinhoaGracia: Assuming we are using GitHub we have different options: LaTex, Ms-Office or OpenOffice documents. The key point is to use the todonotes in case of LaTex documents, and an Excel sheet for other types; but not having duplicated documents. The whole process shall be controlled via GitHub and the updates with the history.}
 
-\todo{BerndHekele: I propose we also define a section in each document (type) showing the status of the document and the documents history (like your "Document History")}
+\todo[color=yellow!20, inline]{BerndHekele: it might also be an option to introduce a light-weight review-process for not-critical documents. This process could be based on a slimmed procedure in the issue tracker (like voting or starting an issue on Git. This user guideline should show a little bit like a decision matrix how to select the right procedure.}
+
+\todo[color=orange, inline]{AinhoaGracia: I find this difficult to follow. In case someone is interested in assessing the evolution of a review process for a document, he/she shall look for different issues in the issue tracker without knowing the subjects. I still think the best option is using the todonotes for LaTex documents and the excel for other types of documents.}
+
+\todo[color=yellow!20, inline]{BerndHekele: I propose we also define a section in each document (type) showing the status of the document and the documents history (like your "Document History")}
+
+\todo[color=green!20, inline]{AinhoaGracia: Ok, I think this is a good idea. The RC manager shall be the responsible for updating the "Document History". This has been included in the TI.6.1.1 New RC branch and the TI.6.1.8 RC Pdf delivery.}
 
 \begin{tabular}{|m{3cm}|m{11cm}|}
 \hline
@@ -163,8 +268,7 @@ Review Documents &
 \end{tabular}
 \end{flushleft}
 
-\section{Roles}
-
+\subsection{Formal Review Roles}
 
 This section describes  the roles of the participants in the review process of the documentation:
 
@@ -176,7 +280,7 @@ This section describes  the roles of the participants in the review process of t
 \multicolumn{2}{|c|}{Roles} \\\hline
 \rowcolor{lightgray}
 Role &
-competencies \\\hline
+Competencies \\\hline
 RC manager / Owner of the document &
 \begin{itemize}
 \item Launch the Review Process
@@ -188,33 +292,63 @@ RC manager / Owner of the document &
 \item Open a review cycle for a document. To do this, create a git new branch ({\it TI.6.1.1. New RC branch}) 
 \item Open a new issue for the new RC linked to the document and the review. Only the owner of the document can close the issue and he/she also be in charge of conducting the discussions and comments below the issue.  ({\it TI.6.1.2. Open issue})
 \item Create the Control Sheet with the basic information related to the tasks to be done during the complete new cycle. ({\it TI.6.1.3. Complete the Control Sheet})
-\item BerndHekele: In each review cycle the manger has to decide who is mandatory contributor in the review. Mandatory Contributors have to be invited (per mail or phone) personally and need to confirm participation in the requested time period (effort is covered).
 
-\item BerndHekele: We should foresee the option of a personal meeting or a \"goto-meeting\" when inviting to intensive documents. This has to be decided at the start of the RC and may be requested later if intensive discussions are ongoing during the review.
+\begin{minipage}{9cm}\todo[color=yellow!20, inline]{BerndHekele: In each review cycle the manger has to decide who is mandatory contributor in the review. Mandatory Contributors have to be invited (per mail or phone) personally and need to confirm participation in the requested time period (effort is covered).} \end{minipage}
+
+\begin{minipage}{9cm}\todo[color=green!20, inline]{AinhoaGracia: Ok. This suggestion has been included in the following item.} \end{minipage}
+
+\item Identify at least one mandatory contributor for the review and send a private e-mail requesting the participation and establishing a deadline for confirmation ({\it TI.6.1.4. Invite main contributors})
+
+\begin{minipage}{9cm}\todo[color=yellow!20, inline]{BerndHekele: We should foresee the option of a personal meeting or a \"goto-meeting\" when inviting to intensive documents. This has to be decided at the start of the RC and may be requested later if intensive discussions are ongoing during the review.} \end{minipage}
+
+\begin{minipage}{9cm}\todo[color=green!20, inline]{AinhoaGracia: Ok. This suggestion has been included in the {\it TI.6.1.2. Open issue} subsection and in the {\it TI.6.1.5. Supervision of the Review Process}} \end{minipage}
 
 \end{itemize}
 \item Control Review Process
 \begin{itemize}
-\item Supervision of the work done. ({\it TI.6.1.4. Supervision of the Review Process})
+\item Supervision of the work done. ({\it TI.6.1.5. Supervision of the Review Process})
 \end{itemize}
 \item Accept/Reject
 \begin{itemize}
-\item Use todonotes tool to add, verify and reject comments in the document being reviewed. ({\it TI.6.3.2 Add notes using todonotes})
+\item Use todonotes tool to add, verify and reject comments in the document being reviewed. ({\it TI.6.1.6. Approval/rejection of comments})
 \item Make changes to the document.
-\item BerndHekele: after updating the document the owner shall distribute the document for a final confirmation of the changes. Typically, this process shall only allow a few days for final confirmation. This step is essential if criticial issues have been detected or discussed during the review.
 
-\end{itemize}
-\item Closing
-\begin{itemize}
-\item Send the notification of closing. ({\it TI.6.1.6. RC Issue closing})
-\item Merge the associated RC branch into the repository master branch. ({\it TI.6.1.7. RC Branch merging})
-\item Generate an established version of the document in PDF format when the review cycle is finished and store it in the directory of Final documents. ({\it TI.6.1.8. Pdf delivery})
+\begin{minipage}{9cm}\todo[color=yellow!20, inline]{BerndHekele: after updating the document the owner shall distribute the document for a final confirmation of the changes. Typically, this process shall only allow a few days for final confirmation. This step is essential if criticial issues have been detected or discussed during the review.}
+\end{minipage}
+
+\begin{minipage}{9cm}\todo[color=green!20, inline]{AinhoaGracia: Ok. This suggestion has been included in the {\it TI.6.1.7. Final confirmation of changes} subsection } \end{minipage}
+
+\item Make a request for a final confirmation of the changes made. Put the last version without any comment available in the {\it Review Documents} directory and notify in the related issue the period of time (two - three days) after that the RC shall be closed. {\it TI.6.1.7. Final confirmation of changes}
 \end{itemize}
 \end{itemize}
 \\\\\hline
 \end{tabular}
 \end{flushleft}
-\todo{BerndHekele: the valid options of the todonotes tool are not documented in the proposed location}
+
+\begin{flushleft}
+\begin{tabular}{|m{3cm}|m{11cm}|}
+\hline
+\rowcolor{myblue}
+\multicolumn{2}{|c|}{Roles} \\\hline
+\rowcolor{lightgray}
+Role &
+Competencies \\\hline
+RC manager / Owner of the document &
+\begin{itemize}
+\item Closing
+\begin{itemize}
+\item Send the notification of closing. ({\it TI.6.1.8. RC Issue closing})
+\item Merge the associated RC branch into the repository master branch. ({\it TI.6.1.9. RC Branch merging})
+\item Generate an established version of the document in PDF format when the review cycle is finished and store it in the directory of Final documents. ({\it TI.6.1.10. Pdf delivery})
+\end{itemize}
+\end{itemize}
+\\\\\hline
+\end{tabular}
+\end{flushleft}
+
+\todo[color=yellow!20, inline]{BerndHekele: the valid options of the todonotes tool are not documented in the proposed location}
+
+\todo[color=green!20, inline]{AinhoaGracia: Ok. The valid options of the todonotes package have been included in the {\it Review Process} directory as a pdf}
 
 \begin{flushleft}
 
@@ -244,44 +378,11 @@ Reviewer &
 \end{tabular}
 \end{flushleft}
 
+\subsection{Description of the Formal Review Process}
 
-\section{Tools}
+\todo[color=yellow!20, inline]{BerndHekele: I see this document as a good basis for textual documents in the process. However, we also need to decide how we live the process for other documents like Code of formal specifications. We need to be prepared for those kind of documents before actual reviews start. We do not have to much time.}
 
-\begin{flushleft}
-
-\begin{tabular}{|m{3cm}|m{11cm}|}
-\hline
-\rowcolor{myblue}
-\multicolumn{2}{|c|}{Tools} \\\hline
-GIT &
-\begin{itemize}
-\item GitHub: A web-based hosting service for projects that use Git revision control system.
-\item SmartGit: A graphical front-end for Git distributed version control systems. 
-\end{itemize}\\\hline
-Pdf documents &
-\begin{itemize}
-\item Adobe Acrobat Reader: Software package that allows to view, navigate and print pdf files.
-\item Diffpdf: Open source application that compares different PDF files for discrepancies. 
-\item BerndHekele: PDF Creator: Software for creating pdf files. Works like a printer on your PC.
-
-\end{itemize}\\\hline
-TeX documents &
-\begin{itemize}
-\item MiKTeX : Provides the tools necessary to prepare documents using de TeX/LaTeX mark up language.
-\item GhostScript. 
-\item GhostView.
-\item TexMaker.
-\item Todonotes package.
-\item Adobe Acrobat Reader: Software package that allows to view, navigate and print pdf files.
-\item BerndHekele: I would like to see in addition a tool to compare files (outside of SmartGit). I have seen no open source solution so far. But, maybe someone else knows a good solution.
-
-\end{itemize}\\\hline
-\end{tabular}
-\end{flushleft}
-
-\section{Review Process Overview}
-
-\todo{BerndHekele: I see this document as a good basis for textual documents in the process. However, we also need to decide how we live the process for other documents like Code of formal specifications. We need to be prepared for those kind of documents before actual reviews start. We do not have to much time.}
+\todo[color=green!20, inline]{AinhoaGracia: Of course, but I think it is good to have this Review Process for documents closed before we continue with code review and formal specification reviews}
 
 This subject is concerned with the validation and verification of the documentation generated within the OpenETCS project.  The process shall aim to confirm that what has been produced is correct and meets the expectations of the committers as well as improving the quality of the document and its reliability; it also ensures the technical approach is appropriate before releasing the related documentation.
 
@@ -306,13 +407,14 @@ In this context the review will help to:
 The key aspects of the review process include the following:
 
 \begin{itemize}
-\item \underline{Each review need for a document shall be translated into the creation of a new review cycle}
+\item \underline{Each review needed for a document shall be translated into the creation of a new review cycle}
 \begin{itemize}
 \item A RC for a document starts when a need or objective to be fulfilled is identified.
 \item Such proposal can be done by the owner of the document or by any committer that can justify the need for a new cycle. 
 \item When a proposal is submitted by a person who is not the owner of the document, the review proposal shall be accepted by the owner of the document and the process shall begin.
-\item BerndHekele: review cycles are timeboxed. When starting the cycle the review plan and the end date for the review need to be confirmed.
- 
+\begin{minipage}{9cm}\todo[color=yellow!20, inline]{{BerndHekele: review cycles are timeboxed. When starting the cycle the review plan and the end date for the review need to be confirmed.}} \end{minipage}
+\item Review cycles are timeboxed. When starting the cycle the review plan and the end date for the review need to be confirmed. 
+\begin{minipage}{9cm}\todo[color=green!20, inline]{{AinhoaGracia: Ok. Item added to the section}} \end{minipage}
 \end{itemize}
 \item \underline{The owner of the document shall be the RC manager}
 \begin{itemize}
@@ -370,10 +472,10 @@ It is important to have in mind that the document under review, once it has been
 
 In the Final documents directory of each WP inside the structure of the OpenETCS project there shall be always a readable version for anyone in the project. 
 
-When comparisons between correlative stable versions of a document need to be done, the diffPDF tool cab be used to find the differences between them.
+When comparisons between correlative stable versions of a document need to be done, the diffPDF tool can be used to find the differences between them.
 
 
-\section{Technical Instructions}
+\section{Technical Instructions of the Formal Review}
 
 In this section the whole Review process is explained step by step using technical instructions, so all the participants involved in the process are aware of the mechanisms they shall implement to work and achieve the expected objectives. 
 
@@ -420,6 +522,7 @@ Steps &
 	\item The new branch appears in the Smartgit Branches view, below the origin tag. 
 	\item Confirm that the local branch is linked to the remote git branch: in the local one the {\it set tracked branch shall} have been done and it shall address to the RC branch already created in the git repository
 \end{enumerate}
+\item The RC manager shall include the new state of the document in the "Document History" section of the document under review; there the ongoing review is highlighted as well as the purpose of it.
 \end{itemize}
 \\\hline
 \end{supertabular}
@@ -466,6 +569,7 @@ Steps &
 \begin{enumerate}
 	\item Send an e-mail to all the reviewers involved when the RC is limited to a group of known people 
 \end{enumerate}
+\item When the document under review is an intensive or complex one, the RC manager shall begin in the issue the discussion about organising periodical audioconferences or other type of meetings. 
 \end{itemize}
 \\\hline
 \end{supertabular}
@@ -521,6 +625,35 @@ Steps &
 \caption{Template of the Control Sheet}
 \end{figure}
 
+\subsubsection{Invite main contributors}
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{2cm}|m{13cm}|}
+\hline
+\rowcolor{myblue}
+TI & 
+TI.6.1.4. Invite main contributors
+\\\hline
+Roles &
+RC manager
+\\\hline
+Description &
+The RC manager shall contact the reviewers he/she shall consider {\it mandatory} so they shall provide their specific knowledge and experience in specific subjects to be discussed.
+\\\hline
+Steps &
+\begin{itemize}
+\item Identify the main contributors, at least one name shall be obtained.
+\item Prepare a private e-mail for each of the identified contributors highlighting the purpose of the review and what is expected from his/her collaboration.
+\item Specify a deadline for confirmation so the Review Process is not delayed.
+\end{itemize}
+\\\hline
+\end{supertabular}
+\end{flushleft}
+
 \subsubsection{Supervision of the Review Process}
 
 \begin{flushleft}
@@ -532,7 +665,7 @@ Steps &
 \hline
 \rowcolor{myblue}
 TI & 
-TI.6.1.4. Supervision of the Review Process
+TI.6.1.5. Supervision of the Review Process
 \\\hline
 Roles &
 RC manager
@@ -544,6 +677,12 @@ Steps &
 \begin{itemize}
 \item The RC manager shall wait for the reviewers to answer, so they confirm the pending issues have been fixed or they have more suggestions to do.
 \item The iterative work done in a RC shall finish once the RC manager and reviewers have reached a common agreement about the state of the document, and no more issues are pending. \item When this happens, the RC manager shall clean the document, deleting all the comments, confirmations and notes inserted into the document, so a final editable version is obtained.
+\item The RC manager shall be the responsible for updating the state of the document under review in the Wiki of the repository so
+\begin{itemize}
+\item When a new RC is opened, the RC Manager shall include in the Review Process wiki the name of the document under review and the state of it (under review), the version of the document, the branch and issue containing the process, the author of the document and the RC manager. Include the URL of the wiki in the issue opened to notify the new review.
+\item Put also in the ReadMe document of the {\it master branch} that a new RC has started and that the information is available on the wiki.
+\item When a RC is closed, the RC Manager shall update the Wiki and ReadMe of the repository indicating that the RC has been closed and the document has been released with the corresponding version. The new release shall be included in the list of the documents that are part of the repository.
+\end{itemize}
 \end{itemize}
 \\\hline
 \end{supertabular}
@@ -560,7 +699,7 @@ Steps &
 \hline
 \rowcolor{myblue}
 TI & 
-TI.6.1.5. Approval/rejection of comments
+TI.6.1.6. Approval/rejection of comments
 \\\hline
 Roles &
 RC manager
@@ -595,6 +734,44 @@ Steps &
 \caption{New issue in {\it Github}}
 \end{figure}
 
+\subsubsection{Final confirmation of changes}
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{2cm}|m{13cm}|}
+\hline
+\rowcolor{myblue}
+TI & 
+TI.6.1.7. Final confirmation of changes
+\\\hline
+Roles &
+RC manager
+\\\hline
+Description &
+The RC manager shall provide a final version with the considered changes implemented to the reviewers, so they can confirm the new version.  
+\\\hline
+Steps &
+\begin{itemize}
+\item Once the {\it Approval/rejection of comments} have been done, the changes implemented and pushed into the corresponding directory, a complete version of the document with those changes but without the comments shall be prepared.
+\item The pdf and the original document shall be {\it commited} and {\it pushed} in the {\it Review Documents} directory.
+\item A notification shall be included in the issue linked to the ongoing RC: 
+\begin{enumerate}
+\item There, the RC manager shall explain that the changes have been implemented and that there is a complete version available in the indicated path
+\item A period of time shall be fixed (two-three days) to read the new version of the document and make comments or confirm the new version of the document.
+\end{enumerate}
+\item After this period of time the final results shall be analysed:
+\begin{itemize}
+\item If no additional comments neither confirmation have been provided, then the RC Manager shall continue with the RC closing.
+\item Whenever there are some disagreements a discussion shall be followed to assess if new changes are required or not. If appropriate a new deadline shall be established and the Review Process shall continue until all the reviewers approach an agreement.
+\end{itemize}
+\end{itemize}
+\\\hline
+\end{supertabular}
+\end{flushleft}
+
 \subsubsection{RC Issue closing}
 
 \begin{flushleft}
@@ -606,7 +783,7 @@ Steps &
 \hline
 \rowcolor{myblue}
 TI & 
-TI.6.1.6. RC Issue closing
+TI.6.1.8. RC Issue closing
 \\\hline
 Roles &
 RC manager
@@ -646,7 +823,7 @@ Steps &
 \hline
 \rowcolor{myblue}
 TI & 
-TI.6.1.7. RC Branch merging
+TI.6.1.9. RC Branch merging
 \\\hline
 Roles &
 RC manager
@@ -682,7 +859,7 @@ Steps &
 \hline
 \rowcolor{myblue}
 TI & 
-TI.6.1.8. Pdf Delivery
+TI.6.1.10. Pdf Delivery
 \\\hline
 Roles &
 RC manager
@@ -692,6 +869,7 @@ The RC manager shall deliver the document under review (once the complete RC has
 \\\hline
 Steps &
 \begin{itemize}
+\item The RC manager shall update the "Document History" of the document indicating the date of closing and a brief summary of the changes made. 
 \item Preparation of the pdf
 \begin{enumerate}
 \item The RC manager shall compile the document under review in its editable version (LaTex) and obtain a pdf non-editable document.
@@ -766,7 +944,7 @@ Roles &
 Reviewers
 \\\hline
 Description &
-The Reviewer shall perform the review in the expected time and conditions and the starting point shall be provided by the Control Sheet prepared by the RC manager and the work. The work of a reviewer shall finished when the RC owner confirms the closing of the RC.
+The Reviewer shall perform the review in the expected time and conditions and the starting point shall be provided by the Control Sheet prepared by the RC manager and the work. The work of a reviewer shall finished when the RC manager confirms the closing of the RC.
 \\\hline
 Steps &
 \begin{itemize}
@@ -792,7 +970,7 @@ Steps &
 \item The conflict shall be solved in the following way.
 \begin{enumerate}
 \item The reviewer shall indicate that the version stored in the remote repository is the correct one. The changes in case of conflict are not included. 
-\item The Reviewer will {\it Push} the changes that do not have any conflict and add a notification in the document about that. 
+\item The Reviewer will {\it Commit} and {\it Push} the changes that do not have any conflict and add a notification in the document about that. 
 \item After finishing the {\it pushing}, he/she shall perform a {\it pulling} to obtain the integrated and last committed version; then he/she shall add a note using {\it todonotes} tool in the section where the conflicts were; he/she shall explain the problem found. 
 \end{enumerate}
 \item Have in mind that after {\it pushing/pulling} the document the changes in conflict made by the Reviewer shall be lost. Anytime a conflict appears, the reviewer shall prepare a copy of the suggestions or modifications made by him/her.
@@ -830,10 +1008,10 @@ This section includes any Technical Instruction that shall be followed by the RC
 \hline
 \rowcolor{myblue}
 TI & 
-TI.6.3.1 New, RC request
+TI.6.3.1 New RC request
 \\\hline
 Roles &
-RC manager
+RC manager, 
 Any committer
 \\\hline
 Description &
