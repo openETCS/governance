@@ -119,6 +119,12 @@
 All &
 First version &
 SQS
+\\\hline
+0.0.2 &
+06.06.2013 &
+All &
+Second revised version &
+SQS
 \\
 \end{supertabular}
 \end{flushleft}
@@ -126,13 +132,41 @@ SQS
 \newpage
 
 \section{Introduction}
-Two different processes have been identified:
+Two are the processes defined in OpenETCS to guarantee and maintain the quality of the documents published in the repository:
+
 \begin{itemize}
-\item \underline{\textbf{Revision Process}} - The OpenETCS committers are invited to perform a revision of the contents of a document. The committers can edit the document, writing complete sections or making changes directly in it (LaTex, todonotes and Smartgit tools). The author(s) shall support the whole process answering questions and resolving conflicts. Once the author(s) and committers are satisfied with the results, the Product owner shall confirm and approve or reject and request more changes to the revised document. Finally, the approved document is pushed into the corresponding GitHub repository.
-\item \underline{\textbf{Review Process}} - Any person involved in the GitHub communnity and/or the OpenETCS project is invited to participate in a Review Process. They shall not edit the document but send comments and suggestions creating the corresponding issues in the {\it Issue Tracker} tool. Once the deadline has arrived, the author(s) shall collect the comments and make the changes they consider appropriate. Any doubt shall be answered by the reviewers using the issue threads opened and in case of conflicts the collaboration of the Product owner may be required. The process may be launched after a Revision Process ends, there are relevant issues reported for a release or whenever the Product owner considers appropriate. 
+\item \underline{\textbf{The Revision Process}} -  
+Committers and selected Contributors are invited to make contributions to a version of a document before it is published in the Open ETCS repository.
+The revision process will be performed:
+\begin{itemize}
+\item After a first version of the document is created by the authors and when it is plausible significant contributions are still needed to have a complete and publishable document.
+\item •	After a major rework of a document or after a review process in which major improvements/comments have been detected.
+\end{itemize}
+In all cases:
+\begin{itemize}
+\item The revision process will be carried out in a dedicated Revision Cycle Branch.
+\item In case of conflicts, it is the Product Owner who will be responsible for their resolution.
+\item The Revision Team is composed of Committers and invited Contributors
+\item Contributions/comments are made directly in the document under revision. However, in the case of “Contributors”, the Issue Tracker Tool will be used.
+\item The launching, control, notification and clarification processes are managed through the Issue Tracker Tool.
 \end{itemize}
 
-The following diagram presents the Flow of the Revision/Review processes.
+\item \underline{\textbf{The Review Process}} - The Open ETCS community is invited to make comments, suggestions or improvements to an already revised document published in the OpenETCS repository. In case major comments are received, a revision process may be launched afterwards.
+There are two types of Review Processes:
+\begin{itemize}
+\item Planned Review Process: It is launched by the product owner; there is a deadline for receiving comments (by default, 2 weeks) from the community and if considered appropriate, there are well identified review objectives and/or guidelines. A Planned Review Process will always be launched after a Revision Process.
+\item Open Review Process: At any time, an expert can make comments and suggest improvements to the documents published in the repository. Comments will be assessed by the Product Owner as they are received, and the appropriate actions taken.
+\end{itemize}
+In both cases:
+\begin{itemize}
+\item The review process will be performed against documents already revised and therefore published in the repository. Therefore no specific branch for review will be created.
+\item All comments will be made and answered using the Issue Tracker tool.
+\item The Team of Reviewers is not limited to invited reviewers but to any expert of the Community.
+\item The Product Owner will be assisted by a group of selected Key Customers of the document under review when necessary and specifically to resolve conflicts and approve/reject a document and/or launch a new revision process.
+\end{itemize}
+\end{itemize}
+
+The status (in progress, in revision; revised; in review; active) of each document is maintained in the Wiki page named “Status of documents” of the corresponding project/repository in Github.
 
 \begin{figure}[H]
 \centering
@@ -140,64 +174,48 @@ The following diagram presents the Flow of the Revision/Review processes.
 \caption{Revision-Review Processes flow}
 \end{figure}
 
-In the following sections a summary of both processes is provided. 
-
 \section{Revision Process}
-The Revision of a document implies the {\it\underline{reworking}} of a document following a set of steps that are performed in sequential order. A typical scenario shall include one or more authors creating a document that is then revised by a specific number of registered committers and finally approved by a specific individual.
 
-The document revision cycle consists on several stages. After the document is created and confirmed its first version, it is pushed to the GitHub repository and made available to the committers for revision either concurrently or sequentially. 
+The revision of the document supports the reworking and/or the incorporation of significant improvements ad contributions to a document. The revision process is controlled by the Product Owner who is supported by the rest of the authors of the document under revision in the process of approving or rejecting changes.
 
-This process requires collaboration between the committers and the autor(s). After all of the committers’ comments, suggestions, and changes made directly to the document have been accepted by the author(s), the revised document shall be approved, or not, by the Product Owner. The Product owner can be one of the authors or the Project Leader, and who is going to play this roles shall be decided at the beginning of the Revision process. 
+The revision team is composed of the committers of the project the document belongs to and by invited Contributors, if necessary.
 
-More changes can be requested by the Product owner and he/she shall be the responsible for making final decisions and solving conflicts between the commiters and/or the author(s).
+Once the document is ready for revision, the product owner launches the process ({\it Stage 1.Revision}). The document status becomes “In revision” and it is uploaded to its corresponding Revision Cycle Branch in the project repository.
 
-When approved, the document with the changes is pushed to the corresponding GitHub repository and its availability notified via the Issue tracker. 
+The launching and details (dates, scope) of the Revision Process are announced via the Issue Tracker. In this moment, the revision process officially starts.
 
-Then, the process can be closed and the corresponding Revision Cycle branch merged to the {\it master branch}.
+During the Revision Process ({\it Stage 2.Revision}), committers are expected to make their contributions directly on the document (Latex, ToDoNotes, SmartGit) and contributors via the Issue Tracker.
 
-In order to be truly effective, the Revision process must take full advantage of the editing and document generation tools available in the project (LaTex, Smartgit, todonotes, PDF creator, etc.), including the use of GitHub to have always a version with the changes included remotely (not only in local) and accessible to all the committers and author(s). The process requires that all the committers involved have the appropriate knowledge in using and managing these tools.
+Interactions between the Revision Team and the Product Owner will be done via the Issue Tracker, so a complete traceability of the process is maintained.
 
-From this moment, the document is in the 'Version revised' state and it can be put under review.
+Once the deadline for receiving comments is reached, the Approval Stage starts ({\it Stage 3.Revision}). The Product Owner, supported by the Author(s), revises each of the comments and decides whether approving and implementing or rejecting. 
+A final assessment of the comments received will be the basis for the Product Owner to decide whether the document is to be approved or needs further revision (revision process is re-opened).
 
-The stages involved in the process are shown in the next diagram:
-
-\begin{figure}[H]
-\centering
-\includegraphics{./figures/RevisionProcess.JPG}
-\caption{Stages of the Revision Process}
-\end{figure}
+Once approved, the Closing Stage ({\it Stage 4.Revision}) starts. The Revision Branch is merged into the Master Branch and the document status is set to “Revised”. The Revision Cycle is closed and a Review Process is launched.
 
 \section{Review Process}
-The Review of a document implies {\it\underline{looking at something}}, so it shall be strictly limited to reading a document and giving comments using the GitHub {\it Issue Tracker} tool. 
+The review process implies opening a document for the community to make comments, propose changes and improvements.
 
-A typical scenario shall include the product owner makes the document available in GitHub and creates an issue calling for reviewers. A deadline is set so at the end of the period all the issues reported via the {\it Issue Tracker} are collected. 
+As already indicated, any document published in the repository can be reviewed by an expert at any time. Therefore the Review Process can be considered as an Open process. In the case of Open ETCS project, any expert can add a comment to a document in the form of an Issue. The Product Owner is in charge of their analysis and processing.
 
-The author(s) assess the comments and suggestions made and decide whether they shall be considered or not, justifying each decision. In this way only the author(s) shall edit the document and not the reviewers, and any question or doubt that appears shall be answered by the reviewers through the {\it Issue Tracker} tool. Because of this, the author(s) should have enough time to implement the changes and ask questions to the reviewers.
+However, at certain stages of a document life-cycle, it is necessary to plan a review process in which selected reviewers are invited to play an active role. This is identified as a Planned Review Process and described below.
 
-A Review process could be started not only after a Revision Process has been done, but also in other contexts. \underline{The process shall be started once the following situations have been identified}:
+For each document a group of “Key Customers” (users of the document) will be appointed. Key Customers will support the Product Owner in the process of revising, analyzing the relevance and approving/rejecting comments made by the reviewers. 
 
-\begin{itemize}
-\item After a Revision Process has finished
-\item There is a release of a document and in the {\it Issue Tracker} there are a set of relevant issues to that release. A Review process shall be started to collect more issues.
-\item There is a special situation because of that the product owner considers to begin a Review Process 
-\end{itemize}
+The Product Owner launches ({\it Stage 1.Review}) the review process (dates, scope) via the Issue Tracker. If necessary, the Project Owner addresses individually the invited reviewers to guarantee their effective participation.
 
-This process requires active involvement of the community, reviewers with technical knowledge in several subjects included in the document or some expertise in the project. Any person of the community interested in participate shall provide a brief explanation of his/her expertise and skills so its collaboration could be adequately assessed.
+The document is set to status “In review” and the planned review process starts officially.
 
-Finally, the Product owner shall decide whether the document deserves an approval or not. And then, there are \underline{three possible situations for the closing}:
+During the Review Process ({\it Stage 2.Review}), comments are made via the Issue Trackers. Reviewers will be invited to put special attention in labeling the issues properly so they can be easily classified and in revising comments made by other reviewers in order to avoid duplicates.
 
-\begin{itemize}
-\item For each Review Process that finishes with an approval, a new Release shall be generated and pushed into GitHub.
-\item There are minor changes pending to be implemented because the modifications made are not enough to close the reported issues. The author(s) shall complete the task.
-\item The issues found have reveal that the document needs further improvements, so it has not been approved as release and a new Revision Cycle shall begin, so the author(s) and selected committers can fix the problems identified and generate a more complete version of the document. Then, and with the version revised, a new Review process shall be addressed. 
-\end{itemize}
+Interactions (i.e. request of clarifications) between the Revision Team and the Product Owner will be done via the Issue Tracker, so a complete traceability of the process is maintained.
 
-The stages involved in the process are shown in the next diagram:
+Once the time for comments is over, the Product Owner will go through the comments and select the ones to be implemented and the ones to be rejected or postponed. For this activity and as needed, the Product Owner will have the support of the Key Customers and the Authors.
 
-\begin{figure}[H]
-\centering
-\includegraphics{./figures/ReviewProcess.JPG}
-\caption{Stages of the Review Process}
-\end{figure}
+The Product Owner is responsible for implementing the comments accepted.
+
+Final assessment of the comments and their implementation in the document will be performed by the Product Owner with support of the Key Customers. Conflict resolution will be managed by the Key Customers.
+
+If the document is considered of sufficient quality, the review process will be closed ({\it Stage 4.Review}). Otherwise, further improvements will be applied extending the deadline to process comments or in case of major concerns a revision process will be opened. 
 
 \end{document}
