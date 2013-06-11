@@ -9,7 +9,7 @@ part of WP1: information needed to run project management in openetcs, e.g.,
 
 Documents under Review
 * QA Plan in its 0.9.5.4 version
-	- State of the document: chapters 1, 2, 4, 5 and annexes are modified. The document has been renamed. See the history in the document 20130415_QA_Plan_Version_0.9.5.3_SQS
+	- State of the document: chapters 1, 2, 4, 5 and annexes are modified. The document has been renamed. 
 	- Branch: Master branch
 	- Related issue: No issue
 * Review process in its 0.5 version
