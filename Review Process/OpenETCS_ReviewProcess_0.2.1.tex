@@ -114,10 +114,22 @@
 \tablelasttail{}
 \begin{supertabular}{m{1.1cm}m{1.8cm}m{2cm}m{7cm}m{2cm}lp{6cm}|}
 \hline
-0.0.1 &
+0.1.0 &
 24.05.2013 &
 All &
 First version &
+SQS
+\\\hline
+0.2.0 &
+06.06.2013 &
+All &
+Simplified version &
+SQS
+\\\hline
+0.2.1 &
+20.06.2013 &
+Planned reviews &
+Quick guide added and Review plan referred &
 SQS
 \end{supertabular}
 \end{flushleft}
@@ -152,7 +164,7 @@ governance/Review Process &
 Brief presentation of the Revision process and the Review process as well as their interactions.
 \\\hline
 Review Guidelines &
-Governance/ecosystem &
+Ecosystem/Wiki/ openETCS Development Process &
 It describes major aspects to be assessed during a Review Cycle.
 \\\hline
 QA Plan & governance/QA Plan & It defines the processes, methods and tools that will be used to develop the OpenETCS project
@@ -208,7 +220,18 @@ PDF documents &
 
 There are two types of Review Processes:
 \begin{itemize}
-\item Planned Review Process: It is launched by the product owner; there is a deadline for receiving comments (by default, 2 weeks) from the community and if considered appropriate, there are well identified review objectives and/or guidelines. A Planned Review Process will always be launched after a Revision Process.
+\item Planned Review Process: It is launched by the product owner; there is a deadline for receiving comments (by default, 2 weeks) from the community and if considered appropriate, there are well identified review objectives and/or guidelines. A Planned Review Process will always be launched after a Revision Process. 
+The following Review types are considered as Planed reviews:
+\begin{itemize}
+\item Creation Review: launched after the proposal of a new project has been made.
+\item Graduation Review: it is about the phase change from Incubation Phase to Mature Phase in the project lifecycle.
+\item Release Review: performed during the Incubation phase.
+\item Promotion Review: it is about the phase change from Mature Phase to Top-Level phase.
+\item Continuation Review: launched at Incubation, Mature or Top-Level phases of the project lifecycle.
+\item Termination Review: launched whenever it is necessary.
+\item Move Review: launched whenever it is necessary.
+\item Restructuring Review: launched whenever it is necessary.
+\end{itemize}
 \item Open Review Process: At any time, an expert can make comments and suggest improvements to the documents published in the repository. Comments will be assessed by the Product Owner as they are received, and the appropriate actions taken.
 \end{itemize}
 
@@ -218,10 +241,6 @@ In both cases:
 \item All comments will be made and answered using the Issue Tracker tool.
 \item The Product Owner will be assisted by a group of selected Key Customers of the document under review when necessary.
 \end{itemize}
-
-\subsection{Structure of the repository}
- 
-There is no need of additional working directories for a Review process, considering no branches shall be created and the changes to be included in a version of a document shall be minor changes.
 
 \subsection{Review Roles}
 
@@ -259,40 +278,117 @@ The next figure shows the different stages of the Review Process. Right after th
 \subsubsection{Stage One: Launching of the Review Process}
 
 \begin{itemize}
-\item The Product Owner elaborates the Review Plan with the information to be sent to the reviewers: deadline for the different stages and specific review guidelines and/or objectives.
+\item The Product Owner elaborates the Review Plan with the information to be sent to the reviewers: deadline for the different stages and specific review guidelines and/or objectives. 
 \item The Product Owner updates the status of the document in the wiki page “List of Documents” of the project to “In Review”. Besides, a specific reference to the review process is to be included in the ReadMe file.
-\item The Product Owner creates the list of reviewers and key customers and invites them to participate. Refer to {\it A2.Review Process-Control and Monitoring} in Annex for Technical Instructions.
+\item The Product Owner creates the list of reviewers and key customers and invites them to participate. Refer to {\it A2.1.Review Process-Control and Monitoring} in Annex for Technical Instructions.
 \item The Review Process is officially launched.
 \end{itemize}
 
 \subsubsection{Stage Two: The Review Process}
 
 \begin{itemize}
-\item Reviewers will make comments in the form of appropriately labeled Issues. Reviewers are invited to include the “relevance” of the comment (high, medium, low). Refer to Section {\it A3. Review Process} for detailed instructions.
+\item Reviewers will make comments in the form of appropriately labeled Issues. Reviewers are invited to include the “relevance” of the comment (high, medium, low). Refer to Section {\it A2.2. Review Process} for detailed instructions.
 \item The Product Owner jointly with the Authors will interact with the reviewers, when needed, in order to clarify comments.  
-\item The deadline for receiving comments may be extended by the Product Owner. Both the finalization and the extension will be notified to the revision team members. Refer to {\it A2.Review Process-Control and Monitoring} in Annex for Technical Instructions.
+\item The deadline for receiving comments may be extended by the Product Owner. Both the finalization and the extension will be notified to the revision team members. Refer to {\it A2.1. Review Process-Control and Monitoring} in Annex for Technical Instructions.
 \end{itemize}
 
 \subsubsection{Stage Three: The Approval Process}
 
 \begin{itemize}
-\item The Product Owner will analyze the comments and proceed with their acceptance or rejection. In case of conflicts, the Key Customers will support the Product Owner in this process. Refer to {\it A4.Approval/Rejection of changes} in Annex for Technical Instructions.
+\item The Product Owner will analyze the comments and proceed with their acceptance or rejection. In case of conflicts, the Key Customers will support the Product Owner in this process. Refer to {\it A2.3.Approval/Rejection of changes} in Annex for Technical Instructions.
 \item The Product Owner will implement the changes in the document under review.  
 \item The Product Owner with the support of the Key Customer will decide whether the project is ready for publication or not.
-\item If ready for publication, the review process will be closed. Otherwise, a revision process will be launched, A notification with the published in the form of an issue. Refer to {\it A2.Review Process-Control and Monitoring} in Annex for Technical Instructions.
+\item If ready for publication, the review process will be closed. Otherwise, a revision process will be launched, A notification with the published in the form of an issue. Refer to {\it A2.1. Review Process-Control and Monitoring} in Annex for Technical Instructions.
 \end{itemize}
 
 \subsubsection{Stage Four: Review Closing}
 
 \begin{itemize}
-\item The Product Owner publishes a new version of the document. Refer to section {\it A12.Versioning} for versioning instructions.
-\item The Product Owner closes the Review Process. Refer to section {\it A6. Review Closing} for instructions 
+\item The Product Owner publishes a new version of the document. Refer to section {\it A2.6.Versioning} for versioning instructions.
+\item The Product Owner closes the Review Process. Refer to section {\it A2.5. Review Closing} for instructions 
 \item The Product Owner updates the status of the document in the wiki of the Project to “Active”.
+\item The Product Owner moves the Review Plan from the directory of the document under review to the 'Review plans' available in the repository/project.
 \end{itemize}
 
-\section{ANNEXES - Technical Instructions for using the Issue Tracker tool}
+\subsection{Planned Reviews}
 
-\textbf{A2. Review Process-Control and Monitoring}
+According to the {\it Eclipse Development Process} there are different kinds of reviews that shall be launched at different moments during the project Lifecycle. This section provides guidance on how to deal with these planned reviews following the Review process previously described.
+
+\subsubsection{Creation Review}
+\begin{itemize}
+\item The review consists on verifying that in a new repository/project there are appropriate and available resources, and to confirm a list of {\it initial committers} to be involved in future reviews. 
+\item The Review Process is officially launched in the {\it Issue Tracker} of the {\it governance} repository.
+\item The Product Owner with the support of the Key Customer will decide whether the proposal of a new project with the suggested structure and documents is approved or not.
+\item A name for the project is approved by the Product Owner with the support of the Committers.
+\item The Product Owner creates the new repository and adds the resources that are available in that moment. 
+\item The Product Owner closes the Review Process in the {\it governance Issue Tracker}.
+\end{itemize}
+
+\subsubsection{Graduation Review}
+
+\begin{itemize}
+\item The review consists on confirming that the resources of the project are of sufficiently high quality, and there are active and sufficiently diverse communities (authors, commiters, contributors, key costumers). 
+\end{itemize}
+
+\subsubsection{Release Review}
+
+\begin{itemize}
+\item The review consists on summarizing the accomplishments of the release, verifying that the OpenETCS QAPlan has been followed and all approvals have been received, and highlighting any remaining quality and/or architectural issues.
+\end{itemize}
+
+\subsubsection{Promotion Review}
+
+\begin{itemize}
+\item The review consists on determining whether the Project with all the documents contained in it has demonstrated the characteristics of a Top-Level Project. 
+\end{itemize}
+
+\subsubsection{Continuation Review}
+
+\begin{itemize}
+\item The review consists on verifying that there are not inactive documents and resources in a repository/project looking promising but never actually delivering extensible frameworks, exemplary tools or useful information to the OpenETCS project. 
+\end{itemize}
+
+\subsubsection{Termination Review}
+
+\begin{itemize}
+\item The review consists on providing a final opportunity for the Committers, Contributors or any person involved in the community to discuss the proposed withdrawal of a Proposal/Document or its archiving. The desired outcome is to find sufficient evidence of renewed interest and resources in keeping it active.
+\end{itemize}
+
+\subsubsection{Move Review}
+
+\begin{itemize}
+\item A Move Review is considered to be a special type of Restructuring Review.
+\end{itemize}
+
+\subsubsection{Restructuring Review}
+
+\begin{itemize}
+\item The review consists on identifying significant changes to one or more projects. It shall include: movement of significant resources from one project to another; modification of the project structure (combining multiple projects into a single project, or decomposing a single project into multiple projects); and/or change of project scope.
+\item The Review process shall be launched jointly with the Change Management process, so the impact of changes are assessed and a backout plan is prepared.
+\item The creation of new projects shall be done by the Product Owner that shall be the responsible for that repository.
+\item The modification of the structure of the affected projects shall be done by the Product Owner of each project/repository.
+\item The process shall be equivalent to the Creation Review. 
+\end{itemize}
+
+\section{ANNEXES A1.- Review plan templates}
+
+\textbf{A1.1 Creation Review template}
+
+\textbf{A1.2 Graduation Review template}
+
+\textbf{A1.3 Release Review template}
+
+\textbf{A1.4 Promotion Review template}
+
+\textbf{A1.5 Continuation Review template}
+
+\textbf{A1.6 Termination Review template}
+
+\textbf{A1.7 Restructuring Review template}
+
+\section{ANNEXES A2.- Technical Instructions for using the Issue Tracker tool}
+
+\textbf{A2.1 Review Process-Control and Monitoring}
 
 \begin{flushleft}
 \tablefirsthead{}
@@ -349,7 +445,7 @@ Notification that the Review Stage has finalized &
 \end{supertabular}
 \end{flushleft}
 
-\textbf{A3. Review Process}
+\textbf{A2.2. Review Process}
 
 \begin{flushleft}
 \tablefirsthead{}
@@ -401,7 +497,7 @@ Steps &
 \end{supertabular}
 \end{flushleft}
 
-\textbf{A4. Approval/Rejection of Changes}
+\textbf{A2.3. Approval/Rejection of Changes}
 
 \begin{flushleft}
 \tablefirsthead{}
@@ -438,7 +534,7 @@ Steps &
 \end{supertabular}
 \end{flushleft}
 
-\textbf{A5. Final Implementation}
+\textbf{A2.4. Final Implementation}
 
 \begin{flushleft}
 \tablefirsthead{}
@@ -470,7 +566,7 @@ Steps &
 \end{supertabular}
 \end{flushleft}
 
-\textbf{A6. Review closing}
+\textbf{A2.5. Review closing}
 
 \begin{flushleft}
 \tablefirsthead{}
@@ -511,7 +607,7 @@ Steps &
 \end{supertabular}
 \end{flushleft}
 
-\textbf{A12. Versioning}
+\textbf{A2.6. Versioning}
 
 \begin{flushleft}
 \tablefirsthead{}
@@ -548,5 +644,13 @@ For further information see {\it Versioning Artifacts} in ecosystem wiki
 \\\hline
 \end{supertabular}
 \end{flushleft}
+
+\section{ANNEXES A3.- Quick guide for the Review process}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.83]{./figures/ReviewProcessSummary.JPG}
+\caption{Review Process summary}
+\end{figure}
 
 \end{document}
