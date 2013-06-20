@@ -114,40 +114,40 @@
 \tablelasttail{}
 \begin{supertabular}{m{1.1cm}m{1.8cm}m{2cm}m{7cm}m{2cm}lp{6cm}|}
 \hline
-0.0.1 &
+0.1.0 &
 09.04.2013 &
 All &
 First version &
 SQS
 \\\hline
-0.0.2 &
+0.1.1 &
 12.04.2013 &
 Roles &
 Tables added to the 'Roles' section &
 SQS
 \\\hline
-0.0.3 &
+0.1.2 &
 15.04.2013 &
 T.instructions &
 Technical instructions completed &
 SQS
 \\\hline
-0.0.4 &
+0.1.3 &
 16.05.2013 &
 All &
 Comments of the reviewers analysed and some changes implemented &
 SQS
 \\\hline
-0.0.5 &
+0.2.0 &
 23.05.2013 &
 All &
 New complete version adjusted to the Revision process concept &
 SQS
 \\\hline
-0.0.6 &
+0.2.1 &
 06.06.2013 &
 All &
-New complete version adjusted to the Revision process concept &
+Simplified version &
 SQS
 \end{supertabular}
 \end{flushleft}
@@ -261,26 +261,6 @@ In all cases:
 \item The launching, control and clarification processes are managed through the Issue Tracker Tool
 \end{itemize}
 
-\subsection{Structure of the repository}
- 
-The Revision process involves the creation of the following directory inside the structure of each repository once a {\it new branch} for the revision has been created.
-
-\begin{flushleft}
-\begin{tabular}{|m{3cm}|m{11cm}|}
-\hline
-\rowcolor{myblue}
-\multicolumn{2}{|c|}{Structure of the repository} \\\hline
-\rowcolor{lightgray}
-Name &
-Content 
-\\\hline
-Revision Documents &
-\begin{itemize}
-\item The document under revision: In Tex and PDF formats with all its history of changes, comments and sections added.
-\end{itemize}\\\hline
-\end{tabular}
-\end{flushleft}
-
 \subsection{Revision Roles}
 
 This section describes the roles of the participants in the revision process of a document:
@@ -387,7 +367,7 @@ Steps &
    \item Open Smartgit
    \item Branch menu, add branch and give a new name following this nomenclature: 
    \begin{itemize}
-   \item {\it RC\_<name of the document to be revised>\_<number of Revision>}. 
+   \item {\it RC\_<name of the document to be revised>\_<version of document>}. 
    \end{itemize}
    \item Push {\it add branch \& switch}. With these steps the branch is created as a local branch.
 \end{enumerate}
