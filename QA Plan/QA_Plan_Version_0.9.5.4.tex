@@ -11,6 +11,9 @@
 \usepackage{graphicx}
 \usepackage{lscape}
 \usepackage{float}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{breakurl}
 \makeatletter
 \newcommand\arraybslash{\let\\\@arraycr}
 \makeatother
@@ -50,7 +53,6 @@
 \todo[color={red!100!green!33}]{
 \textbf{[\uppercase{#1} \themycommentcounter]:} #2}
 }
-
 
 
 % Use the option "nocc" if the document is not licensed under Creative Commons
@@ -268,8 +270,6 @@ Izaskun de la Torre (SQS)\\\hline
 
 
 \subsection{Purpose}
-%\textcolor{red}{Guidance}
-%\textit{Guidance: This document contains the procedures and control methods to achieve the end products of the OpenETCS project with the desired levels of safety and quality. It also describes the processes, methods and tools to develop such products in accordance to CENELEC Standards and following Open Source principles.}
 
 The purpose of the QA Plan is to define the processes, methods and tools that will be used to develop the OpenETCS project meeting ITEA requirements, following Open Source principles and practices and applying the SCRUM Methodology. Besides, two of the project outcomes, the OpenETCS software, the OpenETCS Tool Chain, will have to comply with CENELEC requirements.
 
@@ -278,7 +278,7 @@ Due to the nature of the OpenETCS project (R\&D EU project with a complex list o
 The QA Plan also describes the activities to monitor and manage quality in all aspects of the project:
 
 \begin{itemize}
-\item Providing objective evaluation of processes and products against applicable standards and requirements
+\item Defining and ensuring that all processes and products are compliant with the corresponding standard and requirements, according to the required system/software safety integrity level
 \item Identifying nonconformances
 \item Providing timely quality status feedback to management and affected personnel
 \item Ensuring noncompliance issues are addressed
@@ -287,11 +287,7 @@ The QA Plan also describes the activities to monitor and manage quality in all a
 Therefore, it describes the QA functions, responsibilities and specific monitoring and control activities.
 
 
-\subsection{Scope}
-
-%\todo[color=yellow!20, inline]{JW: Since their have been long discussions concerning the goal the first sentence showed by revised. It is unclear what a "open proofs'' platform should be.}
-
-%\todo[color=green!20, inline]{IT: OK}
+\subsection{Goals of the openETCS project}
 
 The main goals and deliverables of the OpenETCS project are:
 \begin{enumerate}
@@ -302,21 +298,10 @@ The main goals and deliverables of the OpenETCS project are:
 \item A tools chain supporting both previous bullet points including code, test case and document generation meeting CENELEC EN50128:2011 (T3) requirements and certifiable for SIL4 software applications for signalling equipment (Certification itself is not part of the project)
 \end{enumerate}
 
-%\todo[color=yellow!20, inline]{JW: The goals shall be reformulated to respect the formulations and priorities defined at Paris.}
-
-%\todo[color=green!20, inline]{IT: OK}
 
 
 \subsection{Intended Audience}
-%\textit{Guidance: This document applies to the whole development life-cycle of the project and it addresses all the stakeholders involved in the project. This document should be available to all of them in read access mode and it provides operational guidance and access to QA procedures.}
 
-%\todo[color=yellow!20, inline]{JW: The part " should be available to all of them in read access mode '' shall be deleted, since this is clear and always given in an open project public repository.}
-
-%\todo[color=green!20, inline]{IT: OK}
-
-%\todo[color=yellow!20, inline]{JW: at the following part "for all people participating in the OpenETCS project. The formulation"operational guidance and access to QA procedures'' should be clarified and extended on.}
-
-%\todo[color=green!20, inline]{IT: OK}
 The QA Plan addresses all the stakeholders who are in the position to interact with OpenETCS project
 
 \begin{flushleft}
@@ -363,15 +348,6 @@ For evaluation \\\hline
 
 
 \subsection{Evolution}
-%\textit{Guidance: Frequency, method, responsibilities,{\dots}}
-
-%\todo[color=yellow!20, inline]{JW: Please at an example, as I don't see the purpose of this part.}
-
-%\todo[color=green!20, inline]{IT: OK. An example will be provided}
-
-%\todo[color=yellow!20, inline]{CC: What is this part related to? Does the evolution concern only the quality documentation, or the whole project outcomes?.}
-
-%\todo[color=green!20, inline]{IT: Only to the Quality Documentation}
 
 The first version of the document, prepared at the beginning of the project, will be updated regularly with the evolution of the OpenETCS project. The methods and tools to be applied during the development of the OpenETCS software products will be decided based upon the results of the research activities carried out during the project. 
 
@@ -379,142 +355,205 @@ The QA Plan document will incorporate such decisions as they are taken with a pr
 
 The QA Plan document has been conceived as a reference document. This means that detailed descriptions of procedures, guidelines, methods and/or tools will not necessarily be included in the document but adequately referenced \textit{(chapter 1.5)}. The authors of such documents and/or Wiki pages will be responsible for keeping them updated. The QA manager will monitor such activities and will guarantee changes are appropriately reflected in the QA Plan, when appropriate.
 
-The QA Manager will maintain the QA Plan backlog [YY].
+The QA Manager will maintain the QA Plan backlog \citep{qabacklog} \href{https://github.com/openETCS/governance/wiki/QAplan-backlog}{[Wiki]}.
 
 Major revisions of the QA Plan will be accomplished by the Committers to the Management Project. Minor review process will be done with the participation of the external community, following procedure \citep{RP}
 
 
 \subsection{References, Guidelines and Standards}
-%\textit{Guidance:}
 
 \begin{flushleft}
-\begin{tabular}[H]{|m{2cm}|m{7cm}|m{2cm}|m{3cm}|}
+\begin{tabular}[H]{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
 \hline
 \rowcolor{myblue}
-\multicolumn{4}{|c|}{Standards} \\\hline
+\multicolumn{5}{|c|}{Standards} \\\hline
 \rowcolor{lightgray}
 Internal Code &
 Name &
+Version &
 Repository &
 Responsible 
 \\\hline
 \citep{EN50128} &
 EN 50128 &
+\centering  &
 governance &
 CENELEC\\\hline
 \cite{ISO9001} &
 ISO 9001 &
+\centering  &
 governance &
 International Organization for Standardization\\\hline
 \cite{subset023} &
-SUBSET-023 v300 &
+SUBSET-023 &
+\centering 3.0.0 &
 SSRS &
 UNISIG\\\hline
 \cite{subset026} &
-SUBSET-026 v330 &
+SUBSET-026 &
+\centering 3.3.0 &
 SSRS &
 UNISIG\\\hline
 \end{tabular}
 \end{flushleft}
 
+
 \begin{flushleft}
-\begin{tabular}[H]{|m{2cm}|m{7cm}|m{2cm}|m{3cm}|}
+\begin{tabular}[H]{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
 \hline
 \rowcolor{myblue}
-\multicolumn{4}{|c|}{References} \\\hline
+\multicolumn{5}{|c|}{References} \\\hline
 \rowcolor{lightgray}
 Internal Code &
 Name &
+Version &
 Repository &
 Responsible  
 \\\hline
 \citep{fpp} &
 Full Project Proposal (FPP) &
-governance &
+\centering 3.0 &
+management &
 Klaus-Rüdiger Hase\\\hline
 \cite{scmp} &
 Software Configuration Management Plan &
+\centering  &
 governance &
-??\\\hline
-\cite{emp} &
-Error Management Plan &
-governance &
-??\\\hline
+Jürgen Weiss\\\hline
 \cite{PCA} &
 Project Co-operation Agreement &
+\centering 02e &
 management &
 Bernd Hekele\\\hline
 \citep{IPP} &
 OpenECTS IP Policy &
+\centering 0.1 &
 ecosystem &
 Bernd Hekele\\\hline
 \citep{IA} &
-OpenETCS Internal Assessment &
-ecosystem &
-Bernd Hekele\\\hline
-\cite{verification} &
-SW Verification Plan &
+OpenETCS Internal Assessment Plan &
+\centering  &
+internal-assessment &
+Cyril Cornu\\\hline
+\cite{vv} &
+OpenETCS Validation \& Verification Plan &
+\centering 01 &
+validation &
+Marc Behrens
+Hardi Hungar\\\hline
+\cite{qabacklog} &
+QA Plan Backlog &
+\centering 0.1.0 &
 governance &
-??\\\hline
+Izaskun de la Torre\\\hline
 \end{tabular}
 \end{flushleft}
 
 \begin{flushleft}
-\begin{tabular}[H]{|m{2cm}|m{7cm}|m{2cm}|m{3cm}|}
+\begin{tabular}[H]{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
 \hline
 \rowcolor{myblue}
-\multicolumn{4}{|c|}{Procedures} \\\hline
+\multicolumn{5}{|c|}{Procedures} \\\hline
 \rowcolor{lightgray}
 Internal Code &
 Name &
+Version &
 Repository &
 Responsible  
 \\\hline
 \citep{RP} &
 Review Process &
+\centering 0.2.1 &
 governance &
 Ainhoa Gracia\\\hline
+\citep{revision} &
+Revision Process &
+\centering 0.2.1 &
+governance &
+Ainhoa Gracia\\\hline
+\cite{emp} &
+Change/Problem Management Process &
+\centering 0.1.0 &
+governance &
+Izaskun de la Torre\\\hline
 \cite{ghp} &
 Grieving Handling Process &
+\centering &
 governance &
-???\\\hline
+Bernd Hekele\\\hline
 \cite{cap} &
 Committer Approvement Process &
+\centering  &
 ecosystem &
 Jonas Helming\\\hline
 \cite{odp} &
 openETCS Development Process &
+\centering &
 ecosystem &
 Jonas Helming\\\hline
+\cite{training} &
+Training Process &
+\centering &
+governance &
+\it {To be defined}\\\hline
 \end{tabular}
 \end{flushleft}
 
 \begin{flushleft}
-\begin{tabular}[H]{|m{2cm}|m{7cm}|m{2cm}|m{3cm}|}
+\begin{tabular}[H]{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
 \hline
 \rowcolor{myblue}
-\multicolumn{4}{|c|}{Guidelines} \\\hline
+\multicolumn{5}{|c|}{Guidelines} \\\hline
 \rowcolor{lightgray}
 Internal Code &
 Name &
+Version &
 Repository &
 Responsible  
 \\\hline
 \cite{Contribution} &
 Contribution guidelines &
+\centering 01 &
 ecosystem &
 Bernd Hekele\\\hline
 \cite{committer} &
 Committer Election Guideline &
+\centering &
 ecosystem &
 Jonas Helming\\\hline
+\cite{expertguide} &
+Expert Election Guideline &
+\centering &
+governance &
+\it {To be defined}\\\hline
 \end{tabular}
 \end{flushleft}
 
+\begin{flushleft}
+\begin{tabular}[H]{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
+\hline
+\rowcolor{myblue}
+\multicolumn{5}{|c|}{Templates} \\\hline
+\rowcolor{lightgray}
+Internal Code &
+Name &
+Version &
+Repository &
+Responsible  
+\\\hline
+\cite{Competence} &
+Competence Matrix Template &
+\centering  &
+governance &
+\it {To be defined}\\\hline
+\cite{expert} &
+Expert database Template &
+\centering &
+governance &
+\it {To be defined}\\\hline
+\end{tabular}
+\end{flushleft}
 
-%\todo[color=yellow!20, inline]{JW: At least add EN 50128 and ISO 9001, but how is references meant?}
-
-%\todo[color=green!20, inline]{IT: OK. Documents used as reference in QA Plan}
 
 \subsection{Definitions and acronyms}
 \tablefirsthead{\hline
@@ -607,11 +646,8 @@ IP Clean &
 No IP without permission in writing \\\hline
 \end{supertabular}
 
+\newpage
 \section{Project Organization}
-
-%\todo[color=yellow!20, inline]{JW: A short (two sentences) introduction is needed to explain the relation between all following points.}
-
-%\todo[color=green!20, inline]{IT: OK}
 
 OpenETCS is a cooperative European-ITEA project. The project plan (objectives, work plan schedule, role of the partners, project organization) is described in the \citep{fpp} FPP document, which is updated regularly (at least yearly). The project is accomplished according to the Project Co-operation Agreement (PCA) \citep{PCA} signed by the partners.
 
@@ -628,25 +664,15 @@ The organization of the project has to meet the following constraints and challe
 The following chapters shows the mechanisms implemented at organizational level to guarantee the above mentioned objectives are achieved.
 
 
-\subsection{Project structure diagram}
+\subsection{openETCS project organisation}
 
-%\todo[color=yellow!20, inline]{JW: A diagram (graphic) has to be added.}
-
-%\todo[color=green!20, inline]{IT: OK}
-
-%\todo[color=yellow!20, inline]{CC: This part refers to the Project Management Plan. What is this document? Is that the configuration Management plan? Is that document still created?}
-
-%\todo[color=green!20, inline]{IT: It can be updated FPP where the updated description of the Project Plan is available.}
-
-%\textit{Guidance: Refer to the PMP(Project Management Plan) and/or to the Full Project Proposal where the Project Organisation is described in detail.In this chapter include only the way compliance to CENELEC and SCRUM high level requirements at organisational level is achieved. i. all organisations are ISO 9001, how independency between roles is achieved within the structure,{\dots}}
-
-%\textit{include ProjectStructure/visio}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{./figures/project_structure.PNG}
 \caption{OpenETCS Project Structure}
 \end{figure}
 
+\subsubsection{Compliance with ITEA Requirements}
 Compliance to ITEA Requirements is achieved by means of:
 \begin{itemize}
 \item The appointment of a Project Coordinator (DB, WP1, supported by the Project Office) who leads the project and is responsible for the communications with the ITEA representatives. 
@@ -655,24 +681,26 @@ Compliance to ITEA Requirements is achieved by means of:
 \item An OpenETCS Foundation NV which guarantees sustainability of the project results once the project is finished.
 \end{itemize}
 
+\subsubsection{Compliance with Open Source Principles}
 Compliance to the Open Source Principles and related objectives is achieved by means of:
 \begin{itemize}
 \item An OpenETCS IP Policy and Procedures \citep{IPP}
-\item An OpenETCS Development Process \citep{odp}[Wiki] based in the Eclipse Development Process \citep{EDP}, designed to promote dynamism in the development and openness. All the guidelines are maintained and available at the OpenETCS Ecosystem project [XX]: 
+\item An OpenETCS Development Process \citep{odp} \href{https://github.com/openETCS/ecosystem/wiki/openETCS-Development-Process}{[Wiki]} based in the Eclipse Development Process \citep{EDP}, designed to promote dynamism in the development and openness. All the guidelines are maintained and available at the OpenETCS Ecosystem project [XX]: 
 \begin{itemize}
 \item The OpenETCS project is conceived as a project of projects organized in a hierarchical manner, where the WorkPackages, as defined within the WorkProgramme \citep{fpp}, are considered Top-Level Projects with their own charter. The so-called Tasks are projects, sub-projects of the corresponding Top-Level Project.
 \item Anyhow, new projects can be launched, if needed and approved; existing projects can be archived, if they become inactive. Therefore the final structure of the OpenETCS project will very much depend on its evolution.  
 \item The list of OpenETCS projects with information on their status is available in [XX]
 \item Any project (independently to its position in the hierarchy, and type) has its project leader, scope and maintains its own resources. The project leader is not only responsible to guarantee progress towards the scope of the project but to promote that the most appropriate community is engaged in the project life-cycle with openness and transparency. This community includes committers, contributors, users and adopters.
-\item Every project has its own repository under the responsibility of the Project Leader. Agreements and principles on the repository structure and content can be found in [XX] 
+\item Every Top-project/WP has its own repository under the responsibility of the Top-Project/WP Leader. Agreements and principles on the repository structure and content can be found in [XX] 
 \item The PMB (Project Management Board) is responsible for maintaining and assuring the implementation of the OpenETCS Development Process and for ensuring the required “coordination” among the projects.
 \item The Mentoring board (composed of XXX) is responsible for mentoring projects and advising.
 \item The Project Office is responsible for the administrative tasks around the OpenETCS Development Process and maintains the OpenETCS Ecosystem project [XX]
 \end{itemize}
-\item The list of OpenETCS projects with information on their status is available in [XX]
 \item The tools to support the OpenETCS Development Process are open source tools. A relation of the tools approved by the consortium is [XX]
+\item The engagement of the OpenETCS Advisory Group will not only provide valuable technical insights but visibility of the project within the railway community.
 \end{itemize}
 
+\subsubsection{Compliance with SCRUM Requirements}
 Compliance to SCRUM Requirements is achieved by means of
 \begin{itemize}
 \item Each Work Package/Top-Project Leader is the SCRUM Owner of the corresponding WP/Top-Project results and maintains the corresponding backlog
@@ -687,13 +715,14 @@ Compliance to SCRUM Requirements is achieved by means of
 \item A SCRUM master (WP1) is responsible for ensuring SCRUM is understood and enacted
 \end{itemize}
 
-In principle, two of the OpenETCS project results (Software and Tool Chain) are to be CEN SIL 4 certifiable. These are two of the results from WP3 and WP7. The following mechanisms, at organizational level, will help the corresponding project leader to provide evidence of compliance with chapters 5.1 \citep{EN50128} and 5.2. Anyhow, evidence that requirements imposed are met will have to be provided for each of the two software projects on a project by project basis. 
+\subsubsection{Compliance with software management and organisation according to EN50128:2011}
+In principle, two of the OpenETCS project results (Software and Tool Chain) are to be CENELEC SIL 4 certifiable. These are two of the results from WP3 and WP7. The following mechanisms, at organizational level, will help the corresponding project leader to provide evidence of compliance with chapters 5.1 \citep{EN50128} and 5.2. Anyhow, evidence that requirements imposed are met will have to be provided for each of the two software projects on a project by project basis. 
 
 \begin{itemize}
 \item Every partner in the consortium is ISO9001 Certified or will be in the position to provide evidence of a quality management process is accordance to ISO9001
 \item Every partner maintains an updated CV of the staff/experts involved in OpenETCS
 \item A Required Competence Matrix (RCM) per role and project will be maintained \textit{(Chapter 4)}.
-\item A database with the participants per role and project will be maintained maintained.
+\item A database with the participants per role and task/project will be maintained by the task/project leader.
 \item Overall, the independence required to develop certifiable results is promoted by the Work Programme which is structured into the following “independent” WorkPackages/Top-Projects, each lead by a different organization.  
 \begin{itemize}
 \item WP2, focused on Requirements Specification is led by SNCF.
@@ -704,50 +733,35 @@ In principle, two of the OpenETCS project results (Software and Tool Chain) are 
 \item For the purpose of validating/adapting technical approaches, tools and concepts before they are taken into consideration, three Use Cases will be engaged.
 \item The Open Development Process facilitates the creation of the necessary projects required to achieve the OpenETCS project results.
 \end{itemize}
-\item For each certifiable result, CENELEC required software roles will be covered by experts from different WPs. Incompatibilities can be controlled and monitored as active participation to the different projects has to be granted, accepted and is appropriately registered  \textit{(Chapter 2.2)}. Evidence of competence can be provided by comparing the CV of each expert with the RCM for the role assigned.
-\item For each certifiable result, if possible, the role of the assessor will be selected from the external community of the project. Meanwhile, an internal independent assessor will be appointed. The role and profile of this assessor is detailed in \citep{IA} OpenETCS/internal-assessment [wiki pages]
+\item For each assessable result, CENELEC required software roles will be covered by experts from different WPs. Incompatibilities can be controlled and monitored as active participation to the different projects has to be granted, accepted and is appropriately registered  \textit{(Chapter 2.2)}. Evidence of competence can be provided by comparing the CV of each expert with the RCM for the role assigned.
+\item For each assessable result, if possible, the role of the assessor will be selected from the external community of the project. Meanwhile, an internal independent assessor will be appointed. The role and profile of this assessor is detailed in OpenETCS/internal-assessment \citep{IA} \href{https://github.com/openETCS/ecosystem/wiki/WP4:-internal-assessment}{[wiki pages]}
 \end{itemize}
 
 One of the mechanisms to guarantee the availability of competence staff when needed will be the design and implementation of a training programme. The training programme will be managed by the Project Office. The identification of needs will be performed by the project leaders, the PMB and the Quality Manager. 
-
-%\begin{figure}
-%\includegraphics[width=\textwidth]{./figures/organization.PNG}
-%\caption{???? Organization ????}
-%\end{figure}
+The training process is detailed in [XX]
 
 
 \subsection{Committers assignment and responsibilities}
-%\textit{Guidance: Introduce the concept of Committers as the way to guarantee the required competences are available within the context of the large project, with many organisations involved in the context of a EU project and with an open source environment.  Introduce the concept of Contributors also and the difference between them. Refer to the document where the process to become a Committer and/or contributor is detailed.} 
 
-%\todo[color=yellow!20, inline]{JW: To cover all open source roles also the user have to be introduced.}
+Each Top-Project/WP leader is responsible for establishing and publishing the specific required competence matrix for the Top-Project/WP \textit{(Chapter 4)}. This matrix will be updated in response to the demands imposed by the evolution of the project. The competence matrix template \citep{Competence}is provided in [XX]
 
-%\todo[color=yellow!20, inline]{JW: Section covers only open source rules. A short decription of the relations to the project structure and CENELEC rules is needed.}
-
-%\todo[color=yellow!20, inline]{CC: What is the document to refer to for the committer assignement? The needed competencies matrix, the actual competencies matrix and the training plan will be included in this document?}
-
-%\todo[color=green!20, inline]{IT: This is an open source project and at the same time it is a EU project. This means that "participation" is not "mandatory" as in a "real life project". In this chapter we would like to emphasize/show the way/means OpenETCS has put in place to guarantee or at least control the effective participation of the "experts". The Required Competence Matrix (RCM) is specifically included later but actual competence matrix can be obtained by comparing the effective committers and contributors with the RCM. By "Document" we mean the place where the "process" and the "requirements" to become contributor or committer are explained. In this moment there is not "written document" so we will explain it here.}
-
-Each project leader is responsible for establishing and publishing the specific required competence matrix for the project \textit{(Chapter 4)}. This matrix will be updated in response to the demands imposed by the evolution of the project.
-
-Each project leader is responsible for developing the most appropriate communities of users, adopters, contributors and committers as required by the project. A database will be maintained and assessed periodically by the Project Leader. This database will contain the coordinates of the expert, his/her role in the project and a basic explanation of adequacy.
+Each Top-Project/WP leader is responsible for developing the most appropriate communities of users, adopters, contributors and committers as required by the Top-Project/WP. A database will be maintained and assessed periodically by the Top-Project/WP Leader. This database will contain the coordinates of the expert, his/her role in the project and a basic explanation of adequacy. The expert database template is provided in [XX]
 
 The required core competences as well as the expected contribution of each of the identified communities are described in Chapter 4.
 
-Only committers have write-access to the project resources. Becoming a committer requires of the acceptance of the project leader and of the rest of the project committers. Guidelines on how to become a committer can be found in [XX].
+Only committers have write-access to the project resources. Becoming a committer requires of the acceptance of the project leader and of the rest of the project committers. Guidelines on how to become a committer can be found in \href{https://github.com/openETCS/ecosystem/wiki/_pages}{[ecosystem wiki pages]}.
 
 \begin{itemize}
 \item It is the responsibility of the Project Leader to make sure the required competence to develop a task is covered by the engaged committers.
 \item It is the responsibility of the Open ETCS Project Leader to guarantee the required competence for the project is covered by the effective committers.
 \end{itemize}
 
-Contributors have read-access to the project resources, and acceptance is not required. Guidelines on how to become a contributor can be found in [XX].
+Contributors have read-access to the project resources, and acceptance is not required. Guidelines on how to become a contributor can be found in \href{https://github.com/openETCS/ecosystem/wiki/_pages}{[ecosystem wiki pages]}.
 
-An expert can contribute to different projects with different roles. The data from different project will be integrated and analysed to detect potential incompatibilities, if applicable. This activity will be done by the QA Manager. 
+An expert can contribute to different projects with different roles. The data from different project will be integrated and analysed to detect potential incompatibilities, if applicable. This activity will be done by the QA Manager. The guideline on how to select expert is detailed in [XX].
 
 
 \subsection{Project QA Management}
-%\textit{Guidance: Provide a description of the tasks to be developed by the project  QA organisational structure jointly with the QA tasks to be performed by the team to guarantee project procedures/{\dots} are met. This means to detail the overall QA strategy.}
-
 QA activities will be under the responsibility of the QA Manager, who reports to the Project Coordinator.
 
 The QA Manager will be responsible for the identification, supervision and control of all the processes, methods and tools required to meet the quality targets of the project. It is also the responsibility of the QA manager to provide the necessary evidence that such activities have been developed.
@@ -764,6 +778,8 @@ The activities of the QA Manager will be:
 \item To produce and publish the corresponding quality reports.
 \end{itemize}
 
+
+\newpage
 \section{Life Cycle}
 
 \todo[color=yellow!20, inline]{JW: A short (two sentences) introduction how these two life cycles are related.}
@@ -816,32 +832,10 @@ In chapter 3.3 we will explain the QA activities}
 
 \section{Roles}
 
-%\todo[color=yellow!20, inline]{CC: The SCRUM and open source part of the roles described in the §4.1 are missing. The 2 paragraphs (roles within Software and within ToolChain) allow to make the connection between the competencies matrix and the training plan (shortly described in the §4.1), which is a good point.
-%Moreover, the §4.4 should be a refinement of the CENELEC role for the quality manager, and thus be integrated in the previous paragraphs.}
-
 \newcommand\todoin[2][]{\todo[inline, caption={2do}, #1]{
 \begin{minipage}{\textwidth-4pt}#2\end{minipage}}}
 
-%\todoin[color=green!20, inline]{IT:
-%\begin{description}
-%\item In the template (see Annex) we have considered SCRUM Roles as a secondary feature, as every "participant" has to comply (from a competence point of view) to several roles at the same time: Functional/CENELEC role, a SCRUM Role, an Open Source Role and an OpenETCS project role.
-%\item In order to simplify and provide more clarity, we will prepare separate competence tables.
-%\end{description}
-%}
-
 \subsection{OpenETCS Roles}
-
-%\todo[color=yellow!20, inline]{JW: Introduction needed that relates the openETCS project structure based on the open source principles to the needed CENELEC roles. For the specific competencies and the listing the reference can be made to the Annex.}
-
-%\todoin[color=green!20, inline]{IT: 
-%\begin{description}
-%\item OK, we will do it. Anyhow, please consider this to assess the structure we propose:One participant can be: Committer and/or Contributor to any WP and at the same time has a CENELEC Role. (Incompatible situations should be detected and avoided).
-%\item For instance, from the project point of view, an expert can be WP4 Contributor, WP2 Committer and  Requirements Manager from a CENELEC point of view.
-%\item In relation to SCRUM, he/she can act as SCRUM leader and/or SCRUM Team. SCRUM Roles should be considered aside
-%\item There exist certain relations between CENELEC roles and WP activities. For instance WP2 committers are more likely to adopt a role of requirements engineers that WP4 ones, but it may occur that an expert is committers to two different WPs, so we prefer not to stablish "mandatory" relations but only references.
-%\end{description}}
-
-%\textit{Guidance: Refer to Annex with the Role/Competence Matrix at project level. Besides, in this chapter,  outline or refer to the procedure that will be used to maintain this matrix up to date; identify (refer and/or outline) the measures and/or mechanisms in place to record the competencies of the personnel assigned to the different roles (i.e. each company has to maintain training records) and measures and/or mechanisms to identify and fill gaps (i.e.maintain a project specific incorporation programme; maintain a training programme)}
 
 In view of the nature of the project, roles are grouped into three independent categories:
 
@@ -851,7 +845,7 @@ In view of the nature of the project, roles are grouped into three independent c
 \item CAT3: CENELEC Roles 
 \end{itemize}
 
-Therefore, any participant will always adopt a role within CAT1, a role within CAT2 and if he/she is involved in the development of a CENELEC Certifiable product, a third role in CAT3.
+Therefore, any participant will always adopt a role within CAT1, a role within CAT2 and if he/she is involved in the development of a CENELEC assessable product, a third role in CAT3.
 
 As already mentioned, OpenETCS is a project of projects. An expert can participate to different projects with different roles. Therefore an expert will have a CAT1, CAT2 and/or CAT3 role per project.
 
@@ -864,14 +858,12 @@ According to the open development process followed by Open ETCS, the QA process 
 As project results affected by CENELEC are already identified, both core and specific required competence per CAT 3 role are included in Annexes C and D.
 
 \subsection{Roles within the Development process of the openETCS Software}
-%\textit{Guidance: Refer to Annex with the Role/Competence Matrix of the OpenETCS software. Besides in this chapter, outline key specific competences demanded by the ETCS software development to the different roles.}
+
 See Annex C
 \subsection{Roles within the Development process of the openETCS Tools Chain}
-%\textit{Guidance: See Chapter 4.2}
+
 See Annex D
 \subsection{QA Activities}
-
-%\textit{Guidance: Describe the measures applied to monitor/verify people assigned to the different roles meet the requirements imposed by the role and have an active/qualified participation to the project (i.e. committers: assess effective contribution activities; gap analysis;{\dots}).}
 
 The QA Manager will be in charge of:
 \begin{itemize}
@@ -883,41 +875,6 @@ The QA Manager will be in charge of:
 
 \section{Methods, measures and tools for quality assurance (product + open ETCS software + Tools chain)}
 
-%\todo[color=yellow!20, inline]{JW: The Annex does/can not provide the needed information. The references have to be made to the WP 2 and WP3 deliverables, which actually provide these information in depth}
-
-%\todo[color=green!20, inline]{IT: We agree that the full and detailed description will be included in the deliverables. However, a summarised version with the key elements (methods, tools and short justification) should be included in this document as annex. Within this point, we consider the proposal of Merlin is very appropriate}
-
-%\todoin[color=yellow!20, inline]{CC: Why add a QA activities at the end of each of thoses paragraphs, whether the QA activities are exactly le scope of this document? For instance, the following titles are proposed for replacing the "QA Activities":
-%\begin{itemize}
-%\item §5.1: "evaluation tools"
-%\item §6.3: "Configuration Management Plan"
-%\item §7.3: "Review process"
-%\end{itemize}
-%}
-
-%\todo[color=green!20, inline]{IT: OK. I think there is an error in the template. Instead of QA Activities, it is Quality Control and Monitoring Activities.}
-
-%\todoin[color=yellow!20, inline]{MP: My suggestion would be, for each software life cycle phase (see below), give appropriate Methods/Technique for SIL4 and give a justification why this Method(s) is (or are) the best one.
-%\begin{itemize}
-%\item Software Requirements Specification
-%\item Software Architecture Specification
-%\item Component Design and Implementation
-%\item Software Verification and Modul Testing
-%\item Software Integration Testing
-%\item Overall Software Testing
-%\item Software Validation
-%\item Data Preparation 
-%\item  Software deployment
-%\end{itemize}
-%}
-
-%\todo[color=green!20, inline]{IT: That´s great. OK}
-
-%\textit{Guidance: Refer to Annex where for each phase in the development life-cycle identify methods and tools as well as justification for selection}
-
-%\todo[color=yellow!20, inline]{JW: There should be again sections for the openETCS model, software (are the product) and Tools chain.}
-
-%\todo[color=green!20, inline]{IT: OK.}
 In this chapter, the methods and tools used in each phase of the software development life-cycle process of both the application software and the tool chain are identified. A brief justification of compliance to CENELEC is included.
 
 This chapter has to be read in conjunction with OpenETCS project work producs listed in the Table below. The relevance of each deliverable for the scope of this chapter is also indicated:
@@ -1005,12 +962,36 @@ Following CENELEC criteria, each tool belongs to one of the following classes: T
 \textit{Describe the QA activities}
 
 \subsection{Fault Management}
-\textit{Guidance: Refer to Incident Management Process. Overview table with the summary of main features of the procedure}
 
-\todo[color=yellow!20, inline]{JW: What shall be the be the focus of the "Incident Management", since deal with safety development and Vand V activities, the word incident is mainly used in a safety sense. Here specifically procedures how to handle software bugs and faulty behaviour discovered during the V and V process has to be described.}
-\todo[color=green!20, inline]{IT: OK, that you say is correct. We will change the naming.}
+ISTQB define a defect as "a flaw in a component or system that can cause the component or system to fail to perform its required function". A defect can be random or systematic. A defect, if encountered during execution, may cause a failure of the component or system". From the ISTQ glossary bug, fault and problem are defined to be the same as a defect.
 
-\textit{Describe the QA activities}
+A failure is a deviation of the component or system from its expected delivery, service or result. A failure is the consequence of a fault or error in a system but not all faults result in failures.
+
+Faults, failures and errors encountered during the review activities (QA. Verification, Validation, Assessment) planned in the software development life-cycle, problems reported by users and customers as well as change requests initiated by any of the system stakeholders will be reported and managed following the Change/Problem Management Process  \citep{emp} detailed in [XX] and through the Change/Problem Management Tool. This tool will be integrated with the Configuration management tool {\it GIT} and will be configured to implement and record all the information generated during the process.
+
+The integration with the Configuration management tool {\it GIT} will permit:
+\begin{itemize}
+\item Traceability between Change/Problem Requests and the configuration items where the problem was located.
+\item Traceability between the configuration items modified and the corresponding Change/problem request. 
+\end{itemize}
+ 
+The implementation of the workflow will permit:
+\begin{itemize}
+\item A complete history trail of the Change Request/Problem Report
+\end{itemize}
+
+The purpose of the Change/Problems Management implementation at OpenETCS project is to ensure that standardized methods and procedures are used for efficient and prompt handling of all changes/problems associated with the OpenETCS products, in order to minimize the number and impact of any related changes/problems. Changes/problems in the products may arise reactively in response to incidents, or proactively from seeking improved efficiency and effectiveness, as well as to enable or reflect OpenETCS initiatives, or products improvements.
+
+The QA Manager will be in charge of:
+\begin{itemize}
+\item perform periodical audits and quality assessments of the bugs received
+\begin{itemize}
+\item Audits to verify the process itself
+\item Quality Assessments to verify the evolution of the product quality
+\end{itemize}
+\item Assist in determining QA impacts
+\item Support Problem owner in analysis
+\end{itemize}
 
 \subsection{Grievance Handling}
 \textit{Guidance: Refer to the specific procedure. }
@@ -1018,11 +999,24 @@ Following CENELEC criteria, each tool belongs to one of the following classes: T
 \textit{Describe the QA activities}
 
 \subsection{Modification and change control }
-\textit{Guidance: Refer to external procedure; Overview table with the summary of main features of the procedure.}
 
-\todo[color=yellow!20, inline]{JW: What is meant with "external procedures"? This topic is closely related to the document related responsabilities and the github use. Therefore it is very close to the Configuration Management, which maybe makes it hard to separate these topics.}
-\todo[color=green!20, inline]{IT: OK. We agree}
-\textit{describe the QA activities to be developed.}
+A change is the addition, modification, or removal of a configuration item (CI), product, or product component, and/or its associated elements
+
+The change requests initiated by any of the system stakeholders will be reported and managed following the Change/Problem Management Process  \citep{emp} detailed in \href{https://github.com/openETCS/governance/tree/master/Change-Problem%20Process}{[governance]} and through the Change/Problem Management Tool.
+
+The Change/problem Management process aims to evaluate and plan the change/problem process to ensure that, if a change is made, it is done in the most efficient way possible, following the established procedures and ensuring the quality and continuity of the OpenETCS project and products at all times.
+
+The QA Manager will be in charge of:
+\begin{itemize}
+\item perform periodical audits and quality assessments of the change request received
+\begin{itemize}
+\item Audits to verify the process itself
+\item Quality Assessments to verify the evolution of the product quality
+\end{itemize}
+\item Assist in determining QA impacts
+\item Support Change owner in analysis
+\end{itemize}
+
 
 \section{Supplier Control}
 \textit{Guidance: Requirements to external suppliers and how they will be verified}
@@ -1041,28 +1035,6 @@ Following CENELEC criteria, each tool belongs to one of the following classes: T
 
 \subsection{ANNEX A -CAT1: Open Source Development Process Roles and Competence Matrix-}
 
-%\todoin[color=yellow!20, inline]{MP: I assume by "role" you mean the roles within the project openETCS.
-%In Fact you distinguish between these roles:
-%At project level:
-%\begin{itemize}
-%\item Project Leader
-%\item Project office
-%\end{itemize}
-%for each WP:
-%\begin{itemize}
-%\item WP-Leader
-%\end{itemize}
-%within each WP:
-%\begin{itemize}
-%\item Task-leader
-%\item Task-Major Participant
-%\item Task participant
-%\item Task Committer
-%\end{itemize}
-%}
-
-%\todo[color=green!20, inline]{IT: Yes.}
-
 \begin{flushleft}
 \tablefirsthead{\hline
 \rowcolor{myblue}
@@ -1073,7 +1045,7 @@ Following CENELEC criteria, each tool belongs to one of the following classes: T
 \hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & \centering Core Competences & Specific Competences/ Responsibilities per project\\}
 %\tabletail{}
 %\tablelasttail{}
-\begin{supertabular}[H]{|m{1cm}|m{3cm}|m{12cm}|m{4,5cm}|m{4,5cm}|}
+\begin{supertabular}[H]{|m{1cm}|m{3cm}|m{11cm}|m{4,6cm}|m{4,6cm}|}
 \hline
 OPL &
 OpenETCS project Leader &
@@ -1108,9 +1080,7 @@ Project: QA activities
 US &
 User &
 \raggedright
-Create a viable ecosystem around an openETCS project,\\
-Encourage additional open source and commercial organizations to participate
-&
+Not Applicable &
 \textbf{(To be fulfilled)} &
 \textbf{(To be fulfilled per project)} \\\hline
 AD &
@@ -1146,10 +1116,6 @@ Proactively report problems in the task tracking system, and annotating problem 
 \end{supertabular}
 \end{flushleft}
 
-%\todo[color=yellow!40, inline]{JW: "Project Contributor/OpenETCS Scrum team" row --> This are more external or short term contributers, which do not belong to the team.}
-
-%\todo[color=yellow!40, inline]{JW: "Project Committer" row --> This should be the scrum team.}
-%\todo[color=green!20, inline]{IT: We are changing the tables}
 
 \newpage
 \subsection{ANNEX B -CAT2: SCRUM Roles and Competence Matrix-}
@@ -1163,7 +1129,7 @@ Proactively report problems in the task tracking system, and annotating problem 
 \hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & Core Competences\\}
 %\tabletail{}
 %\tablelasttail{}
-\begin{supertabular}[H]{|m{1cm}|m{4cm}|m{13cm}|m{7cm}|}
+\begin{supertabular}[H]{|m{1cm}|m{4cm}|m{12cm}|m{7,5cm}|}
 \hline
 POw &
 Product Owner &
@@ -1212,7 +1178,7 @@ Unit and initial Acceptance testing
 \tablehead{\hline \rowcolor{myblue} 
 \multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS application software project}\\
 \hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & Competences\\}
-\begin{supertabular}[H]{|m{1cm}|m{2,5cm}|m{15,5cm}|m{6cm}|}
+\begin{supertabular}[H]{|m{1cm}|m{2,5cm}|m{15cm}|m{6cm}|}
 \hline
 PM &
 OpenETCS project Manager &
@@ -1307,7 +1273,7 @@ Develop a report of components and the overall system integration covering the i
 VER &
 Verifier &
 \raggedright
-Develop a SW Verification Plan \citep{verification}\\
+Develop a SW Verification Plan \\
 Check the documented test suitability (completeness, coherency, relevance, traceability) with the verification objectives\\
 Identify anomalies, evaluate in terms of the risk, record them and communicate them to the authority in charge of the changes management for evaluation and decision making\\
 Manage the verification process (revision, integration and testing) and ensure the independence of the activities as needed\\
@@ -1386,7 +1352,7 @@ Prepare the published release notes mentioning incompatible versions of sw compo
 \hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & Competences\\}
 %\tabletail{}
 %\tablelasttail{}
-\begin{supertabular}[H]{|m{1cm}|m{2,5cm}|m{15,5cm}|m{6cm}|}
+\begin{supertabular}[H]{|m{1cm}|m{2,5cm}|m{15cm}|m{6cm}|}
 \hline
 PM &
 OpenETCS project Manager &
@@ -1481,7 +1447,7 @@ Develop a report of components and the overall system integration covering the i
 VER &
 Verifier &
 \raggedright
-Develop a SW Verification Plan \citep{verification}\\
+Develop a SW Verification Plan \\
 Check the documented test suitability (completeness, coherency, relevance, traceability) with the verification objectives\\
 Identify anomalies, evaluate in terms of the risk, record them and communicate them to the authority in charge of the changes management for evaluation and decision making\\
 Manage the verification process (revision, integration and testing) and ensure the independence of the activities as needed\\
