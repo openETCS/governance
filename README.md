@@ -4,8 +4,8 @@ governance
 part of WP1: information needed to run project management in openetcs, e.g., 
 * quality assurance plan, 
 * scrum meeting minutes
-* Full Project Proposal (FPP) --> temporarily part of management repository
-* Project Cooperation Agreement --> temporarily part of management repository
+* Full Project Proposal (FPP) --> https://github.com/openETCS/management/blob/master/FPP/11025_openETCS_FPP_Annex_v301.pdf
+* Project Cooperation Agreement --> https://github.com/openETCS/management/blob/master/PCA/openETCS_PCA_v0201.pdf
 
 Documents under Revision/Review
 * Review process in its 0.2.1 version
