@@ -793,17 +793,10 @@ The activities of the QA Manager will be:
 
 \subsection{Project Life Cycle }
 
-\todo[color=yellow!20, inline]{JW: A short text before referring to the document (naming of WPs and the overall concept).}
+The project Life Cycle is implemented through a set of WPs broken down into Tasks. In response of the nature of the project, these WPs are grouped into three purpose driven categories. The first category (WP2, WP4) addresses the specification of the work to be developed and the validation of the results to be obtained; the second category (WP3, WP7, WP5) addresses the development itself and the demonstration of the software and the tool chain developed and the third category (WP1, WP6) addresses the project management, the quality assurance and the dissemination of the project.
+This structure permits both the development and the integration of conceptual (R\&D) and implementation activities to achieve innovative, validated and fit-for-purpose results.
+The detailed description of the Work Package description and overview plan is covered by [FPP].  
 
-\todo[color=green!20, inline]{IT: OK}
-
-\textit{Guidance: Refer to a separate document (PMP and Full Project Proposal)  that describes the WP structure, refer to  the Iterative process; relation between WPs and Results; WP/Project Backlog creation and maintenance and Scrum implementation.}
-
-%\begin{figure}
-%\center
-%\includegraphics[width=.35\textwidth]{./figures/lifecycle.PNG}
-%\caption{???? Lifecycle ????}
-%\end{figure}
 
 \subsection{Product Life Cycle }
 
@@ -813,19 +806,13 @@ The activities of the QA Manager will be:
 \textit{Guidance: Refer to a separate document that describes the life cycle. Consider EN50126 and EN50129 Requirements, include Deployment and Maintenance, include activities to "adapt" the generic/abstract software to a concrete implementation.
 In this chapter, if applicable, include justification to "potential deviations" to CENELEC standards.}
 
-\subsubsection{Life Cycle of the OpenETCS Software}
-\textit{Guidance: Prepare a separate document with a complete description of phases of the the SW development life-cycle, including V\&V, QA and Safety processes. This description shall contain the activities to be performed by each role.
-In the preparation of this document, contribution of the different WPs is necessary (i.e. WP2 for the Design and development phase and WP4 for the V\&V activities).
-In this chapter, if applicable, include justification to "potential deviations" to standard (EN50128) standards.}
+<To be discussed>
 
-\todo[color=yellow!20, inline]{JW: Reference to D 2.3.}
-\todo[color=green!20, inline]{IT: OK}
+\subsubsection{Life Cycle of the OpenETCS Software}
+The software development life-cycle of the OpenETCS project has to comply with CEN50128. Requirements imposed by the standard are analyzed and shown in detail in D2.2. The software development life-cycle is described in Deliverable 2.3 and D2.X.
 
 \subsubsection{Life Cycle of the OpenETCS Tools chain}
-\textit{Guidance: See 3.2.1}
-
-\todo[color=yellow!20, inline]{JW: Reference to the respective documents of WP 7.}
-\todo[color=green!20, inline]{IT: OK}
+The development of the Tool Chain has to comply with EN50128. Requirements imposed by the standard are analyzed and shown in detail in D2.2. The software development life-cycle is described in Deliverable 7.XXXX.
 
 \subsection{QA Management }
 \textit{Guidance: Refer to the procedures to implement the QA activities identified within the above mentioned development life-cycle. }
@@ -924,11 +911,171 @@ Following CENELEC criteria, each tool belongs to one of the following classes: T
 
 \section{Documentation}
 
+The documentation structure of the OpenETCS project is composed of:
+\begin{itemize}
+\item Deliverables, which constitute the official outcomes of the different Top-Projects/WPs
+\begin{itemize}
+\item The relation and scope of the deliverables to be produced along OpenETCS can be found in the FPP [].
+\item The updated status of development of each Deliverable can be found in 
+\href{https://github.com/openETCS/management/wiki/State-of-Deliverables}{[State-of-Deliverables Wiki]}.
+\item The approved and therefore valid version of each Deliverables can be found in the repository of the Top-Project/WP it belongs to. 
+\end{itemize}
+\item Contractual documents, with the Commission and among the project partners
+\begin{itemize}
+\item The status of development of each contractual document can be found under the repository of Management (WP1).
+\item The last approved and therefore valid version of each contractual document can be found under the repository of Management (WP1).
+\end{itemize}
+\item Periodic Progress Reports, to show progress to ITEA and EC representatives.
+\begin{itemize}
+\item The state of each Periodic Report can be found under repository of Management (WP1).
+\item The last approved and therefore valid version of each Periodic Progress Report can be found under the repository of Management (WP1). 
+\end{itemize}
+\item Supporting Documents, in the form of Templates and Procedures
+\begin{itemize}
+\item The procedures and templates applicable to a specific Top-Project/WP can be found in the repository of the corresponding TP/WP.
+\item The procedures and templates applicable to the whole project can be found in the repository of Governance.
+\end{itemize}
+\item Internal Reports, in the form of Meeting Minutes
+\begin{itemize}
+\item The minutes of the weekly scrum meetings are found in the repository of Governance.
+\end{itemize}
+\end{itemize}
+
+The nomenclature used for the naming of the different documents is provided in [XX-to be developed].
+
+For each TP/WP the relation of existing documents is provided in the form of a list \href{https://github.com/openETCS/governance/wiki}{[Wiki]}. This list includes a direct access to the valid version of each document.
+
 \subsection{Documentation Structure within the development process of the openETCS Software}
-\textit{Guidance: Prepare a separate document with a complete description of labelling; definitions and acronyms; control information to include in each document; documents QA criteria; documentation matrix}
+As a SIL4 software, the documentation structure has to comply with CENELEC requirements. The following table shows the document structure required by CENELEC for a SIL4 development and the corresponding documents produced in the OpenETCS project.
+
+\begin{flushleft}
+\tablefirsthead{\hline
+\rowcolor{myblue}
+\multicolumn{5}{|c|}{Documentation Structure within the development process of the openETCS Software}\\
+\hline \rowcolor{lightgray} \centering Phase & \centering SIL4 & \centering Document & \centering WP/Task & Document\\}
+\tablehead{\hline
+\rowcolor{myblue}
+\multicolumn{5}{|c|}{Software Requirements Specification Phase}\\}
+\begin{supertabular}[H]{|m{2cm}|m{1cm}|m{7cm}|m{2cm}|m{2cm}|}
+\hline
+Planning &
+\centering HR &
+\raggedright
+Software Quality Assurance Plan\\
+Software Quality Assurance Verification Report\\
+Software Configuration Management Plan\\
+Software Verification and Validation Plan\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Software Requirements &
+\centering HR &
+\raggedright
+Software Requirements Specification\\
+Software Requirements Test Specification\\
+Software Requirements Verification Report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Architecture and design &
+\centering HR &
+\raggedright
+Software Architecture Specification\\
+Software Design Specification\\
+Software Interface Specification\\ 
+Software Integration Test Specification\\ 
+Software/Hardware Integration Test Specification\\ 
+Software Architecture and design verification report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Component Design &
+\centering HR &
+\raggedright
+Software Component design specification\\
+Software Component Test Specification\\
+Software Component design verification report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Component Implementation and Testing &
+\centering HR &
+\raggedright
+Software source code and supporting documentation\\
+Software source code verification report\\
+Software Component Test Report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Integration &
+\centering HR &
+\raggedright
+Software Integration Test Report\\
+Software/Hardware Integration Test Report\\
+Software Integration Verification Report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Overall Software Testing/Final validation &
+\centering HR &
+\raggedright
+Overall Software Test Report\\
+Software Validation Report\\
+Tools Validation Report\\ 
+Release Note\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Systems configured by Application Data/algorithms &
+\centering HR &
+\raggedright
+Application Requirements Specification\\
+Application Preparation Plan\\
+Application Test Specification\\ 
+Application Architecture and Design\\ 
+Application Preparation Verification Report\\ 
+Application Test Report\\ 
+Source Code of Application Data/Algorithms\\ 
+Application Data/Algorithms Verification Report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Software Deployment &
+\centering HR &
+\raggedright
+Software Release and Deployment Plan\\
+Software Deployment Manual\\
+Release Notes\\ 
+Deployment Records\\ 
+Deployment Verification Report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Software Maintenance &
+\centering HR &
+\raggedright
+Software Maintenance Plan\\
+Software Change Records\\
+Software Maintenance Records\\ 
+Software Maintenance Verification Report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Software Assessment &
+\centering HR &
+\raggedright
+Software Assessment Plan\\ 
+Software Assessment Report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+\end{supertabular}
+\end{flushleft}
+
 
 \subsection{Documentation Structure within the development process of the openETCS Tools chain}
 \textit{Guidance: See Chapter 6.1}
+
 
 \subsection{Quality Control and Monitoring Activities}
 \textit{Guidance: Describe the methods to review the documentation structure}
