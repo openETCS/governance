@@ -1333,11 +1333,11 @@ Unit and initial Acceptance testing
 \tablehead{\hline \rowcolor{myblue} 
 \multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS application software project}\\
 \hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & Competences\\}
-\begin{supertabular}[H]{|m{1cm}|m{2,5cm}|m{15cm}|m{6cm}|}
+\begin{supertabular}[H]{|m{1cm}|m{2,5cm}|m{11cm}|m{10cm}|}
 \hline
 PM &
 OpenETCS software Project Manager &
-\raggedright
+\parbox{11cm}{\raggedright
 Identify which roles are needed for the project\\
 Verify that at least one person fulfills an identified project role\\
 Guarantee the required competence for the project is covered by the effective committers\\
@@ -1348,29 +1348,31 @@ Responsible for the delivery and implementation of the software\\
 Ensure the compliance and the delivery of safety requirements\\
 Approve full and partial products to be delivered by the development process\\
 Ensure that records and traceability are maintained throughout the decision making and project\\
-Ensure appropriate validation for the project through project partners
+Ensure appropriate validation for the project through project partners}
 &
+\parbox{10cm}{\raggedright
 Understand requirements of software development process\\
 Understand quality, competencies, organizational and management requirements according to relevant standards\\
 Understand the requirements of the verification, validation and safety process\\
-Able to evaluated the impact of different options for the performance concerning implementation, validation and safety
+Able to evaluated the impact of different options for the performance concerning implementation, validation and safety}
 \\\hline
 RQM &
 Requirement manager &
-\raggedright
+\parbox{11cm}{\raggedright
 Responsible for the software model and source code requirement specification\\
 Establishes and maintain traceability to and from the system-level requirements\\
 Ensure that software and derived specifications requirements are under system\\ configuration and changes management control.\\
 Ensure consistency and completeness of the software requirements specification\\
 Develop and maintain documents related to software requirements
-&
+}&
+\parbox{10cm}{\raggedright
 experience in railways sector and safety attributes in the railway domain\\
 experience with requirements management process and tools\\
-knowledges of TSI and related CENELEC requirements
+knowledges of TSI and related CENELEC requirements}
 \\\hline
 DES &
 Designer &
-\raggedright
+\parbox{11cm}{\raggedright
 Transform software requirements on acceptable solutions\\
 Derive the requirements for the system and software architecture\\
 Identify the key design issues that must be resolved to support successful development of the software\\
@@ -1382,17 +1384,18 @@ Ensure that the design documents are under system configuration and changes mana
 Design or select design methods and support tools\\
 Apply principles and suitable design standards\\
 Develop component specifications if it is applicable
-&
+}&
+\parbox{10cm}{\raggedright
 Competent in software development in the railway domain\\
 Competent in safety design principles\\
 Familiarity with methods and tools for design analysis and design testing\\
 Ability to work with design constraints for safety relevant software in On-Board systems\\
 Understanding of the system constraints created through the TSI\\
-Understanding of the relevants parts of EN 50128
+Understanding of the relevant parts of EN 50128 like design methods}
 \\\hline
 IMP &
 Implementer &
-\raggedright
+\parbox{11cm}{\raggedright
 Transform design solutions in data, models, source code and finally executable code for the demonstrator\\
 Apply safety design principles\\
 Apply specific rules for data preparation/codification\\
@@ -1400,12 +1403,17 @@ Perform analysis to verify intermediate results\\
 Develop and maintain implementing documents comprising the methods, types of data, models and listings applied\\
 Maintain traceability to and from the design\\
 Maintain the generated or modified data/codes/models under system configuration and changes management control.
-&
-Competent in 
+}&
+\parbox{10cm}{\raggedright
+Competent in safety relevant software implementation for embedded systems\\
+Competent in the implementation language and supporting tools\\
+Capable of applying the specified coding standards and programming styles\\
+Understanding of the system constraints created through the On-Board hardware respectively the demonstrator\\
+Understanding of the relevant parts of EN 50128 like design methods}
 \\\hline
 TST &
 Tester &
-\raggedright
+\parbox{11cm}{\raggedright
 Ensure the test activities planning \\
 Develop tests specification (goals and cases)\\
 Ensure traceability of test objectives to specified software requirements\\
@@ -1415,39 +1423,51 @@ Identify deviations from the expected results and record in the test reports\\
 Communicate deviation to the authority in charge of the changes management for evaluation and decision making\\
 Record the results reports\\
 Select the equipment for testing the software
-&
-\textbf{(To be fulfilled)}
+}&
+\parbox{10cm}{\raggedright
+Competent in ETCS specification, used means of description (model/ source code), used train and track parameter and other application data source\\
+Competent in various test approaches/methods to identify to identify the most appropriate method or combination of methods for every aspect of an artifact\\
+Capable of deriving test cases from TSI (specifically Subset 26) and the specification model\\
+Understanding of the relevant parts of EN 50128 like test methods}
+\\\hline
+VER &
+Verifier &
+\parbox{11cm}{\raggedright
+Develop a SW Verification Plan \\
+Check the documented test suitability (completeness, coherency, relevance, traceability) with the verification objectives\\
+Identify anomalies, evaluate in terms of the risk, record them and communicate them to the authority in charge of the changes management for evaluation and decision making\\
+Manage the verification process (revision, integration and testing) and ensure the independence of the activities as needed\\
+Develop a verification report with the results of the verification activities
+} &
+\parbox{10cm}{\raggedright
+Competent in ETCS specification, used means of description (model/ source code), used train and track parameter and other application data source\\
+Competent in various verification approaches/methods to identify the most appropriate method or combination of methods for every aspect of an artifact\\
+Capable of deriving verification procedures from TSI (specifically Subset 26) and the specification model\\
+Understanding of the relevant parts of EN 50128 like verification methods}
 \\\hline
 INT &
 Integrator &
-\raggedright
+\parbox{11cm}{\raggedright
 Manage the integration process using software baselines\\
 Develop sw and sw /hw integration test specification for sw components based on the specifications and on the designer{\textquotesingle}s components architecture \\
 Develop and maintain records of the integration activities\\
 Identify integration anomalies; record them and communicate them to the authority in charge of the changes management for evaluation and decision making\\
 Develop a report of components and the overall system integration covering the integration results 
-&
-\textbf{(To be fulfilled)}
-\\\hline
-VER &
-Verifier &
-\raggedright
-Develop a SW Verification Plan \\
-Check the documented test suitability (completeness, coherency, relevance, traceability) with the verification objectives\\
-Identify anomalies, evaluate in terms of the risk, record them and communicate them to the authority in charge of the changes management for evaluation and decision making\\
-Manage the verification process (revision, integration and testing) and ensure the independence of the activities as needed\\
-Develop a verification report with the results of the verification activities &
-%must be able to deduce the verification types from the specifications
-%must be competent in various verification methodologies and able to identify the most appropriate method or combination of methods to the context 
-\textbf{(To be fulfilled)}
+}&
+\parbox{10cm}{\raggedright
+Competent in ETCS specification, used programming language, used API and demonstrator hardware\\
+Competent in various integration approaches/methods to identify the most appropriate method or combination of methods for the demonstrator implementation\\
+Understanding the design and functionality requirements for intermediated development levels\\
+Capable of deriving integrator tests from the set of integrated functions\\
+Understanding of the relevant parts of EN 50128 like integration tests}
 \\\hline
 VAL &
 Validator &
-\raggedright
+\parbox{11cm}{\raggedright
 Develop a Validation Plan specifying the main tasks and activities for the sw validation\\
 Agree on the Validation Plan with the assessor\\
 Review Sw requirements in relation to their intended use/environment\\
-Ensure sw fulfil all sw requirements\\
+Ensure sw fulfill all sw requirements\\
 Evaluate the assessment of the software process and of the software according to CENELEC requirements and the assigned SIL\\
 Review the verification and tests correctness, consistency and suitability \\
 Check the correctness, consistency and suitability of the test cases and executed tests\\
@@ -1461,13 +1481,21 @@ Check whether the developed solutions are traceable to the sw requirements \\
 Ensure that records associated hazardous situations and nonconformances are reviewed\\
 Ensure that all dangerous situations are appropriately resolved\\
 Develop a Validation Report\\
-Express their agreement or disagreement about the sw version  &
-\textbf{(To be fulfilled)}
+Express their agreement or disagreement about the sw version  
+}&
+\parbox{10cm}{\raggedright
+Competent in ETCS On-Board units\\
+Experience in safety attributes for train control systems\\
+Competent in various validation approaches/methods to identify the most appropriate method or combination of methods for the demonstrator implementation\\
+Capable of deriving types of validation evidence required for the TSI with respect to the train control functionality\\
+Capable to combine different sources and types of evidence and synthesize an overall view about fitness for purpose or constraints and limitations of the On-Board application\\
+Overall software understanding and perspective including the general railway environment\\
+Understanding the requirements of EN 50128}
 \\\hline
 ASR &
 Assessor &
-\raggedright
-Develop an evaluation Plan\\
+\parbox{11cm}{\raggedright
+Develop an assessment plan and communication with safety authority and client organization\\
 Evaluate the assessment of the software process and of the software according to CENELEC requirements and the assigned SIL\\
 Assess the project team and the organization competences for the sw development\\
 Evaluate the Verification \& Validation activities and the supporting evidences\\
@@ -1478,20 +1506,32 @@ Ensure the evaluation Plan is implemented\\
 Performs independent checks of: The development process (audits) and the products safety functions (spot checks) during different development phases.\\
 Should perform audits, based on the Safety plan, of the Quality and Safety management systems of the Supplier, the Infrastructure owner and the Operator and be convinced that these systems works\\
 The Assessor can also perform spot checks on detailed technical issues to see that safety functions are correctly implemented. The safety functions key documentation (Hazard Log, Safety Requirements and Safety Case) should be examined too.\\
-Give an opinion on the validity of sw developed for its intended use\\
-Develop an evaluation report and maintain records about the evaluation process
-&
-\textbf{(To be fulfilled)}
+Give an opinion on the validity of sw developed for its intended use detailing any constraints, application conditions and observations for risk control appropriate\\
+Develop an assessment report and maintain records about the assessment process
+}&
+\parbox{10cm}{\raggedright
+Competences in the railway domain and technology specifically concerning On-Board systems\\
+Acceptance/License from a recognized safety authority\\
+Continually gained sufficient level of experience in the safety principles and the application of these principles within the railway domain\\
+Competence to evaluated that a suitable method or combination of methods in a given context have been applied\\
+Understanding the relevant safety, human resource, technical and quality management processes to fulfill the requirements of the EN 50128\\
+Competence in assessment approaches/ methods\\
+Capable to combine different sources and types of evidence and synthesize an overall view about fitness for purpose or constraints and limitations of the On-Board application\\
+Overall software understanding and perspective including the general railway environment\\
+Ability to judge the adequacy of all development processes (like quality management, configuration management, validation and verification processes)\\
+Understanding the requirements of EN 50128}
 \\\hline
 CM &
 Configuration Manager &
-\raggedright
+\parbox{11cm}{\raggedright
 Responsible for the configuration management plan \citep{scmp}
 System configuration management owner\\
 Establish that all sw components are clearly identified and have independent versions within the system configuration management\\
 Prepare the published release notes mentioning incompatible versions of sw components
-&
-\textbf{(To be fulfilled)}
+}&
+\parbox{10cm}{\raggedright
+Competences in software configuration management\\
+Understanding the requirements of EN 50128}
 \\\hline
 \end{supertabular}
 \end{flushleft}
