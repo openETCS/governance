@@ -103,7 +103,7 @@
 %Do not change the next three lines
 \maketitle
 \tableofcontents
-%\listoffiguresandtables
+\listoffiguresandtables
 \newpage
 %=============================
 
@@ -370,7 +370,7 @@ Major revisions of the QA Plan will be accomplished by the Committers to the Man
 \rowcolor{lightgray}
 Internal Code &
 Name &
-Version &
+Version/ Edition/ Date &
 Repository &
 Responsible 
 \\\hline
@@ -406,7 +406,7 @@ UNISIG\\\hline
 \rowcolor{lightgray}
 Internal Code &
 Name &
-Version &
+Version/ Edition/ Date &
 Repository &
 Responsible  
 \\\hline
@@ -457,7 +457,7 @@ Izaskun de la Torre\\\hline
 \rowcolor{lightgray}
 Internal Code &
 Name &
-Version &
+Version/ Edition/ Date &
 Repository &
 Responsible  
 \\\hline
@@ -507,7 +507,7 @@ governance &
 \rowcolor{lightgray}
 Internal Code &
 Name &
-Version &
+Version/ Edition/ Date &
 Repository &
 Responsible  
 \\\hline
@@ -542,7 +542,7 @@ governance &
 \rowcolor{lightgray}
 Internal Code &
 Name &
-Version &
+Version/ Edition/ Date &
 Repository &
 Responsible  
 \\\hline
@@ -804,8 +804,6 @@ The detailed description of the Work Package description and overview plan is co
 \textit{Guidance: Refer to a separate document that describes the life cycle. Consider EN50126 and EN50129 Requirements, include Deployment and Maintenance, include activities to "adapt" the generic/abstract software to a concrete implementation.
 In this chapter, if applicable, include justification to "potential deviations" to CENELEC standards.}
 
-<To be discussed>
-
 As the OpenETCS project products shall be part of the train development the reference for their life cycles are the CENELEC standard phases defined in the EN50126. But as the products are in general R\&D results, their life cycles do not include any certification or acceptance activities at the moment.
 The main OpenETCS products are the OpenETCS Software model and the OpenETCS tools chain development, which have their own life cycles. For both parts the main development, verification and validation activities are done during the OpenETCS project. For the software only the demonstrator implementation is part of the OpenETCS project, while any kind of implementation on a target hardware is out of the project. 
 For the OpenETCS tools chain the basic implementation is part of the project, but all further steps from qualification on are out of the project.
@@ -870,9 +868,12 @@ The QA Manager will be in charge of:
 
 \section{Methods, measures and tools for quality assurance (product + open ETCS software + Tools chain)}
 
-In this chapter, the methods and tools used in each phase of the software development life-cycle process of both the application software and the tool chain are identified. A brief justification of compliance to CENELEC is included.
 
-This chapter has to be read in conjunction with OpenETCS project work producs listed in the Table below. The relevance of each deliverable for the scope of this chapter is also indicated:
+Selection of methods and tools used in each phase of the OpenETCS process is a part of the WP7 activities. This selection is based on the state of art established by WP2 (D2.1 and D2.2), the set of requirements defined by WP2 (D2.6-9) and the process definition (D2.3, D2.4, D4.1, D4.2.3).
+
+Results of the selection of methods and tools are given in the D7.1 and D7.2 deliverables. Conformance of the methods and tools are going to be discussed in D7.3.
+
+The following table give details of all this deliverables.
 
 \begin{flushleft}
 \tablefirsthead{}
@@ -884,26 +885,45 @@ This chapter has to be read in conjunction with OpenETCS project work producs li
 \rowcolor{myblue}
 Deliverable &
 Content of Relevance for this Chapter\\\hline
+D2.1: Report on existing methodologies &
+State of the art on methods and tools \\\hline
 D2.2: Report on CENELEC Standards &
-CENELEC requirements to be fulfilled and the approach followed by the project to provide evidence[XX]\\\hline
-XX &
-XX \\\hline
+CENELEC requirements to be fulfilled and the approach followed by the project to provide evidence\\\hline
+D2.3: Process definition &
+OpenETCS process definition \\\hline
+D2.4: Report on Methods definition &
+Description of methods and tools to use to follow the OpenETCS process \\\hline
+D2.6-9: Set of requirements for the OpenETCS project &
+Definition of the requirements that the selected methods and tools shall follow \\\hline
+D4.1: Report on V\&V Plan \& Methodology &
+Detailed description of the V\&V process and how are used the methods and tools to cover V\&V artifacts \\\hline
+D4.2.3: Safety Plan &
+Detailed requirements on methods and tools to be used during the process to obtain a SIL4 developement of on-board unit \\\hline
+D7.1: Report on the final choice(s) for the primary tool chain (means of description, tool and platform) &
+Selected methods and tools to be used during the specification and design part of the OpenETCS process \\\hline
+D7.2: Report on all aspects of secondary tooling (results of T7.2)  &
+Selected methods and tools to complete the OpenETCS process (V\&V, safety analyses,..) \\\hline
+D7.3: Tool chain qualification process description &
+This report describe how the selected methods and tools fit the qualification requirements according CENELEC standard \\\hline
 \end{supertabular}
 \end{flushleft}
-
-In Annexes F, G and H the methods, techniques and tools used are identified.
 
 
 \subsection{Methods, measures and tools for quality assurance OpenETCS Application Software}
 
 It is assumed that the OpenETCS application software will be SIL4 compliant. Therefore, the methods, techniques and tools shall be suitable to SIL 4. 
 
+
+\todo[color=yellow!20, inline]{MPD(Systerel): It is not totally exact: one of the aim of the project is to provide a tool chain which allows to develop SIL4 software, the OpenETCS applcation software produced during the project has not as objective to be SIL4 compliant.}
+
+
+\todo[color=yellow!20, inline]{MPD(Systerel): The current OpenETCS process, and the selection of methods and tools, do not cover only software development but also system phases as described in EN50129 or EN50126.}
+
 \subsection{Methods, measures and tools for quality assurance openETCS Tools chain}
 
-The Tool Chain will be composed of a set of tools with different levels of interaction. The document [XX] provides a description of the Tool Chain architecture, jointly with a description of the constituent tools.
-Following CENELEC criteria, each tool belongs to one of the following classes: T1, T2 and T3. Only Class 3 Tools are obliged to follow specific development methods, techniques and tools. Therefore, Annex XX applies to the following tools: Tool 1,{\dots}
+The Tool Chain will be composed of a set of tools with different levels of interaction. The document D7.3 provides a description of the Tool Chain architecture, jointly with a description of the constituent tools.
+Following CENELEC criteria, each tool belongs to one of the following classes: T1, T2 and T3. Class 3 and Class 2 Tools are obliged to follow specific development methods, techniques and tools. 
 
-\textit{[To be further developed]}
 
 \subsection{Quality Control and Monitoring Activities}
 \textit{Guidance: Describe the measures to monitor the appropriate implementation of the selected methods and tools.}
@@ -2474,9 +2494,6 @@ Safe Roll back capabilities  &
 \textbf{(To be fulfilled)} \\\hline
 \end{supertabular}
 \end{flushleft}
-
-\subsection{ANNEX F -Class T3 Tools}
-\subsection{ANNEX G - Methods \& Tools for Tool Chain}
 
 
 %\nocite{50126,EN50128,EN50129,EN61508,200857EC,201118EU,201288EU}
