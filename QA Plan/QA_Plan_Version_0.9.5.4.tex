@@ -1,4 +1,4 @@
-\documentclass{template/openetcs_article}
+ \documentclass{template/openetcs_article}
 %\documentclass{article}
 %\usepackage[ascii]{inputenc}
 %\usepackage[T1]{fontenc}
@@ -14,6 +14,7 @@
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{breakurl}
+\usepackage{lipsum}
 \makeatletter
 \newcommand\arraybslash{\let\\\@arraycr}
 \makeatother
@@ -120,15 +121,21 @@
 
 \section*{Document History}
 
-\begin{flushleft}
-%\tablefirsthead{\hline Version & Date & Chapters modified & Reason & Name\\}
+\begin{center}
+\begin{longtable}{m{1.1cm}m{1.8cm}m{2cm}m{5cm}m{4cm}}
+\caption{Documentation History}\\
 
-\tablehead{\hline \rowcolor{myblue} Version & Date & Chapters modified & Reason & Name\\}
+\hline \rowcolor{myblue} \multicolumn{1}{l}{Version} & \multicolumn{1}{l}{Date} & \multicolumn{1}{l}{Chapters modified} & \multicolumn{1}{l}{Reason} & \multicolumn{1}{l}{Name} \\ \hline 
+\endfirsthead
 
-%\tabletail{}
-%\tablelasttail{}
-\begin{supertabular}{m{1.1cm}m{1.8cm}m{2cm}m{5cm}m{4cm}}
-\hline
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{1}{l}{Version} & \multicolumn{1}{l}{Date} & \multicolumn{1}{l}{Chapters modified} & \multicolumn{1}{l}{Reason} & \multicolumn{1}{l}{Name} \\ \hline 
+\endhead
+
+\hline \hline
+\endlastfoot
+
 0.0.0 &
 15.11.2012 &
 All &
@@ -258,8 +265,8 @@ Izaskun de la Torre (SQS)\\\hline
 Chapter 1, 2, 4 and annexes to chapter 4\& 5 &
 New Content  &
 Izaskun de la Torre (SQS)\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
 
 \newpage
@@ -304,28 +311,27 @@ The main goals and deliverables of the OpenETCS project are:
 
 The QA Plan addresses all the stakeholders who are in the position to interact with OpenETCS project
 
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}[H]{|m{3cm}|m{9cm}|m{3cm}|}
+
+\begin{table} [H]
+\begin{tabular}{|m{3cm}|m{9cm}|m{3cm}|}
 \hline
 \rowcolor{myblue}
 Audience &
 Use &
 Role\\\hline
 OpenETCS Consortium Members &
-\begin{description}
-\item It provides information and access to the QA procedures and guidelines to be followed/applied during the different phases of the project development life-cycle.
-\item It provides a consistent and integrated view of the development process followed.
-\end{description} &
-\begin{description}
-\item Consultation
-\item Reviewer
-\item Contributor or 
-\item Committer
-\end{description}\\\hline
+It provides information and access to the QA procedures and guidelines to be followed/applied during the different phases of the project development life-cycle.
+
+It provides a consistent and integrated view of the development process followed.
+&
+Consultation
+
+Reviewer
+
+Contributor or 
+
+Committer
+\\\hline
 OpenETCS Quality Manager &
 It contains the quality targets to be achieved and the corresponding QA activities to be implemented and monitored. &
 Author\\\hline
@@ -333,18 +339,19 @@ CENELEC Assessors &
 It shows the SQA strategy conceived and the one effectively implemented &
 To assess whether the project results comply to CENELEC standards\\\hline
 Open Source Community (Users, Adopters, Contributors, Committers) &
-\begin{description}
-\item Provision of information and access to the QA related procedures and guidelines implemented.
-\item Provision of information on the on-going projects
-\item Provision of guidelines on how to participate to any of the projects
-\end{description}
+Provision of information and access to the QA related procedures and guidelines implemented.
+
+Provision of information on the on-going projects
+
+Provision of guidelines on how to participate to any of the projects
 &
 For consultation and/or engagement\\\hline
 ITEA Representative &
 The QA Plan constitutes a Project Deliverable &
 For evaluation \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{tabular}
+\caption{Intended Audience}
+\end{table}
 
 
 \subsection{Evolution}
@@ -362,8 +369,8 @@ Major revisions of the QA Plan will be accomplished by the Committers to the Man
 
 \subsection{References, Guidelines and Standards}
 
-\begin{flushleft}
-\begin{tabular}[H]{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
 \hline
 \rowcolor{myblue}
 \multicolumn{5}{|c|}{Standards} \\\hline
@@ -395,11 +402,13 @@ SUBSET-026 &
 SSRS &
 UNISIG\\\hline
 \end{tabular}
-\end{flushleft}
+\caption{Standards}
+\end{table}
 
 
-\begin{flushleft}
-\begin{tabular}[H]{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
+
+\begin{table}[H]
+\begin{tabular}{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
 \hline
 \rowcolor{myblue}
 \multicolumn{5}{|c|}{References} \\\hline
@@ -447,10 +456,11 @@ QA Plan Backlog &
 governance &
 Izaskun de la Torre\\\hline
 \end{tabular}
-\end{flushleft}
+\caption{References}
+\end{table}
 
-\begin{flushleft}
-\begin{tabular}[H]{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
 \hline
 \rowcolor{myblue}
 \multicolumn{5}{|c|}{Procedures} \\\hline
@@ -497,10 +507,11 @@ Training Process &
 governance &
 \it {To be defined}\\\hline
 \end{tabular}
-\end{flushleft}
+\caption{Procedures}
+\end{table}
 
-\begin{flushleft}
-\begin{tabular}[H]{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
 \hline
 \rowcolor{myblue}
 \multicolumn{5}{|c|}{Guidelines} \\\hline
@@ -532,10 +543,11 @@ Expert Election Guideline &
 governance &
 \it {To be defined}\\\hline
 \end{tabular}
-\end{flushleft}
+\caption{Guidelines}
+\end{table}
 
-\begin{flushleft}
-\begin{tabular}[H]{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
 \hline
 \rowcolor{myblue}
 \multicolumn{5}{|c|}{Templates} \\\hline
@@ -557,19 +569,36 @@ Expert database Template &
 governance &
 \it {To be defined}\\\hline
 \end{tabular}
-\end{flushleft}
+\caption{Templates}
+\end{table}
 
 
 \subsection{Definitions and acronyms}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-Abbreviation &
-Meaning\\}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{3cm}m{11cm}|}
-\hline
+
+\begin{center}
+\begin{longtable}{|m{3cm}m{11cm}|}
+\caption{Definitions and acronyms}\\
+
+\hline \rowcolor{myblue} \multicolumn{1}{|l}{\textbf{Abbreviation}} & \multicolumn{1}{l|}{\textbf{Meaning}} \\ \hline 
+\endfirsthead
+
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\rowcolor{myblue} \multicolumn{1}{|l}{\textbf{Abbreviation}} & \multicolumn{1}{l|}{\textbf{Meaning}} \\ \hline 
+\endhead
+
+\hline \hline
+\endlastfoot
+
+%\tablefirsthead{\hline
+%\rowcolor{myblue}
+%Abbreviation &
+%Meaning\\}
+%\tablehead{}
+%\tabletail{}
+%\tablelasttail{}
+%\begin{supertabular}{|m{3cm}m{11cm}|}
+%\hline
 ASR &
 Assessor\\\hline
 CCS &
@@ -649,7 +678,8 @@ IP &
 Intellectual Property\\\hline
 IP Clean &
 No IP without permission in writing \\\hline
-\end{supertabular}
+\end{longtable}
+\end{center}
 
 \newpage
 \section{Project Organization}
@@ -875,12 +905,8 @@ Results of the selection of methods and tools are given in the D7.1 and D7.2 del
 
 The following table give details of all this deliverables.
 
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}[H]{|m{3cm}|m{11cm}|}
+\begin{table}[H]
+\begin{supertabular}{|m{3cm}|m{11cm}|}
 \hline
 \rowcolor{myblue}
 Deliverable &
@@ -906,7 +932,8 @@ Selected methods and tools to complete the OpenETCS process (V\&V, safety analys
 D7.3: Tool chain qualification process description &
 This report describe how the selected methods and tools fit the qualification requirements according CENELEC standard \\\hline
 \end{supertabular}
-\end{flushleft}
+\caption{Referenced deliverables}
+\end{table}
 
 
 \subsection{Methods, measures and tools for quality assurance OpenETCS Application Software}
@@ -971,16 +998,25 @@ For each TP/WP the relation of existing documents is provided in the form of a l
 \subsection{Documentation Structure within the development process of the openETCS Software}
 As a SIL4 software, the documentation structure has to comply with CENELEC requirements. The following table shows the document structure required by CENELEC for a SIL4 development and the corresponding documents produced in the OpenETCS project.
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Documentation Structure within the development process of the openETCS Software}\\
-\hline \rowcolor{lightgray} \centering Phase & \centering SIL4 & \centering Document & \centering WP/Task & Document\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Requirements Specification Phase}\\}
-\begin{supertabular}[H]{|m{2cm}|m{1cm}|m{7cm}|m{2cm}|m{2cm}|}
-\hline
+\begin{center}
+\begin{longtable}{|m{2cm}|m{1cm}|m{7cm}|m{2cm}|m{2cm}|}
+\caption{Documentation Structure}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{\textbf{Documentation Structure within the development process of the openETCS Software}} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{\textbf{Phase}} & \multicolumn{1}{c|}{\textbf{SIL4}} & \multicolumn{1}{c|}{\textbf{Document}} & \multicolumn{1}{c|}{\textbf{WP/Task}} & \multicolumn{1}{c|}{\textbf{Link}} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\rowcolor{myblue} \multicolumn{5}{|c|}{\textbf{Documentation Structure within the development process of the openETCS Software}} \\
+\rowcolor{lightgray} \multicolumn{1}{|c|}{\textbf{Phase}} & \multicolumn{1}{c|}{\textbf{SIL4}} & \multicolumn{1}{c|}{\textbf{Document}} & \multicolumn{1}{c|}{\textbf{WP/Task}} & \multicolumn{1}{c|}{\textbf{Link}} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 Planning &
 \centering HR &
 \raggedright
@@ -1092,8 +1128,8 @@ Software Assessment Report\\ &
 (to be defined) &
 (to be defined)
 \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
 
 \subsection{Documentation Structure within the development process of the openETCS Tools chain}
@@ -1210,18 +1246,26 @@ The QA Manager will be in charge of:
 
 \subsection{ANNEX A -CAT1: Open Source Development Process Roles and Competence Matrix-}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{CAT1: Open Source Development Process Roles/Competences}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & \centering Core Competences & Specific Competences/ Responsibilities per project\\}
-\tablehead{\hline \rowcolor{myblue} 
-\multicolumn{5}{|c|}{CAT1: Open Source Development Process Roles/Competences}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & \centering Core Competences & Specific Competences/ Responsibilities per project\\}
-%\tabletail{}
-%\tablelasttail{}
-\begin{supertabular}[H]{|m{1cm}|m{3cm}|m{11cm}|m{4,6cm}|m{4,6cm}|}
-\hline
+\begin{center}
+\begin{longtable}{|m{1cm}|m{2,20cm}|m{8,70cm}|m{4,6cm}|m{4,6cm}|}
+\caption{CAT1: Open Source Development Process Roles/Competences}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{CAT1: Open Source Development Process Roles/Competences} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities (To be revised)} & \multicolumn{1}{|c|}{Core Competences} & \multicolumn{0}{|c|}{Specific Competences
+ /Responsibilities per project} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{CAT1: Open Source Development Process Roles/Competences} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities (To be revised)} & \multicolumn{1}{|c|}{Core Competences} & \multicolumn{0}{|c|}{Specific Competences
+ /Responsibilities per project} \\ \hline
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 OPL &
 OpenETCS project Leader &
 \raggedright
@@ -1288,24 +1332,31 @@ Proactively report problems in the task tracking system, and annotating problem 
 &
 \textbf{(To be fulfilled)} &
 \textbf{(To be fulfilled per project)} \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
 
 \newpage
 \subsection{ANNEX B -CAT2: SCRUM Roles and Competence Matrix-}
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{4}{|c|}{CAT2: SCRUM Roles/Competences}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & Core Competences\\}
-\tablehead{\hline \rowcolor{myblue} 
-\multicolumn{4}{|c|}{CAT2: SCRUM Roles/Competences}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & Core Competences\\}
-%\tabletail{}
-%\tablelasttail{}
-\begin{supertabular}[H]{|m{1cm}|m{4cm}|m{12cm}|m{7,5cm}|}
-\hline
+
+\begin{center}
+\begin{longtable}{|m{1cm}|m{4cm}|m{12cm}|m{7,5cm}|}
+\caption{CAT2: SCRUM Roles/Competences}\\
+
+\hline \rowcolor{myblue} \multicolumn{4}{|c|}{CAT2: SCRUM Roles/Competences} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities \textbf{(To be revised)}} & \multicolumn{1}{|c|}{Core Competences} \\ \hline 
+\endfirsthead
+
+\multicolumn{4}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{4}{|c|}{CAT2: SCRUM Roles/Competences} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities \textbf{(To be revised)}} & \multicolumn{1}{|c|}{Core Competences} \\ \hline
+\endhead
+
+\hline \multicolumn{4}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 POw &
 Product Owner &
 \raggedright
@@ -1339,22 +1390,30 @@ Implementing test cases \\
 Unit and initial Acceptance testing 
 &
 \textbf{(To be fulfilled)} \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
 \newpage
 \subsection{ANNEX C -CAT3: CENELEC Roles and Competence Matrix for OpenETCS software product-}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS application software project}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & Competences\\}
-\tablehead{\hline \rowcolor{myblue} 
-\multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS application software project}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & Competences\\}
-\begin{supertabular}[H]{|m{1cm}|m{2,5cm}|m{11cm}|m{10cm}|}
-\hline
+\begin{center}
+\begin{longtable}{|m{1cm}|m{2,5cm}|m{11cm}|m{10cm}|}
+\caption{CAT3: CENELEC Roles/Competences for OpenETCS application software project}\\
+
+\hline \rowcolor{myblue} \multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS application software project} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities \textbf{(To be revised)}} & \multicolumn{1}{|c|}{Competences} \\ \hline 
+\endfirsthead
+
+\multicolumn{4}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS application software project} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities \textbf{(To be revised)}} & \multicolumn{1}{|c|}{Competences} \\ \hline 
+\endhead
+
+\hline \multicolumn{4}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 PM &
 OpenETCS software Project Manager &
 \parbox{11cm}{\raggedright
@@ -1553,26 +1612,32 @@ Prepare the published release notes mentioning incompatible versions of sw compo
 Competences in software configuration management\\
 Understanding the requirements of EN 50128}
 \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
 \newpage
 
 
 \subsection{ANNEX D -CAT3: CENELEC Roles and Competence Matrix for OpenETCS Tool Chain product-}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS Tool Chain product}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & Competences\\}
-\tablehead{\hline \rowcolor{myblue} 
-\multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS Tool Chain product}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & Competences\\}
-%\tabletail{}
-%\tablelasttail{}
-\begin{supertabular}[H]{|m{1cm}|m{2,5cm}|m{15cm}|m{6cm}|}
-\hline
+\begin{center}
+\begin{longtable}{|m{1cm}|m{2,5cm}|m{11cm}|m{10cm}|}
+\caption{CAT3: CENELEC Roles/Competences for OpenETCS Tool Chain product}\\
+
+\hline \rowcolor{myblue} \multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS Tool Chain product} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities \textbf{(To be revised)}} & \multicolumn{1}{|c|}{Competences} \\ \hline 
+\endfirsthead
+
+\multicolumn{4}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS Tool Chain product} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities \textbf{(To be revised)}} & \multicolumn{1}{|c|}{Competences} \\ \hline 
+\endhead
+
+\hline \multicolumn{4}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 PM &
 OpenETCS project Manager &
 \raggedright
@@ -1727,14 +1792,14 @@ Prepare the published release notes mentioning incompatible versions of sw compo
 &
 \textbf{(To be fulfilled)}
 \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 \end{landscape}
 
 \newpage
 \subsection{ANNEX E - Methods \& Tools for Application Software}
 
-\begin{flushleft}
+\begin{table}[H]
 \tablefirsthead{\hline
 \rowcolor{myblue}
 \multicolumn{5}{|c|}{Software Requirements Specification Phase}\\
@@ -1776,19 +1841,27 @@ Yes &
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
 \end{supertabular}
-\end{flushleft}
+\caption{Software Requirements Specification Phase}
+\end{table}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Architecture Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Architecture Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Software Architecture Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Architecture Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Architecture Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Defensive Programming &
 \centering
@@ -1954,20 +2027,27 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Design and Implementation Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Design and Implementation Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Software Design and Implementation Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Design and Implementation Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Design and Implementation Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Formal Methods &
 \centering
@@ -2069,20 +2149,27 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Verification and Testing Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Verification and Testing Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\ }
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Verification and Testing Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Verification and Testing Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Verification and Testing Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Formal Proof &
 \centering
@@ -2156,19 +2243,27 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Integration Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Integration Phase}\\}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Integration Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Integration Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Integration Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Functional and Black-box Testing &
 \centering
@@ -2186,19 +2281,27 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Overall Software Testing Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Overall Software Testing Phase}\\}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Overall Software Testing Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Overall Software Testing Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Overall Software Testing Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Performance Testing &
 \centering
@@ -2223,20 +2326,27 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Analysis Techniques Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Analysis Techniques Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Software Analysis Techniques Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Analysis Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Analysis Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Static Software Analysis &
 \centering
@@ -2275,21 +2385,27 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Quality Assurance Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Quality Assurance Phase}\\
-%\hline \rowcolor{lightgray} \multicolumn{5}{|l|}{Justification}\\
-}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Software Quality Assurance Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Quality Assurance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Quality Assurance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Accredited to EN ISO 9001 &
 \centering
@@ -2349,19 +2465,24 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Maintenance Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Maintenance Phase}\\}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Software Maintenance Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Maintenance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Maintenance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Impact Analysis &
 \centering
@@ -2379,19 +2500,27 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Data Preparation Techniques Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Data Preparation Techniques Phase}\\ \hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Data Preparation Techniques Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Data Preparation Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Data Preparation Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Tabular Specification Methods &
 \centering
@@ -2458,19 +2587,24 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{7,5cm}|m{7cm}|}
-\hline
-\rowcolor{myblue}
-Quality mechanisms for Safe deployment &
-Technique \& Approach\\\hline
+\begin{center}
+\begin{longtable}[H]{|m{7,75cm}|m{7,75cm}|}
+\caption{Quality mechanisms for Safe deployment}\\
+
+\hline \rowcolor{myblue} \multicolumn{1}{|c|}{Quality mechanisms for Safe deployment} & \multicolumn{1}{|c|}{Technique \& Approach} \\ \hline 
+\endfirsthead
+
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{1}{|c|}{Quality mechanisms for Safe deployment} & \multicolumn{1}{|c|}{Technique \& Approach} \\ \hline 
+\endhead
+
+\hline \hline
+\endlastfoot
+
 Software Self-identification Mechanisms
 
 (9.1.4.11) &
@@ -2492,8 +2626,8 @@ Provision of appropriate and accurate diagnostic information &
 Safe Roll back capabilities  &
 ~
 \textbf{(To be fulfilled)} \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
 
 %\nocite{50126,EN50128,EN50129,EN61508,200857EC,201118EU,201288EU}
