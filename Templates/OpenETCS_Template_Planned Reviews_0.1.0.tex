@@ -1,0 +1,80 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage [landscape]{geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{hhline}
+\usepackage{graphicx}
+%\setcounter{tocdepth}{3}
+\usepackage{float}
+\usepackage{hhline}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{color, colortbl}
+\definecolor{myblue}{rgb}{0.6,.6,1}
+\definecolor{mydarkblue}{rgb}{0,0,0.5}
+\definecolor{mylightblue}{rgb}{0.8,0.8,1}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=mydarkblue, urlcolor=mydarkblue}
+\usepackage{xcolor}
+
+\usepackage{booktabs}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\usepackage[textwidth=2.7cm,textsize=scriptsize,linecolor=green!40,backgroundcolor=green!40]{todonotes}
+
+\begin{document}
+\begin{center} \huge\bf openETCS Planned Review Template\end{center}
+
+\vspace{1\baselineskip}\vspace{-\parskip}
+
+\begin{flushleft}
+\ra{1.5}
+\begin{tabular}{|m{4cm}|m{19cm}|}
+\hline
+\rowcolor{myblue}
+\multicolumn{2}{|c|}{Planned Review Template}
+\\\hline\
+%\rowcolor{lightgray}
+\bf Type of review &
+{\it Specify the type of review: Creation, Graduation, Release, Promotion, Continuation, Termination, Move, Restructuring}
+\\\hline
+\bf Document &
+{\it Identify clearly the document under review with its specific nomenclature}
+{\it Provide a brief summary in no more than 2-3 lines about the purpose of the document.}
+\\\hline
+\bf Product Owner &
+{\it Name of the person responsible for the document}
+\\\hline
+\bf Starting date &
+{\it dd/mm/yyyy}
+\\\hline
+\bf End date &
+{\it dd/mm/yyyy}
+\\\hline
+\bf Reviewers &
+{\it List experts and main contributors that are expected to be involved in review when it applies.}
+\\\hline
+\bf Objectives &
+{\it List the specific objectives to be covered in the planned review}
+\begin{itemize}
+\item {\it Objective 1}
+\item {\it Objective 2}
+\item {\it Objective n}
+\end{itemize}
+\\\hline
+\bf Scope & 
+{\it Provide guidelines about the key aspects the reviewers shall be focused on to accomplished the objectives defined.}
+\begin{itemize}
+\item {\it Recommendation 1}
+\item {\it Recommendation 2}
+\item {\it Recommendation n}
+\end{itemize}
+\\\hline
+\end{tabular}
+\end{flushleft}
+
+\end{document}
