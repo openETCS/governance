@@ -68,7 +68,7 @@
 
 %define a list of authors and their affiliation here
 
-\author{SQS}
+\author{Ainhoa Gracia}
 
 \affiliation{Avda. Zugazarte 8,6\\
   48930 Getxo \\
@@ -88,7 +88,7 @@
 %Do not change the next three lines
 \maketitle
 \tableofcontents
-%\listoffiguresandtables
+\listoffiguresandtables
 \newpage
 %=============================
 
@@ -163,16 +163,16 @@ This document presents the whole process to follow when documents need revision.
 This document applies to the whole development life-cycle of the project and it addresses all the Author(s), Committers and Contributors involved. This document should be available to all of them in read access mode and it provides guidance about the Revision process to follow anytime revisions of documents are needed.
 
 \subsection{Supporting documents}
-\tablefirsthead{\hline
+\begin{table}[H]
+\begin{tabular}{|m{2cm}m{3cm}m{9cm}|}
+\hline
 \rowcolor{myblue}
+\multicolumn{3}{|c|}{Supporting documents} \\\hline
+\rowcolor{lightgray}
 Name &
 Path &
-Contents\\}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{2cm}m{3cm}m{9cm}|}
-\hline
+Contents
+\\\hline
 Todonotes package &
 governance/Review Process &
 Brief introduction to the todonotes package with detailed descriptions about the available attributes. 
@@ -185,18 +185,20 @@ QA Plan &
 Governance/QA Plan &
 It defines the processes, methods and tools that will be used to develop the OpenETCS project.
 \\\hline
-\end{supertabular}
+\end{tabular}
+\caption{Supporting documents}
+\end{table}
 
 \subsection{Definitions and acronyms}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-Abbreviation &
-Meaning\\}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{3cm}m{11cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{3cm}|m{11cm}|}
 \hline
+\rowcolor{myblue}
+\multicolumn{2}{|c|}{Definitions and acronyms} \\\hline
+\rowcolor{lightgray}
+Abbreviation &
+Meaning
+\\\hline
 Revision Process &
 It is the process through which committers and selected contributors perform a through analysis of a document, propose contributions and improvements to be included before the document is published in the OpenETCS repository.
 \\\hline
@@ -211,13 +213,13 @@ A person who has editing rights for a specific project.
 \\\hline
 Contributor &
 A person without editing rights for a project that contributes with comments or improvements. A Contributor can become a Committer through a voting process.
-\\\hline  
-\end{supertabular}
+\\\hline
+\end{tabular}
+\caption{Definitions and acronyms}
+\end{table}
 
 \section{Tools}
-
-\begin{flushleft}
-
+\begin{table}[H]
 \begin{tabular}{|m{3cm}|m{11cm}|}
 \hline
 \rowcolor{myblue}
@@ -241,9 +243,11 @@ TeX documents &
 \item TexMaker.
 \item Todonotes package.
 \item Adobe Acrobat Reader: Software package that allows to view, navigate and print pdf files.
-\end{itemize}\\\hline
+\end{itemize}
+\\\hline
 \end{tabular}
-\end{flushleft}
+\caption{Tools}
+\end{table}
 
 \section{Revision Process overview}
 
@@ -264,16 +268,14 @@ In all cases:
 \subsection{Revision Roles}
 
 This section describes the roles of the participants in the revision process of a document:
-
-\begin{flushleft}
+\begin{table}[H]
 \begin{tabular}{|m{3cm}|m{11cm}|}
 \hline
 \rowcolor{myblue}
 \multicolumn{2}{|c|}{Roles} \\\hline
 \rowcolor{lightgray}
 Role &
-Competencies 
-\\\hline
+Competencies \\\hline
 Product owner &
 He/She is the main responsible of a document. 
 He/She is in charge of launching the revision process; preparing the revision plan and controlling and monitoring the process progresses according to the plan; informing and interacting with the revision team members; approving and rejecting changes and resolving conflicts.
@@ -282,10 +284,10 @@ Author(s) &
 They provide support to the Product Owner in the revision of the contributions made by the revision team and therefore in the implementation of the approved ones. When requested by the Product Owner, they will provide support in assessing whether the document is ready for publication or not.
 \\\hline
 Revision Team &
-As experts in the theme of the project, they will provide meaningful contributions to guarantee the document meets its scope and purpose  in a complete and accurate way.
-\\\hline
+As experts in the theme of the project, they will provide meaningful contributions to guarantee the document meets its scope and purpose  in a complete and accurate way. \\\hline
 \end{tabular}
-\end{flushleft}
+\caption{Revision Roles}
+\end{table}
 
 \subsection{Description of the Revision Process}
 
@@ -341,14 +343,9 @@ The next figure shows the different stages of the Revision Process. Right after 
 
 \section{ANNEXES A1.- Technical Instructions}
 
-
 \textbf{A1. Create a New RC branch}
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{2cm}|m{13cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{2cm}|m{12cm}|}
 \hline
 \rowcolor{myblue}
 TI & 
@@ -379,9 +376,9 @@ Steps &
 \end{enumerate}
 \end{itemize}
 \\\hline
-\end{supertabular}
-\end{flushleft}
-
+\end{tabular}
+\caption{TI - Create a New RC branch}
+\end{table}
 
 \begin{figure}[H]
 \centering
@@ -390,13 +387,8 @@ Steps &
 \end{figure}
 
 \textbf{A2. Revision Process-Control and Monitoring}
-
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{3cm}|m{12cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{3cm}|m{11cm}|}
 \hline
 \rowcolor{myblue}
 TI & 
@@ -443,22 +435,17 @@ Add a Comment to the Main Issue of the RC indicating the date for receiving comm
 Notification the Revision Period has been re-opened &
 Product Owner
 
-
 Add a Comment to the Main Issue of the RC indicating the Revision period has been re-open and therefore a new deadline for receiving comments is indicated.
 
 Besides specific indications for the process will be indicated.
 \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{tabular}
+\caption{TI - Revision Process-Control and Monitoring}
+\end{table}
 
 \textbf{A3. Revision Activities}
-
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{2cm}|m{13cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{2cm}|m{12cm}|}
 \hline
 \rowcolor{myblue}
 TI & 
@@ -487,15 +474,13 @@ Steps &
 \end{itemize}
 \end{itemize}
 \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{tabular}
+\caption{TI - Revision Activities}
+\end{table}
 
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{2cm}|m{13cm}|}
+
+\begin{table}[H]
+\begin{tabular}{|m{2cm}|m{12cm}|}
 \hline
 \rowcolor{myblue}
 TI & 
@@ -535,37 +520,18 @@ Steps &
 \end{enumerate}
 \item Have in mind that after {\it pushing/pulling} the document, the changes in conflict made by the Committer shall be lost. Anytime a conflict appears, the Committer shall prepare a copy of the suggestions or modifications made by him/her.
 \item He/she also adds a comment in the RC issue thread (if it exists) or send an e-mail exposing that problem and requesting a solution.
-\item The Author(s) and(or the Product owner shall take part in the discussion and propose a solution. The Committer can put in the document again the suggestions in conflict stored locally if the Author(s) or the Product owner requires that.
+\item The Author(s) and/or the Product owner shall take part in the discussion and propose a solution. The Committer can put in the document again the suggestions in conflict stored locally if the Author(s) or the Product owner requires that.
 \end{enumerate}
 \end{itemize}
 \end{itemize}
 \\\\\hline
-Steps &
-\begin{itemize}
-\item The Contributor shall:
-\begin{enumerate}
-\item Make comments, suggestions or improvement proposals with the {\it Issue Tracker tool}.
-\item Add comments in the RC issue thread when it applies (See {\it A11 Add comments in a RC issue}).
-\end{enumerate}
-\end{itemize}
-\\\hline
-Steps &
-\begin{itemize}
-\item In any case, the Committer/Contributor shall inform about the progress of the work posting a message in the RC issue thread or sending an e-mail. (See {\it A11 Add comments in a RC issue}).
-\end{itemize}
-\\\hline
-\end{supertabular}
-\end{flushleft}
-
+\end{tabular}
+\caption{TI - Revision work}
+\end{table}
 
 \textbf{A4. Approval/Rejection of Changes}
-
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{2cm}|m{13cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{2cm}|m{12cm}|}
 \hline
 \rowcolor{myblue}
 TI & 
@@ -596,18 +562,13 @@ Steps &
 \item The Author(s) add(s) a message to the RC issue thread (if it exists) or send(s) an e-mail, so everyone can be informed about the commit recently done. 
 \end{itemize}
 \\\hline
-\end{supertabular}
-\end{flushleft}
-
+\end{tabular}
+\caption{TI - Approval/rejection of Changes}
+\end{table}
 
 \textbf{A5. Final Implementation}
-
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{2cm}|m{13cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{2cm}|m{12cm}|}
 \hline
 \rowcolor{myblue}
 TI & 
@@ -629,17 +590,13 @@ Steps &
 \end{enumerate}
 \end{itemize}
 \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{tabular}
+\caption{TI - Final Implementation}
+\end{table}
 
 \textbf{A6. Revision closing}
-
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{2cm}|m{13cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{2cm}|m{12cm}|}
 \hline
 \rowcolor{myblue}
 TI & 
@@ -668,17 +625,13 @@ Steps &
 \item Or notify the closing of the RC sending an e-mail. The information included in this case is the same as before.
 \end{itemize}
 \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{tabular}
+\caption{TI - Revision closing}
+\end{table}
 
 \textbf{A7. RC Branch merging}
-
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{2cm}|m{13cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{2cm}|m{12cm}|}
 \hline
 \rowcolor{myblue}
 TI & 
@@ -705,18 +658,13 @@ Steps &
 \end{enumerate}
 \end{itemize}
 \\\hline
-\end{supertabular}
-\end{flushleft}
-
+\end{tabular}
+\caption{TI - RC Branch merging}
+\end{table}
 
 \textbf{A10. Add notes using ToDoNotes}
-
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{2cm}|m{13cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{2cm}|m{12cm}|}
 \hline
 \rowcolor{myblue}
 TI & 
@@ -752,19 +700,15 @@ Steps &
 \item {\it Yellow}: any general comment done by the participants in the Revision. 
 \end{enumerate} 
 \end{itemize}
-
 \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{tabular}
+\caption{TI -  Add notes using ToDoNotes}
+\end{table}
 
 
 \textbf{A11. Add comments to a RC Main Issue}
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{2cm}|m{13cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{2cm}|m{12cm}|}
 \hline
 \rowcolor{myblue}
 TI & 
@@ -788,19 +732,14 @@ Steps &
 \item Do not edit any comment done. It is a better option to rewrite it with the additions you proposed than editing and make the changes directly. In this way, it is assured that everyone reads the new message because in the other case, the change/addition can be missed.
 \item Push the {\it Comment} button to post the message.
 \end{itemize}
-
 \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{tabular}
+\caption{TI -  Add comments to a RC Main Issue}
+\end{table}
 
 \textbf{A12. Versioning}
-
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{2cm}|m{13cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{2cm}|m{12cm}|}
 \hline
 \rowcolor{myblue}
 TI & 
@@ -828,8 +767,9 @@ Only graduated projects are allowed to do releases starting with a "1" or higher
 
 For further information see {\it Versioning Artifacts} in ecosystem wiki
 \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{tabular}
+\caption{TI -  Versioning}
+\end{table}
 
 \section{ANNEXES A2.- Quick guide for the Revision process}
 
