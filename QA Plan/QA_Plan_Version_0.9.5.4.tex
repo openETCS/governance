@@ -678,6 +678,8 @@ IP &
 Intellectual Property\\\hline
 IP Clean &
 No IP without permission in writing \\\hline
+ISTQB &
+International Software Testing Qualifications Board \\\hline
 \end{longtable}
 \end{center}
 
@@ -1188,7 +1190,7 @@ ISTQB define a defect as "a flaw in a component or system that can cause the com
 
 A failure is a deviation of the component or system from its expected delivery, service or result. A failure is the consequence of a fault or error in a system but not all faults result in failures.
 
-Faults, failures and errors encountered during the review activities (QA. Verification, Validation, Assessment) planned in the software development life-cycle, problems reported by users and customers as well as change requests initiated by any of the system stakeholders will be reported and managed following the Change/Problem Management Process  \citep{emp} detailed in [XX] and through the Change/Problem Management Tool. This tool will be integrated with the Configuration management tool {\it GIT} and will be configured to implement and record all the information generated during the process.
+Faults, failures and errors encountered during the review activities (QA. Verification, Validation, Assessment) planned in the software development life-cycle, problems reported by users and customers as well as change requests initiated by any of the system stakeholders will be reported and managed following the Change/Problem Management Process  \citep{emp} detailed in \href{https://github.com/openETCS/governance/tree/master/Change-Problem%20Process}{[governance]} and through the Change/Problem Management Tool. This tool will be integrated with the Configuration management tool {\it GIT} and will be configured to implement and record all the information generated during the process.
 
 The integration with the Configuration management tool {\it GIT} will permit:
 \begin{itemize}
@@ -1218,6 +1220,31 @@ The QA Manager will be in charge of:
 \textit{Guidance: Refer to the specific procedure. }
 
 \textit{Describe the QA activities}
+
+\todo[color=yellow!20, inline]{BH: section is based on eclipse process and adopted to openETCS needs}
+
+It is a good culture to solve concerns as close as possible to the root cause of an problem or a misunderstanding. This means, the team where a problem is seen first is empowered to search for a solution of the problem first.
+
+If the partners cannot agreed on a solution, the impediment is escalated to the next level in the project hierarchy. 
+
+When a member of the openETCS community has a concern about a Project, the  member will raise that concern with the Project's Leadership (e.g., task leader in openETCS). If the member is not satisfied with the result, the member can raise the concern with the parent Project's Leadership, typically the workpackage leader.
+
+The Member can continue appeals up the Project Leadership Chain and, if still not satisfied, thence to the project management board PMB, then the openETCS project lead, and finally to the project co-operation committee (PCC). All appeals and discussions will abide by the Guiding Principles of being open, transparent, and public.
+
+Member concerns may include:
+\begin {itemize}
+\item Out of Scope. It is alleged that a Project is exceeding its approved scope.
+
+\item Dysfunctional. It is alleged that a Project is not functioning correctly or is in violation of one or more requirements of the Development Process.\
+
+\item Contributor Appeal. It is alleged that a Contributor who desires to be a Committer is not being treated fairly.
+
+\item Invalid Veto. It is alleged that a -1 vote on a Review is not in the interests of the Project and/or of Eclipse.
+\end{itemize}
+
+A variety of grievance resolutions are available to the PMB up to, and including, rebooting or restarting a project with new Committers and leadership.
+
+The issues seen during a sprint shall be taken to the sprint retrospective in order to help the team find an easy way in the future.
 
 \subsection{Modification and change control }
 
