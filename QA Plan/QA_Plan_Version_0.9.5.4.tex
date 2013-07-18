@@ -708,6 +708,8 @@ The following chapters shows the mechanisms implemented at organizational level 
 \end{figure}
 
 \subsubsection{Compliance with ITEA Requirements}
+ITEA rules are documented in the ITEA2 Frame Agreement [XX].
+
 Compliance to ITEA Requirements is achieved by means of:
 \begin{itemize}
 \item The appointment of a Project Coordinator (DB, WP1, supported by the Project Office) who leads the project and is responsible for the communications with the ITEA representatives. 
@@ -736,18 +738,32 @@ Compliance to the Open Source Principles and related objectives is achieved by m
 \end{itemize}
 
 \subsubsection{Compliance with SCRUM Requirements}
+Agile Project Management ha been introduced to software projects in the 90-ties and is now a de-fact industry standard well documented in publications as e.g., in [XX].
+
 Compliance to SCRUM Requirements is achieved by means of
 \begin{itemize}
-\item Each Work Package/Top-Project Leader is the SCRUM Owner of the corresponding WP/Top-Project results and maintains the corresponding backlog
-\item Each Project/Task Leader is the SCRUM Owner of the corresponding Tasks results  and maintains the corresponding backlog
+\item Each Work Package/Top-Project Leader is the SCRUM Product Owner of the corresponding WP/Top-Project results and maintains the corresponding backlog
+\item Each Project/Task Leader is the SCRUM  Product Owner of the corresponding Tasks results  and maintains the corresponding backlog
 \item The Project Coordinator is the SCRUM Product Owner of the project results and maintains the project results backlog.
-\item Weekly meetings are maintained to assess progress, promote cross-collaboration, plan next steps and therefore, maintain the corresponding backlog.
+\item Weekly meetings are maintained to find and report on impediments, assess progress, promote cross-collaboration, plan next steps and therefore, maintain the corresponding backlog.
 \begin{itemize}
+\item Weekly Scrum meetings are per definition open meetings, e.g., everybody from the teams can participate and contribute to the meeting.
+\item The weekly meetings are strictly time-boxed.
 \item At WP/Project level, the registered committers, contributors, users and adopters are invited to participate
 \item At Open ETCS project level, the components of the PMB( Project Management Board) are invited.
 \end{itemize} 
-\item There is a SCRUM Development Team for the each WP/Project composed by the accepted committers.
-\item A SCRUM master (WP1) is responsible for ensuring SCRUM is understood and enacted
+\item The work-packages resp. tasks need to organize there scrum teams according to practical needs.
+\item Teams are typically distributed in geography and in organisation (i.e., participating companies).
+\item Scrum teams typically have to provide several development roles (according to CENELEC and according to Eclipse). Guidance on the possible mixtrues of CENELEC roles into a Scrum team is documented in the annex section of this guideline.
+\item To be able to be successful in Agile Development we need to set special focus to the role of the "User" of a product.
+\begin{itemize}
+\item In general, the user of a product in openETCS should representratives of the project openETCS consuming the result of a scrum team. 
+\item The workpackage leader of the WP using an outcome of the team is the first candidate.
+\item Representatives of partners making use of the openETCS result in long term are also natural users of a team result.
+\item Partners in the openETCS project need to agree on the Users before the task when planning the interfaces. 
+\end{itemize}  
+\item Each team has to select a scrum master. Scrum training is mandatory.
+\item A SCRUM master (WP1) is responsible for supporting the teams.
 \end{itemize}
 
 \subsubsection{Compliance with software management and organisation according to EN50128:2011}
@@ -827,12 +843,6 @@ The detailed description of the Work Package description and overview plan is co
 
 
 \subsection{Product Life Cycle }
-
-\todo[color=yellow!20, inline]{JW: Not to long, just short introduction, please.}
-\todo[color=green!20, inline]{IT: OK}
-
-\textit{Guidance: Refer to a separate document that describes the life cycle. Consider EN50126 and EN50129 Requirements, include Deployment and Maintenance, include activities to "adapt" the generic/abstract software to a concrete implementation.
-In this chapter, if applicable, include justification to "potential deviations" to CENELEC standards.}
 
 As the OpenETCS project products shall be part of the train development the reference for their life cycles are the CENELEC standard phases defined in the EN50126. But as the products are in general R\&D results, their life cycles do not include any certification or acceptance activities at the moment.
 The main OpenETCS products are the OpenETCS Software model and the OpenETCS tools chain development, which have their own life cycles. For both parts the main development, verification and validation activities are done during the OpenETCS project. For the software only the demonstrator implementation is part of the OpenETCS project, while any kind of implementation on a target hardware is out of the project. 
