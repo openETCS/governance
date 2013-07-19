@@ -88,7 +88,7 @@
 %Do not change the next three lines
 \maketitle
 \tableofcontents
-%\listoffiguresandtables
+\listoffiguresandtables
 \newpage
 %=============================
 
@@ -105,22 +105,28 @@
 
 \section*{Document History}
 
-\begin{flushleft}
-%\tablefirsthead{\hline Version & Date & Chapters modified & Reason & Name\\}
+\begin{center}
+\begin{longtable}{m{1.1cm}m{1.8cm}m{2cm}m{5cm}m{4cm}}
+\caption{Documentation History}\\
 
-\tablehead{\hline \rowcolor{myblue} Version & Date & Chapters modified & Reason & Name\\}
+\hline \rowcolor{myblue} \multicolumn{1}{l}{Version} & \multicolumn{1}{l}{Date} & \multicolumn{1}{l}{Chapters modified} & \multicolumn{1}{l}{Reason} & \multicolumn{1}{l}{Name} \\ \hline 
+\endfirsthead
 
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{m{1.1cm}m{1.8cm}m{2cm}m{7cm}m{2cm}lp{6cm}|}
-\hline
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{1}{l}{Version} & \multicolumn{1}{l}{Date} & \multicolumn{1}{l}{Chapters modified} & \multicolumn{1}{l}{Reason} & \multicolumn{1}{l}{Name} \\ \hline 
+\endhead
+
+\hline \hline
+\endlastfoot
+
 0.1.0 &
 11.06.2013 &
 All &
 First version &
 Izaskun de la Torre (SQS)
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
 \newpage
 
@@ -142,30 +148,34 @@ the potential detrimental impact of changes/problems, thus contributing to maint
 This document applies to the whole development life-cycle of the project and it addresses all the author(s), product owners, commiters and users involved. This document should be available to all of them in read access mode and it provides guidance about the Change Request/Problem Management process whenever it is needed. 
 
 \subsection{Supporting documents}
-\tablefirsthead{\hline
-\rowcolor{myblue}
+\begin{table}[H]
+\begin{supertabular}{|m{3cm}m{3,5cm}m{7,5cm}|}
+\hline \rowcolor{myblue}
 Name &
 Path &
-Contents\\}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{3cm}m{3,5cm}m{7,5cm}|}
-\hline
+Contents \\ \hline
 QA Plan & governance/QA Plan & It defines the processes, methods and tools that will be used to develop the OpenETCS project
 \\\hline
 \end{supertabular}
+\caption{Supporting documents}
+\end{table}
 
 \subsection{Definitions and acronyms}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-Abbreviation &
-Meaning\\}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{3cm}m{11cm}|}
-\hline
+\begin{center}
+\begin{longtable}[H]{|m{3cm}m{11cm}|}
+\caption{Definitions and acronyms}\\
+
+\hline \rowcolor{myblue} \multicolumn{1}{l}{Abbreviation} & \multicolumn{1}{l}{Meaning} \\ \hline 
+\endfirsthead
+
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{1}{l}{Abbreviation} & \multicolumn{1}{l}{Meaning} \\ \hline
+\endhead
+
+\hline \hline
+\endlastfoot
+
 Backout plan &
 Detailed procedure for reversing a change and restore the system to its original state, in the event of failed or aborted implementation.\\\hline
 CCB &
@@ -180,12 +190,12 @@ Configuration Items
 IA &
 Impact Assessment
 \\\hline
-\end{supertabular}
+\end{longtable}
+\end{center}
 
 \section{Tools}
 
-\begin{flushleft}
-
+\begin{table}[H]
 \begin{tabular}{|m{3cm}|m{11cm}|}
 \hline
 \rowcolor{myblue}
@@ -196,7 +206,8 @@ Web-based project management and bug-tracking tool. It provides integrated proje
 It can be integrated with Git.
 \\\hline
 \end{tabular}
-\end{flushleft}
+\caption{Tools}
+\end{table}
 
 \section{Change/Problem Management Process overview}
 
@@ -215,12 +226,13 @@ In all cases:
 \item The launching, control and clarification processes are managed through the Change/problem Management tool
 \end{itemize}
 
+In case of the detected bugs apply to ERA requirements, a change/problem request will be launch to UNISIG.
 
 \subsection{Roles}
 
 This section describes the roles of the participants in the Change Request/Problem management process:
 
-\begin{flushleft}
+\begin{table}[H]
 \begin{tabular}{|m{4,5cm}|m{10cm}|}
 \hline
 \rowcolor{myblue}
@@ -263,7 +275,8 @@ Tester &
 The person/assignee or group of individuals who execute
 the test cases related to a change/problem resolution activity.\\\hline
 \end{tabular}
-\end{flushleft}
+\caption{Roles}
+\end{table}
 
 
 \subsection{Description of the Change/Problem Management Process}
