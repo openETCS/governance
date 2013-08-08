@@ -1,2 +1,0 @@
-This is a test to see if the folder SCMP can be created in the governance folder to save the SCMP.
-JuergenWeiss
