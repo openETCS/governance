@@ -1,0 +1,2 @@
+This folder is for the Software Configuration Management Plan (SCMP).
+JuergenWeiss
