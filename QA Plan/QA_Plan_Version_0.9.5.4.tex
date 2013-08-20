@@ -11,6 +11,10 @@
 \usepackage{graphicx}
 \usepackage{lscape}
 \usepackage{float}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{breakurl}
+\usepackage{lipsum}
 \makeatletter
 \newcommand\arraybslash{\let\\\@arraycr}
 \makeatother
@@ -50,7 +54,6 @@
 \todo[color={red!100!green!33}]{
 \textbf{[\uppercase{#1} \themycommentcounter]:} #2}
 }
-
 
 
 % Use the option "nocc" if the document is not licensed under Creative Commons
@@ -101,7 +104,7 @@
 %Do not change the next three lines
 \maketitle
 \tableofcontents
-%\listoffiguresandtables
+\listoffiguresandtables
 \newpage
 %=============================
 
@@ -118,15 +121,21 @@
 
 \section*{Document History}
 
-\begin{flushleft}
-%\tablefirsthead{\hline Version & Date & Chapters modified & Reason & Name\\}
+\begin{center}
+\begin{longtable}{m{1.1cm}m{1.8cm}m{2cm}m{5cm}m{4cm}}
+\caption{Documentation History}\\
 
-\tablehead{\hline \rowcolor{myblue} Version & Date & Chapters modified & Reason & Name\\}
+\hline \rowcolor{myblue} \multicolumn{1}{l}{Version} & \multicolumn{1}{l}{Date} & \multicolumn{1}{l}{Chapters modified} & \multicolumn{1}{l}{Reason} & \multicolumn{1}{l}{Name} \\ \hline 
+\endfirsthead
 
-%\tabletail{}
-%\tablelasttail{}
-\begin{supertabular}{m{1.1cm}m{1.8cm}m{2cm}m{5cm}m{4cm}}
-\hline
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{1}{l}{Version} & \multicolumn{1}{l}{Date} & \multicolumn{1}{l}{Chapters modified} & \multicolumn{1}{l}{Reason} & \multicolumn{1}{l}{Name} \\ \hline 
+\endhead
+
+\hline \hline
+\endlastfoot
+
 0.0.0 &
 15.11.2012 &
 All &
@@ -140,7 +149,7 @@ All &
 First Steps on Content &
 Rico Kaseroni (DB)
 
-Jan Welte (TUB)
+Jan Welte (TUBS)
 
 Peyman Farhangi (DB)
 
@@ -159,7 +168,7 @@ Cyril Cornu (All4tec)\\\hline
 30.11.2012 &
 Baseline Requirements for certification  &
 Extention of Chapter according to EN 50128 &
-Jan Welte (TUB)
+Jan Welte (TUBS)
 
 Rico Kaseroni (DB)\\\hline
 0.3.0 &
@@ -256,8 +265,8 @@ Izaskun de la Torre (SQS)\\\hline
 Chapter 1, 2, 4 and annexes to chapter 4\& 5 &
 New Content  &
 Izaskun de la Torre (SQS)\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
 
 \newpage
@@ -268,8 +277,6 @@ Izaskun de la Torre (SQS)\\\hline
 
 
 \subsection{Purpose}
-%\textcolor{red}{Guidance}
-%\textit{Guidance: This document contains the procedures and control methods to achieve the end products of the OpenETCS project with the desired levels of safety and quality. It also describes the processes, methods and tools to develop such products in accordance to CENELEC Standards and following Open Source principles.}
 
 The purpose of the QA Plan is to define the processes, methods and tools that will be used to develop the OpenETCS project meeting ITEA requirements, following Open Source principles and practices and applying the SCRUM Methodology. Besides, two of the project outcomes, the OpenETCS software, the OpenETCS Tool Chain, will have to comply with CENELEC requirements.
 
@@ -278,7 +285,7 @@ Due to the nature of the OpenETCS project (R\&D EU project with a complex list o
 The QA Plan also describes the activities to monitor and manage quality in all aspects of the project:
 
 \begin{itemize}
-\item Providing objective evaluation of processes and products against applicable standards and requirements
+\item Defining and ensuring that all processes and products are compliant with the corresponding standard and requirements, according to the required system/software safety integrity level
 \item Identifying nonconformances
 \item Providing timely quality status feedback to management and affected personnel
 \item Ensuring noncompliance issues are addressed
@@ -287,11 +294,7 @@ The QA Plan also describes the activities to monitor and manage quality in all a
 Therefore, it describes the QA functions, responsibilities and specific monitoring and control activities.
 
 
-\subsection{Scope}
-
-%\todo[color=yellow!20, inline]{JW: Since their have been long discussions concerning the goal the first sentence showed by revised. It is unclear what a "open proofs'' platform should be.}
-
-%\todo[color=green!20, inline]{IT: OK}
+\subsection{Goals of the openETCS project}
 
 The main goals and deliverables of the OpenETCS project are:
 \begin{enumerate}
@@ -302,45 +305,33 @@ The main goals and deliverables of the OpenETCS project are:
 \item A tools chain supporting both previous bullet points including code, test case and document generation meeting CENELEC EN50128:2011 (T3) requirements and certifiable for SIL4 software applications for signalling equipment (Certification itself is not part of the project)
 \end{enumerate}
 
-%\todo[color=yellow!20, inline]{JW: The goals shall be reformulated to respect the formulations and priorities defined at Paris.}
-
-%\todo[color=green!20, inline]{IT: OK}
 
 
 \subsection{Intended Audience}
-%\textit{Guidance: This document applies to the whole development life-cycle of the project and it addresses all the stakeholders involved in the project. This document should be available to all of them in read access mode and it provides operational guidance and access to QA procedures.}
 
-%\todo[color=yellow!20, inline]{JW: The part " should be available to all of them in read access mode '' shall be deleted, since this is clear and always given in an open project public repository.}
-
-%\todo[color=green!20, inline]{IT: OK}
-
-%\todo[color=yellow!20, inline]{JW: at the following part "for all people participating in the OpenETCS project. The formulation"operational guidance and access to QA procedures'' should be clarified and extended on.}
-
-%\todo[color=green!20, inline]{IT: OK}
 The QA Plan addresses all the stakeholders who are in the position to interact with OpenETCS project
 
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}[H]{|m{3cm}|m{9cm}|m{3cm}|}
+
+\begin{table} [H]
+\begin{tabular}{|m{3cm}|m{9cm}|m{3cm}|}
 \hline
 \rowcolor{myblue}
 Audience &
 Use &
 Role\\\hline
 OpenETCS Consortium Members &
-\begin{description}
-\item It provides information and access to the QA procedures and guidelines to be followed/applied during the different phases of the project development life-cycle.
-\item It provides a consistent and integrated view of the development process followed.
-\end{description} &
-\begin{description}
-\item Consultation
-\item Reviewer
-\item Contributor or 
-\item Committer
-\end{description}\\\hline
+It provides information and access to the QA procedures and guidelines to be followed/applied during the different phases of the project development life-cycle.
+
+It provides a consistent and integrated view of the development process followed.
+&
+Consultation
+
+Reviewer
+
+Contributor or 
+
+Committer
+\\\hline
 OpenETCS Quality Manager &
 It contains the quality targets to be achieved and the corresponding QA activities to be implemented and monitored. &
 Author\\\hline
@@ -348,30 +339,22 @@ CENELEC Assessors &
 It shows the SQA strategy conceived and the one effectively implemented &
 To assess whether the project results comply to CENELEC standards\\\hline
 Open Source Community (Users, Adopters, Contributors, Committers) &
-\begin{description}
-\item Provision of information and access to the QA related procedures and guidelines implemented.
-\item Provision of information on the on-going projects
-\item Provision of guidelines on how to participate to any of the projects
-\end{description}
+Provision of information and access to the QA related procedures and guidelines implemented.
+
+Provision of information on the on-going projects
+
+Provision of guidelines on how to participate to any of the projects
 &
 For consultation and/or engagement\\\hline
 ITEA Representative &
 The QA Plan constitutes a Project Deliverable &
 For evaluation \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{tabular}
+\caption{Intended Audience}
+\end{table}
 
 
 \subsection{Evolution}
-%\textit{Guidance: Frequency, method, responsibilities,{\dots}}
-
-%\todo[color=yellow!20, inline]{JW: Please at an example, as I don't see the purpose of this part.}
-
-%\todo[color=green!20, inline]{IT: OK. An example will be provided}
-
-%\todo[color=yellow!20, inline]{CC: What is this part related to? Does the evolution concern only the quality documentation, or the whole project outcomes?.}
-
-%\todo[color=green!20, inline]{IT: Only to the Quality Documentation}
 
 The first version of the document, prepared at the beginning of the project, will be updated regularly with the evolution of the OpenETCS project. The methods and tools to be applied during the development of the OpenETCS software products will be decided based upon the results of the research activities carried out during the project. 
 
@@ -379,157 +362,246 @@ The QA Plan document will incorporate such decisions as they are taken with a pr
 
 The QA Plan document has been conceived as a reference document. This means that detailed descriptions of procedures, guidelines, methods and/or tools will not necessarily be included in the document but adequately referenced \textit{(chapter 1.5)}. The authors of such documents and/or Wiki pages will be responsible for keeping them updated. The QA manager will monitor such activities and will guarantee changes are appropriately reflected in the QA Plan, when appropriate.
 
-The QA Manager will maintain the QA Plan backlog [YY].
+The QA Manager will maintain the QA Plan backlog \citep{qabacklog} \href{https://github.com/openETCS/governance/wiki/QAplan-backlog}{[Wiki]}.
 
 Major revisions of the QA Plan will be accomplished by the Committers to the Management Project. Minor review process will be done with the participation of the external community, following procedure \citep{RP}
 
 
 \subsection{References, Guidelines and Standards}
-%\textit{Guidance:}
 
-\begin{flushleft}
-\begin{tabular}[H]{|m{2cm}|m{7cm}|m{2cm}|m{3cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
 \hline
 \rowcolor{myblue}
-\multicolumn{4}{|c|}{Standards} \\\hline
+\multicolumn{5}{|c|}{Standards} \\\hline
 \rowcolor{lightgray}
 Internal Code &
 Name &
+Version/ Edition/ Date &
 Repository &
 Responsible 
 \\\hline
 \citep{EN50128} &
 EN 50128 &
+\centering  &
 governance &
 CENELEC\\\hline
 \cite{ISO9001} &
 ISO 9001 &
+\centering  &
 governance &
 International Organization for Standardization\\\hline
 \cite{subset023} &
-SUBSET-023 v300 &
+SUBSET-023 &
+\centering 3.0.0 &
 SSRS &
 UNISIG\\\hline
 \cite{subset026} &
-SUBSET-026 v330 &
+SUBSET-026 &
+\centering 3.3.0 &
 SSRS &
 UNISIG\\\hline
 \end{tabular}
-\end{flushleft}
+\caption{Standards}
+\end{table}
 
-\begin{flushleft}
-\begin{tabular}[H]{|m{2cm}|m{7cm}|m{2cm}|m{3cm}|}
+
+
+\begin{table}[H]
+\begin{tabular}{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
 \hline
 \rowcolor{myblue}
-\multicolumn{4}{|c|}{References} \\\hline
+\multicolumn{5}{|c|}{References} \\\hline
 \rowcolor{lightgray}
 Internal Code &
 Name &
+Version/ Edition/ Date &
 Repository &
 Responsible  
 \\\hline
 \citep{fpp} &
 Full Project Proposal (FPP) &
-governance &
+\centering 3.0 &
+management &
 Klaus-Rüdiger Hase\\\hline
 \cite{scmp} &
 Software Configuration Management Plan &
+\centering  &
 governance &
 Jürgen Weiss\\\hline
-\cite{emp} &
-Error Management Plan &
-governance &
-??\\\hline
 \cite{PCA} &
 Project Co-operation Agreement &
+\centering 02e &
 management &
 Bernd Hekele\\\hline
 \citep{IPP} &
 OpenECTS IP Policy &
+\centering 0.1 &
 ecosystem &
 Bernd Hekele\\\hline
 \citep{IA} &
-OpenETCS Internal Assessment &
-ecosystem &
-Bernd Hekele\\\hline
-\cite{verification} &
-SW Verification Plan &
+OpenETCS Internal Assessment Plan &
+\centering  &
+internal-assessment &
+Cyril Cornu\\\hline
+\cite{vv} &
+OpenETCS Validation \& Verification Plan &
+\centering 01 &
+validation &
+Marc Behrens
+Hardi Hungar\\\hline
+\cite{qabacklog} &
+QA Plan Backlog &
+\centering 0.1.0 &
 governance &
-??\\\hline
+Izaskun de la Torre\\\hline
 \end{tabular}
-\end{flushleft}
+\caption{References}
+\end{table}
 
-\begin{flushleft}
-\begin{tabular}[H]{|m{2cm}|m{7cm}|m{2cm}|m{3cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
 \hline
 \rowcolor{myblue}
-\multicolumn{4}{|c|}{Procedures} \\\hline
+\multicolumn{5}{|c|}{Procedures} \\\hline
 \rowcolor{lightgray}
 Internal Code &
 Name &
+Version/ Edition/ Date &
 Repository &
 Responsible  
 \\\hline
 \citep{RP} &
 Review Process &
+\centering 0.2.1 &
 governance &
 Ainhoa Gracia\\\hline
+\citep{revision} &
+Revision Process &
+\centering 0.2.1 &
+governance &
+Ainhoa Gracia\\\hline
+\cite{emp} &
+Change/Problem Management Process &
+\centering 0.1.0 &
+governance &
+Izaskun de la Torre\\\hline
 \cite{ghp} &
 Grieving Handling Process &
+\centering &
 governance &
-???\\\hline
+Bernd Hekele\\\hline
 \cite{cap} &
 Committer Approvement Process &
+\centering  &
 ecosystem &
 Jonas Helming\\\hline
 \cite{odp} &
 openETCS Development Process &
+\centering &
 ecosystem &
 Jonas Helming\\\hline
+\cite{training} &
+Training Process &
+\centering &
+governance &
+\it {To be defined}\\\hline
 \end{tabular}
-\end{flushleft}
+\caption{Procedures}
+\end{table}
 
-\begin{flushleft}
-\begin{tabular}[H]{|m{2cm}|m{7cm}|m{2cm}|m{3cm}|}
+\begin{table}[H]
+\begin{tabular}{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
 \hline
 \rowcolor{myblue}
-\multicolumn{4}{|c|}{Guidelines} \\\hline
+\multicolumn{5}{|c|}{Guidelines} \\\hline
 \rowcolor{lightgray}
 Internal Code &
 Name &
+Version/ Edition/ Date &
 Repository &
 Responsible  
 \\\hline
 \cite{Contribution} &
 Contribution guidelines &
+\centering 01 &
 ecosystem &
 Bernd Hekele\\\hline
 \cite{committer} &
 Committer Election Guideline &
+\centering &
 ecosystem &
 Jonas Helming\\\hline
 \cite{PublishingGuideline} &
 openETCS Publishing Guideline &
 Dissemination &
 Stefan Rieger\\\hline
+openETCS Publishing Guideline (see also Sct.~\ref{sct:publishingguideline}) &
+\centering &
+Dissemination &
+Stefan Rieger\\\hline
+\cite{expertguide} &
+Expert Election Guideline &
+\centering &
+governance &
+\it {To be defined}\\\hline
 \end{tabular}
-\end{flushleft}
+\caption{Guidelines}
+\end{table}
 
+\begin{table}[H]
+\begin{tabular}{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
+\hline
+\rowcolor{myblue}
+\multicolumn{5}{|c|}{Templates} \\\hline
+\rowcolor{lightgray}
+Internal Code &
+Name &
+Version/ Edition/ Date &
+Repository &
+Responsible  
+\\\hline
+\cite{Competence} &
+Competence Matrix Template &
+\centering  &
+governance &
+\it {To be defined}\\\hline
+\cite{expert} &
+Expert database Template &
+\centering &
+governance &
+\it {To be defined}\\\hline
+\end{tabular}
+\caption{Templates}
+\end{table}
 
-%\todo[color=yellow!20, inline]{JW: At least add EN 50128 and ISO 9001, but how is references meant?}
-
-%\todo[color=green!20, inline]{IT: OK. Documents used as reference in QA Plan}
 
 \subsection{Definitions and acronyms}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-Abbreviation &
-Meaning\\}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{3cm}m{11cm}|}
-\hline
+
+\begin{center}
+\begin{longtable}{|m{3cm}m{11cm}|}
+\caption{Definitions and acronyms}\\
+
+\hline \rowcolor{myblue} \multicolumn{1}{|l}{\textbf{Abbreviation}} & \multicolumn{1}{l|}{\textbf{Meaning}} \\ \hline 
+\endfirsthead
+
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\rowcolor{myblue} \multicolumn{1}{|l}{\textbf{Abbreviation}} & \multicolumn{1}{l|}{\textbf{Meaning}} \\ \hline 
+\endhead
+
+\hline \hline
+\endlastfoot
+
+%\tablefirsthead{\hline
+%\rowcolor{myblue}
+%Abbreviation &
+%Meaning\\}
+%\tablehead{}
+%\tabletail{}
+%\tablelasttail{}
+%\begin{supertabular}{|m{3cm}m{11cm}|}
+%\hline
 ASR &
 Assessor\\\hline
 CCS &
@@ -609,13 +681,13 @@ IP &
 Intellectual Property\\\hline
 IP Clean &
 No IP without permission in writing \\\hline
-\end{supertabular}
+ISTQB &
+International Software Testing Qualifications Board \\\hline
+\end{longtable}
+\end{center}
 
+\newpage
 \section{Project Organization}
-
-%\todo[color=yellow!20, inline]{JW: A short (two sentences) introduction is needed to explain the relation between all following points.}
-
-%\todo[color=green!20, inline]{IT: OK}
 
 OpenETCS is a cooperative European-ITEA project. The project plan (objectives, work plan schedule, role of the partners, project organization) is described in the \citep{fpp} FPP document, which is updated regularly (at least yearly). The project is accomplished according to the Project Co-operation Agreement (PCA) \citep{PCA} signed by the partners.
 
@@ -623,7 +695,7 @@ The organization of the project has to meet the following constraints and challe
 
 \begin{enumerate}
 \item As an ITEA project, the project has to meet requirements imposed by the ITEA Office that affect both the organization and the outcomes of the project.
-\item As an ITEA project, the effective involvement of the partners is sometimes hampered by external constraints (i.e. local financing, local approvals) so mechanisms to guarantee the “required competence” is available when needed are to be implemented. Besides, OpenETCS operates in a regulated environment where demonstrating the competence of the personnel assigned to the different activities is required. 
+\item As an ITEA project, the effective involvement of the partners is sometimes hampered by external constraints (i.e. local financing, local approvals) so mechanisms to guarantee the “required competence�? is available when needed are to be implemented. Besides, OpenETCS operates in a regulated environment where demonstrating the competence of the personnel assigned to the different activities is required. 
 \item Some of the results (software \& tool chain) have to be certifiable; CENELEC SIL4 requirement \citep{subset026} have to be followed and the corresponding evidence provided. 
 \item As an open source project, Open Source principles will be respected; high degrees of engagement from the community are intended.
 \item As it is the intention to apply SCRUM, the appropriate responsibilities and mechanisms have to be implemented
@@ -632,24 +704,16 @@ The organization of the project has to meet the following constraints and challe
 The following chapters shows the mechanisms implemented at organizational level to guarantee the above mentioned objectives are achieved.
 
 
-\subsection{Project structure diagram}
+\subsection{openETCS project organisation}
 
-%\todo[color=yellow!20, inline]{JW: A diagram (graphic) has to be added.}
-
-%\todo[color=green!20, inline]{IT: OK}
-
-%\todo[color=yellow!20, inline]{CC: This part refers to the Project Management Plan. What is this document? Is that the configuration Management plan? Is that document still created?}
-
-%\todo[color=green!20, inline]{IT: It can be updated FPP where the updated description of the Project Plan is available.}
-
-%\textit{Guidance: Refer to the PMP(Project Management Plan) and/or to the Full Project Proposal where the Project Organisation is described in detail.In this chapter include only the way compliance to CENELEC and SCRUM high level requirements at organisational level is achieved. i. all organisations are ISO 9001, how independency between roles is achieved within the structure,{\dots}}
-
-%\textit{include ProjectStructure/visio}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{./figures/project_structure.png}
 \caption{OpenETCS Project Structure}
 \end{figure}
+
+\subsubsection{Compliance with ITEA Requirements}
+ITEA rules are documented in the ITEA2 Frame Agreement [XX].
 
 Compliance to ITEA Requirements is achieved by means of:
 \begin{itemize}
@@ -659,46 +723,63 @@ Compliance to ITEA Requirements is achieved by means of:
 \item An OpenETCS Foundation NV which guarantees sustainability of the project results once the project is finished.
 \end{itemize}
 
+\subsubsection{Compliance with Open Source Principles}
 Compliance to the Open Source Principles and related objectives is achieved by means of:
 \begin{itemize}
 \item An OpenETCS IP Policy and Procedures \citep{IPP}
-\item An OpenETCS Development Process \citep{odp}[Wiki] based in the Eclipse Development Process \citep{EDP}, designed to promote dynamism in the development and openness. All the guidelines are maintained and available at the OpenETCS Ecosystem project [XX]: 
+\item An OpenETCS Development Process \citep{odp} \href{https://github.com/openETCS/ecosystem/wiki/openETCS-Development-Process}{[Wiki]} based in the Eclipse Development Process \citep{EDP}, designed to promote dynamism in the development and openness. All the guidelines are maintained and available at the OpenETCS Ecosystem project [XX]: 
 \begin{itemize}
 \item The OpenETCS project is conceived as a project of projects organized in a hierarchical manner, where the WorkPackages, as defined within the WorkProgramme \citep{fpp}, are considered Top-Level Projects with their own charter. The so-called Tasks are projects, sub-projects of the corresponding Top-Level Project.
 \item Anyhow, new projects can be launched, if needed and approved; existing projects can be archived, if they become inactive. Therefore the final structure of the OpenETCS project will very much depend on its evolution.  
 \item The list of OpenETCS projects with information on their status is available in [XX]
 \item Any project (independently to its position in the hierarchy, and type) has its project leader, scope and maintains its own resources. The project leader is not only responsible to guarantee progress towards the scope of the project but to promote that the most appropriate community is engaged in the project life-cycle with openness and transparency. This community includes committers, contributors, users and adopters.
-\item Every project has its own repository under the responsibility of the Project Leader. Agreements and principles on the repository structure and content can be found in [XX] 
-\item The PMB (Project Management Board) is responsible for maintaining and assuring the implementation of the OpenETCS Development Process and for ensuring the required “coordination” among the projects.
+\item Every Top-project/WP has its own repository under the responsibility of the Top-Project/WP Leader. Agreements and principles on the repository structure and content can be found in [XX] 
+\item The PMB (Project Management Board) is responsible for maintaining and assuring the implementation of the OpenETCS Development Process and for ensuring the required “coordination�? among the projects.
 \item The Mentoring board (composed of XXX) is responsible for mentoring projects and advising.
 \item The Project Office is responsible for the administrative tasks around the OpenETCS Development Process and maintains the OpenETCS Ecosystem project [XX]
 \end{itemize}
-\item The list of OpenETCS projects with information on their status is available in [XX]
 \item The tools to support the OpenETCS Development Process are open source tools. A relation of the tools approved by the consortium is [XX]
+\item The engagement of the OpenETCS Advisory Group will not only provide valuable technical insights but visibility of the project within the railway community.
 \end{itemize}
+
+\subsubsection{Compliance with SCRUM Requirements}
+Agile Project Management ha been introduced to software projects in the 90-ties and is now a de-fact industry standard well documented in publications as e.g., in [XX].
 
 Compliance to SCRUM Requirements is achieved by means of
 \begin{itemize}
-\item Each Work Package/Top-Project Leader is the SCRUM Owner of the corresponding WP/Top-Project results and maintains the corresponding backlog
-\item Each Project/Task Leader is the SCRUM Owner of the corresponding Tasks results  and maintains the corresponding backlog
+\item Each Work Package/Top-Project Leader is the SCRUM Product Owner of the corresponding WP/Top-Project results and maintains the corresponding backlog
+\item Each Project/Task Leader is the SCRUM  Product Owner of the corresponding Tasks results  and maintains the corresponding backlog
 \item The Project Coordinator is the SCRUM Product Owner of the project results and maintains the project results backlog.
-\item Weekly meetings are maintained to assess progress, promote cross-collaboration, plan next steps and therefore, maintain the corresponding backlog.
+\item Weekly meetings are maintained to find and report on impediments, assess progress, promote cross-collaboration, plan next steps and therefore, maintain the corresponding backlog.
 \begin{itemize}
+\item Weekly Scrum meetings are per definition open meetings, e.g., everybody from the teams can participate and contribute to the meeting.
+\item The weekly meetings are strictly time-boxed.
 \item At WP/Project level, the registered committers, contributors, users and adopters are invited to participate
 \item At Open ETCS project level, the components of the PMB( Project Management Board) are invited.
 \end{itemize} 
-\item There is a SCRUM Development Team for the each WP/Project composed by the accepted committers.
-\item A SCRUM master (WP1) is responsible for ensuring SCRUM is understood and enacted
+\item The work-packages resp. tasks need to organize there scrum teams according to practical needs.
+\item Teams are typically distributed in geography and in organisation (i.e., participating companies).
+\item Scrum teams typically have to provide several development roles (according to CENELEC and according to Eclipse). Guidance on the possible mixtrues of CENELEC roles into a Scrum team is documented in the annex section of this guideline.
+\item To be able to be successful in Agile Development we need to set special focus to the role of the "User" of a product.
+\begin{itemize}
+\item In general, the user of a product in openETCS should representratives of the project openETCS consuming the result of a scrum team. 
+\item The workpackage leader of the WP using an outcome of the team is the first candidate.
+\item Representatives of partners making use of the openETCS result in long term are also natural users of a team result.
+\item Partners in the openETCS project need to agree on the Users before the task when planning the interfaces. 
+\end{itemize}  
+\item Each team has to select a scrum master. Scrum training is mandatory.
+\item A SCRUM master (WP1) is responsible for supporting the teams.
 \end{itemize}
 
-In principle, two of the OpenETCS project results (Software and Tool Chain) are to be CEN SIL 4 certifiable. These are two of the results from WP3 and WP7. The following mechanisms, at organizational level, will help the corresponding project leader to provide evidence of compliance with chapters 5.1 \citep{EN50128} and 5.2. Anyhow, evidence that requirements imposed are met will have to be provided for each of the two software projects on a project by project basis. 
+\subsubsection{Compliance with software management and organisation according to EN50128:2011}
+In principle, two of the OpenETCS project results (Software and Tool Chain) are to be CENELEC SIL 4 certifiable. These are two of the results from WP3 and WP7. The following mechanisms, at organizational level, will help the corresponding project leader to provide evidence of compliance with chapters 5.1 and 5.2. Anyhow, evidence that requirements imposed are met will have to be provided for each of the two software projects on a project by project basis. 
 
 \begin{itemize}
 \item Every partner in the consortium is ISO9001 Certified or will be in the position to provide evidence of a quality management process is accordance to ISO9001
 \item Every partner maintains an updated CV of the staff/experts involved in OpenETCS
 \item A Required Competence Matrix (RCM) per role and project will be maintained \textit{(Chapter 4)}.
-\item A database with the participants per role and project will be maintained maintained.
-\item Overall, the independence required to develop certifiable results is promoted by the Work Programme which is structured into the following “independent” WorkPackages/Top-Projects, each lead by a different organization.  
+\item A database with the participants per role and task/project will be maintained by the task/project leader.
+\item Overall, the independence required to develop certifiable results is promoted by the Work Programme which is structured into the following “independent�? WorkPackages/Top-Projects, each lead by a different organization.  
 \begin{itemize}
 \item WP2, focused on Requirements Specification is led by SNCF.
 \item WP3, focused on the Software Implementation taking as input WP2 and WP7 results is led by Alstom France.
@@ -708,50 +789,35 @@ In principle, two of the OpenETCS project results (Software and Tool Chain) are 
 \item For the purpose of validating/adapting technical approaches, tools and concepts before they are taken into consideration, three Use Cases will be engaged.
 \item The Open Development Process facilitates the creation of the necessary projects required to achieve the OpenETCS project results.
 \end{itemize}
-\item For each certifiable result, CENELEC required software roles will be covered by experts from different WPs. Incompatibilities can be controlled and monitored as active participation to the different projects has to be granted, accepted and is appropriately registered  \textit{(Chapter 2.2)}. Evidence of competence can be provided by comparing the CV of each expert with the RCM for the role assigned.
-\item For each certifiable result, if possible, the role of the assessor will be selected from the external community of the project. Meanwhile, an internal independent assessor will be appointed. The role and profile of this assessor is detailed in \citep{IA} OpenETCS/internal-assessment [wiki pages]
+\item For each assessable result, CENELEC required software roles will be covered by experts from different WPs. Incompatibilities can be controlled and monitored as active participation to the different projects has to be granted, accepted and is appropriately registered  \textit{(Chapter 2.2)}. Evidence of competence can be provided by comparing the CV of each expert with the RCM for the role assigned.
+\item For each assessable result, if possible, the role of the assessor will be selected from the external community of the project. Meanwhile, an internal independent assessor will be appointed. The role and profile of this assessor is detailed in OpenETCS/internal-assessment \citep{IA} \href{https://github.com/openETCS/ecosystem/wiki/WP4:-internal-assessment}{[wiki pages]}
 \end{itemize}
 
 One of the mechanisms to guarantee the availability of competence staff when needed will be the design and implementation of a training programme. The training programme will be managed by the Project Office. The identification of needs will be performed by the project leaders, the PMB and the Quality Manager. 
-
-%\begin{figure}
-%\includegraphics[width=\textwidth]{./figures/organization.PNG}
-%\caption{???? Organization ????}
-%\end{figure}
+The training process is detailed in [XX]
 
 
 \subsection{Committers assignment and responsibilities}
-%\textit{Guidance: Introduce the concept of Committers as the way to guarantee the required competences are available within the context of the large project, with many organisations involved in the context of a EU project and with an open source environment.  Introduce the concept of Contributors also and the difference between them. Refer to the document where the process to become a Committer and/or contributor is detailed.} 
 
-%\todo[color=yellow!20, inline]{JW: To cover all open source roles also the user have to be introduced.}
+Each Top-Project/WP leader is responsible for establishing and publishing the specific required competence matrix for the Top-Project/WP \textit{(Chapter 4)}. This matrix will be updated in response to the demands imposed by the evolution of the project. The competence matrix template \citep{Competence}is provided in [XX]
 
-%\todo[color=yellow!20, inline]{JW: Section covers only open source rules. A short decription of the relations to the project structure and CENELEC rules is needed.}
-
-%\todo[color=yellow!20, inline]{CC: What is the document to refer to for the committer assignement? The needed competencies matrix, the actual competencies matrix and the training plan will be included in this document?}
-
-%\todo[color=green!20, inline]{IT: This is an open source project and at the same time it is a EU project. This means that "participation" is not "mandatory" as in a "real life project". In this chapter we would like to emphasize/show the way/means OpenETCS has put in place to guarantee or at least control the effective participation of the "experts". The Required Competence Matrix (RCM) is specifically included later but actual competence matrix can be obtained by comparing the effective committers and contributors with the RCM. By "Document" we mean the place where the "process" and the "requirements" to become contributor or committer are explained. In this moment there is not "written document" so we will explain it here.}
-
-Each project leader is responsible for establishing and publishing the specific required competence matrix for the project \textit{(Chapter 4)}. This matrix will be updated in response to the demands imposed by the evolution of the project.
-
-Each project leader is responsible for developing the most appropriate communities of users, adopters, contributors and committers as required by the project. A database will be maintained and assessed periodically by the Project Leader. This database will contain the coordinates of the expert, his/her role in the project and a basic explanation of adequacy.
+Each Top-Project/WP leader is responsible for developing the most appropriate communities of users, adopters, contributors and committers as required by the Top-Project/WP. A database will be maintained and assessed periodically by the Top-Project/WP Leader. This database will contain the coordinates of the expert, his/her role in the project and a basic explanation of adequacy. The expert database template is provided in [XX]
 
 The required core competences as well as the expected contribution of each of the identified communities are described in Chapter 4.
 
-Only committers have write-access to the project resources. Becoming a committer requires of the acceptance of the project leader and of the rest of the project committers. Guidelines on how to become a committer can be found in [XX].
+Only committers have write-access to the project resources. Becoming a committer requires of the acceptance of the project leader and of the rest of the project committers. Guidelines on how to become a committer can be found in \href{https://github.com/openETCS/ecosystem/wiki/_pages}{[ecosystem wiki pages]}.
 
 \begin{itemize}
 \item It is the responsibility of the Project Leader to make sure the required competence to develop a task is covered by the engaged committers.
 \item It is the responsibility of the Open ETCS Project Leader to guarantee the required competence for the project is covered by the effective committers.
 \end{itemize}
 
-Contributors have read-access to the project resources, and acceptance is not required. Guidelines on how to become a contributor can be found in [XX].
+Contributors have read-access to the project resources, and acceptance is not required. Guidelines on how to become a contributor can be found in \href{https://github.com/openETCS/ecosystem/wiki/_pages}{[ecosystem wiki pages]}.
 
-An expert can contribute to different projects with different roles. The data from different project will be integrated and analysed to detect potential incompatibilities, if applicable. This activity will be done by the QA Manager. 
+An expert can contribute to different projects with different roles. The data from different project will be integrated and analysed to detect potential incompatibilities, if applicable. This activity will be done by the QA Manager. The guideline on how to select expert is detailed in [XX].
 
 
 \subsection{Project QA Management}
-%\textit{Guidance: Provide a description of the tasks to be developed by the project  QA organisational structure jointly with the QA tasks to be performed by the team to guarantee project procedures/{\dots} are met. This means to detail the overall QA strategy.}
-
 QA activities will be under the responsibility of the QA Manager, who reports to the Project Coordinator.
 
 The QA Manager will be responsible for the identification, supervision and control of all the processes, methods and tools required to meet the quality targets of the project. It is also the responsibility of the QA manager to provide the necessary evidence that such activities have been developed.
@@ -768,47 +834,31 @@ The activities of the QA Manager will be:
 \item To produce and publish the corresponding quality reports.
 \end{itemize}
 
+
+\newpage
 \section{Life Cycle}
 
-\todo[color=yellow!20, inline]{JW: A short (two sentences) introduction how these two life cycles are related.}
-
-\todo[color=green!20, inline]{IT: OK}
+The openETCs project itself is a R\&D project running over 3 years which has the goal to deliver products such as the on-board specification model and the corresponding tool chain to generate source code based on this model. While the project life cycle is limited through the project time span, the products shall be used and also developed further after the end of the openETCS project. Respectively, the project only presents the firth development part of the product life cycle.
 
 \subsection{Project Life Cycle }
 
-\todo[color=yellow!20, inline]{JW: A short text before referring to the document (naming of WPs and the overall concept).}
+The project Life Cycle is implemented through a set of WPs broken down into Tasks. In response of the nature of the project, these WPs are grouped into three purpose driven categories. The first category (WP2, WP4) addresses the specification of the work to be developed and the validation of the results to be obtained; the second category (WP3, WP7, WP5) addresses the development itself and the demonstration of the software and the tools chain developed and the third category (WP1, WP6) addresses the project management, the quality assurance and the dissemination of the project.
+This structure permits both the development and the integration of conceptual (R\&D) and implementation activities to achieve innovative, validated and fit-for-purpose results.
+The detailed description of the Work Package description and overview plan is covered by [FPP].  
 
-\todo[color=green!20, inline]{IT: OK}
-
-\textit{Guidance: Refer to a separate document (PMP and Full Project Proposal)  that describes the WP structure, refer to  the Iterative process; relation between WPs and Results; WP/Project Backlog creation and maintenance and Scrum implementation.}
-
-%\begin{figure}
-%\center
-%\includegraphics[width=.35\textwidth]{./figures/lifecycle.PNG}
-%\caption{???? Lifecycle ????}
-%\end{figure}
 
 \subsection{Product Life Cycle }
 
-\todo[color=yellow!20, inline]{JW: Not to long, just short introduction, please.}
-\todo[color=green!20, inline]{IT: OK}
-
-\textit{Guidance: Refer to a separate document that describes the life cycle. Consider EN50126 and EN50129 Requirements, include Deployment and Maintenance, include activities to "adapt" the generic/abstract software to a concrete implementation.
-In this chapter, if applicable, include justification to "potential deviations" to CENELEC standards.}
+As the OpenETCS project products shall be part of the train development the reference for their life cycles are the CENELEC standard phases defined in the EN50126. But as the products are in general R\&D results, their life cycles do not include any certification or acceptance activities at the moment.
+The main OpenETCS products are the OpenETCS Software model and the OpenETCS tools chain development, which have their own life cycles. For both parts the main development, verification and validation activities are done during the OpenETCS project. For the software only the demonstrator implementation is part of the OpenETCS project, while any kind of implementation on a target hardware is out of the project. 
+For the OpenETCS tools chain the basic implementation is part of the project, but all further steps from qualification on are out of the project.
+In general long time maintenance is a key concept of these products but it can not be established in the project time span. 
 
 \subsubsection{Life Cycle of the OpenETCS Software}
-\textit{Guidance: Prepare a separate document with a complete description of phases of the the SW development life-cycle, including V\&V, QA and Safety processes. This description shall contain the activities to be performed by each role.
-In the preparation of this document, contribution of the different WPs is necessary (i.e. WP2 for the Design and development phase and WP4 for the V\&V activities).
-In this chapter, if applicable, include justification to "potential deviations" to standard (EN50128) standards.}
-
-\todo[color=yellow!20, inline]{JW: Reference to D 2.3.}
-\todo[color=green!20, inline]{IT: OK}
+The software development life-cycle of the OpenETCS project should be complied with CEN50128. Requirements imposed by the standard are analyzed and shown in detail in D2.2, while the software development life cycle applied in this project is described in Deliverable 2.3 and D2.4. The Test and Validation activities are presented in D4.2. The integration, the assessment and any maintenance is only defined in relation to the demonstrator implementation as no further phase can are planed in depth at this point.
 
 \subsubsection{Life Cycle of the OpenETCS Tools chain}
-\textit{Guidance: See 3.2.1}
-
-\todo[color=yellow!20, inline]{JW: Reference to the respective documents of WP 7.}
-\todo[color=green!20, inline]{IT: OK}
+The development of the Tool Chain has to comply with EN50128. Requirements imposed by the standard are analyzed and shown in detail in D2.2. The tools chain development life cycle is described in D7.3. As the tools chain is a combination and improvement of already existing tools, which have a specific life-cycle, the tools chain life cycle mainly consists of integration and maintenance activities. 
 
 \subsection{QA Management }
 \textit{Guidance: Refer to the procedures to implement the QA activities identified within the above mentioned development life-cycle. }
@@ -820,32 +870,10 @@ In chapter 3.3 we will explain the QA activities}
 
 \section{Roles}
 
-%\todo[color=yellow!20, inline]{CC: The SCRUM and open source part of the roles described in the §4.1 are missing. The 2 paragraphs (roles within Software and within ToolChain) allow to make the connection between the competencies matrix and the training plan (shortly described in the §4.1), which is a good point.
-%Moreover, the §4.4 should be a refinement of the CENELEC role for the quality manager, and thus be integrated in the previous paragraphs.}
-
 \newcommand\todoin[2][]{\todo[inline, caption={2do}, #1]{
 \begin{minipage}{\textwidth-4pt}#2\end{minipage}}}
 
-%\todoin[color=green!20, inline]{IT:
-%\begin{description}
-%\item In the template (see Annex) we have considered SCRUM Roles as a secondary feature, as every "participant" has to comply (from a competence point of view) to several roles at the same time: Functional/CENELEC role, a SCRUM Role, an Open Source Role and an OpenETCS project role.
-%\item In order to simplify and provide more clarity, we will prepare separate competence tables.
-%\end{description}
-%}
-
 \subsection{OpenETCS Roles}
-
-%\todo[color=yellow!20, inline]{JW: Introduction needed that relates the openETCS project structure based on the open source principles to the needed CENELEC roles. For the specific competencies and the listing the reference can be made to the Annex.}
-
-%\todoin[color=green!20, inline]{IT: 
-%\begin{description}
-%\item OK, we will do it. Anyhow, please consider this to assess the structure we propose:One participant can be: Committer and/or Contributor to any WP and at the same time has a CENELEC Role. (Incompatible situations should be detected and avoided).
-%\item For instance, from the project point of view, an expert can be WP4 Contributor, WP2 Committer and  Requirements Manager from a CENELEC point of view.
-%\item In relation to SCRUM, he/she can act as SCRUM leader and/or SCRUM Team. SCRUM Roles should be considered aside
-%\item There exist certain relations between CENELEC roles and WP activities. For instance WP2 committers are more likely to adopt a role of requirements engineers that WP4 ones, but it may occur that an expert is committers to two different WPs, so we prefer not to stablish "mandatory" relations but only references.
-%\end{description}}
-
-%\textit{Guidance: Refer to Annex with the Role/Competence Matrix at project level. Besides, in this chapter,  outline or refer to the procedure that will be used to maintain this matrix up to date; identify (refer and/or outline) the measures and/or mechanisms in place to record the competencies of the personnel assigned to the different roles (i.e. each company has to maintain training records) and measures and/or mechanisms to identify and fill gaps (i.e.maintain a project specific incorporation programme; maintain a training programme)}
 
 In view of the nature of the project, roles are grouped into three independent categories:
 
@@ -855,7 +883,7 @@ In view of the nature of the project, roles are grouped into three independent c
 \item CAT3: CENELEC Roles 
 \end{itemize}
 
-Therefore, any participant will always adopt a role within CAT1, a role within CAT2 and if he/she is involved in the development of a CENELEC Certifiable product, a third role in CAT3.
+Therefore, any participant will always adopt a role within CAT1, a role within CAT2 and if he/she is involved in the development of a CENELEC assessable product, a third role in CAT3.
 
 As already mentioned, OpenETCS is a project of projects. An expert can participate to different projects with different roles. Therefore an expert will have a CAT1, CAT2 and/or CAT3 role per project.
 
@@ -868,14 +896,12 @@ According to the open development process followed by Open ETCS, the QA process 
 As project results affected by CENELEC are already identified, both core and specific required competence per CAT 3 role are included in Annexes C and D.
 
 \subsection{Roles within the Development process of the openETCS Software}
-%\textit{Guidance: Refer to Annex with the Role/Competence Matrix of the OpenETCS software. Besides in this chapter, outline key specific competences demanded by the ETCS software development to the different roles.}
-See Annex C
+The responsibilities and competences for every role specific to the openETCS Software development are listed in Annex C. The independence of different roles is the core concept of the quality assurance strategy required be CENELEC standards. As openETCS is a collective project by various independent partners, the project organization already ensures full independence between the roles administrated by experts from different partners. 
+
 \subsection{Roles within the Development process of the openETCS Tools Chain}
-%\textit{Guidance: See Chapter 4.2}
+
 See Annex D
 \subsection{QA Activities}
-
-%\textit{Guidance: Describe the measures applied to monitor/verify people assigned to the different roles meet the requirements imposed by the role and have an active/qualified participation to the project (i.e. committers: assess effective contribution activities; gap analysis;{\dots}).}
 
 The QA Manager will be in charge of:
 \begin{itemize}
@@ -887,75 +913,59 @@ The QA Manager will be in charge of:
 
 \section{Methods, measures and tools for quality assurance (product + open ETCS software + Tools chain)}
 
-%\todo[color=yellow!20, inline]{JW: The Annex does/can not provide the needed information. The references have to be made to the WP 2 and WP3 deliverables, which actually provide these information in depth}
 
-%\todo[color=green!20, inline]{IT: We agree that the full and detailed description will be included in the deliverables. However, a summarised version with the key elements (methods, tools and short justification) should be included in this document as annex. Within this point, we consider the proposal of Merlin is very appropriate}
+Selection of methods and tools used in each phase of the OpenETCS process is a part of the WP7 activities. This selection is based on the state of art established by WP2 (D2.1 and D2.2), the set of requirements defined by WP2 (D2.6-9) and the process definition (D2.3, D2.4, D4.1, D4.2.3).
 
-%\todoin[color=yellow!20, inline]{CC: Why add a QA activities at the end of each of thoses paragraphs, whether the QA activities are exactly le scope of this document? For instance, the following titles are proposed for replacing the "QA Activities":
-%\begin{itemize}
-%\item §5.1: "evaluation tools"
-%\item §6.3: "Configuration Management Plan"
-%\item §7.3: "Review process"
-%\end{itemize}
-%}
+Results of the selection of methods and tools are given in the D7.1 and D7.2 deliverables. Conformance of the methods and tools are going to be discussed in D7.3.
 
-%\todo[color=green!20, inline]{IT: OK. I think there is an error in the template. Instead of QA Activities, it is Quality Control and Monitoring Activities.}
+The following table give details of all this deliverables.
 
-%\todoin[color=yellow!20, inline]{MP: My suggestion would be, for each software life cycle phase (see below), give appropriate Methods/Technique for SIL4 and give a justification why this Method(s) is (or are) the best one.
-%\begin{itemize}
-%\item Software Requirements Specification
-%\item Software Architecture Specification
-%\item Component Design and Implementation
-%\item Software Verification and Modul Testing
-%\item Software Integration Testing
-%\item Overall Software Testing
-%\item Software Validation
-%\item Data Preparation 
-%\item  Software deployment
-%\end{itemize}
-%}
-
-%\todo[color=green!20, inline]{IT: That´s great. OK}
-
-%\textit{Guidance: Refer to Annex where for each phase in the development life-cycle identify methods and tools as well as justification for selection}
-
-%\todo[color=yellow!20, inline]{JW: There should be again sections for the openETCS model, software (are the product) and Tools chain.}
-
-%\todo[color=green!20, inline]{IT: OK.}
-In this chapter, the methods and tools used in each phase of the software development life-cycle process of both the application software and the tool chain are identified. A brief justification of compliance to CENELEC is included.
-
-This chapter has to be read in conjunction with OpenETCS project work producs listed in the Table below. The relevance of each deliverable for the scope of this chapter is also indicated:
-
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}[H]{|m{3cm}|m{11cm}|}
+\begin{table}[H]
+\begin{supertabular}{|m{3cm}|m{11cm}|}
 \hline
 \rowcolor{myblue}
 Deliverable &
 Content of Relevance for this Chapter\\\hline
+D2.1: Report on existing methodologies &
+State of the art on methods and tools \\\hline
 D2.2: Report on CENELEC Standards &
-CENELEC requirements to be fulfilled and the approach followed by the project to provide evidence[XX]\\\hline
-XX &
-XX \\\hline
+CENELEC requirements to be fulfilled and the approach followed by the project to provide evidence\\\hline
+D2.3: Process definition &
+OpenETCS process definition \\\hline
+D2.4: Report on Methods definition &
+Description of methods and tools to use to follow the OpenETCS process \\\hline
+D2.6-9: Set of requirements for the OpenETCS project &
+Definition of the requirements that the selected methods and tools shall follow \\\hline
+D4.1: Report on V\&V Plan \& Methodology &
+Detailed description of the V\&V process and how are used the methods and tools to cover V\&V artifacts \\\hline
+D4.2.3: Safety Plan &
+Detailed requirements on methods and tools to be used during the process to obtain a SIL4 developement of on-board unit \\\hline
+D7.1: Report on the final choice(s) for the primary tool chain (means of description, tool and platform) &
+Selected methods and tools to be used during the specification and design part of the OpenETCS process \\\hline
+D7.2: Report on all aspects of secondary tooling (results of T7.2)  &
+Selected methods and tools to complete the OpenETCS process (V\&V, safety analyses,..) \\\hline
+D7.3: Tool chain qualification process description &
+This report describe how the selected methods and tools fit the qualification requirements according CENELEC standard \\\hline
 \end{supertabular}
-\end{flushleft}
-
-In Annexes F, G and H the methods, techniques and tools used are identified.
+\caption{Referenced deliverables}
+\end{table}
 
 
 \subsection{Methods, measures and tools for quality assurance OpenETCS Application Software}
 
 It is assumed that the OpenETCS application software will be SIL4 compliant. Therefore, the methods, techniques and tools shall be suitable to SIL 4. 
 
+
+\todo[color=yellow!20, inline]{MPD(Systerel): It is not totally exact: one of the aim of the project is to provide a tool chain which allows to develop SIL4 software, the OpenETCS applcation software produced during the project has not as objective to be SIL4 compliant.}
+
+
+\todo[color=yellow!20, inline]{MPD(Systerel): The current OpenETCS process, and the selection of methods and tools, do not cover only software development but also system phases as described in EN50129 or EN50126.}
+
 \subsection{Methods, measures and tools for quality assurance openETCS Tools chain}
 
-The Tool Chain will be composed of a set of tools with different levels of interaction. The document [XX] provides a description of the Tool Chain architecture, jointly with a description of the constituent tools.
-Following CENELEC criteria, each tool belongs to one of the following classes: T1, T2 and T3. Only Class 3 Tools are obliged to follow specific development methods, techniques and tools. Therefore, Annex XX applies to the following tools: Tool 1,{\dots}
+The Tool Chain will be composed of a set of tools with different levels of interaction. The document D7.3 provides a description of the Tool Chain architecture, jointly with a description of the constituent tools.
+Following CENELEC criteria, each tool belongs to one of the following classes: T1, T2 and T3. Class 3 and Class 2 Tools are obliged to follow specific development methods, techniques and tools. 
 
-\textit{[To be further developed]}
 
 \subsection{Quality Control and Monitoring Activities}
 \textit{Guidance: Describe the measures to monitor the appropriate implementation of the selected methods and tools.}
@@ -966,11 +976,180 @@ Following CENELEC criteria, each tool belongs to one of the following classes: T
 
 \section{Documentation}
 
+The documentation structure of the OpenETCS project is composed of:
+\begin{itemize}
+\item Deliverables, which constitute the official outcomes of the different Top-Projects/WPs
+\begin{itemize}
+\item The relation and scope of the deliverables to be produced along OpenETCS can be found in the FPP [].
+\item The updated status of development of each Deliverable can be found in 
+\href{https://github.com/openETCS/management/wiki/State-of-Deliverables}{[State-of-Deliverables Wiki]}.
+\item The approved and therefore valid version of each Deliverables can be found in the repository of the Top-Project/WP it belongs to. 
+\end{itemize}
+\item Contractual documents, with the Commission and among the project partners
+\begin{itemize}
+\item The status of development of each contractual document can be found under the repository of Management (WP1).
+\item The last approved and therefore valid version of each contractual document can be found under the repository of Management (WP1).
+\end{itemize}
+\item Periodic Progress Reports, to show progress to ITEA and EC representatives.
+\begin{itemize}
+\item The state of each Periodic Report can be found under repository of Management (WP1).
+\item The last approved and therefore valid version of each Periodic Progress Report can be found under the repository of Management (WP1). 
+\end{itemize}
+\item Supporting Documents, in the form of Templates and Procedures
+\begin{itemize}
+\item The procedures and templates applicable to a specific Top-Project/WP can be found in the repository of the corresponding TP/WP.
+\item The procedures and templates applicable to the whole project can be found in the repository of Governance.
+\end{itemize}
+\item Internal Reports, in the form of Meeting Minutes
+\begin{itemize}
+\item The minutes of the weekly scrum meetings are found in the repository of Governance.
+\end{itemize}
+\end{itemize}
+
+The nomenclature used for the naming of the different documents is provided in [XX-to be developed].
+
+For each TP/WP the relation of existing documents is provided in the form of a list \href{https://github.com/openETCS/governance/wiki}{[Wiki]}. This list includes a direct access to the valid version of each document.
+
 \subsection{Documentation Structure within the development process of the openETCS Software}
-\textit{Guidance: Prepare a separate document with a complete description of labelling; definitions and acronyms; control information to include in each document; documents QA criteria; documentation matrix}
+As a SIL4 software, the documentation structure has to comply with CENELEC requirements. The following table shows the document structure required by CENELEC for a SIL4 development and the corresponding documents produced in the OpenETCS project.
+
+\begin{center}
+\begin{longtable}{|m{2cm}|m{1cm}|m{7cm}|m{2cm}|m{2cm}|}
+\caption{Documentation Structure}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{\textbf{Documentation Structure within the development process of the openETCS Software}} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{\textbf{Phase}} & \multicolumn{1}{c|}{\textbf{SIL4}} & \multicolumn{1}{c|}{\textbf{Document}} & \multicolumn{1}{c|}{\textbf{WP/Task}} & \multicolumn{1}{c|}{\textbf{Link}} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\rowcolor{myblue} \multicolumn{5}{|c|}{\textbf{Documentation Structure within the development process of the openETCS Software}} \\
+\rowcolor{lightgray} \multicolumn{1}{|c|}{\textbf{Phase}} & \multicolumn{1}{c|}{\textbf{SIL4}} & \multicolumn{1}{c|}{\textbf{Document}} & \multicolumn{1}{c|}{\textbf{WP/Task}} & \multicolumn{1}{c|}{\textbf{Link}} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
+Planning &
+\centering HR &
+\raggedright
+Software Quality Assurance Plan\\
+Software Quality Assurance Verification Report\\
+Software Configuration Management Plan\\
+Software Verification and Validation Plan\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Software Requirements &
+\centering HR &
+\raggedright
+Software Requirements Specification\\
+Software Requirements Test Specification\\
+Software Requirements Verification Report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Architecture and design &
+\centering HR &
+\raggedright
+Software Architecture Specification\\
+Software Design Specification\\
+Software Interface Specification\\ 
+Software Integration Test Specification\\ 
+Software/Hardware Integration Test Specification\\ 
+Software Architecture and design verification report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Component Design &
+\centering HR &
+\raggedright
+Software Component design specification\\
+Software Component Test Specification\\
+Software Component design verification report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Component Implementation and Testing &
+\centering HR &
+\raggedright
+Software source code and supporting documentation\\
+Software source code verification report\\
+Software Component Test Report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Integration &
+\centering HR &
+\raggedright
+Software Integration Test Report\\
+Software/Hardware Integration Test Report\\
+Software Integration Verification Report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Overall Software Testing/Final validation &
+\centering HR &
+\raggedright
+Overall Software Test Report\\
+Software Validation Report\\
+Tools Validation Report\\ 
+Release Note\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Systems configured by Application Data/algorithms &
+\centering HR &
+\raggedright
+Application Requirements Specification\\
+Application Preparation Plan\\
+Application Test Specification\\ 
+Application Architecture and Design\\ 
+Application Preparation Verification Report\\ 
+Application Test Report\\ 
+Source Code of Application Data/Algorithms\\ 
+Application Data/Algorithms Verification Report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Software Deployment &
+\centering HR &
+\raggedright
+Software Release and Deployment Plan\\
+Software Deployment Manual\\
+Release Notes\\ 
+Deployment Records\\ 
+Deployment Verification Report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Software Maintenance &
+\centering HR &
+\raggedright
+Software Maintenance Plan\\
+Software Change Records\\
+Software Maintenance Records\\ 
+Software Maintenance Verification Report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+Software Assessment &
+\centering HR &
+\raggedright
+Software Assessment Plan\\ 
+Software Assessment Report\\ &
+(to be defined) &
+(to be defined)
+\\\hline
+\end{longtable}
+\end{center}
+
 
 \subsection{Documentation Structure within the development process of the openETCS Tools chain}
 \textit{Guidance: See Chapter 6.1}
+
 
 \subsection{Quality Control and Monitoring Activities}
 \textit{Guidance: Describe the methods to review the documentation structure}
@@ -1009,35 +1188,186 @@ Following CENELEC criteria, each tool belongs to one of the following classes: T
 \textit{Describe the QA activities}
 
 \subsection{Fault Management}
-\textit{Guidance: Refer to Incident Management Process. Overview table with the summary of main features of the procedure}
 
-\todo[color=yellow!20, inline]{JW: What shall be the be the focus of the "Incident Management", since deal with safety development and Vand V activities, the word incident is mainly used in a safety sense. Here specifically procedures how to handle software bugs and faulty behaviour discovered during the V and V process has to be described.}
-\todo[color=green!20, inline]{IT: OK, that you say is correct. We will change the naming.}
+ISTQB define a defect as "a flaw in a component or system that can cause the component or system to fail to perform its required function". A defect can be random or systematic. A defect, if encountered during execution, may cause a failure of the component or system". From the ISTQ glossary bug, fault and problem are defined to be the same as a defect.
 
-\textit{Describe the QA activities}
+A failure is a deviation of the component or system from its expected delivery, service or result. A failure is the consequence of a fault or error in a system but not all faults result in failures.
+
+Faults, failures and errors encountered during the review activities (QA. Verification, Validation, Assessment) planned in the software development life-cycle, problems reported by users and customers as well as change requests initiated by any of the system stakeholders will be reported and managed following the Change/Problem Management Process  \citep{emp} detailed in \href{https://github.com/openETCS/governance/tree/master/Change-Problem%20Process}{[governance]} and through the Change/Problem Management Tool. This tool will be integrated with the Configuration management tool {\it GIT} and will be configured to implement and record all the information generated during the process.
+
+The integration with the Configuration management tool {\it GIT} will permit:
+\begin{itemize}
+\item Traceability between Change/Problem Requests and the configuration items where the problem was located.
+\item Traceability between the configuration items modified and the corresponding Change/problem request. 
+\end{itemize}
+ 
+The implementation of the workflow will permit:
+\begin{itemize}
+\item A complete history trail of the Change Request/Problem Report
+\end{itemize}
+
+The purpose of the Change/Problems Management implementation at OpenETCS project is to ensure that standardized methods and procedures are used for efficient and prompt handling of all changes/problems associated with the OpenETCS products, in order to minimize the number and impact of any related changes/problems. Changes/problems in the products may arise reactively in response to incidents, or proactively from seeking improved efficiency and effectiveness, as well as to enable or reflect OpenETCS initiatives, or products improvements.
+
+The QA Manager will be in charge of:
+\begin{itemize}
+\item perform periodical audits and quality assessments of the bugs received
+\begin{itemize}
+\item Audits to verify the process itself
+\item Quality Assessments to verify the evolution of the product quality
+\end{itemize}
+\item Assist in determining QA impacts
+\item Support Problem owner in analysis
+\end{itemize}
 
 \subsection{Grievance Handling}
 \textit{Guidance: Refer to the specific procedure. }
 
 \textit{Describe the QA activities}
 
-\subsection{Modification and change control }
-\textit{Guidance: Refer to external procedure; Overview table with the summary of main features of the procedure.}
+\todo[color=yellow!20, inline]{BH: section is based on eclipse process and adopted to openETCS needs}
 
-\todo[color=yellow!20, inline]{JW: What is meant with "external procedures"? This topic is closely related to the document related responsabilities and the github use. Therefore it is very close to the Configuration Management, which maybe makes it hard to separate these topics.}
-\todo[color=green!20, inline]{IT: OK. We agree}
-\textit{describe the QA activities to be developed.}
+It is a good culture to solve concerns as close as possible to the root cause of an problem or a misunderstanding. This means, the team where a problem is seen first is empowered to search for a solution of the problem first.
+
+If the partners cannot agreed on a solution, the impediment is escalated to the next level in the project hierarchy. 
+
+When a member of the openETCS community has a concern about a Project, the  member will raise that concern with the Project's Leadership (e.g., task leader in openETCS). If the member is not satisfied with the result, the member can raise the concern with the parent Project's Leadership, typically the workpackage leader.
+
+The Member can continue appeals up the Project Leadership Chain and, if still not satisfied, thence to the project management board PMB, then the openETCS project lead, and finally to the project co-operation committee (PCC). All appeals and discussions will abide by the Guiding Principles of being open, transparent, and public.
+
+Member concerns may include:
+\begin {itemize}
+\item Out of Scope. It is alleged that a Project is exceeding its approved scope.
+
+\item Dysfunctional. It is alleged that a Project is not functioning correctly or is in violation of one or more requirements of the Development Process.\
+
+\item Contributor Appeal. It is alleged that a Contributor who desires to be a Committer is not being treated fairly.
+
+\item Invalid Veto. It is alleged that a -1 vote on a Review is not in the interests of the Project and/or of Eclipse.
+\end{itemize}
+
+A variety of grievance resolutions are available to the PMB up to, and including, rebooting or restarting a project with new Committers and leadership.
+
+The issues seen during a sprint shall be taken to the sprint retrospective in order to help the team find an easy way in the future.
+
+\subsection{Modification and change control }
+
+A change is the addition, modification, or removal of a configuration item (CI), product, or product component, and/or its associated elements
+
+The change requests initiated by any of the system stakeholders will be reported and managed following the Change/Problem Management Process  \citep{emp} detailed in \href{https://github.com/openETCS/governance/tree/master/Change-Problem%20Process}{[governance]} and through the Change/Problem Management Tool.
+
+The Change/problem Management process aims to evaluate and plan the change/problem process to ensure that, if a change is made, it is done in the most efficient way possible, following the established procedures and ensuring the quality and continuity of the OpenETCS project and products at all times.
+
+The QA Manager will be in charge of:
+\begin{itemize}
+\item perform periodical audits and quality assessments of the change request received
+\begin{itemize}
+\item Audits to verify the process itself
+\item Quality Assessments to verify the evolution of the product quality
+\end{itemize}
+\item Assist in determining QA impacts
+\item Support Change owner in analysis
+\end{itemize}
+
 
 \section{Supplier Control}
-\textit{Guidance: Requirements to external suppliers and how they will be verified}
 
-\todo[color=yellow!20, inline]{JW: What are the suppliers in OpenETCs and what activities are needed here?}
-\todo[color=green!20, inline]{IT: It is only to be considered if any supplier is needed}
 
-\textit{describe the QA activities to be developed.}
+This section describes what openETCS consortium expects its suppliers to do to
+ensure that all openETCS products' requirements and expectations are met.
+
+This Supplier control applies to all Suppliers providing openETCS project with materials, products, processing, and related services.
+
+At following, the expected Suppliers' general requirements are listed:
+
+\begin{itemize}
+\item Supplier shall ensure the confidentiality of openETCS project and products under development, and related product information, as well as intellectual property shared as a result of the working relationship.
+\item Suppliers are expected to have an effective quality system that ensures conforming product is delivered.
+\begin{itemize}
+\item Suppliers shall maintain a Quality Management System suitable to the products and services provided to openETCS, that is certified by an accredited third-party certification body, i.e. ISO9001. This letter of accreditation should be provided to the respective QA personnel
+\item In the absence of third-party certification, depending on the product, its application, value, and criticality, the OpenETCS community and Quality Assurance Manager may authorize the acceptance of other evidence of compliance
+\end{itemize}
+\item Supplier should assure that all performance, endurance, maintenance, safety and warning requirements are met.
+\item The Supplier shall maintain documented procedures for identification of product from receipt and during processes of production and delivery. When traceability is a specified requirement, the Supplier shall establish and maintain a documented procedure for unique identification of individual product or batches
+\item The supplier shall provide and maintain suitable gauges, measuring instruments and test equipment to measure/test all material for conformance to OpenETCS requirements.
+\item Copies of quality conformance inspection data pertinent to material inspection must be provided by the supplier if required for each shipment or retained at Suppliers premises for future verification.
+\item The Supplier shall provide evidence that the following verifications required by the design record and control plan have been completed and that results indicate compliance with specified requirements
+\item Suppliers will be responsible for corrective action when changes to product specifications without prior notification to QA result in non- conformity to product or processes.
+\item OpenETCS requires all Suppliers to be approved prior to the issuance of contracts
+\end{itemize}
+
+\paragraph{Supplier Approval Process}
+\begin{itemize}
+\item \textbf{Registration:} New suppliers must complete a registration form. This form initiates the approval 
+\item \textbf{Evaluation:} 
+\begin{itemize}
+\item Ensure Supplier Risk Assessment considers both:
+\begin{itemize}
+\item \underline{Quality risk}
+\begin{itemize}
+\item Finished Device Quality implications
+\end{itemize}
+\item \underline{Supply risk}
+\begin{itemize}
+\item Including implications of supplier going out of business
+\end{itemize}
+\end{itemize}
+\item Evaluate Suppliers using Questionnaires, Self surveys and Audits techniques
+\item Supplier’s grading based upon evaluation results and assigned an evaluation status: Approved, conditional or not approved
+\end{itemize}
+\item \textbf{Certification}: Classify Suppliers based on both QUALITY Risk and SUPPLY Risk.
+\end{itemize}
+
+The QA Manager will be in charge of:
+\begin{itemize}
+\item inspect records/evidence of a supplier’s quality management systems at their facility
+\item monitoring and feedback processes: Include periodic review of critical product/process data
+\item documents problem issues and requirements for the supplier
+\item analyses the supplier operating conditions,
+\item Establish Minimal performance for Quality and Delivery
+\item When a supplier provides a product/part, apply supplemental controls to further mitigate risk 
+\begin{itemize}
+\item Product Acceptance Activities
+\item Supplier Performance and Monitoring: augmented frequency of reviews
+\end{itemize}
+\item creates a corrective development profile together with the supplier,
+\end{itemize}
+
 
 \todo[color=yellow!20, inline]{JW: Im missing sections for the Quality Assurance during the product maintenance and the deployment of the software and the tool chain.}
 \todo[color=green!20, inline]{IT: Product Maintenance and deployment phased will be covered in Chapter 3.2}
+
+\section{Publishing Guideline}
+\label{sct:publishingguideline}
+
+\begin{figure}[H]
+\includegraphics[trim=1.5cm 7cm 2cm 0,clip,width=\textwidth]{figures/publication_process_bpmn}
+\caption{The publishing process as BPMN diagram}
+\label{fig:process}
+\end{figure}
+
+When publishing in the context of the openETCS project authors shall adhere to this guideline. Figure~\ref{fig:process} depicts the steps as graphical BPMN process. The individual steps are described in detail in the following.
+
+\begin{enumerate}
+  \item  It must be ensured that the \emph{project}, the \emph{funding authority} and the \emph{grant number} is mentioned in the paper/presentation. The following acknowledgements can be used:
+  \begin{description}
+    \item[Germany] This work was funded by the German Federal Ministry of Education and Research (Grant No. 01IS12021) in the context of the ITEA2 project openETCS.
+    \item[Belgium/Brussels region] This work was funded by the Région de Bruxelles-Capitale / Brussels Hoofdstedelijk Gewest (Grant No. RBC/12 R 11) in the context of the ITEA2 project openETCS.
+    \item[Belgium/Walloon region] This work was funded by the Walloon Region (DG06) (Grant No. 6921) in the context of the ITEA2 project openETCS.
+    \item[France] This work was funded by the “Direction Générale de la compétitivité, de l’industrie et des services�? (DGCIS)  (Grant No. 112930309) in the context of the ITEA2 project openETCS.
+    \item[to be completed] Spain still missing
+  \end{description}
+
+\item Publications potentially affecting project contributions of other partners require explicit approval. A request for approval shall be accompanied with a reasonable deadline (e.g., two weeks). Please consider a joint publication with the involved partners.
+
+\item An entry with the details of the publication should be added to the Zotero group \emph{openETCS Publications} by using the Zotero tool or the website \href{http://www.zotero.org}{zotero.org}. A how-to regarding the use of Zotero in openETCS is \href{https://github.com/openETCS/Dissemination/wiki/Management-of-Publications-and-References-with-Zotero}{provided here}. A link to an official and public webpage where the publication can be obtained/purchased should be included.
+
+\item The final document should be uploaded to GitHub to one of the following directories:
+  \begin{itemize}
+    \item To \href{https://github.com/openETCS/dissemination-management/tree/master/ProjectPublications}{Dissemination-Management/ProjectPublications} if legal restrictions apply for publication.
+    \item To \href{https://github.com/openETCS/Dissemination/tree/master/ProjectPublications}{Dissemination/ProjectPublications} if it can be published freely under the openETCS Open License.
+  \end{itemize}
+\end{enumerate}
+
 
 \newpage
 \begin{landscape}
@@ -1045,40 +1375,26 @@ Following CENELEC criteria, each tool belongs to one of the following classes: T
 
 \subsection{ANNEX A -CAT1: Open Source Development Process Roles and Competence Matrix-}
 
-%\todoin[color=yellow!20, inline]{MP: I assume by "role" you mean the roles within the project openETCS.
-%In Fact you distinguish between these roles:
-%At project level:
-%\begin{itemize}
-%\item Project Leader
-%\item Project office
-%\end{itemize}
-%for each WP:
-%\begin{itemize}
-%\item WP-Leader
-%\end{itemize}
-%within each WP:
-%\begin{itemize}
-%\item Task-leader
-%\item Task-Major Participant
-%\item Task participant
-%\item Task Committer
-%\end{itemize}
-%}
+\begin{center}
+\begin{longtable}{|m{1cm}|m{2,20cm}|m{8,70cm}|m{4,6cm}|m{4,6cm}|}
+\caption{CAT1: Open Source Development Process Roles/Competences}\\
 
-%\todo[color=green!20, inline]{IT: Yes.}
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{CAT1: Open Source Development Process Roles/Competences} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities (To be revised)} & \multicolumn{1}{|c|}{Core Competences} & \multicolumn{0}{|c|}{Specific Competences
+ /Responsibilities per project} \\ \hline 
+\endfirsthead
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{CAT1: Open Source Development Process Roles/Competences}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & \centering Core Competences & Specific Competences/ Responsibilities per project\\}
-\tablehead{\hline \rowcolor{myblue} 
-\multicolumn{5}{|c|}{CAT1: Open Source Development Process Roles/Competences}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & \centering Core Competences & Specific Competences/ Responsibilities per project\\}
-%\tabletail{}
-%\tablelasttail{}
-\begin{supertabular}[H]{|m{1cm}|m{3cm}|m{12cm}|m{4,5cm}|m{4,5cm}|}
-\hline
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{CAT1: Open Source Development Process Roles/Competences} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities (To be revised)} & \multicolumn{1}{|c|}{Core Competences} & \multicolumn{0}{|c|}{Specific Competences
+ /Responsibilities per project} \\ \hline
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 OPL &
 OpenETCS project Leader &
 \raggedright
@@ -1112,9 +1428,7 @@ Project: QA activities
 US &
 User &
 \raggedright
-Create a viable ecosystem around an openETCS project,\\
-Encourage additional open source and commercial organizations to participate
-&
+Not Applicable &
 \textbf{(To be fulfilled)} &
 \textbf{(To be fulfilled per project)} \\\hline
 AD &
@@ -1147,28 +1461,31 @@ Proactively report problems in the task tracking system, and annotating problem 
 &
 \textbf{(To be fulfilled)} &
 \textbf{(To be fulfilled per project)} \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-%\todo[color=yellow!40, inline]{JW: "Project Contributor/OpenETCS Scrum team" row --> This are more external or short term contributers, which do not belong to the team.}
-
-%\todo[color=yellow!40, inline]{JW: "Project Committer" row --> This should be the scrum team.}
-%\todo[color=green!20, inline]{IT: We are changing the tables}
 
 \newpage
 \subsection{ANNEX B -CAT2: SCRUM Roles and Competence Matrix-}
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{4}{|c|}{CAT2: SCRUM Roles/Competences}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & Core Competences\\}
-\tablehead{\hline \rowcolor{myblue} 
-\multicolumn{4}{|c|}{CAT2: SCRUM Roles/Competences}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & Core Competences\\}
-%\tabletail{}
-%\tablelasttail{}
-\begin{supertabular}[H]{|m{1cm}|m{4cm}|m{13cm}|m{7cm}|}
-\hline
+
+\begin{center}
+\begin{longtable}{|m{1cm}|m{4cm}|m{12cm}|m{7,5cm}|}
+\caption{CAT2: SCRUM Roles/Competences}\\
+
+\hline \rowcolor{myblue} \multicolumn{4}{|c|}{CAT2: SCRUM Roles/Competences} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities \textbf{(To be revised)}} & \multicolumn{1}{|c|}{Core Competences} \\ \hline 
+\endfirsthead
+
+\multicolumn{4}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{4}{|c|}{CAT2: SCRUM Roles/Competences} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities \textbf{(To be revised)}} & \multicolumn{1}{|c|}{Core Competences} \\ \hline
+\endhead
+
+\hline \multicolumn{4}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 POw &
 Product Owner &
 \raggedright
@@ -1202,59 +1519,68 @@ Implementing test cases \\
 Unit and initial Acceptance testing 
 &
 \textbf{(To be fulfilled)} \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
 \newpage
 \subsection{ANNEX C -CAT3: CENELEC Roles and Competence Matrix for OpenETCS software product-}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS application software project}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & Competences\\}
-\tablehead{\hline \rowcolor{myblue} 
-\multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS application software project}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & Competences\\}
-\begin{supertabular}[H]{|m{1cm}|m{2,5cm}|m{15,5cm}|m{6cm}|}
-\hline
+\begin{center}
+\begin{longtable}{|m{1cm}|m{2,5cm}|m{11cm}|m{10cm}|}
+\caption{CAT3: CENELEC Roles/Competences for OpenETCS application software project}\\
+
+\hline \rowcolor{myblue} \multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS application software project} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities \textbf{(To be revised)}} & \multicolumn{1}{|c|}{Competences} \\ \hline 
+\endfirsthead
+
+\multicolumn{4}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS application software project} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities \textbf{(To be revised)}} & \multicolumn{1}{|c|}{Competences} \\ \hline 
+\endhead
+
+\hline \multicolumn{4}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 PM &
-OpenETCS project Manager &
-\raggedright
-Guarantee the required competence for the project is covered by the effective committers\\
+OpenETCS software Project Manager &
+\parbox{11cm}{\raggedright
 Identify which roles are needed for the project\\
-Verify that at least one person has been identified per project role\\
-Ensure the independence of the roles according to CENELEC\\
+Verify that at least one person fulfills an identified project role\\
+Guarantee the required competence for the project is covered by the effective committers\\
+Initialize the distribution of roles between partners to ensure independence of the roles\\
 Ensure compliance with the quality management system\\
 Responsible to guarantee progress according to scheduled plans\\
-Devote sufficient resources to perform the task, including security tasks\\
 Responsible for the delivery and implementation of the software\\
-Ensure the compliance and the delivery of security requirements\\
-Provide enough time for proper implementation and enforcement of security tasks\\
+Ensure the compliance and the delivery of safety requirements\\
 Approve full and partial products to be delivered by the development process\\
 Ensure that records and traceability are maintained throughout the decision making and project\\
-Ensure that it has appointed an appropriate validator for the project according to cenelec
+Ensure appropriate validation for the project through project partners}
 &
-\textbf{(To be fulfilled)}
+\parbox{10cm}{\raggedright
+Understand requirements of software development process\\
+Understand quality, competencies, organizational and management requirements according to relevant standards\\
+Understand the requirements of the verification, validation and safety process\\
+Able to evaluated the impact of different options for the performance concerning implementation, validation and safety}
 \\\hline
 RQM &
 Requirement manager &
-\raggedright
-Responsible for the Software requirement specification\\
+\parbox{11cm}{\raggedright
+Responsible for the software model and source code requirement specification\\
 Establishes and maintain traceability to and from the system-level requirements\\
 Ensure that software and derived specifications requirements are under system\\ configuration and changes management control.\\
 Ensure consistency and completeness of the software requirements specification\\
 Develop and maintain documents related to software requirements
-&
-%experience with requirements management process\\
-%experience with requirements management tools\\
-%knowledges, experience and deep understanding with subset 026\\
-%experience in railways sector\\
-\textbf{(To be fulfilled: core and specific competences)}
+}&
+\parbox{10cm}{\raggedright
+experience in railways sector and safety attributes in the railway domain\\
+experience with requirements management process and tools\\
+knowledges of TSI and related CENELEC requirements}
 \\\hline
 DES &
 Designer &
-\raggedright
+\parbox{11cm}{\raggedright
 Transform software requirements on acceptable solutions\\
 Derive the requirements for the system and software architecture\\
 Identify the key design issues that must be resolved to support successful development of the software\\
@@ -1266,25 +1592,36 @@ Ensure that the design documents are under system configuration and changes mana
 Design or select design methods and support tools\\
 Apply principles and suitable design standards\\
 Develop component specifications if it is applicable
-&
-\textbf{(To be fulfilled)}
+}&
+\parbox{10cm}{\raggedright
+Competent in software development in the railway domain\\
+Competent in safety design principles\\
+Familiarity with methods and tools for design analysis and design testing\\
+Ability to work with design constraints for safety relevant software in On-Board systems\\
+Understanding of the system constraints created through the TSI\\
+Understanding of the relevant parts of EN 50128 like design methods}
 \\\hline
 IMP &
 Implementer &
-\raggedright
-Transform design solutions in data, source code, models  and / or other design representations\\
-Apply design principles\\
+\parbox{11cm}{\raggedright
+Transform design solutions in data, models, source code and finally executable code for the demonstrator\\
+Apply safety design principles\\
 Apply specific rules for data preparation/codification\\
 Perform analysis to verify intermediate results\\
 Develop and maintain implementing documents comprising the methods, types of data, models and listings applied\\
 Maintain traceability to and from the design\\
 Maintain the generated or modified data/codes/models under system configuration and changes management control.
-&
-\textbf{(To be fulfilled)}
+}&
+\parbox{10cm}{\raggedright
+Competent in safety relevant software implementation for embedded systems\\
+Competent in the implementation language and supporting tools\\
+Capable of applying the specified coding standards and programming styles\\
+Understanding of the system constraints created through the On-Board hardware respectively the demonstrator\\
+Understanding of the relevant parts of EN 50128 like design methods}
 \\\hline
 TST &
 Tester &
-\raggedright
+\parbox{11cm}{\raggedright
 Ensure the test activities planning \\
 Develop tests specification (goals and cases)\\
 Ensure traceability of test objectives to specified software requirements\\
@@ -1294,39 +1631,51 @@ Identify deviations from the expected results and record in the test reports\\
 Communicate deviation to the authority in charge of the changes management for evaluation and decision making\\
 Record the results reports\\
 Select the equipment for testing the software
-&
-\textbf{(To be fulfilled)}
+}&
+\parbox{10cm}{\raggedright
+Competent in ETCS specification, used means of description (model/ source code), used train and track parameter and other application data source\\
+Competent in various test approaches/methods to identify to identify the most appropriate method or combination of methods for every aspect of an artifact\\
+Capable of deriving test cases from TSI (specifically Subset 26) and the specification model\\
+Understanding of the relevant parts of EN 50128 like test methods}
+\\\hline
+VER &
+Verifier &
+\parbox{11cm}{\raggedright
+Develop a SW Verification Plan \\
+Check the documented test suitability (completeness, coherency, relevance, traceability) with the verification objectives\\
+Identify anomalies, evaluate in terms of the risk, record them and communicate them to the authority in charge of the changes management for evaluation and decision making\\
+Manage the verification process (revision, integration and testing) and ensure the independence of the activities as needed\\
+Develop a verification report with the results of the verification activities
+} &
+\parbox{10cm}{\raggedright
+Competent in ETCS specification, used means of description (model/ source code), used train and track parameter and other application data source\\
+Competent in various verification approaches/methods to identify the most appropriate method or combination of methods for every aspect of an artifact\\
+Capable of deriving verification procedures from TSI (specifically Subset 26) and the specification model\\
+Understanding of the relevant parts of EN 50128 like verification methods}
 \\\hline
 INT &
 Integrator &
-\raggedright
+\parbox{11cm}{\raggedright
 Manage the integration process using software baselines\\
 Develop sw and sw /hw integration test specification for sw components based on the specifications and on the designer{\textquotesingle}s components architecture \\
 Develop and maintain records of the integration activities\\
 Identify integration anomalies; record them and communicate them to the authority in charge of the changes management for evaluation and decision making\\
 Develop a report of components and the overall system integration covering the integration results 
-&
-\textbf{(To be fulfilled)}
-\\\hline
-VER &
-Verifier &
-\raggedright
-Develop a SW Verification Plan \citep{verification}\\
-Check the documented test suitability (completeness, coherency, relevance, traceability) with the verification objectives\\
-Identify anomalies, evaluate in terms of the risk, record them and communicate them to the authority in charge of the changes management for evaluation and decision making\\
-Manage the verification process (revision, integration and testing) and ensure the independence of the activities as needed\\
-Develop a verification report with the results of the verification activities &
-%must be able to deduce the verification types from the specifications
-%must be competent in various verification methodologies and able to identify the most appropriate method or combination of methods to the context 
-\textbf{(To be fulfilled)}
+}&
+\parbox{10cm}{\raggedright
+Competent in ETCS specification, used programming language, used API and demonstrator hardware\\
+Competent in various integration approaches/methods to identify the most appropriate method or combination of methods for the demonstrator implementation\\
+Understanding the design and functionality requirements for intermediated development levels\\
+Capable of deriving integrator tests from the set of integrated functions\\
+Understanding of the relevant parts of EN 50128 like integration tests}
 \\\hline
 VAL &
 Validator &
-\raggedright
+\parbox{11cm}{\raggedright
 Develop a Validation Plan specifying the main tasks and activities for the sw validation\\
 Agree on the Validation Plan with the assessor\\
 Review Sw requirements in relation to their intended use/environment\\
-Ensure sw fulfil all sw requirements\\
+Ensure sw fulfill all sw requirements\\
 Evaluate the assessment of the software process and of the software according to CENELEC requirements and the assigned SIL\\
 Review the verification and tests correctness, consistency and suitability \\
 Check the correctness, consistency and suitability of the test cases and executed tests\\
@@ -1340,13 +1689,21 @@ Check whether the developed solutions are traceable to the sw requirements \\
 Ensure that records associated hazardous situations and nonconformances are reviewed\\
 Ensure that all dangerous situations are appropriately resolved\\
 Develop a Validation Report\\
-Express their agreement or disagreement about the sw version  &
-\textbf{(To be fulfilled)}
+Express their agreement or disagreement about the sw version  
+}&
+\parbox{10cm}{\raggedright
+Competent in ETCS On-Board units\\
+Experience in safety attributes for train control systems\\
+Competent in various validation approaches/methods to identify the most appropriate method or combination of methods for the demonstrator implementation\\
+Capable of deriving types of validation evidence required for the TSI with respect to the train control functionality\\
+Capable to combine different sources and types of evidence and synthesize an overall view about fitness for purpose or constraints and limitations of the On-Board application\\
+Overall software understanding and perspective including the general railway environment\\
+Understanding the requirements of EN 50128}
 \\\hline
 ASR &
 Assessor &
-\raggedright
-Develop an evaluation Plan\\
+\parbox{11cm}{\raggedright
+Develop an assessment plan and communication with safety authority and client organization\\
 Evaluate the assessment of the software process and of the software according to CENELEC requirements and the assigned SIL\\
 Assess the project team and the organization competences for the sw development\\
 Evaluate the Verification \& Validation activities and the supporting evidences\\
@@ -1357,41 +1714,59 @@ Ensure the evaluation Plan is implemented\\
 Performs independent checks of: The development process (audits) and the products safety functions (spot checks) during different development phases.\\
 Should perform audits, based on the Safety plan, of the Quality and Safety management systems of the Supplier, the Infrastructure owner and the Operator and be convinced that these systems works\\
 The Assessor can also perform spot checks on detailed technical issues to see that safety functions are correctly implemented. The safety functions key documentation (Hazard Log, Safety Requirements and Safety Case) should be examined too.\\
-Give an opinion on the validity of sw developed for its intended use\\
-Develop an evaluation report and maintain records about the evaluation process
-&
-\textbf{(To be fulfilled)}
+Give an opinion on the validity of sw developed for its intended use detailing any constraints, application conditions and observations for risk control appropriate\\
+Develop an assessment report and maintain records about the assessment process
+}&
+\parbox{10cm}{\raggedright
+Competences in the railway domain and technology specifically concerning On-Board systems\\
+Acceptance/License from a recognized safety authority\\
+Continually gained sufficient level of experience in the safety principles and the application of these principles within the railway domain\\
+Competence to evaluated that a suitable method or combination of methods in a given context have been applied\\
+Understanding the relevant safety, human resource, technical and quality management processes to fulfill the requirements of the EN 50128\\
+Competence in assessment approaches/ methods\\
+Capable to combine different sources and types of evidence and synthesize an overall view about fitness for purpose or constraints and limitations of the On-Board application\\
+Overall software understanding and perspective including the general railway environment\\
+Ability to judge the adequacy of all development processes (like quality management, configuration management, validation and verification processes)\\
+Understanding the requirements of EN 50128}
 \\\hline
 CM &
 Configuration Manager &
-\raggedright
+\parbox{11cm}{\raggedright
 Responsible for the configuration management plan \citep{scmp}
 System configuration management owner\\
 Establish that all sw components are clearly identified and have independent versions within the system configuration management\\
 Prepare the published release notes mentioning incompatible versions of sw components
-&
-\textbf{(To be fulfilled)}
+}&
+\parbox{10cm}{\raggedright
+Competences in software configuration management\\
+Understanding the requirements of EN 50128}
 \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
 \newpage
 
 
 \subsection{ANNEX D -CAT3: CENELEC Roles and Competence Matrix for OpenETCS Tool Chain product-}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS Tool Chain product}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & Competences\\}
-\tablehead{\hline \rowcolor{myblue} 
-\multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS Tool Chain product}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Role & \centering Responsibilities \textbf{(To be revised)} & Competences\\}
-%\tabletail{}
-%\tablelasttail{}
-\begin{supertabular}[H]{|m{1cm}|m{2,5cm}|m{15,5cm}|m{6cm}|}
-\hline
+\begin{center}
+\begin{longtable}{|m{1cm}|m{2,5cm}|m{11cm}|m{10cm}|}
+\caption{CAT3: CENELEC Roles/Competences for OpenETCS Tool Chain product}\\
+
+\hline \rowcolor{myblue} \multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS Tool Chain product} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities \textbf{(To be revised)}} & \multicolumn{1}{|c|}{Competences} \\ \hline 
+\endfirsthead
+
+\multicolumn{4}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{4}{|c|}{CAT3: CENELEC Roles/Competences for OpenETCS Tool Chain product} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities \textbf{(To be revised)}} & \multicolumn{1}{|c|}{Competences} \\ \hline 
+\endhead
+
+\hline \multicolumn{4}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 PM &
 OpenETCS project Manager &
 \raggedright
@@ -1485,7 +1860,7 @@ Develop a report of components and the overall system integration covering the i
 VER &
 Verifier &
 \raggedright
-Develop a SW Verification Plan \citep{verification}\\
+Develop a SW Verification Plan \\
 Check the documented test suitability (completeness, coherency, relevance, traceability) with the verification objectives\\
 Identify anomalies, evaluate in terms of the risk, record them and communicate them to the authority in charge of the changes management for evaluation and decision making\\
 Manage the verification process (revision, integration and testing) and ensure the independence of the activities as needed\\
@@ -1546,14 +1921,14 @@ Prepare the published release notes mentioning incompatible versions of sw compo
 &
 \textbf{(To be fulfilled)}
 \\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 \end{landscape}
 
 \newpage
 \subsection{ANNEX E - Methods \& Tools for Application Software}
 
-\begin{flushleft}
+\begin{table}[H]
 \tablefirsthead{\hline
 \rowcolor{myblue}
 \multicolumn{5}{|c|}{Software Requirements Specification Phase}\\
@@ -1595,19 +1970,27 @@ Yes &
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
 \end{supertabular}
-\end{flushleft}
+\caption{Software Requirements Specification Phase}
+\end{table}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Architecture Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Architecture Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Software Architecture Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Architecture Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Architecture Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Defensive Programming &
 \centering
@@ -1773,20 +2156,27 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Design and Implementation Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Design and Implementation Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Software Design and Implementation Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Design and Implementation Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Design and Implementation Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Formal Methods &
 \centering
@@ -1888,20 +2278,27 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Verification and Testing Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Verification and Testing Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\ }
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Verification and Testing Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Verification and Testing Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Verification and Testing Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Formal Proof &
 \centering
@@ -1975,19 +2372,27 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Integration Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Integration Phase}\\}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Integration Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Integration Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Integration Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Functional and Black-box Testing &
 \centering
@@ -2005,19 +2410,27 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Overall Software Testing Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Overall Software Testing Phase}\\}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Overall Software Testing Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Overall Software Testing Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Overall Software Testing Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Performance Testing &
 \centering
@@ -2042,20 +2455,27 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Analysis Techniques Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Analysis Techniques Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Software Analysis Techniques Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Analysis Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Analysis Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Static Software Analysis &
 \centering
@@ -2094,21 +2514,27 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Quality Assurance Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Quality Assurance Phase}\\
-%\hline \rowcolor{lightgray} \multicolumn{5}{|l|}{Justification}\\
-}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Software Quality Assurance Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Quality Assurance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Quality Assurance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Accredited to EN ISO 9001 &
 \centering
@@ -2168,19 +2594,24 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Maintenance Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Software Maintenance Phase}\\}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Software Maintenance Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Maintenance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Maintenance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Impact Analysis &
 \centering
@@ -2198,19 +2629,27 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Data Preparation Techniques Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\tablehead{\hline
-\rowcolor{myblue}
-\multicolumn{5}{|c|}{Data Preparation Techniques Phase}\\ \hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\hline
+\begin{center}
+\begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\caption{Data Preparation Techniques Phase}\\
+
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Data Preparation Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Data Preparation Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \centering 1 &
 Tabular Specification Methods &
 \centering
@@ -2277,19 +2716,24 @@ Yes &
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
 \multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
-\end{supertabular}
-\end{flushleft}
+\end{longtable}
+\end{center}
 
-\begin{flushleft}
-\tablefirsthead{}
-\tablehead{}
-\tabletail{}
-\tablelasttail{}
-\begin{supertabular}{|m{7,5cm}|m{7cm}|}
-\hline
-\rowcolor{myblue}
-Quality mechanisms for Safe deployment &
-Technique \& Approach\\\hline
+\begin{center}
+\begin{longtable}[H]{|m{7,75cm}|m{7,75cm}|}
+\caption{Quality mechanisms for Safe deployment}\\
+
+\hline \rowcolor{myblue} \multicolumn{1}{|c|}{Quality mechanisms for Safe deployment} & \multicolumn{1}{|c|}{Technique \& Approach} \\ \hline 
+\endfirsthead
+
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{1}{|c|}{Quality mechanisms for Safe deployment} & \multicolumn{1}{|c|}{Technique \& Approach} \\ \hline 
+\endhead
+
+\hline \hline
+\endlastfoot
+
 Software Self-identification Mechanisms
 
 (9.1.4.11) &
@@ -2311,11 +2755,8 @@ Provision of appropriate and accurate diagnostic information &
 Safe Roll back capabilities  &
 ~
 \textbf{(To be fulfilled)} \\\hline
-\end{supertabular}
-\end{flushleft}
-
-\subsection{ANNEX F -Class T3 Tools}
-\subsection{ANNEX G - Methods \& Tools for Tool Chain}
+\end{longtable}
+\end{center}
 
 
 %\nocite{50126,EN50128,EN50129,EN61508,200857EC,201118EU,201288EU}
