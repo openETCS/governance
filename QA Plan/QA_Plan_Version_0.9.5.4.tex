@@ -13,6 +13,7 @@
 \usepackage{float}
 \usepackage{url}
 \usepackage{hyperref}
+\usepackage[nonumberlist]{glossaries} %glossaries to create glossary and abbreviation lists
 \usepackage{breakurl}
 \usepackage{lipsum}
 \makeatletter
@@ -23,6 +24,8 @@
 \newcounter{Ilustracin}
 \renewcommand\theIlustracin{\arabic{Ilustracin}}
 \title{openETCS}
+
+
 
 %\setcounter{tocdepth}{3}
 
@@ -60,6 +63,11 @@
 %\documentclass[nocc]{template/openetcs_article}
 \usepackage{lipsum,url}
 \graphicspath{{./template/}{.}{./images/}}
+
+\makeglossaries
+%Glossary terms
+%\loadglsentries{./glossary/openETCS-Latex-Glossary.tex}
+
 \begin{document}
 \frontmatter
 \project{openETCS}
@@ -265,6 +273,11 @@ Izaskun de la Torre (SQS)\\\hline
 Chapter 1, 2, 4 and annexes to chapter 4\& 5 &
 New Content  &
 Izaskun de la Torre (SQS)\\\hline
+0.9.5.5 &
+23.08.2013 &
+Chapter 1 &
+Terminology &
+Jan Welte (TUBS)
 \end{longtable}
 \end{center}
 
@@ -594,7 +607,8 @@ Depending on the needs further extractions from the iglos database can be create
 
 \subsubsection{Glossary}
 
-\subsubsection{Abbreviations}
+\printglossaries
+%\subsubsection{Abbreviations}
 
 \begin{center}
 \begin{longtable}{|m{3cm}m{11cm}|}
