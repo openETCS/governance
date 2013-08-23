@@ -186,7 +186,7 @@ All4Tech, DB, SQS\\\hline
 0.6.0 &
 28.01.2013 &
 All &
-IP Clean &
+\gls{IP} Clean &
 Rico Kaseroni (DB)
 
 Cyril Cornu (All4tec)\\\hline
@@ -223,7 +223,7 @@ Rico Kaseroni (DB)\\\hline
 0.9.3 &
 11.02.2013 &
 1-, 2-, Last Chapter Annex A and C  &
-Graphic Figure 1, Definition of openETCS Process IP clean Job &
+Graphic Figure 1, Definition of openETCS Process \gls{IP} clean Job &
 Rico Kaseroni (DB)\\\hline
 0.9.4 &
 12.02.2013 &
@@ -280,7 +280,7 @@ Izaskun de la Torre (SQS)\\\hline
 
 The purpose of the QA Plan is to define the processes, methods and tools that will be used to develop the OpenETCS project meeting ITEA requirements, following Open Source principles and practices and applying the SCRUM Methodology. Besides, two of the project outcomes, the OpenETCS software, the OpenETCS Tool Chain, will have to comply with CENELEC requirements.
 
-Due to the nature of the OpenETCS project (R\&D EU project with a complex list of project outcomes and deliverables), the QA Plan is specifically designed to provide a complete, consistent and integrated view of the development process at both project and product level (i.e. the development life-cycle is described partially in two different deliverables, the QA plan should manage to provide an integrated view).
+Due to the nature of the OpenETCS project (\gls{RandD} EU project with a complex list of project outcomes and deliverables), the QA Plan is specifically designed to provide a complete, consistent and integrated view of the development process at both project and product level (i.e. the development life-cycle is described partially in two different deliverables, the QA plan should manage to provide an integrated view).
 
 The QA Plan also describes the activities to monitor and manage quality in all aspects of the project:
 
@@ -298,7 +298,7 @@ Therefore, it describes the QA functions, responsibilities and specific monitori
 
 The main goals and deliverables of the OpenETCS project are:
 \begin{enumerate}
-\item Creating a formal specification of the ETCS OBU functionality according to UNISIG Subset 026
+\item Creating a formal specification of the \gls{ETCS} \gls{OBU} functionality according to UNISIG Subset 026
 
 \item An executable software package generated from the formal specification and a non-vital implementation of that software for laboratory test, simulation and reference purposes
 
@@ -435,7 +435,7 @@ Project Co-operation Agreement &
 management &
 Bernd Hekele\\\hline
 \citep{IPP} &
-OpenECTS IP Policy &
+OpenECTS \gls{IP} Policy &
 \centering 0.1 &
 ecosystem &
 Bernd Hekele\\\hline
@@ -573,7 +573,28 @@ governance &
 \end{table}
 
 
-\subsection{Definitions and acronyms}
+\subsection{openETCS Terminology}
+
+The openETCS project deals with topics from different domains like railway vehicles, signaling systems, formal methods and tool development. As every of these domains has their specific terminology, the identification of all relevant terms and abbreviations is an important part of the openETCS development process. Respectively a terminology process has been defined which collects, defines, analyses and distributes the relevant terminology for all parts of the openETCS project. 
+
+\subsubsection{Terminology Process}
+
+The openETCS terminology process is based on the main openETCS development environement mainly github and Latex.  In addition the iglos (\url{https://www.iglos.de/iglos/}) environment is used to model and manage terminology relations. The overall process contains the following steps: 
+
+\begin{enumerate}
+
+\item Term proposals with definition, source and relation proposals via \url{https://github.com/openETCS/glossary/issues} or through extraction from project documents
+\item Inclusion of term, definition, source and relation proposals into iglos, to manage the terminology work and allow analysis of the terminology (e.g. for consistency)
+\item Export of terms and abbreviations and their information as definitions, sources and relations from iglos using a csv-file
+\item Transformation of the csv-file into a latex glossary (\url{https://github.com/openETCS/glossary/blob/master/Latex_Glossary/openETCS-Latex-Glossary.tex})for all project documents
+\item All glossary files and their documentation is provided in the github glossary repository and continuously updates 
+\end{enumerate}
+
+Depending on the needs further extractions from the iglos database can be created providing terminology for specific openETCS activities.
+
+\subsubsection{Glossary}
+
+\subsubsection{Abbreviations}
 
 \begin{center}
 \begin{longtable}{|m{3cm}m{11cm}|}
@@ -599,25 +620,25 @@ governance &
 %\tablelasttail{}
 %\begin{supertabular}{|m{3cm}m{11cm}|}
 %\hline
-ASR &
+\gls{ASR} &
 Assessor\\\hline
-CCS &
+\gls{CCS} &
 control-command and signalling subsystems  \\\hline
-DES &
+\gls{DES} &
 Designer\\\hline
-ERTMS &
+\gls{ERTMS} &
 European Rail Traffic Management System
 
 Train signalling system equipment based on a single Europe-wide standard for train control and command systems.\\\hline
-ERA &
+\gls{ERA} &
 European Railway Agency\\\hline
-ETCS &
+\gls{ETCS} &
 European Train Control System
 
 It is a signalling, control and train protection system designed to replace the many incompatible safety systems currently used by European railways\\\hline
-EUPL &
+\gls{EUPL} &
 European Union Public Licence\\\hline
-EVC &
+\gls{EVC} &
 European Vital Control\\\hline
 GSM-R
 
@@ -625,60 +646,60 @@ GSM-R
 Global System for Mobile Communications - Rail(way)
 
 It is an international wireless communications standard for railway communication and applications.\\\hline
-HR &
+\gls{HR} &
 Highly Recommended\\\hline
-HW &
+\gls{HW} &
 Hardware\\\hline
-IMP &
+\gls{IMP} &
 Implementer\\\hline
-INT &
+\gls{INT} &
 Integrator\\\hline
-MVB &
+\gls{MVB} &
 Multifunction Vehicle Bus
 
-It is a part of the Train Communication Network (TCN), and it takes part in digital operation in the train. MVB is the bus part in each coach, and the Wire Train Bus (WTB) allows connecting the MVB parts with the train control system.\\\hline
-NA &
+It is a part of the Train Communication Network (TCN), and it takes part in digital operation in the train. \gls{MVB} is the bus part in each coach, and the Wire Train Bus (WTB) allows connecting the \gls{MVB} parts with the train control system.\\\hline
+\gls{NA} &
 Not Applicable\\\hline
-OBU &
+\gls{OBU} &
 On-Board Unit\\\hline
-PMP &
+\gls{PMP} &
 Project Management Plan\\\hline
-REQ &
+\gls{REQ} &
 Requirements Manager\\\hline
-R\&D &
+\gls{RandD} &
 Research and Development\\\hline
-SCMP &
+\gls{SCMP} &
 System Configuration Management Plan\\\hline
-SIL &
+\gls{SIL} &
 Safety Integrity Level\\\hline
-SME &
+\gls{SME} &
 ~
 \\\hline
-SRS &
+\gls{SRS} &
 Software Requirements Specification\\\hline
-SW &
+\gls{SW} &
 Software\\\hline
-SW-SIL &
+\gls{SW}-\gls{SIL} &
 Software-Safety Integrity Level (EN 50128:2011)\\\hline
-TSI &
+\gls{TSI} &
 Technical Specification for Interoperability\\\hline
-TST &
+\gls{TST} &
 Tester\\\hline
-VAL &
+\gls{VAL} &
 Validator\\\hline
-VER &
+\gls{VER} &
 Verifier\\\hline
-V\&V &
+\gls{VandV} &
 Verification and Validation\\\hline
-WP &
+\gls{WP} &
 Work Package\\\hline
-FM &
+\gls{FM} &
 Formal Methods\\\hline
-IP &
+\gls{IP} &
 Intellectual Property\\\hline
-IP Clean &
-No IP without permission in writing \\\hline
-ISTQB &
+\gls{IP} Clean &
+No \gls{IP} without permission in writing \\\hline
+\gls{ISTQB} &
 International Software Testing Qualifications Board \\\hline
 \end{longtable}
 \end{center}
@@ -723,14 +744,14 @@ Compliance to ITEA Requirements is achieved by means of:
 \subsubsection{Compliance with Open Source Principles}
 Compliance to the Open Source Principles and related objectives is achieved by means of:
 \begin{itemize}
-\item An OpenETCS IP Policy and Procedures \citep{IPP}
+\item An OpenETCS \gls{IP} Policy and Procedures \citep{IPP}
 \item An OpenETCS Development Process \citep{odp} \href{https://github.com/openETCS/ecosystem/wiki/openETCS-Development-Process}{[Wiki]} based in the Eclipse Development Process \citep{EDP}, designed to promote dynamism in the development and openness. All the guidelines are maintained and available at the OpenETCS Ecosystem project [XX]: 
 \begin{itemize}
 \item The OpenETCS project is conceived as a project of projects organized in a hierarchical manner, where the WorkPackages, as defined within the WorkProgramme \citep{fpp}, are considered Top-Level Projects with their own charter. The so-called Tasks are projects, sub-projects of the corresponding Top-Level Project.
 \item Anyhow, new projects can be launched, if needed and approved; existing projects can be archived, if they become inactive. Therefore the final structure of the OpenETCS project will very much depend on its evolution.  
 \item The list of OpenETCS projects with information on their status is available in [XX]
 \item Any project (independently to its position in the hierarchy, and type) has its project leader, scope and maintains its own resources. The project leader is not only responsible to guarantee progress towards the scope of the project but to promote that the most appropriate community is engaged in the project life-cycle with openness and transparency. This community includes committers, contributors, users and adopters.
-\item Every Top-project/WP has its own repository under the responsibility of the Top-Project/WP Leader. Agreements and principles on the repository structure and content can be found in [XX] 
+\item Every Top-project/\gls{WP} has its own repository under the responsibility of the Top-Project/\gls{WP} Leader. Agreements and principles on the repository structure and content can be found in [XX] 
 \item The PMB (Project Management Board) is responsible for maintaining and assuring the implementation of the OpenETCS Development Process and for ensuring the required “coordination” among the projects.
 \item The Mentoring board (composed of XXX) is responsible for mentoring projects and advising.
 \item The Project Office is responsible for the administrative tasks around the OpenETCS Development Process and maintains the OpenETCS Ecosystem project [XX]
@@ -744,15 +765,15 @@ Agile Project Management ha been introduced to software projects in the 90-ties 
 
 Compliance to SCRUM Requirements is achieved by means of
 \begin{itemize}
-\item Each Work Package/Top-Project Leader is the SCRUM Product Owner of the corresponding WP/Top-Project results and maintains the corresponding backlog
+\item Each Work Package/Top-Project Leader is the SCRUM Product Owner of the corresponding \gls{WP}/Top-Project results and maintains the corresponding backlog
 \item Each Project/Task Leader is the SCRUM  Product Owner of the corresponding Tasks results  and maintains the corresponding backlog
 \item The Project Coordinator is the SCRUM Product Owner of the project results and maintains the project results backlog.
 \item Weekly meetings are maintained to find and report on impediments, assess progress, promote cross-collaboration, plan next steps and therefore, maintain the corresponding backlog.
 \begin{itemize}
 \item Weekly Scrum meetings are per definition open meetings, e.g., everybody from the teams can participate and contribute to the meeting.
 \item The weekly meetings are strictly time-boxed.
-\item At WP/Project level, the registered committers, contributors, users and adopters are invited to participate
-\item At Open ETCS project level, the components of the PMB( Project Management Board) are invited.
+\item At \gls{WP}/Project level, the registered committers, contributors, users and adopters are invited to participate
+\item At Open \gls{ETCS} project level, the components of the PMB( Project Management Board) are invited.
 \end{itemize} 
 \item The work-packages resp. tasks need to organize there scrum teams according to practical needs.
 \item Teams are typically distributed in geography and in organisation (i.e., participating companies).
@@ -760,7 +781,7 @@ Compliance to SCRUM Requirements is achieved by means of
 \item To be able to be successful in Agile Development we need to set special focus to the role of the "User" of a product.
 \begin{itemize}
 \item In general, the user of a product in openETCS should representratives of the project openETCS consuming the result of a scrum team. 
-\item The workpackage leader of the WP using an outcome of the team is the first candidate.
+\item The workpackage leader of the \gls{WP} using an outcome of the team is the first candidate.
 \item Representatives of partners making use of the openETCS result in long term are also natural users of a team result.
 \item Partners in the openETCS project need to agree on the Users before the task when planning the interfaces. 
 \end{itemize}  
@@ -769,7 +790,7 @@ Compliance to SCRUM Requirements is achieved by means of
 \end{itemize}
 
 \subsubsection{Compliance with software management and organisation according to EN50128:2011}
-In principle, two of the OpenETCS project results (Software and Tool Chain) are to be CENELEC SIL 4 certifiable. These are two of the results from WP3 and WP7. The following mechanisms, at organizational level, will help the corresponding project leader to provide evidence of compliance with chapters 5.1 and 5.2. Anyhow, evidence that requirements imposed are met will have to be provided for each of the two software projects on a project by project basis. 
+In principle, two of the OpenETCS project results (Software and Tool Chain) are to be CENELEC \gls{SIL} 4 certifiable. These are two of the results from WP3 and WP7. The following mechanisms, at organizational level, will help the corresponding project leader to provide evidence of compliance with chapters 5.1 and 5.2. Anyhow, evidence that requirements imposed are met will have to be provided for each of the two software projects on a project by project basis. 
 
 \begin{itemize}
 \item Every partner in the consortium is ISO9001 Certified or will be in the position to provide evidence of a quality management process is accordance to ISO9001
@@ -780,7 +801,7 @@ In principle, two of the OpenETCS project results (Software and Tool Chain) are 
 \begin{itemize}
 \item WP2, focused on Requirements Specification is led by SNCF.
 \item WP3, focused on the Software Implementation taking as input WP2 and WP7 results is led by Alstom France.
-\item WP4 focused on the specification of the V\&V structure, is led by DLR
+\item WP4 focused on the specification of the \gls{VandV} structure, is led by DLR
 \item WP5 focused on demonstrating applicability/validity of WP3 and WP7 results is led by ERSA
 \item WP7 focused on the development of the Tool Chain is led by DLR taking as input WP2 and WP4 inputs
 \item For the purpose of validating/adapting technical approaches, tools and concepts before they are taken into consideration, three Use Cases will be engaged.
@@ -796,9 +817,9 @@ The training process is detailed in [XX]
 
 \subsection{Committers assignment and responsibilities}
 
-Each Top-Project/WP leader is responsible for establishing and publishing the specific required competence matrix for the Top-Project/WP \textit{(Chapter 4)}. This matrix will be updated in response to the demands imposed by the evolution of the project. The competence matrix template \citep{Competence}is provided in [XX]
+Each Top-Project/\gls{WP} leader is responsible for establishing and publishing the specific required competence matrix for the Top-Project/\gls{WP} \textit{(Chapter 4)}. This matrix will be updated in response to the demands imposed by the evolution of the project. The competence matrix template \citep{Competence}is provided in [XX]
 
-Each Top-Project/WP leader is responsible for developing the most appropriate communities of users, adopters, contributors and committers as required by the Top-Project/WP. A database will be maintained and assessed periodically by the Top-Project/WP Leader. This database will contain the coordinates of the expert, his/her role in the project and a basic explanation of adequacy. The expert database template is provided in [XX]
+Each Top-Project/\gls{WP} leader is responsible for developing the most appropriate communities of users, adopters, contributors and committers as required by the Top-Project/\gls{WP}. A database will be maintained and assessed periodically by the Top-Project/\gls{WP} Leader. This database will contain the coordinates of the expert, his/her role in the project and a basic explanation of adequacy. The expert database template is provided in [XX]
 
 The required core competences as well as the expected contribution of each of the identified communities are described in Chapter 4.
 
@@ -806,7 +827,7 @@ Only committers have write-access to the project resources. Becoming a committer
 
 \begin{itemize}
 \item It is the responsibility of the Project Leader to make sure the required competence to develop a task is covered by the engaged committers.
-\item It is the responsibility of the Open ETCS Project Leader to guarantee the required competence for the project is covered by the effective committers.
+\item It is the responsibility of the Open \gls{ETCS} Project Leader to guarantee the required competence for the project is covered by the effective committers.
 \end{itemize}
 
 Contributors have read-access to the project resources, and acceptance is not required. Guidelines on how to become a contributor can be found in \href{https://github.com/openETCS/ecosystem/wiki/_pages}{[ecosystem wiki pages]}.
@@ -835,18 +856,18 @@ The activities of the QA Manager will be:
 \newpage
 \section{Life Cycle}
 
-The openETCs project itself is a R\&D project running over 3 years which has the goal to deliver products such as the on-board specification model and the corresponding tool chain to generate source code based on this model. While the project life cycle is limited through the project time span, the products shall be used and also developed further after the end of the openETCS project. Respectively, the project only presents the firth development part of the product life cycle.
+The openETCs project itself is a \gls{RandD} project running over 3 years which has the goal to deliver products such as the on-board specification model and the corresponding tool chain to generate source code based on this model. While the project life cycle is limited through the project time span, the products shall be used and also developed further after the end of the openETCS project. Respectively, the project only presents the firth development part of the product life cycle.
 
 \subsection{Project Life Cycle }
 
 The project Life Cycle is implemented through a set of WPs broken down into Tasks. In response of the nature of the project, these WPs are grouped into three purpose driven categories. The first category (WP2, WP4) addresses the specification of the work to be developed and the validation of the results to be obtained; the second category (WP3, WP7, WP5) addresses the development itself and the demonstration of the software and the tools chain developed and the third category (WP1, WP6) addresses the project management, the quality assurance and the dissemination of the project.
-This structure permits both the development and the integration of conceptual (R\&D) and implementation activities to achieve innovative, validated and fit-for-purpose results.
+This structure permits both the development and the integration of conceptual (\gls{RandD}) and implementation activities to achieve innovative, validated and fit-for-purpose results.
 The detailed description of the Work Package description and overview plan is covered by [FPP].  
 
 
 \subsection{Product Life Cycle }
 
-As the OpenETCS project products shall be part of the train development the reference for their life cycles are the CENELEC standard phases defined in the EN50126. But as the products are in general R\&D results, their life cycles do not include any certification or acceptance activities at the moment.
+As the OpenETCS project products shall be part of the train development the reference for their life cycles are the CENELEC standard phases defined in the EN50126. But as the products are in general \gls{RandD} results, their life cycles do not include any certification or acceptance activities at the moment.
 The main OpenETCS products are the OpenETCS Software model and the OpenETCS tools chain development, which have their own life cycles. For both parts the main development, verification and validation activities are done during the OpenETCS project. For the software only the demonstrator implementation is part of the OpenETCS project, while any kind of implementation on a target hardware is out of the project. 
 For the OpenETCS tools chain the basic implementation is part of the project, but all further steps from qualification on are out of the project.
 In general long time maintenance is a key concept of these products but it can not be established in the project time span. 
@@ -888,7 +909,7 @@ In the Annexes A, B, C and D, the responsibilities and the core competences requ
 
 In the case of CAT 1 roles, specific technical competence will be required depending on the scope of the project. For this reason a new column has been added. In this column, specific technical competences for each project and role are to be included. It is the responsibility of each project leader to provide this information.
 
-According to the open development process followed by Open ETCS, the QA process is also a project. For this reason the QA Manager will have to meet the competences of a Project Leader and the specific competences imposed by CENELEC and the OpenETCS project to the Quality Manager activities. When needed, specific responsibilities imposed by a project to a role will be detailed too.
+According to the open development process followed by Open \gls{ETCS}, the QA process is also a project. For this reason the QA Manager will have to meet the competences of a Project Leader and the specific competences imposed by CENELEC and the OpenETCS project to the Quality Manager activities. When needed, specific responsibilities imposed by a project to a role will be detailed too.
 
 As project results affected by CENELEC are already identified, both core and specific required competence per CAT 3 role are included in Annexes C and D.
 
@@ -908,7 +929,7 @@ The QA Manager will be in charge of:
 \item In the case of CENELEC related project, provide the necessary evidence of competence and independency between roles. If this is not possible, propose the necessary solutions and support the projects in its implementation
 \end{itemize}
 
-\section{Methods, measures and tools for quality assurance (product + open ETCS software + Tools chain)}
+\section{Methods, measures and tools for quality assurance (product + open \gls{ETCS} software + Tools chain)}
 
 
 Selection of methods and tools used in each phase of the OpenETCS process is a part of the WP7 activities. This selection is based on the state of art established by WP2 (D2.1 and D2.2), the set of requirements defined by WP2 (D2.6-9) and the process definition (D2.3, D2.4, D4.1, D4.2.3).
@@ -933,14 +954,14 @@ D2.4: Report on Methods definition &
 Description of methods and tools to use to follow the OpenETCS process \\\hline
 D2.6-9: Set of requirements for the OpenETCS project &
 Definition of the requirements that the selected methods and tools shall follow \\\hline
-D4.1: Report on V\&V Plan \& Methodology &
-Detailed description of the V\&V process and how are used the methods and tools to cover V\&V artifacts \\\hline
+D4.1: Report on \gls{VandV} Plan \& Methodology &
+Detailed description of the \gls{VandV} process and how are used the methods and tools to cover \gls{VandV} artifacts \\\hline
 D4.2.3: Safety Plan &
 Detailed requirements on methods and tools to be used during the process to obtain a SIL4 developement of on-board unit \\\hline
 D7.1: Report on the final choice(s) for the primary tool chain (means of description, tool and platform) &
 Selected methods and tools to be used during the specification and design part of the OpenETCS process \\\hline
 D7.2: Report on all aspects of secondary tooling (results of T7.2)  &
-Selected methods and tools to complete the OpenETCS process (V\&V, safety analyses,..) \\\hline
+Selected methods and tools to complete the OpenETCS process (\gls{VandV}, safety analyses,..) \\\hline
 D7.3: Tool chain qualification process description &
 This report describe how the selected methods and tools fit the qualification requirements according CENELEC standard \\\hline
 \end{supertabular}
@@ -950,7 +971,7 @@ This report describe how the selected methods and tools fit the qualification re
 
 \subsection{Methods, measures and tools for quality assurance OpenETCS Application Software}
 
-It is assumed that the OpenETCS application software will be SIL4 compliant. Therefore, the methods, techniques and tools shall be suitable to SIL 4. 
+It is assumed that the OpenETCS application software will be SIL4 compliant. Therefore, the methods, techniques and tools shall be suitable to \gls{SIL} 4. 
 
 
 \todo[color=yellow!20, inline]{MPD(Systerel): It is not totally exact: one of the aim of the project is to provide a tool chain which allows to develop SIL4 software, the OpenETCS applcation software produced during the project has not as objective to be SIL4 compliant.}
@@ -980,7 +1001,7 @@ The documentation structure of the OpenETCS project is composed of:
 \item The relation and scope of the deliverables to be produced along OpenETCS can be found in the FPP [].
 \item The updated status of development of each Deliverable can be found in 
 \href{https://github.com/openETCS/management/wiki/State-of-Deliverables}{[State-of-Deliverables Wiki]}.
-\item The approved and therefore valid version of each Deliverables can be found in the repository of the Top-Project/WP it belongs to. 
+\item The approved and therefore valid version of each Deliverables can be found in the repository of the Top-Project/\gls{WP} it belongs to. 
 \end{itemize}
 \item Contractual documents, with the Commission and among the project partners
 \begin{itemize}
@@ -994,7 +1015,7 @@ The documentation structure of the OpenETCS project is composed of:
 \end{itemize}
 \item Supporting Documents, in the form of Templates and Procedures
 \begin{itemize}
-\item The procedures and templates applicable to a specific Top-Project/WP can be found in the repository of the corresponding TP/WP.
+\item The procedures and templates applicable to a specific Top-Project/\gls{WP} can be found in the repository of the corresponding TP/\gls{WP}.
 \item The procedures and templates applicable to the whole project can be found in the repository of Governance.
 \end{itemize}
 \item Internal Reports, in the form of Meeting Minutes
@@ -1005,7 +1026,7 @@ The documentation structure of the OpenETCS project is composed of:
 
 The nomenclature used for the naming of the different documents is provided in [XX-to be developed].
 
-For each TP/WP the relation of existing documents is provided in the form of a list \href{https://github.com/openETCS/governance/wiki}{[Wiki]}. This list includes a direct access to the valid version of each document.
+For each TP/\gls{WP} the relation of existing documents is provided in the form of a list \href{https://github.com/openETCS/governance/wiki}{[Wiki]}. This list includes a direct access to the valid version of each document.
 
 \subsection{Documentation Structure within the development process of the openETCS Software}
 As a SIL4 software, the documentation structure has to comply with CENELEC requirements. The following table shows the document structure required by CENELEC for a SIL4 development and the corresponding documents produced in the OpenETCS project.
@@ -1014,13 +1035,13 @@ As a SIL4 software, the documentation structure has to comply with CENELEC requi
 \begin{longtable}{|m{2cm}|m{1cm}|m{7cm}|m{2cm}|m{2cm}|}
 \caption{Documentation Structure}\\
 
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{\textbf{Documentation Structure within the development process of the openETCS Software}} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{\textbf{Phase}} & \multicolumn{1}{c|}{\textbf{SIL4}} & \multicolumn{1}{c|}{\textbf{Document}} & \multicolumn{1}{c|}{\textbf{WP/Task}} & \multicolumn{1}{c|}{\textbf{Link}} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{\textbf{Documentation Structure within the development process of the openETCS Software}} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{\textbf{Phase}} & \multicolumn{1}{c|}{\textbf{SIL4}} & \multicolumn{1}{c|}{\textbf{Document}} & \multicolumn{1}{c|}{\textbf{\gls{WP}/Task}} & \multicolumn{1}{c|}{\textbf{Link}} \\ \hline 
 \endfirsthead
 
 \multicolumn{5}{c}%
 {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
 \rowcolor{myblue} \multicolumn{5}{|c|}{\textbf{Documentation Structure within the development process of the openETCS Software}} \\
-\rowcolor{lightgray} \multicolumn{1}{|c|}{\textbf{Phase}} & \multicolumn{1}{c|}{\textbf{SIL4}} & \multicolumn{1}{c|}{\textbf{Document}} & \multicolumn{1}{c|}{\textbf{WP/Task}} & \multicolumn{1}{c|}{\textbf{Link}} \\ \hline 
+\rowcolor{lightgray} \multicolumn{1}{|c|}{\textbf{Phase}} & \multicolumn{1}{c|}{\textbf{SIL4}} & \multicolumn{1}{c|}{\textbf{Document}} & \multicolumn{1}{c|}{\textbf{\gls{WP}/Task}} & \multicolumn{1}{c|}{\textbf{Link}} \\ \hline 
 \endhead
 
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
@@ -1030,7 +1051,7 @@ As a SIL4 software, the documentation structure has to comply with CENELEC requi
 \endlastfoot
 
 Planning &
-\centering HR &
+\centering \gls{HR} &
 \raggedright
 Software Quality Assurance Plan\\
 Software Quality Assurance Verification Report\\
@@ -1040,7 +1061,7 @@ Software Verification and Validation Plan\\ &
 (to be defined)
 \\\hline
 Software Requirements &
-\centering HR &
+\centering \gls{HR} &
 \raggedright
 Software Requirements Specification\\
 Software Requirements Test Specification\\
@@ -1049,7 +1070,7 @@ Software Requirements Verification Report\\ &
 (to be defined)
 \\\hline
 Architecture and design &
-\centering HR &
+\centering \gls{HR} &
 \raggedright
 Software Architecture Specification\\
 Software Design Specification\\
@@ -1061,7 +1082,7 @@ Software Architecture and design verification report\\ &
 (to be defined)
 \\\hline
 Component Design &
-\centering HR &
+\centering \gls{HR} &
 \raggedright
 Software Component design specification\\
 Software Component Test Specification\\
@@ -1070,7 +1091,7 @@ Software Component design verification report\\ &
 (to be defined)
 \\\hline
 Component Implementation and Testing &
-\centering HR &
+\centering \gls{HR} &
 \raggedright
 Software source code and supporting documentation\\
 Software source code verification report\\
@@ -1079,7 +1100,7 @@ Software Component Test Report\\ &
 (to be defined)
 \\\hline
 Integration &
-\centering HR &
+\centering \gls{HR} &
 \raggedright
 Software Integration Test Report\\
 Software/Hardware Integration Test Report\\
@@ -1088,7 +1109,7 @@ Software Integration Verification Report\\ &
 (to be defined)
 \\\hline
 Overall Software Testing/Final validation &
-\centering HR &
+\centering \gls{HR} &
 \raggedright
 Overall Software Test Report\\
 Software Validation Report\\
@@ -1098,7 +1119,7 @@ Release Note\\ &
 (to be defined)
 \\\hline
 Systems configured by Application Data/algorithms &
-\centering HR &
+\centering \gls{HR} &
 \raggedright
 Application Requirements Specification\\
 Application Preparation Plan\\
@@ -1112,7 +1133,7 @@ Application Data/Algorithms Verification Report\\ &
 (to be defined)
 \\\hline
 Software Deployment &
-\centering HR &
+\centering \gls{HR} &
 \raggedright
 Software Release and Deployment Plan\\
 Software Deployment Manual\\
@@ -1123,7 +1144,7 @@ Deployment Verification Report\\ &
 (to be defined)
 \\\hline
 Software Maintenance &
-\centering HR &
+\centering \gls{HR} &
 \raggedright
 Software Maintenance Plan\\
 Software Change Records\\
@@ -1133,7 +1154,7 @@ Software Maintenance Verification Report\\ &
 (to be defined)
 \\\hline
 Software Assessment &
-\centering HR &
+\centering \gls{HR} &
 \raggedright
 Software Assessment Plan\\ 
 Software Assessment Report\\ &
@@ -1177,16 +1198,16 @@ Software Assessment Report\\ &
 \textit{Guidance: Provide a description of traceability requirements, as well as how the traceability will be achieved, implement, maintained and verified. At this stage, exceptions if they exist should be justified.}
 
 \subsection{Configuration Management}
-\textit{Guidance: Refer to SCMP (System Configuration Management Plan). Overview table with the summary of main features of SCMP.}
+\textit{Guidance: Refer to \gls{SCMP} (System Configuration Management Plan). Overview table with the summary of main features of \gls{SCMP}.}
 
-\todo[color=yellow!20, inline]{JW: SCMP has to be written. This mainly includes an explanation of the proper github working processes.}
+\todo[color=yellow!20, inline]{JW: \gls{SCMP} has to be written. This mainly includes an explanation of the proper github working processes.}
 \todo[color=green!20, inline]{IT: OK, it will be included in the backlog we are preparing.}
 
 \textit{Describe the QA activities}
 
 \subsection{Fault Management}
 
-ISTQB define a defect as "a flaw in a component or system that can cause the component or system to fail to perform its required function". A defect can be random or systematic. A defect, if encountered during execution, may cause a failure of the component or system". From the ISTQ glossary bug, fault and problem are defined to be the same as a defect.
+\gls{ISTQB} define a defect as "a flaw in a component or system that can cause the component or system to fail to perform its required function". A defect can be random or systematic. A defect, if encountered during execution, may cause a failure of the component or system". From the ISTQ glossary bug, fault and problem are defined to be the same as a defect.
 
 A failure is a deviation of the component or system from its expected delivery, service or result. A failure is the consequence of a fault or error in a system but not all faults result in failures.
 
@@ -1403,7 +1424,7 @@ Ensure that all personnel involved in all phases of the software, tool chain (pr
 \textbf{(To be fulfilled)} &
 \textbf{(To be fulfilled per project)} \\\hline
 WPL &
-WP Leader/Top-level project leader &
+\gls{WP} Leader/Top-level project leader &
 \raggedright
 Make sure the required competence to develop a task is covered by the engaged committers\\
 To ensure that all personnel who have responsibilities for the software are competent to discharge those responsibilities\\
@@ -1574,9 +1595,9 @@ Develop and maintain documents related to software requirements
 \parbox{10cm}{\raggedright
 experience in railways sector and safety attributes in the railway domain\\
 experience with requirements management process and tools\\
-knowledges of TSI and related CENELEC requirements}
+knowledges of \gls{TSI} and related CENELEC requirements}
 \\\hline
-DES &
+\gls{DES} &
 Designer &
 \parbox{11cm}{\raggedright
 Transform software requirements on acceptable solutions\\
@@ -1596,10 +1617,10 @@ Competent in software development in the railway domain\\
 Competent in safety design principles\\
 Familiarity with methods and tools for design analysis and design testing\\
 Ability to work with design constraints for safety relevant software in On-Board systems\\
-Understanding of the system constraints created through the TSI\\
+Understanding of the system constraints created through the \gls{TSI}\\
 Understanding of the relevant parts of EN 50128 like design methods}
 \\\hline
-IMP &
+\gls{IMP} &
 Implementer &
 \parbox{11cm}{\raggedright
 Transform design solutions in data, models, source code and finally executable code for the demonstrator\\
@@ -1617,7 +1638,7 @@ Capable of applying the specified coding standards and programming styles\\
 Understanding of the system constraints created through the On-Board hardware respectively the demonstrator\\
 Understanding of the relevant parts of EN 50128 like design methods}
 \\\hline
-TST &
+\gls{TST} &
 Tester &
 \parbox{11cm}{\raggedright
 Ensure the test activities planning \\
@@ -1631,27 +1652,27 @@ Record the results reports\\
 Select the equipment for testing the software
 }&
 \parbox{10cm}{\raggedright
-Competent in ETCS specification, used means of description (model/ source code), used train and track parameter and other application data source\\
+Competent in \gls{ETCS} specification, used means of description (model/ source code), used train and track parameter and other application data source\\
 Competent in various test approaches/methods to identify to identify the most appropriate method or combination of methods for every aspect of an artifact\\
-Capable of deriving test cases from TSI (specifically Subset 26) and the specification model\\
+Capable of deriving test cases from \gls{TSI} (specifically Subset 26) and the specification model\\
 Understanding of the relevant parts of EN 50128 like test methods}
 \\\hline
-VER &
+\gls{VER} &
 Verifier &
 \parbox{11cm}{\raggedright
-Develop a SW Verification Plan \\
+Develop a \gls{SW} Verification Plan \\
 Check the documented test suitability (completeness, coherency, relevance, traceability) with the verification objectives\\
 Identify anomalies, evaluate in terms of the risk, record them and communicate them to the authority in charge of the changes management for evaluation and decision making\\
 Manage the verification process (revision, integration and testing) and ensure the independence of the activities as needed\\
 Develop a verification report with the results of the verification activities
 } &
 \parbox{10cm}{\raggedright
-Competent in ETCS specification, used means of description (model/ source code), used train and track parameter and other application data source\\
+Competent in \gls{ETCS} specification, used means of description (model/ source code), used train and track parameter and other application data source\\
 Competent in various verification approaches/methods to identify the most appropriate method or combination of methods for every aspect of an artifact\\
-Capable of deriving verification procedures from TSI (specifically Subset 26) and the specification model\\
+Capable of deriving verification procedures from \gls{TSI} (specifically Subset 26) and the specification model\\
 Understanding of the relevant parts of EN 50128 like verification methods}
 \\\hline
-INT &
+\gls{INT} &
 Integrator &
 \parbox{11cm}{\raggedright
 Manage the integration process using software baselines\\
@@ -1661,20 +1682,20 @@ Identify integration anomalies; record them and communicate them to the authorit
 Develop a report of components and the overall system integration covering the integration results 
 }&
 \parbox{10cm}{\raggedright
-Competent in ETCS specification, used programming language, used API and demonstrator hardware\\
+Competent in \gls{ETCS} specification, used programming language, used API and demonstrator hardware\\
 Competent in various integration approaches/methods to identify the most appropriate method or combination of methods for the demonstrator implementation\\
 Understanding the design and functionality requirements for intermediated development levels\\
 Capable of deriving integrator tests from the set of integrated functions\\
 Understanding of the relevant parts of EN 50128 like integration tests}
 \\\hline
-VAL &
+\gls{VAL} &
 Validator &
 \parbox{11cm}{\raggedright
 Develop a Validation Plan specifying the main tasks and activities for the sw validation\\
 Agree on the Validation Plan with the assessor\\
 Review Sw requirements in relation to their intended use/environment\\
 Ensure sw fulfill all sw requirements\\
-Evaluate the assessment of the software process and of the software according to CENELEC requirements and the assigned SIL\\
+Evaluate the assessment of the software process and of the software according to CENELEC requirements and the assigned \gls{SIL}\\
 Review the verification and tests correctness, consistency and suitability \\
 Check the correctness, consistency and suitability of the test cases and executed tests\\
 Ensure that all validation plan activities are carried out\\
@@ -1690,19 +1711,19 @@ Develop a Validation Report\\
 Express their agreement or disagreement about the sw version  
 }&
 \parbox{10cm}{\raggedright
-Competent in ETCS On-Board units\\
+Competent in \gls{ETCS} On-Board units\\
 Experience in safety attributes for train control systems\\
 Competent in various validation approaches/methods to identify the most appropriate method or combination of methods for the demonstrator implementation\\
-Capable of deriving types of validation evidence required for the TSI with respect to the train control functionality\\
+Capable of deriving types of validation evidence required for the \gls{TSI} with respect to the train control functionality\\
 Capable to combine different sources and types of evidence and synthesize an overall view about fitness for purpose or constraints and limitations of the On-Board application\\
 Overall software understanding and perspective including the general railway environment\\
 Understanding the requirements of EN 50128}
 \\\hline
-ASR &
+\gls{ASR} &
 Assessor &
 \parbox{11cm}{\raggedright
 Develop an assessment plan and communication with safety authority and client organization\\
-Evaluate the assessment of the software process and of the software according to CENELEC requirements and the assigned SIL\\
+Evaluate the assessment of the software process and of the software according to CENELEC requirements and the assigned \gls{SIL}\\
 Assess the project team and the organization competences for the sw development\\
 Evaluate the Verification \& Validation activities and the supporting evidences\\
 Evaluate quality management systems adopted for  the sw development\\
@@ -1799,7 +1820,7 @@ develop and maintain documents related to tool chain requirements
 %experience in railways sector\\
 \textbf{(To be fulfilled)}
 \\\hline
-DES &
+\gls{DES} &
 Designer &
 \raggedright
 Transform software requirements on acceptable solutions\\
@@ -1816,7 +1837,7 @@ Develop component specifications if it is applicable
 &
 \textbf{(To be fulfilled)}
 \\\hline
-IMP &
+\gls{IMP} &
 Implementer &
 \raggedright
 Transform design solutions in data, source code, models  and / or other design representations\\
@@ -1829,7 +1850,7 @@ Maintain the generated or modified data/codes/models under system configuration 
 &
 \textbf{(To be fulfilled)}
 \\\hline
-TST &
+\gls{TST} &
 Tester &
 \raggedright
 Ensure the test activities planning \\
@@ -1844,7 +1865,7 @@ Select the equipment for testing the software
 &
 \textbf{(To be fulfilled)}
 \\\hline
-INT &
+\gls{INT} &
 Integrator &
 \raggedright
 Manage the integration process using software baselines\\
@@ -1855,10 +1876,10 @@ Develop a report of components and the overall system integration covering the i
 &
 \textbf{(To be fulfilled)}
 \\\hline
-VER &
+\gls{VER} &
 Verifier &
 \raggedright
-Develop a SW Verification Plan \\
+Develop a \gls{SW} Verification Plan \\
 Check the documented test suitability (completeness, coherency, relevance, traceability) with the verification objectives\\
 Identify anomalies, evaluate in terms of the risk, record them and communicate them to the authority in charge of the changes management for evaluation and decision making\\
 Manage the verification process (revision, integration and testing) and ensure the independence of the activities as needed\\
@@ -1867,14 +1888,14 @@ Develop a verification report with the results of the verification activities &
 %must be competent in various verification methodologies and able to identify the most appropriate method or combination of methods to the context 
 \textbf{(To be fulfilled)}
 \\\hline
-VAL &
+\gls{VAL} &
 Validator &
 \raggedright
 Develop a Validation Plan specifying the main tasks and activities for the sw validation\\
 Agree on the Validation Plan with the assessor\\
 Review Sw requirements in relation to their intended use/environment\\
 Ensure sw fulfil all sw requirements\\
-Evaluate the assessment of the software process and of the software according to CENELEC requirements and the assigned SIL\\
+Evaluate the assessment of the software process and of the software according to CENELEC requirements and the assigned \gls{SIL}\\
 Review the verification and tests correctness, consistency and suitability \\
 Check the correctness, consistency and suitability of the test cases and executed tests\\
 Ensure that all validation plan activities are carried out\\
@@ -1890,11 +1911,11 @@ Develop a Validation Report\\
 Express their agreement or disagreement about the sw version  &
 \textbf{(To be fulfilled)}
 \\\hline
-ASR &
+\gls{ASR} &
 Assessor &
 \raggedright
 Develop an evaluation Plan\\
-Evaluate the assessment of the software process and of the software according to CENELEC requirements and the assigned SIL\\
+Evaluate the assessment of the software process and of the software according to CENELEC requirements and the assigned \gls{SIL}\\
 Assess the project team and the organization competences for the sw development\\
 Evaluate the Verification \& Validation activities and the supporting evidences\\
 Evaluate quality management systems adopted for  the sw development\\
@@ -1930,7 +1951,7 @@ Prepare the published release notes mentioning incompatible versions of sw compo
 \tablefirsthead{\hline
 \rowcolor{myblue}
 \multicolumn{5}{|c|}{Software Requirements Specification Phase}\\
-\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering SIL 4 & \centering Applied (Yes/No) & Details and References\\}
+\hline \rowcolor{lightgray} \centering Code & \centering Method/Technique & \centering \gls{SIL} 4 & \centering Applied (Yes/No) & Details and References\\}
 \tablehead{\hline
 \rowcolor{myblue}
 \multicolumn{5}{|c|}{Software Requirements Specification Phase}\\}
@@ -1939,28 +1960,28 @@ Prepare the published release notes mentioning incompatible versions of sw compo
 \centering 1 &
 Formal Methods &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary} \\\hline
 \centering 2 &
 Modelling &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 3 &
 Structured Methodology &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 4 &
 Decision Table &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -1975,12 +1996,12 @@ Yes &
 \begin{longtable}{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
 \caption{Software Architecture Phase}\\
 
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Architecture Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Architecture Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endfirsthead
 
 \multicolumn{5}{c}%
 {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Architecture Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Architecture Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endhead
 
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
@@ -1992,14 +2013,14 @@ Yes &
 \centering 1 &
 Defensive Programming &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 2 &
 Fault Detection \& Diagnosis &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2013,14 +2034,14 @@ Yes &
 \centering 4 &
 Error Detecting Codes &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 5 &
 Assertion Programming &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2034,7 +2055,7 @@ Yes &
 \centering 7 &
 Diverse Programming &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2069,7 +2090,7 @@ Yes &
 \centering 12 &
 Memorising Executed Cases &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2090,14 +2111,14 @@ No &
 \centering 15 &
 Software Error Effect Analysis &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 16 &
 Fault Tree Analysis &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2111,7 +2132,7 @@ Yes &
 \centering 18 &
 Information Encapsulation &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2125,21 +2146,21 @@ Yes &
 \centering 20 &
 Formal Methods &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 21 &
 Modelling &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 22 &
 Structured Methodology &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2147,7 +2168,7 @@ Yes &
 Modelling supported by computer aided design
 and specification tools &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2161,12 +2182,12 @@ Yes &
 \begin{longtable}{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
 \caption{Software Design and Implementation Phase}\\
 
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Design and Implementation Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Design and Implementation Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endfirsthead
 
 \multicolumn{5}{c}%
 {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Design and Implementation Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Design and Implementation Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endhead
 
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
@@ -2178,21 +2199,21 @@ Yes &
 \centering 1 &
 Formal Methods &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 2 &
 Modelling &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 3 &
 Structured Methodology &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2206,7 +2227,7 @@ Yes &
 \centering 5 &
 Components &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2220,35 +2241,35 @@ Yes &
 \centering 7 &
 Analysable Programs &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 8 &
 Strongly Typed Programming Language &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 9 &
 Structured Programming &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 10 &
 Programming Language &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 11 &
 Language Subset &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2262,7 +2283,7 @@ Yes &
 \centering 13 &
 Procedural Programming &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2283,12 +2304,12 @@ Yes &
 \begin{longtable}{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
 \caption{Verification and Testing Phase}\\
 
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Verification and Testing Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Verification and Testing Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endfirsthead
 
 \multicolumn{5}{c}%
 {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Verification and Testing Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Verification and Testing Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endhead
 
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
@@ -2300,21 +2321,21 @@ Yes &
 \centering 1 &
 Formal Proof &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 2 &
 Static Analysis &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 3 &
 Dynamic Analysis and Testing &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2335,14 +2356,14 @@ Yes &
 \centering 6 &
 Software Error Effect Analysis &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 7 &
 Test Coverage for code &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2356,14 +2377,14 @@ Yes &
 \centering 9 &
 Performance Testing &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 10 &
 Interface Testing &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2377,12 +2398,12 @@ Yes &
 \begin{longtable}{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
 \caption{Integration Phase}\\
 
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Integration Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Integration Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endfirsthead
 
 \multicolumn{5}{c}%
 {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Integration Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Integration Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endhead
 
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
@@ -2394,14 +2415,14 @@ Yes &
 \centering 1 &
 Functional and Black-box Testing &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 2 &
 Performance Testing &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2415,12 +2436,12 @@ Yes &
 \begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
 \caption{Overall Software Testing Phase}\\
 
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Overall Software Testing Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Overall Software Testing Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endfirsthead
 
 \multicolumn{5}{c}%
 {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Overall Software Testing Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Overall Software Testing Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endhead
 
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
@@ -2460,12 +2481,12 @@ Yes &
 \begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
 \caption{Software Analysis Techniques Phase}\\
 
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Analysis Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Analysis Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endfirsthead
 
 \multicolumn{5}{c}%
 {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Analysis Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Analysis Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endhead
 
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
@@ -2477,14 +2498,14 @@ Yes &
 \centering 1 &
 Static Software Analysis &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 2 &
 Dynamic Software Analysis &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2505,7 +2526,7 @@ Yes &
 \centering 5 &
 Software Error Effect Analysis &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2519,12 +2540,12 @@ Yes &
 \begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
 \caption{Software Quality Assurance Phase}\\
 
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Quality Assurance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Quality Assurance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endfirsthead
 
 \multicolumn{5}{c}%
 {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Quality Assurance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Quality Assurance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endhead
 
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
@@ -2536,7 +2557,7 @@ Yes &
 \centering 1 &
 Accredited to EN ISO 9001 &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2571,7 +2592,7 @@ Yes &
 \centering 6 &
 Checklists &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2599,12 +2620,12 @@ Yes &
 \begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
 \caption{Software Maintenance Phase}\\
 
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Maintenance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Maintenance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endfirsthead
 
 \multicolumn{5}{c}%
 {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Maintenance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Maintenance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endhead
 
 \hline \hline
@@ -2634,12 +2655,12 @@ Yes &
 \begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
 \caption{Data Preparation Techniques Phase}\\
 
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Data Preparation Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Data Preparation Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endfirsthead
 
 \multicolumn{5}{c}%
 {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Data Preparation Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Data Preparation Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{\gls{SIL} 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endhead
 
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
@@ -2665,7 +2686,7 @@ Yes &
 \centering 3 &
 Simulation &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
@@ -2693,21 +2714,21 @@ Yes &
 \centering 7 &
 Formal design reviews &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 8 &
 Formal proof of correctness (of data) &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
 \centering 9 &
 Walkthrough &
 \centering
-HR &
+\gls{HR} &
 \centering
 Yes &
 \textit{Include details and references to external documents when if necessary}\\\hline
