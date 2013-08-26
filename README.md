@@ -15,9 +15,7 @@ Documents under Revision/Review
 * Revision Review process in its 0.2.0 version
    	- State of the document: under review
 * Change/Problem Management Process in its 0.1.0 version
-	- State of the document: new document created
-   	- Branch: RC_ChangeProblemManagementProcess_0.1.0
-   	- Related issue: https://github.com/openETCS/governance/issues/34
+	- State of the document: under review
 	
 
 	
