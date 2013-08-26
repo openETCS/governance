@@ -273,6 +273,13 @@ Marielle Petit-Doche (Systerel)
 Stefan Rieger (TWT)
 
 Izaskun de la Torre (SQS)\\\hline
+0.10.0 &
+26.08.2013 &
+chapter 1.2 and 8.2 &
+New Content  &
+Bernd Hekele (DB)
+
+Stefan Rieger (TWT)\\\hline
 \end{longtable}
 \end{center}
 
@@ -305,13 +312,28 @@ Therefore, it describes the QA functions, responsibilities and specific monitori
 \subsection{Goals of the openETCS project}
 
 The main goals and deliverables of the OpenETCS project are:
-\begin{enumerate}
-\item Creating a formal specification of the ETCS OBU functionality according to UNISIG Subset 026
 
-\item An executable software package generated from the formal specification and a non-vital implementation of that software for laboratory test, simulation and reference purposes
+\paragraph{A semi-formal reference specification for the ETCS requirements and architecture, completed by strictly formal models of sub-parts}
+The first goal of the project is to propose a semi-formal specification of the ETCS on-board functionalities according to UNISIG SUBSET-026 \citep{subset026}, baseline 3.
 
-\item A tools chain supporting both previous bullet points including code, test case and document generation meeting CENELEC EN50128:2011 (T3) requirements and certifiable for SIL4 software applications for signalling equipment (Certification itself is not part of the project)
-\end{enumerate}
+The purpose of this model is:
+\begin{itemize}
+\item to enhance the understanding of the subset;
+\item to be able to animate the model for testing and analysing purpose at system level;
+\item to provide information on the completeness and soundness of the SUBSET-026;
+\item to be used as a reference semi-formal specification for the implementation of an on-board unit
+(by the OpenETCS project team and by industrial actors);
+\end{itemize}
+
+The output is a model, at least semi-formal, which can be extended to many formal approaches (SCADE,
+Simulink, B tools, OpenETCS tool chain…) that can be given to all railway actors, and
+if possible associated to SRS documents in the ERA database.
+
+Thus, strictly formal models can be designed from this semi-formal model which allows for formal proofs of sub-parts of SUBSET-026. This will allow improving the understanding of the system, and will provide elements for verification and validation using formal proof.
+
+The final goal is that industrial actors work with this model instead of the
+natural language specification.
+The objective is to cover as much as possible of the functionality of the on-board unit described in SUBSET-026 and to show the capabilities of analyses of a complex system using formal approaches.
 
 
 
@@ -511,9 +533,14 @@ ecosystem &
 Jonas Helming\\\hline
 \cite{training} &
 Training Process &
-\centering &
+\centering 0.1.0 &
 governance &
 Izaskun de la Torre\\\hline
+\citep{dcontrol} &
+Document Control Process &
+\centering 0.1.0 &
+governance &
+Ainhoa Gracia\\\hline
 \end{tabular}
 \caption{Procedures}
 \end{table}
@@ -985,7 +1012,7 @@ The documentation structure of the OpenETCS project is composed of:
 \begin{itemize}
 \item Deliverables, which constitute the official outcomes of the different Top-Projects/WPs
 \begin{itemize}
-\item The relation and scope of the deliverables to be produced along OpenETCS can be found in the FPP [].
+\item The relation and scope of the deliverables to be produced along OpenETCS can be found in the FPP \citep{fpp}.
 \item The updated status of development of each Deliverable can be found in 
 \href{https://github.com/openETCS/management/wiki/State-of-Deliverables}{[State-of-Deliverables Wiki]}.
 \item The approved and therefore valid version of each Deliverables can be found in the repository of the Top-Project/WP it belongs to. 
@@ -1011,7 +1038,7 @@ The documentation structure of the OpenETCS project is composed of:
 \end{itemize}
 \end{itemize}
 
-The nomenclature used for the naming of the different documents is provided in [XX-to be developed].
+The nomenclature used for the naming of the different documents is provided in \href{https://github.com/openETCS/governance/wiki/Nomenclature-Guideline}{[governance Wiki]}.
 
 For each TP/WP the relation of existing documents is provided in the form of a list \href{https://github.com/openETCS/governance/wiki}{[Wiki]}. This list includes a direct access to the valid version of each document.
 
@@ -1369,7 +1396,7 @@ When publishing in the context of the openETCS project authors shall adhere to t
     \item[Belgium/Brussels region] This work was funded by the Région de Bruxelles-Capitale / Brussels Hoofdstedelijk Gewest (Grant No. RBC/12 R 11) in the context of the ITEA2 project openETCS.
     \item[Belgium/Walloon region] This work was funded by the Walloon Region (DG06) (Grant No. 6921) in the context of the ITEA2 project openETCS.
     \item[France] This work was funded by the "Direction Générale de la compétitivité, de l’industrie et des services" (DGCIS)  (Grant No. 112930309) in the context of the ITEA2 project openETCS.
-    \item[to be completed] Spain still missing
+    \item[Spain] This work was funded by the "Gobierno de España, Ministerio de Ciencia e Innovación" in the context of the ITEA2 project openETCS
   \end{description}
 
 \item Publications potentially affecting project contributions of other partners require explicit approval. A request for approval shall be accompanied with a reasonable deadline (e.g., two weeks). Please consider a joint publication with the involved partners.
