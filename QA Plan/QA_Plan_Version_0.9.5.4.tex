@@ -13,7 +13,7 @@
 \usepackage{float}
 \usepackage{url}
 \usepackage{hyperref}
-\usepackage[nonumberlist]{glossaries} %glossaries to create glossary and abbreviation lists
+\usepackage[acronym,nonumberlist]{glossaries} %glossaries to create glossary and abbreviation lists
 \usepackage{breakurl}
 \usepackage{lipsum}
 \makeatletter
@@ -66,7 +66,7 @@
 
 \makeglossaries
 %Glossary terms
-%\loadglsentries{./glossary/openETCS-Latex-Glossary.tex}
+\loadglsentries{./glossary/openETCS-Latex-Glossary.tex}
 
 \begin{document}
 \frontmatter
@@ -636,8 +636,6 @@ Depending on the needs further extractions from the iglos database can be create
 %\hline
 \gls{ASR} &
 Assessor\\\hline
-\gls{CCS} &
-control-command and signalling subsystems  \\\hline
 \gls{DES} &
 Designer\\\hline
 \gls{ERTMS} &
@@ -686,9 +684,6 @@ Research and Development\\\hline
 System Configuration Management Plan\\\hline
 \gls{SIL} &
 Safety Integrity Level\\\hline
-\gls{SME} &
-~
-\\\hline
 \gls{SRS} &
 Software Requirements Specification\\\hline
 \gls{SW} &
