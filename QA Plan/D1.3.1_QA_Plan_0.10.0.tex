@@ -14,6 +14,7 @@
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{breakurl}
+\usepackage[titletoc]{appendix}
 \usepackage{lipsum}
 \makeatletter
 \newcommand\arraybslash{\let\\\@arraycr}
@@ -222,7 +223,7 @@ Restructuring  &
 Rico Kaseroni (DB)\\\hline
 0.9.3 &
 11.02.2013 &
-1-, 2-, Last Chapter Annex A and C  &
+1-, 2-, Last Chapter Appendices A and C  &
 Graphic Figure 1, Definition of openETCS Process IP clean Job &
 Rico Kaseroni (DB)\\\hline
 0.9.4 &
@@ -791,7 +792,7 @@ Compliance to SCRUM Requirements is achieved by means of
 \end{itemize} 
 \item The work-packages resp. tasks need to organize there scrum teams according to practical needs.
 \item Teams are typically distributed in geography and in organisation (i.e., participating companies).
-\item Scrum teams typically have to provide several development roles (according to CENELEC and according to Eclipse). Guidance on the possible mixtrues of CENELEC roles into a Scrum team is documented in the annex section of this guideline.
+\item Scrum teams typically have to provide several development roles (according to CENELEC and according to Eclipse). Guidance on the possible mixtrues of CENELEC roles into a Scrum team is documented in the appendices section of this guideline.
 \item To be able to be successful in Agile Development we need to set special focus to the role of the "User" of a product.
 \begin{itemize}
 \item In general, the user of a product in openETCS should representratives of the project openETCS consuming the result of a scrum team. 
@@ -826,7 +827,7 @@ In principle, two of the OpenETCS project results (Software and Tool Chain) are 
 \end{itemize}
 
 One of the mechanisms to guarantee the availability of competence staff when needed will be the design and implementation of a training programme. The training programme will be managed by the Project Office. The identification of needs will be performed by the project leaders, the PMB and the Quality Manager. 
-The training process is detailed in [XX]
+The training process is detailed in \href{https://github.com/openETCS/governance/tree/master/Training%20Process}{[governance]}
 
 
 \subsection{Committers assignment and responsibilities}
@@ -919,20 +920,20 @@ Therefore, any participant will always adopt a role within CAT1, a role within C
 
 As already mentioned, OpenETCS is a project of projects. An expert can participate to different projects with different roles. Therefore an expert will have a CAT1, CAT2 and/or CAT3 role per project.
 
-In the Annexes A, B, C and D, the responsibilities and the core competences required by each role are detailed. It is the responsibility of the QA Manager to keep them updated
+In the Appendices \ref{ref:CAT1}, \ref{ref:CAT2}, \ref{ref:CAT3S} and \ref{ref:CAT3TC}, the responsibilities and the core competences required by each role are detailed. It is the responsibility of the QA Manager to keep them updated
 
 In the case of CAT 1 roles, specific technical competence will be required depending on the scope of the project. For this reason a new column has been added. In this column, specific technical competences for each project and role are to be included. It is the responsibility of each project leader to provide this information.
 
 According to the open development process followed by Open ETCS, the QA process is also a project. For this reason the QA Manager will have to meet the competences of a Project Leader and the specific competences imposed by CENELEC and the OpenETCS project to the Quality Manager activities. When needed, specific responsibilities imposed by a project to a role will be detailed too.
 
-As project results affected by CENELEC are already identified, both core and specific required competence per CAT 3 role are included in Annexes C and D.
+As project results affected by CENELEC are already identified, both core and specific required competence per CAT 3 role are included in Appendices \ref{ref:CAT3S} and \ref{ref:CAT3TC}.
 
 \subsection{Roles within the Development process of the openETCS Software}
-The responsibilities and competences for every role specific to the openETCS Software development are listed in Annex C. The independence of different roles is the core concept of the quality assurance strategy required be CENELEC standards. As openETCS is a collective project by various independent partners, the project organization already ensures full independence between the roles administrated by experts from different partners. 
+The responsibilities and competences for every role specific to the openETCS Software development are listed in Appendix \ref{ref:CAT3S}. The independence of different roles is the core concept of the quality assurance strategy required be CENELEC standards. As openETCS is a collective project by various independent partners, the project organization already ensures full independence between the roles administrated by experts from different partners. 
 
 \subsection{Roles within the Development process of the openETCS Tools Chain}
 
-See Annex D
+See Appendix \ref{ref:CAT3TC}
 \subsection{QA Activities}
 
 The QA Manager will be in charge of:
@@ -1132,7 +1133,7 @@ Release Note\\ &
 (to be defined) &
 (to be defined)
 \\\hline
-Systems configured by Application Data/algorithms &
+Systems configured by Application Data/ algorithms &
 \centering HR &
 \raggedright
 Application Requirements Specification\\
@@ -1191,16 +1192,11 @@ Software Assessment Report\\ &
 \todo[color=green!20, inline]{IT: OK}
 
 \section{Documentation Control}
-\textit{Guidance: Refer to Control Process Document where the function develop by authors, reviewers is provider}
+The Documentation Control procedure describes the steps to follow to ensure that the documentation developed whiting the openETCS project is current and suitable for use by the Eclipse community, the project members and the key customers. The main control activities covered by the procedure include the document creation and review, the approval, dissemination, archiving, modification and update due to a change request or the monitoring of the evolution among the time among others.
 
-\todo[color=yellow!20, inline]{JW: This sentence is hard to understand. From my point of view the three section make no sense since there should be the same process for all kinds of documents. This section should name the main control activities (review, approval, dissemination, archiving) and the main tools used for this. Then it should refer do the respective documents (like the great review process).}
-\todo[color=green!20, inline]{IT: OK, we will clarify this sentence.}
+The implementation of this procedure, shall ensure that openETCS documents can be located easily, be periodically reviewed, have the nomenclature updated when needed, be available at any time, and be moved and archived when they are labelled ad obsolete.
 
-\subsection{Documentation Control within the Development process of the openETCS Sotware}
-\textit{Guidance: Refer to the list of active documents of the openETCS software}
-
-\subsection{Documentation Control within the Development process of the openETCS Tools chain}
-\textit{Guidance: Refer to the list of active documents of the openETCS tools chain}
+The whole procedure is fully described in the \href{https://github.com/openETCS/governance/tree/master/Document%20Control%20Process}{[Document Control Procedure]} .
 
 \subsection{Quality Control and Monitoring Activities}
 \textit{Guidance: Describe the methods to monitor both the control and process}
@@ -1413,12 +1409,15 @@ When publishing in the context of the openETCS project authors shall adhere to t
 
 \newpage
 \begin{landscape}
-\section{ANNEXES}
+\begin{appendices}
+   \addappheadtotoc
+   \appendixpage
 
-\subsection{ANNEX A -CAT1: Open Source Development Process Roles and Competence Matrix-}
+\section{CAT1: Open Source Development Process Roles and Competence Matrix}
+\label{ref:CAT1}
 
 \begin{center}
-\begin{longtable}{|m{1cm}|m{2,20cm}|m{8,70cm}|m{4,6cm}|m{4,6cm}|}
+\begin{longtable}{|m{1cm}|m{2,20cm}|m{8,70cm}|m{4,6cm}|m{4,5cm}|}
 \caption{CAT1: Open Source Development Process Roles/Competences}\\
 
 \hline \rowcolor{myblue} \multicolumn{5}{|c|}{CAT1: Open Source Development Process Roles/Competences} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Role} & \multicolumn{1}{|c|}{Responsibilities (To be revised)} & \multicolumn{1}{|c|}{Core Competences} & \multicolumn{0}{|c|}{Specific Competences
@@ -1506,9 +1505,9 @@ Proactively report problems in the task tracking system, and annotating problem 
 \end{longtable}
 \end{center}
 
-
 \newpage
-\subsection{ANNEX B -CAT2: SCRUM Roles and Competence Matrix-}
+\section{CAT2: SCRUM Roles and Competence Matrix}
+\label{ref:CAT2}
 
 \begin{center}
 \begin{longtable}{|m{1cm}|m{4cm}|m{12cm}|m{7,5cm}|}
@@ -1565,7 +1564,8 @@ Unit and initial Acceptance testing
 \end{center}
 
 \newpage
-\subsection{ANNEX C -CAT3: CENELEC Roles and Competence Matrix for OpenETCS software product-}
+\section{CAT3: CENELEC Roles and Competence Matrix for OpenETCS software product}
+\label{ref:CAT3S}
 
 \begin{center}
 \begin{longtable}{|m{1cm}|m{2,5cm}|m{11cm}|m{10cm}|}
@@ -1787,9 +1787,8 @@ Understanding the requirements of EN 50128}
 \end{center}
 
 \newpage
-
-
-\subsection{ANNEX D -CAT3: CENELEC Roles and Competence Matrix for OpenETCS Tool Chain product-}
+\section{CAT3: CENELEC Roles and Competence Matrix for OpenETCS Tool Chain product}
+\label{ref:CAT3TC}
 
 \begin{center}
 \begin{longtable}{|m{1cm}|m{2,5cm}|m{11cm}|m{10cm}|}
@@ -1965,10 +1964,13 @@ Prepare the published release notes mentioning incompatible versions of sw compo
 \\\hline
 \end{longtable}
 \end{center}
+\end{appendices}
 \end{landscape}
 
+
 \newpage
-\subsection{ANNEX E - Methods \& Tools for Application Software}
+\begin{appendices}
+\section{Methods \& Tools for Application Software}
 
 \begin{table}[H]
 \tablefirsthead{\hline
@@ -2799,7 +2801,7 @@ Safe Roll back capabilities  &
 \textbf{(To be fulfilled)} \\\hline
 \end{longtable}
 \end{center}
-
+\end{appendices}
 
 %\nocite{50126,EN50128,EN50129,EN61508,200857EC,201118EU,201288EU}
 %\nocite{pichler2010,monin2008,schwaber2008,subset026,subset036,subset076,fpp}
