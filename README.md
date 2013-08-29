@@ -17,6 +17,8 @@ Documents under Revision/Review
 * Change/Problem Management Process in its 0.1.0 version
 	- State of the document: under review
 	
+Documents in use and standard.
 
+You get an overview on the useful documents needed for the QA [here](https://github.com/openETCS/governance/wiki/Lists-of-documents)
 	
  
