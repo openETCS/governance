@@ -588,7 +588,7 @@ governance &
 
 \subsection{openETCS Terminology}
 
-The openETCS project deals with topics from different domains like railway vehicles, signaling systems, formal methods and tool development. As every of these domains has their specific terminology, the identification of all relevant terms and abbreviations is an important part of the openETCS development process. Respectively a terminology process has been defined which collects, defines, analyses and distributes the relevant terminology for all parts of the openETCS project. 
+The openETCS project deals with topics from different domains like railway vehicles, signaling systems, \gls{formal methods} and tool development. As every of these domains has their specific terminology, the identification of all relevant terms and abbreviations is an important part of the openETCS development process. Respectively a terminology process has been defined which collects, defines, analyses and distributes the relevant terminology for all parts of the openETCS project. 
 
 \subsubsection{Terminology Process}
 
@@ -605,113 +605,19 @@ The openETCS terminology process is based on the main openETCS development envir
 
 Depending on the needs further extractions from the iglos database can be created providing terminology for specific openETCS activities.
 
+The glossary and the list of abbreviations respectively acronyms is then added to any latex document by using the glossaries package. The latex commands to do this can be found in the \textit{User Manual for glossaries.sty v3.07} or in the short description in the glossary wiki at \url{https://github.com/openETCS/glossary}.
+
+The following subsections list the important glossary terms and the abbreviations used in this document. 
+
 \subsubsection{Glossary}
 
-\printglossaries
-%\subsubsection{Abbreviations}
+\glossarystyle{long}
+\printglossary[title=]
 
-\begin{center}
-\begin{longtable}{|m{3cm}m{11cm}|}
-\caption{Definitions and acronyms}\\
 
-\hline \rowcolor{myblue} \multicolumn{1}{|l}{\textbf{Abbreviation}} & \multicolumn{1}{l|}{\textbf{Meaning}} \\ \hline 
-\endfirsthead
+\subsubsection{Abbreviations}
+\printglossary[type=\acronymtype,title=]
 
-\multicolumn{2}{c}%
-{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
-\rowcolor{myblue} \multicolumn{1}{|l}{\textbf{Abbreviation}} & \multicolumn{1}{l|}{\textbf{Meaning}} \\ \hline 
-\endhead
-
-\hline \hline
-\endlastfoot
-
-%\tablefirsthead{\hline
-%\rowcolor{myblue}
-%Abbreviation &
-%Meaning\\}
-%\tablehead{}
-%\tabletail{}
-%\tablelasttail{}
-%\begin{supertabular}{|m{3cm}m{11cm}|}
-%\hline
-\gls{ASR} &
-Assessor\\\hline
-\gls{DES} &
-Designer\\\hline
-\gls{ERTMS} &
-European Rail Traffic Management System
-
-Train signalling system equipment based on a single Europe-wide standard for train control and command systems.\\\hline
-\gls{ERA} &
-European Railway Agency\\\hline
-\gls{ETCS} &
-European Train Control System
-
-It is a signalling, control and train protection system designed to replace the many incompatible safety systems currently used by European railways\\\hline
-\gls{EUPL} &
-European Union Public Licence\\\hline
-\gls{EVC} &
-European Vital Control\\\hline
-GSM-R
-
-(train radio) &
-Global System for Mobile Communications - Rail(way)
-
-It is an international wireless communications standard for railway communication and applications.\\\hline
-\gls{HR} &
-Highly Recommended\\\hline
-\gls{HW} &
-Hardware\\\hline
-\gls{IMP} &
-Implementer\\\hline
-\gls{INT} &
-Integrator\\\hline
-\gls{MVB} &
-Multifunction Vehicle Bus
-
-It is a part of the Train Communication Network (TCN), and it takes part in digital operation in the train. \gls{MVB} is the bus part in each coach, and the Wire Train Bus (WTB) allows connecting the \gls{MVB} parts with the train control system.\\\hline
-\gls{NA} &
-Not Applicable\\\hline
-\gls{OBU} &
-On-Board Unit\\\hline
-\gls{PMP} &
-Project Management Plan\\\hline
-\gls{REQ} &
-Requirements Manager\\\hline
-\gls{RandD} &
-Research and Development\\\hline
-\gls{SCMP} &
-System Configuration Management Plan\\\hline
-\gls{SIL} &
-Safety Integrity Level\\\hline
-\gls{SRS} &
-Software Requirements Specification\\\hline
-\gls{SW} &
-Software\\\hline
-\gls{SW}-\gls{SIL} &
-Software-Safety Integrity Level (EN 50128:2011)\\\hline
-\gls{TSI} &
-Technical Specification for Interoperability\\\hline
-\gls{TST} &
-Tester\\\hline
-\gls{VAL} &
-Validator\\\hline
-\gls{VER} &
-Verifier\\\hline
-\gls{VandV} &
-Verification and Validation\\\hline
-\gls{WP} &
-Work Package\\\hline
-\gls{FM} &
-Formal Methods\\\hline
-\gls{IP} &
-Intellectual Property\\\hline
-\gls{IP} Clean &
-No \gls{IP} without permission in writing \\\hline
-\gls{ISTQB} &
-International Software Testing Qualifications Board \\\hline
-\end{longtable}
-\end{center}
 
 \newpage
 \section{Project Organization}
@@ -817,7 +723,7 @@ In principle, two of the OpenETCS project results (Software and Tool Chain) are 
 \item The Open Development Process facilitates the creation of the necessary projects required to achieve the OpenETCS project results.
 \end{itemize}
 \item For each assessable result, CENELEC required software roles will be covered by experts from different WPs. Incompatibilities can be controlled and monitored as active participation to the different projects has to be granted, accepted and is appropriately registered  \textit{(Chapter 2.2)}. Evidence of competence can be provided by comparing the CV of each expert with the RCM for the role assigned.
-\item For each assessable result, if possible, the role of the assessor will be selected from the external community of the project. Meanwhile, an internal independent assessor will be appointed. The role and profile of this assessor is detailed in OpenETCS/internal-assessment \citep{IA} \href{https://github.com/openETCS/ecosystem/wiki/WP4:-internal-assessment}{[wiki pages]}
+\item For each assessable result, if possible, the role of the \gls{assessor} will be selected from the external community of the project. Meanwhile, an internal independent \gls{assessor} will be appointed. The role and profile of this \gls{assessor} is detailed in OpenETCS/internal-assessment \citep{IA} \href{https://github.com/openETCS/ecosystem/wiki/WP4:-internal-assessment}{[wiki pages]}
 \end{itemize}
 
 One of the mechanisms to guarantee the availability of competence staff when needed will be the design and implementation of a training programme. The training programme will be managed by the Project Office. The identification of needs will be performed by the project leaders, the PMB and the Quality Manager. 
@@ -966,7 +872,7 @@ Definition of the requirements that the selected methods and tools shall follow 
 D4.1: Report on \gls{VandV} Plan \& Methodology &
 Detailed description of the \gls{VandV} process and how are used the methods and tools to cover \gls{VandV} artifacts \\\hline
 D4.2.3: Safety Plan &
-Detailed requirements on methods and tools to be used during the process to obtain a SIL4 developement of on-board unit \\\hline
+Detailed requirements on methods and tools to be used during the process to obtain a SIL4 developement of \gls{on-board unit} \\\hline
 D7.1: Report on the final choice(s) for the primary tool chain (means of description, tool and platform) &
 Selected methods and tools to be used during the specification and design part of the OpenETCS process \\\hline
 D7.2: Report on all aspects of secondary tooling (results of T7.2)  &
@@ -1308,7 +1214,7 @@ This Supplier control applies to all Suppliers providing openETCS project with m
 At following, the expected Suppliers' general requirements are listed:
 
 \begin{itemize}
-\item Supplier shall ensure the confidentiality of openETCS project and products under development, and related product information, as well as intellectual property shared as a result of the working relationship.
+\item Supplier shall ensure the confidentiality of openETCS project and products under development, and related product information, as well as \gls{intellectual property} shared as a result of the working relationship.
 \item Suppliers are expected to have an effective quality system that ensures conforming product is delivered.
 \begin{itemize}
 \item Suppliers shall maintain a Quality Management System suitable to the products and services provided to openETCS, that is certified by an accredited third-party certification body, i.e. ISO9001. This letter of accreditation should be provided to the respective QA personnel
@@ -1685,7 +1591,7 @@ Understanding of the relevant parts of EN 50128 like verification methods}
 Integrator &
 \parbox{11cm}{\raggedright
 Manage the integration process using software baselines\\
-Develop sw and sw /hw integration test specification for sw components based on the specifications and on the designer{\textquotesingle}s components architecture \\
+Develop sw and sw /hw integration test specification for sw components based on the specifications and on the \gls{designer}{\textquotesingle}s components architecture \\
 Develop and maintain records of the integration activities\\
 Identify integration anomalies; record them and communicate them to the authority in charge of the changes management for evaluation and decision making\\
 Develop a report of components and the overall system integration covering the integration results 
@@ -1694,14 +1600,14 @@ Develop a report of components and the overall system integration covering the i
 Competent in \gls{ETCS} specification, used programming language, used API and demonstrator hardware\\
 Competent in various integration approaches/methods to identify the most appropriate method or combination of methods for the demonstrator implementation\\
 Understanding the design and functionality requirements for intermediated development levels\\
-Capable of deriving integrator tests from the set of integrated functions\\
+Capable of deriving \gls{integrator} tests from the set of integrated functions\\
 Understanding of the relevant parts of EN 50128 like integration tests}
 \\\hline
 \gls{VAL} &
 Validator &
 \parbox{11cm}{\raggedright
 Develop a Validation Plan specifying the main tasks and activities for the sw validation\\
-Agree on the Validation Plan with the assessor\\
+Agree on the Validation Plan with the \gls{assessor}\\
 Review Sw requirements in relation to their intended use/environment\\
 Ensure sw fulfill all sw requirements\\
 Evaluate the assessment of the software process and of the software according to CENELEC requirements and the assigned \gls{SIL}\\
@@ -1810,7 +1716,7 @@ ensure the compliance and the delivery of security requirements\\
 provide enough time for proper implementation and enforcement of security tasks\\
 approve full and partial products to be delivered by the development process\\
 ensure that records and traceability are maintained throughout the decision making and project\\
-ensure that it has appointed an appropriate validator for the project according to cenelec
+ensure that it has appointed an appropriate \gls{validator} for the project according to cenelec
 &
 \textbf{(To be fulfilled)}
 \\\hline
@@ -1878,7 +1784,7 @@ Select the equipment for testing the software
 Integrator &
 \raggedright
 Manage the integration process using software baselines\\
-Develop sw and sw /hw integration test specification for sw components based on the specifications and on the designer{\textquotesingle}s components architecture \\
+Develop sw and sw /hw integration test specification for sw components based on the specifications and on the \gls{designer}{\textquotesingle}s components architecture \\
 Develop and maintain records of the integration activities\\
 Identify integration anomalies; record them and communicate them to the authority in charge of the changes management for evaluation and decision making\\
 Develop a report of components and the overall system integration covering the integration results 
@@ -1901,7 +1807,7 @@ Develop a verification report with the results of the verification activities &
 Validator &
 \raggedright
 Develop a Validation Plan specifying the main tasks and activities for the sw validation\\
-Agree on the Validation Plan with the assessor\\
+Agree on the Validation Plan with the \gls{assessor}\\
 Review Sw requirements in relation to their intended use/environment\\
 Ensure sw fulfil all sw requirements\\
 Evaluate the assessment of the software process and of the software according to CENELEC requirements and the assigned \gls{SIL}\\
