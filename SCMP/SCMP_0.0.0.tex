@@ -5,6 +5,11 @@
 \usepackage{color}
 \usepackage{colortbl}
 \usepackage[german,spanish,swedish,portuges,english]{babel} 
+\usepackage{graphicx}
+
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{float}
+\restylefloat{figure}
 
 \definecolor{grey}{rgb}{0.8,0.8,0.8}
 \definecolor{lightgrey}{rgb}{0.95,0.95,0.95}
@@ -19,6 +24,8 @@
 
 % The text in brackets should be your initials and the text in curly braces is your actual comment. Comments are numbered automatically. 
 \usepackage[textwidth=2.7cm,textsize=scriptsize,linecolor=green!40,backgroundcolor=green!40]{todonotes}
+\usepackage{hyperref}
+
 
 \newcounter{mycommentcounter}
 \newcommand{\mycomment}[2][]
@@ -110,10 +117,10 @@ Version & Date & Chapters \mbox{modified} & Reason & Name \\\hline
 \end{table}
 \newpage
 
-\section[Introduction]{Introduction}
+\section[Introduction]{Introduction} % Section 1
 
 
-\subsection{Purpose}
+\subsection{Purpose} % Subsection 1.1
 
 
 This document is the Software Configuration Management Plan (SCMP) for the OpenETCS project. It identifies the functional attributes of the software at various points in time. The SCMP performs systematic control of changes to the identified attributes for the purpose of maintaining software integrity and traceability. This document describes the applicable software configuration management directives which shall be applied by the software development team. Configuration Management (CM) is used to handle changes systematically so that a system maintains its integrity over time. The Software Configuration Management Plan (SCMP) defines the procedures, techniques, and tools that are required to manage the software development, evaluate proposed changes, trace the status of changes, and to support an inventory of the system. 
@@ -133,17 +140,17 @@ The main points to perform a configuration management process are:
 
 This Software Configuration Management Plan (SCMP) has to be written in accordance to the IEEE Std 828™-2005 and must meet the requirements of CENELEC EN 50128.
 
-\subsection{Scope }
+\subsection{Scope } %Subsection 1.2
 The SCMP provides technical and supervising direction to the development and implementation of tools, processes, services,  procedures, functions, and resources required to successfully develop and support a complex system.
 During the OpenETCS project the Scrum methodology will be used. Scrum is an iterative, incremental framework for projects  and products or application development. It structures development in cycles of work called Sprints. These iterations are short  in time, no more than one month each, and take place one after the other without interruption.
 
-\subsection{Implementation responsibility}
+\subsection{Implementation responsibility} % Subsection 1.3
 Responsible: Software Configuration Manager
 \\Accountable: Quality Assurance Manager
 
 \newpage
 
-\subsection{References, Guidelines and Standards}
+\subsection{References, Guidelines and Standards} % Subsection 1.4
 
 \begin{table}[h]
 \begin{tabular}{|m{1.5cm}|m{6,5cm}|m{1,25cm}|m{2cm}|m{2,5cm}|}
@@ -159,7 +166,7 @@ Responsible
 \\\hline
 \cite{QAP} &
 Quality Assurance Plan &
-\centering 0.9.5.4 &
+\centering 0.10.0 &
 governance &
 Izaskun de la Torre\\\hline
 \citep{fpp} &
@@ -270,7 +277,7 @@ UNISIG\\\hline
 
 \newpage
 
-\subsection{Definitions and acronyms}
+\subsection{Definitions and acronyms} % Subsection 1.5
 
 \begin{center}
 \begin{longtable}{|m{3cm}m{11cm}|}
@@ -352,43 +359,63 @@ Work Package\\\hline
 \end{center}
 
 
-\section{Configuration Management Tools}
+\section{Configuration Management Tools} % Section 2 
+\label {Configuration Management Tools}
 In this section the Tools per Configuration Item (CI) and the related repositories will be defined. 
 
 
-\subsection{Tools}
-List of Tools to be used
+\subsection{Tools} % Subsection 2.1
+For the List of Tools refer to \href{https://github.com/openETCS/toolchain/blob/master/DescriptionOfWork/ToolchainDescriptionOfWork.pdf}{Toolchain} 
 
-\subsection{Repositories}
+\subsection{Repositories} % Subsection 2.2
 Git is a Web-based revision control hosting service for software development and code sharing (http://git-scm.com/). Git is  used by large projects to be capable of handling the versioning and incremental development. The Git working directory is a  complete repository with the whole history and full revision tracking capabilities. It is compatibility with existing  systems/protocols and not dependent on network access or a central server. Git is free software and distributed under the  terms of the GNU General Public License.
 Additional advantages are: broader participation, changes can be reverted, peer-2-peer model: different contributors can  work simultaneously and independently (distributed). Extra “features” can added independently of mainline development with  re-integration later. Git supports rapid branching and merging, and includes specific tools for visualizing and navigating a  nonlinear development history.
 
-\section{Configuration Identification}
+\section{Configuration Identification} % Section 3
 The Configuration Identification makes sure that the items are properly stored for traceability, and procedures for placing  configuration items under software configuration management by means of the definition of a hierarchical directory structure  will be established and identification scheme for the components to uniquely identify each individual component will be created.  A proper configuration identification schema identifies each component of the system and provides traceability between the  component and its configuration status information. 
 The Configuration Identification is the basis by where changes to any part of a system are identified, documented, and later  tracked through design, development, testing, and final delivery. Configuration Identification incrementally establishes and  maintains the definitive current basis for configuration status controlling of a system and its Configuration Items (CIs).
 
-\subsection{Configuration items identification }
+\subsection{Configuration items identification} % Subsection 3.1
 In this section the Configuration Items (CIs) have to be selected which together form the product structure. The CIs must be  compatible with each other. The CIs have to be defined, their granularity, a numbering system to identify the CIs and a  commitment to the Baseline Measurement. These CIs will be selected during the sprints of the scrum methodology and have to  be defined in this section.
 
-\subsection{Configuration item management}
+\begin{figure}[H]
+\centering
+\includegraphics [scale=0.8]{Figure/Configuration_Items_2}
+\caption {Configuration Items}
+\end{figure}
+
+\subsection{Configuration Items Main Categories} % Subsection 3.2
+\subsubsection {Tools} % Sub-subsection 3.2.1
+For Tools refer to Chapter 
+\ref{Configuration Management Tools} Configuration Management Tools 
+
+\subsubsection {Documents} % Sub-subsection 3.2.2
+
+\subsubsection {Requirements} % Sub-subsection 3.2.3
+
+\subsubsection {Software} % Sub-subsection 3.2.4
+
+
+\newpage
+\subsection{Configuration item management} % Subsection 3.2
 Configuration Management (CM) is the process of identifying and defining the configuration items in a system, controlling the  release and change of these items throughout the system lifecycle, recording and reporting the status of configuration items.  The term configuration item can be applied to anything designated for the application of the elements of configuration  management and treated as a single entity in the configuration management system. The entity must be uniquely identified so  that it can be distinguished from all other configuration items.
 
 
-\section{Configuration Management Organization and Planning}
+\section{Configuration Management Organization and Planning} % Section 4
 In this section it is planned to guide the Configuration Management program that includes items such as: Conventions,  Personnel, Responsibilities and Resources, Training requirements, Supervisory meeting and guidelines. The Configuration  Management Organization makes sure that the final delivered software has all of the planned enhancements that are  supposed to be included in the release.
 Configuration Tools, Configuration control thru Audits and Reviews, and the Change Process will be under a different scope of  this document.
 
-\subsection{CM roles assignment}
+\subsection{CM roles assignment} % Subsection 4.1
 The configuration management roles referenced in this table are CM roles defined in the software configuration management  instruction.
 
-\subsection{Responsibilities and Resources}
+\subsection{Responsibilities and Resources} % Subsection 4.2
 The configuration management has to define the responsibilities and plan the resources for the project. To prevent confusion  about who will perform given Software Configuration Management (SCM) activities or tasks, organizations to be involved in  the SCM process need to be clearly identified. Specific responsibilities for given SCM activities or tasks also need to be  assigned to organizational entities, either by title or organizational element. The overall authority and reporting channels for  SCM should also be identified, although this might be accomplished in the project management or quality assurance planning.  Any training requirements necessary for implementing the plans and training new staff members are also specified.
 
 
-\section{Configuration Control/Change Management}
+\section{Configuration Control/Change Management} % Section 5 
 Configuration change control is a set of processes and approval stages required to change a configuration item's attributes  and to re-baseline them. This includes the evaluation of all change requests and change proposals, and their subsequent  approval or disapproval. It is the process of controlling modifications to the system's design and documentation.
 
-\subsection{Change management process and procedure}
+\subsection{Change management process and procedure} % Subsection 5.1
 From the perspective of the implementer of a change, the CI is the "what" of the change. Altering a specific baseline version  of a configuration item creates a new version of the same configuration item, itself a baseline. In examining the effect of a  change, two of the questions that must be asked are: 
 
 \vspace{-10pt}
@@ -399,32 +426,32 @@ From the perspective of the implementer of a change, the CI is the "what" of the
 
 Configuration items, their versions, and their changes form the basis of any configuration audit.
 
-\subsection{Change Request}
+\subsection{Change Request} % Subsection 5.2
 The first step in managing changes to controlled items is determining what changes to make. The software change request  process provides formal procedures for submitting and recording change requests, evaluating the potential cost and impact of  a proposed change, and accepting, modifying or rejecting the proposed change. Requests for changes to software  configuration items may be originated by anyone at any point in the software life cycle and may include a suggested solution  and requested priority. One source of change requests is the initiation of corrective action in response to problem reports.
 
-\subsection{Change Control Board meeting organization}
+\subsection{Change Control Board meeting organization} % Subsection 5.3
 The authority for accepting or rejecting proposed changes rests with an entity typically known as a Change Control Board  (CCB). The Change Control Board will be the group which manages change for the project. Change Requests will be reviewed,  approved or rejected, incorporated into a new baseline and then delivered only after the Change Control Board has given its  approval in accordance with contract requirements.
 
-\subsection{Change control board reporting}
+\subsection{Change control board reporting} % Subsection 5.4
 A typical CR form contains a narrative description of the change or problem, information to identify the source of the report,  and some basic information to aid in evaluating the report. A CR may be submitted by anyone associated with the project, but  usually is submitted by a member of the software development team and during testing and verification phases.
 
 
-\section{Configuration Audits}
+\section{Configuration Audits} % Section 6
 A review of the software with the purpose of assessing the compliance with established performance, requirements,  standards, and functions. Configuration audits verify the system and subsystem configuration complies with their functional  and physical performance characteristics before acceptance into an architectural baseline.
 
-\subsection{Responsibilities}
+\subsection{Responsibilities} % Subsection 6.1
 
-\subsection{Audit content}
+\subsection{Audit content} % Subsection 6.2
 Audits are conducted according to a well-defined process consisting of various auditor roles and responsibilities. Consequently,   each audit must be carefully planned. An audit can require a number of individuals to perform a variety of tasks over a fairly  short period of time.
 
-\subsection{Non Conformance follow up and status reporting}
+\subsection{Non Conformance follow up and status reporting} % Subsection 6.3
 All Non Conformances (NCs) identified through the audits are required to be documented in the audit report. The follow up  consist of preparing a corrective action plan, listing each of the non-conformances identified.
 
 
-\section{Baselines}
+\section{Baselines} % Section 7
 In this section the different Baselines should be scheduled and defined. A Baseline should end in a release. OpenETCS has  really concrete Work Packages (WPs) SRS, Model- Code, Safety and Validation and Verification). These WPs are in close  communication among each other, but their working schedule has different speed, so the versions of the CI of one WP could  not match with the versions of related CIs of other WPs. Due to this, it was decided to define Baselines of each WP.
 
-\subsection{Baselines formalism}
+\subsection{Baselines formalism} % Subsection 7.1
 A specification or product that has been formally reviewed and agreed upon, that thereafter serves as the basis for further  development, and can be changed only through formal change control procedures. Baselines provide a stable basis for  continuing evolution of configuration items. Baselines are added to the configuration management system as they are  developed. Changes to baselines and the release work products built from the configuration management system are  systematically controlled and monitored thru the configuration control, change management, and configuration auditing  functions of configuration management. 
 OpenETCS team goal is having a complete control of the final developed product and assure the quality of the product,  following the requirements specify. In order to achieve this objective a configuration process has been defined. This process  has established 6 different baselines: SRS, Model/Code, Safety, V\&V, Product and Archived baselines. The baselines describe  the functional and physical attributes of these CIs, in order to maintain control of changes occurring to existing items and new  ‘‘end items’’ or deliverables within the projects. The project processes result in establishing approved baselines and related  descriptions in a timely manner. 
 SCMP will set when a baseline will be created. The creation of a baseline will depend on the status of the CIs and its versions.
@@ -442,10 +469,10 @@ Definition of each baseline:
 \end{itemize}
 
 
-\subsection{Baselines diffusion}
+\subsection{Baselines diffusion} % Subsection 7.2
 A Baseline Criteria elaborates the conditions and constraints that must be fulfilled prior to establish/create a baseline. Baseline criteria may vary from baseline to baseline due to the nature of baselines contents, so, specific criteria for each baseline are documented in the Configuration Management Plan.
 
-\subsection{Baselines schedule}
+\subsection{Baselines schedule} % Subsection 7.3
 In this Chapter the detailed scheduled Baselines shall be given. All planed baselines in the Configuration Management plan should be reflected as milestones in project schedule in order to avoid them being skipped.
 
 \bibliography{SCMP_literature}
