@@ -16,6 +16,10 @@ part of WP1: information needed to run project management in openetcs, e.g.,
    	- State of the document: under review
 * Change/Problem Management Process in its 0.1.0 version
 	- State of the document: under review
+* Document Control Process in its 0.1.0 version
+	- State of the document: under revision
+* Training Process in its 0.1.0 version
+	- State of the document: under revision
 	
 ### Documents in use.
 
