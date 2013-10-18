@@ -20,7 +20,7 @@ part of WP1: information needed to run project management in openetcs, e.g.,
 	- State of the document: under revision
 * Training Process in its 0.1.0 version
 	- State of the document: under revision
-	
+  	
 ### Documents in use.
 
 You get an overview on the useful documents needed for the QA [here](https://github.com/openETCS/governance/wiki/Lists-of-documents)
