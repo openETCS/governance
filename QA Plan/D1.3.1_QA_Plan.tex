@@ -304,6 +304,12 @@ Jan Welte (TUBS)
 Chapter 6.3, 7.1, 8.1 &
 Updated Content &
 Izaskun de la Torre (SQS)
+\\\hline
+0.10.3 &
+21.11.2013 &
+Chapter 3.3, 5.2, 5.3, 6.2 &
+Updated Content &
+Izaskun de la Torre (SQS)
 \end{longtable}
 \end{center}
 
@@ -968,16 +974,38 @@ It is assumed that the OpenETCS application software will be \gls{SIL}4 complian
 
 \subsection{Methods, measures and tools for quality assurance openETCS Tools chain}
 
-The Tool Chain will be composed of a set of tools with different levels of interaction. The document D7.3 provides a description of the Tool Chain architecture, jointly with a description of the constituent tools.
+The Tool Chain will be composed of a set of tools with different levels of interaction. The openETCS tool chain consists on a series of supporting tools that helps in the development of the whole project. Such tools include, but are not limited to, development and design tools, language translators, testing and debugging tools, and configuration management tools. Support tools are further classified according to their influence on the system:
+\begin{itemize}
+\item On-line support tools are tools that can directly influence the safety-related system during its run time
+\item Off-line support tools are tools that support a phase of the software development lifecycle and that cannot directly influence the safety-related system during its run-time
+\end{itemize}
+
+The document D7.3 provides a description of the Tool Chain architecture, jointly with a description of the constituent tools.
 Following CENELEC criteria, each tool belongs to one of the following classes: T1, T2 and T3. Class 3 and Class 2 Tools are obliged to follow specific development methods, techniques and tools. 
 
 
 \subsection{Quality Control and Monitoring Activities}
-\textit{Guidance: Describe the measures to monitor the appropriate implementation of the selected methods and tools.}
+The monitoring activities of the selected Tools, Methods and Techniques implicates a development of criteria, reviews and audits to determine if the overall tools and methods \& Techniques selection and implementation is correctly develop and maintain. As well as assuring the compliance with the CENELEC standard.
 
-\todo[color=yellow!20, inline]{JW: This is a broad topic, the main issues will be covered by the verification, validation and safety plan. This aspect should introduce the general principals and tools and then reference those documents.}
+The Quality Assurance Manager should do the following monitoring activity:
+\begin{itemize}
+\item Conduct an internal formal audit to confirm the methods and tools are ready to use. This audit consists in:
+\begin{itemize}
+\item Assessing the accept criteria of the tools and methods
+\item Assessing the fulfilment of the expectations of the tools and methods
+\item Assesing the set of selected methods and tools fulfill CENELEC standard (Benchmarking methods, techniques and tools against CENELEC standard.)
+\item Verifying every tool availability and operability
+\item Verifying new tool version control
+\item Verifying the evaluation of the selected tools, methods and techniques
+\end{itemize}
+\item Conduct an internal formal audit every month to confirm the methods and tools chain are appropiately implemented. 
+\begin{itemize}
+\item Verifying the correct use of each tool in each WP and Phase
+\item Verifying the correct use of each technic and metric in the project
+\end{itemize}
+\end{itemize}
 
-\todo[color=green!20, inline]{IT: OK. I think there is an error in the template. Instead of QA Activities, it is Quality Control and Monitoring Activities.}
+In order to do the formal review correctly it will be use the Tool, Method and Technic Monitoring Activities formal audit checklist. This Checklist template is provided in \href{https://github.com/openETCS/governance/tree/master/Templates}{[governance]}.
 
 \section{Documentation}
 
@@ -1153,8 +1181,24 @@ Software Assessment Report\\ &
 
 
 \subsection{Documentation Structure within the development process of the openETCS Tools chain}
-\textit{Guidance: See Chapter 6.1}
 
+CENELEC Standard requires that all the off-line support tools have a manual as  minimun required documentation. The Standard also established that tools in classes T2 and T3 should have documentation that defines the behaviour of the tools together with instructions and constrains on its use. This documentation should be a justification for use, a potencial failures identification and the ways to avoid or mitigate them, manuals and use restrictions. It is also required that tools to be assessed with the aim to determine the level of reliance that shall be placed on the tool, and potential failure mechanisms that may affect the executable software (T3 only).
+
+For T3 class applications, evidence shall be available that the tool conforms to its specification or manual, so called tool assessment. Such tool assessment shall cover:
+\begin{itemize}
+\item A chronological record of the validation activities
+\item The version of the tool product manual being used
+\item The tool functions being validated
+\item Tools and equipment used
+\item The results of the validation activity; the documented results of validation shall state either that the software has passed the validation or the reasons for its failure
+\item Test cases and their results for subsequent analysis
+\item Discrepancies between expected and actual results
+\end{itemize}
+The following table shows the Tool chain document structure.
+
+\textit{(to be included when the D7.3 deliverable will be available - discuss during the telco)}
+
+It is important to add, that every new version of a support tool shall be certified. This may rely on evidence provided for earlier versions if sufficient evidence provides that the modifications do not affect tool compatibility with the rest of the tools in the integrated tool chain and that the new version is unlikely to contain significant new, unknown faults.
 
 \subsection{Quality Control and Monitoring Activities}
 The monitoring activities of the Documentation Structure control involves a development of  criteria, reviews and documentation audits to determine if the overall structure of the documentation is correctly followed. As well as assuring the compliance with CENELEC standard for a SIL 4 product.
@@ -1198,7 +1242,7 @@ The Quality Assurance Manager should do the following monitoring activity:
 \end{itemize}
 \item Conduct an internal informal review every month using the plans, goals and objectives established in the project to verify control documentation and documentation development is done satisfactorily.
 \item Participate in the review processes of the different documents
-\item Maintain a set of metrics for the Document COntrol process.
+\item Maintain a set of metrics for the Document Control process.
 \item Produce and publish the corresponding quality reports.
 \end{itemize}
 
