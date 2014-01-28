@@ -33,7 +33,7 @@
 1. OpenETCS@ITEA2 follow-up project (Commercializing Project): Ideas, Options, Schedule
 
 # Findings:
-1. openETCS Charta is provided as a document on Github in [Chart](https://github.com/openETCS/Charta/tree/master/Proposal). Klaus-Rüdiger is the owner of the document. Revision and contribution of other partners is welcome.
+1. openETCS Charta is provided as a document on Github in [Charta](https://github.com/openETCS/Charta/tree/master/Proposal). Klaus-Rüdiger is the owner of the document. Revision and contribution of other partners is welcome.
 
 1. Statement of Alstom regarding activities in WP3.
 Alstom stated they did not have the required capacity for the WP3 modelling activities with the background of heavy load on ERTMS experts due to activities in implementing baseline 3 in the commercial product. The release of baseline 3 by Unisig is delayed.  Alstom stated there were no other ERTMS experts from industry acting in the openETCS modelling project. With this plan the chance for achieving the project targets were not given in the frame of the ITEA project.
@@ -41,7 +41,6 @@ Alstom stated they did not have the required capacity for the WP3 modelling acti
 With this statement the representative of Alstom left the PCC meeting.
 
 1. Dealing with the defaulting party
-
 Since Alstom has signed the initial version of the PCA (German prerequisite for participating in the German funded project) the issue has to be seen in the context of this version of the PCA contract.
 
 Alstom has withdrawn its resources from WP3 activities, including the leadership of WP3. In order to be able to continue on the project, the activities had to be resumed by other partners, e.g., DB. 
