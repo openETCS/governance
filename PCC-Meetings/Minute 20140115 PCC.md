@@ -1,4 +1,4 @@
-** PCC Project Coordination Meeting Minutes**
+**PCC Project Coordination Meeting Minutes**
 
 * Meeting called by Klaus-Rüdiger Hase
 * When: Wednesday, 15th of January, 15:00 - 18:30
@@ -35,7 +35,7 @@
 # Findings:
 1. openETCS Charta is provided as a document on Github in [Charta](https://github.com/openETCS/Charta/tree/master/Proposal). Klaus-Rüdiger is the owner of the document. Revision and contribution of other partners is welcome.
 
-1. Statement of Alstom regarding activities in WP3.
+1. Statement of Alstom regarding activities in WP3.<>cr<>
 Alstom stated they did not have the required capacity for the WP3 modelling activities with the background of heavy load on ERTMS experts due to activities in implementing baseline 3 in the commercial product. The release of baseline 3 by Unisig is delayed.  Alstom stated there were no other ERTMS experts from industry acting in the openETCS modelling project. With this plan the chance for achieving the project targets were not given in the frame of the ITEA project.
 
 With this statement the representative of Alstom left the PCC meeting.
