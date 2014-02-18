@@ -318,6 +318,12 @@ Fixed issues 4 and 11 of internal assessment &
 Izaskun de la Torre (SQS)
 \\\hline
 0.10.5 &
+18.02.2014 &
+All &
+Fixed issues 3, 10 and 12 of internal assessment &
+Izaskun de la Torre (SQS)
+\\\hline
+0.10.6 &
  &
 All &
 To be fixed the rest of issues of internal assessment. To be done after clarifications &
@@ -379,7 +385,7 @@ The objective is to cover as much as possible of the functionality of the on-boa
 
 
 \paragraph{Definition the of safety case concept for the full model and application on a subset of the on-board unit}
-The safety strategy and the safety case concept required for the full validation of the product, compliant to the CENELEC standards shall be taken into account in all steps of the specification and design process. This will allow industrial actors to reuse the models and processes to develop certifiable products.
+The safety strategy and the safety case concept required for the full validation of the product, compliant to the CENELEC standard shall be taken into account in all steps of the specification and design process. This will allow industrial actors to reuse the models and processes to develop certifiable products.
 
 In particular the definition of the process shall take into account specification as well as verification and validation of the safety properties on the models. The outputs of WP4 (safety plan, safety case concept, verification plan and validation plan) will complete the description of the safety process.
 
@@ -806,7 +812,7 @@ In principle, two of the OpenETCS project results (Software and Tool Chain) are 
 \begin{itemize}
 \item WP2, focused on Requirements Specification is led by SNCF.
 \item WP3, focused on the Software Implementation taking as input WP2 and WP7 results is led by Alstom France.
-\item WP4 focused on the specification of the \gls{VandV} structure, is led by DLR
+\item WP4 focused on \gls{VandV} structure, is led by DLR
 \item WP5 focused on demonstrating applicability/validity of WP3 and WP7 results is led by ERSA
 \item WP7 focused on the development of the Tool Chain is led by DLR taking as input WP2 and WP4 inputs
 \item For the purpose of validating/adapting technical approaches, tools and concepts before they are taken into consideration, three Use Cases will be engaged.
@@ -943,7 +949,7 @@ According to the open development process followed by Open \gls{ETCS}, the QA pr
 As project results affected by CENELEC are already identified, both core and specific required competence per CAT 3 role are included in Appendices \ref{ref:CAT3S} and \ref{ref:CAT3TC}.
 
 \subsection{Roles within the Development process of the openETCS Software}
-The responsibilities and competences for every role specific to the openETCS Software development are listed in Appendix \ref{ref:CAT3S}. The independence of different roles is the core concept of the quality assurance strategy required be CENELEC standards. As openETCS is a collective project by various independent partners, the project organization already ensures full independence between the roles administrated by experts from different partners. 
+The responsibilities and competences for every role specific to the openETCS Software development are listed in Appendix \ref{ref:CAT3S}. The independence of different roles is the core concept of the quality assurance strategy required be CENELEC standard. As openETCS is a collective project by various independent partners, the project organization already ensures full independence between the roles administrated by experts from different partners. 
 
 \subsection{Roles within the Development process of the openETCS Tools Chain}
 
@@ -975,7 +981,7 @@ Deliverable &
 Content of Relevance for this Chapter\\\hline
 D2.1: Report on existing methodologies &
 State of the art on methods and tools \\\hline
-D2.2: Report on CENELEC Standards &
+D2.2: Report on CENELEC Standard &
 CENELEC requirements to be fulfilled and the approach followed by the project to provide evidence\\\hline
 D2.3: Process definition &
 OpenETCS process definition \\\hline
@@ -1324,6 +1330,15 @@ The main points to perform the configuration management process are:
 
 The Quality Assurance Manager is accountable for the implementation of the \gls{SCMP}.
 
+The QA Manager will be in charge of:
+\begin{itemize}
+\item perform periodical audits
+\begin{itemize}
+\item Audits to verify the process itself: the correct implementation of the process and the compliance of the process with CENELEC Standard
+\end{itemize}
+\item Produce and publish the corresponding quality reports.
+\end{itemize}
+
 \subsection{Fault Management}
 
 A failure is a deviation of the component or system from its expected delivery, service or result. A failure is the consequence of a fault or error in a system but not all faults result in failures.
@@ -1379,7 +1394,19 @@ A variety of grievance resolutions are available to the PMB up to, and including
 
 The issues seen during a sprint shall be taken to the sprint retrospective in order to help the team find an easy way in the future.
 
-\subsection{Modification and change control }
+\subsection{Software Maintenance}
+\subsubsection{Software Maintenance Plan}
+Software Maintenance Plan introduces the approach that the OpenETCS-Software and OpenETCS-Toolchain project adopts for the maintenance of the software components.
+
+The procedures for software maintenance will be contained in the Software Maintenance Plan for OpenETCS-Software (SMP-SW) and the Software Maintenance Plan for OpenETCS-ToolChain (SMP-toolchain). These procedures should also contain information about:
+\begin{itemize}
+\item Control of the error report, the error log, maintenance records, authorizations to make changes and software configuration / system and the techniques for estimation impact analysis and record and data analysis.
+\item Evaluation, Verification and Validation of every change
+\item Definition of software modification process (definition of the Authority which approves the changed software, etc...)
+\end{itemize}
+
+
+\subsubsection{Modification and change control }
 
 A change is the addition, modification, or removal of a configuration item (CI), product, or product component, and/or its associated elements
 
@@ -1387,11 +1414,31 @@ The change requests initiated by any of the system stakeholders will be reported
 
 The Change/problem Management process aims to evaluate and plan the change/problem process to ensure that, if a change is made, it is done in the most efficient way possible, following the established procedures and ensuring the quality and continuity of the OpenETCS project and products at all times.
 
+The Change/problem Management process should define at least the following:
+\begin{itemize}
+\item the necessary documentation to report a problem
+\item analysis of the collected information
+\item practices to be followed to report, track and resolve identified problems
+\item responsabilities 
+\item controls to ensure that corrective actions have been taken and are effective
+\item impact analysis
+\item approval before implementation
+\end{itemize}
+
+\subsubsection{Quality control and monitoring activities}
+For Software Maintenance the following metrics to follow in order to control the Maintenance phase are identified:
+\begin{itemize}
+\item Maintenance efficiency
+\item Maintenance effectiveness
+\end{itemize}
+
+Any trends and changes that occur provide an analytical basis for managerial decision making, regarding issues such as; examining resource requirements and initiation of corrective and preventive actions. 
+
 The QA Manager will be in charge of:
 \begin{itemize}
 \item perform periodical audits and quality assessments of the change request received
 \begin{itemize}
-\item Audits to verify the process itself
+\item Audits to verify the processes themself: the correct implementation of the processes and the compliance of the processes with CENELEC Standard
 \item Quality Assessments to verify the evolution of the product quality
 \end{itemize}
 \item Assist in determining QA impacts
