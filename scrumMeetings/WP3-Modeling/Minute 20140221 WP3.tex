@@ -1,0 +1,101 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS WP3 Meeting Minutes\end{center}}
+\section{Meeting Information}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & WP3 Weekly Scrum: Modelling\\
+Date \& time & 2014-02-21, 10:30h--10:45h\\
+Location & Telco and Goto-Meeting\\
+Called up by & Bernd Hekele\\
+Participants &
+%Arnaud,
+Benjamin Beichler,
+Marc Behrens,
+Cecile Braunstein,
+%Baseliyos Jacob,
+%Klaus-R\"udiger Hase,
+Bernd Hekele,
+Hardi Hungar,
+Michael Jastram,
+Alexander Nitsch,
+%Vincent Nuhaan,
+Marielle Petit-Doche,
+Alexander Stante,
+Stefan Rieger,
+Uwe Steinke,
+Izaskun de la Torre,
+Jan Welte
+%Jan Welvaarts
+\\
+
+Minutes by & Bernd Hekele\\
+%\hline
+\end{supertabular}
+\renewcommand{\arraystretch}{1.0}
+
+%\line(1,0){440}
+
+\section{{Agenda}}
+\begin{itemize}
+\item Proceedings with openETCS API
+\item Use of Tools for Modelling\\
+\item Update on Activities\\
+\item Upcoming Events\\
+\end{itemize}
+
+\section{Discussion}
+\begin{itemize}
+\item Proceedings with openETCS API\\
+The API Alstom is located for review in the Requirements repository: \url{https://github.com/openETCS/requirements/tree/master/D2.7-Technical_Appendix}.
+
+The document covers requirements on a generic API function as well as an high-level architecture and detailed implementation proposals.
+
+During the meeting it was recommended to split the document in several parts.
+
+Even though the requirements product owner does not agree on the "requirements" status of the document we plan to continue with the review of the document on this repository. Reasoning: the first version of the document was also made available in requirements.
+This does not imply a decision on the final responsibility for the document. The decision will be made after the review is completed and the conclusion on the document is finalised.
+
+\item Use of Tools for Modelling\\
+WP3 decided (already some time ago) to start the modelling activities with SCADE System (SysML) and SCADE Suite. Papyrus can be taken as an alternative to SCADE System if the restrictions documented in the modelling guideline (D2.4) are considered.
+
+This decision is valid for Modelling activities. It is not a limitation for work in other WPs like WP4 or WP5.
+
+An outcome of the Internal Assessment was the need to document all tool decisions on the development branch in the QA guide. The implementation of this proposal will be taken into the QA meeting.
+
+\item Update on Activities\\
+Uwe has organised the Modelling Scade structure according to Esterels recommendations on Github: \url{https://github.com/openETCS/modeling/tree/master/ModelSpace/Scade }.
+In parallel, a structure to be used in SysML is started. Since we currently do not have the knowledge to organise the structure in the right way we did not bother to complete the structure. Completion is planned to happen after the grooming session.
+
+
+\item Upcoming Events\\
+Next week we have the WP3 Grooming session scheduled (26.2. in Munich). Interested partners are welcome.
+
+\item Upcoming Events 
+\end{itemize}
+
+\section{Notes}
+\begin{itemize}
+
+\item Note: Location of Meeting Minutes\\
+You can find these minutes here: \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/WP3-Modeling/Minute%2020140221%20WP3.pdf}. Please, use the issue tracker for findings in the minutes.
+\end{itemize}
+
+\end{document}
