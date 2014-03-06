@@ -1,3 +1,4 @@
+
 \documentclass{template/openetcs_article}
 %\documentclass{article}
 %\usepackage[ascii]{inputenc}
@@ -905,12 +906,218 @@ The software development life-cycle of the OpenETCS project should be complied w
 
 \todo[color=yellow!20, inline]{IT: necessary to cover the activities (be sure that are compliant with the Plans), the input and output of each activity and its criteria, entity in charge of each activity and quality activities}
 
+\begin{description}
+\item \textbf{System Phase: SSRS}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item System Requirement Specification SUBSET-026 3.3.0
+\item Functional Interface Specification SUBSET-034-3.0.0
+\end{itemize}
+
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item Sub-System Requirement Specification
+(SSRS)
+\item Application Programming Interface
+\item Sub-System Hazard Analyses (SSHA)
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item \textbf{System Phase: Sub-System Model}
+
+\begin{description}
+\item semi-formal model of the sub-system
+\item strictly formal models
+\end{description}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item sub-system architecture
+\item semi-formal model of the sub-system
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item Design a model to describe sub-system architecture, main functions and to allocate sub-system requirements
+\item completed it with a formal model to focus on a subset of functions or properties
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item \textbf{Software Phase: Software Requirements}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item \textbf{Software Phase: Software Model}
+\begin{description}
+\item semi-formal model 
+\item strictly formal model
+\end{description}
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item Software Architecture and Design Specification
+\item formal model of the software
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item \textbf{Software Phase: Code}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item \textbf{Software Phase: V\&V Source Code}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item SW Code Generation Verification Report
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item \textbf{Software Phase: V\&V Sw model}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item SW Architecture, Design and Modelling Verification Report
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item \textbf{Software Phase: V \&V Software Requirements}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item SW Requirements Verification Report
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item \textbf{System Phase: V\&V Subsystem models}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item \textbf{System Phase: V\&V SSRS}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item SSRS verification report
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{description}
+
 \subsubsection{Life Cycle of the OpenETCS Tools chain}
 The development of the Tool Chain has to comply with EN50128. Requirements imposed by the standard are analyzed and shown in detail in D2.2. The tools chain development life cycle is described in the document WP7-ToolChainDevelpmentPlan. As the tools chain is a combination and improvement of already existing tools, which have a specific life-cycle, the tools chain life cycle mainly consists of integration and maintenance activities. 
 
 The tool chain lifecycle is depicted figure  \ref{fig:TC_lifecycle}
 
-\begin{figure}[ tbp]
+\begin{figure}[H]
 \centering
   \includegraphics[width= \textwidth]{./figures/toolchain_lifecycle}
   \caption{The OpenETCS tool chain life cycle}
@@ -1191,19 +1398,19 @@ As a \gls{SIL}4 software, the documentation structure has to comply with CENELEC
 \textcolor{red}{Map the documents with the current openETCS documents and lifecycle}
 
 \begin{center}
-\begin{longtable}{|m{2cm}|m{1.5cm}|m{7cm}|}
+\begin{longtable}{|m{2cm}|m{1.5cm}|m{7cm}|m{2cm}|}
 \caption{Documentation Structure}\\
 
-\hline \rowcolor{myblue} \multicolumn{3}{|c|}{\textbf{Documentation Structure within the development process of the openETCS Software}} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{\textbf{Phase}} & \multicolumn{1}{c|}{\textbf{SIL4}} & \multicolumn{1}{c|}{\textbf{Document}} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{4}{|c|}{\textbf{Documentation Structure within the development process of the openETCS Software}} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{\textbf{Phase}} & \multicolumn{1}{c|}{\textbf{SIL4}} & \multicolumn{1}{c|}{\textbf{Document}} & \multicolumn{1}{c|}{\textbf{Responsible}}\\ \hline 
 \endfirsthead
 
 \multicolumn{3}{c}%
 {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
-\rowcolor{myblue} \multicolumn{3}{|c|}{\textbf{Documentation Structure within the development process of the openETCS Software}} \\
-\rowcolor{lightgray} \multicolumn{1}{|c|}{\textbf{Phase}} & \multicolumn{1}{c|}{\textbf{SIL4}} & \multicolumn{1}{c|}{\textbf{Document}} \\ \hline 
+\rowcolor{myblue} \multicolumn{4}{|c|}{\textbf{Documentation Structure within the development process of the openETCS Software}} \\
+\rowcolor{lightgray} \multicolumn{1}{|c|}{\textbf{Phase}} & \multicolumn{1}{c|}{\textbf{SIL4}} & \multicolumn{1}{c|}{\textbf{Document}} & \multicolumn{1}{c|}{\textbf{Responsible}}\\ \hline 
 \endhead
 
-\hline \multicolumn{3}{|r|}{{Continued on next page}} \\ \hline
+\hline \multicolumn{4}{|r|}{{Continued on next page}} \\ \hline
 \endfoot
 
 \hline \hline
@@ -1217,7 +1424,7 @@ Software Quality Assurance Verification Report
 
 Software Configuration Management Plan
 
-Software Verification and Validation Plan
+Software Verification and Validation Plan &
 \\ \hline
 Software Requirements &
 \centering \gls{HR} &
@@ -1225,7 +1432,7 @@ Software Requirements Specification
 
 Software Requirements Test Specification
 
-Software Requirements Verification Report
+Software Requirements Verification Report &
 \\\hline
 Architecture and design &
 \centering \gls{HR} &
@@ -1239,7 +1446,7 @@ Software Integration Test Specification
 
 Software/Hardware Integration Test Specification
  
-Software Architecture and design verification report
+Software Architecture and design verification report &
 \\\hline
 Component Design &
 \centering \gls{HR} &
@@ -1247,7 +1454,7 @@ Software Component design specification
 
 Software Component Test Specification
 
-Software Component design verification report
+Software Component design verification report &
 \\\hline
 Component Implementation and Testing &
 \centering \gls{HR} &
@@ -1255,7 +1462,7 @@ Software source code and supporting documentation
 
 Software source code verification report
 
-Software Component Test Report
+Software Component Test Report &
 \\\hline
 Integration &
 \centering \gls{HR} &
@@ -1263,7 +1470,7 @@ Software Integration Test Report
 
 Software/Hardware Integration Test Report
 
-Software Integration Verification Report
+Software Integration Verification Report &
 \\\hline
 Overall Software Testing/Final validation &
 \centering \gls{HR} &
@@ -1273,7 +1480,7 @@ Software Validation Report
 
 Tools Validation Report
  
-Release Note
+Release Note &
 \\\hline
 Systems configured by Application Data/ algorithms &
 \centering \gls{HR} &
@@ -1291,7 +1498,7 @@ Application Test Report
 
 Source Code of Application Data/Algorithms
  
-Application Data/Algorithms Verification Report
+Application Data/Algorithms Verification Report &
 \\\hline
 Software Deployment &
 \centering \gls{HR} &
@@ -1303,7 +1510,7 @@ Release Notes
  
 Deployment Records
 
-Deployment Verification Report
+Deployment Verification Report &
 \\\hline
 Software Maintenance &
 \centering \gls{HR} &
@@ -1313,13 +1520,13 @@ Software Change Records
 
 Software Maintenance Records
  
-Software Maintenance Verification Report
+Software Maintenance Verification Report &
 \\\hline
 Software Assessment &
 \centering \gls{HR} &
 Software Assessment Plan
  
-Software Assessment Report
+Software Assessment Report &
 \\\hline
 \end{longtable}
 \end{center}
