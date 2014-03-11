@@ -329,6 +329,12 @@ Izaskun de la Torre (SQS)
 5.2.1, 5.2.2, 11 &
 Addition of new sections &
 Izaskun de la Torre (SQS)
+\\\hline
+0.10.7 &
+11.03.2014 &
+3.2.1, 11.2 &
+An outline and new content &
+Izaskun de la Torre (SQS)
 \end{longtable}
 \end{center}
 
@@ -1951,7 +1957,114 @@ When publishing in the context of the openETCS project authors shall adhere to t
 
 
 \subsection{List of Risks}
-\textcolor{red}{See subset 91 annex A}
+
+\begin{center}
+\begin{longtable}{|m{3cm}|m{13cm}|}
+\caption{Risks}\\
+
+\hline \rowcolor{myblue} \multicolumn{2}{|c|}{Risks} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Event Id.} & \multicolumn{1}{|c|}{Event Description} \\ \hline 
+\endfirsthead
+
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \rowcolor{myblue} \multicolumn{2}{|c|}{Risks} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Event Id.} & \multicolumn{1}{|c|}{Event Description} \\ \hline
+\endhead
+
+\hline \multicolumn{2}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
+MMI-1a & False acknowledgement of mode change to less restrictive mode \\\hline
+MMI-1b & False command to enter Non-leading mode \\\hline
+MMI-1c & False command of Override request \\\hline
+MMI-1d & False acknowledgement of Level Transition \\\hline
+MMI-1e & False acknowledgement of Train Trip \\\hline
+MMI-1f & False acknowledgement of Track Ahead Free \\\hline
+MMI-1g & False shunting request \\\hline
+MMI-1h & False acknowledgement of undesired train movement (RAP, RMP and SSS) \\\hline
+MMI-2a.1 & False presentation of train speed on the DMI \\\hline
+MMI-2a.2 & False presentation of speed (except train speed) or distance on the DMI, including supervision status \\\hline
+MMI-2b & False presentation of mode on the DMI \\\hline
+MMI-2c & False presentation of track adhesion \\\hline
+MMI-2d & Failure to present Entry in FS/OS informa-tion \\\hline
+MMI-2e & False presentation of train data/additional data \\\hline
+MMI-2f & False presentation of Override status, including false enabling of override selection \\\hline
+MMI-2g & Failure to present acknowledgement message to a less restrictive mode \\\hline
+MMI-2h & False presentation of TAF request \\\hline
+MMI-2i & Failure to present LX “not protected” infor-mation \\\hline
+MMI-2j & False presentation of reversing allowed \\\hline
+MMI-2k & False presentation of level transition an-nouncement\\\hline
+MMI-3 & Falsification of driver's train data / addi-tional data input stored onboard \\\hline
+MMI-4 & Falsification of SR speed/distance data \\\hline
+MMI-5 & Falsification of train integrity input \\\hline
+MMI-6 & Falsification of Virtual Balise Cover \\\hline
+ODO-1 & Incorrect standstill indication \\\hline
+ODO-2 & Speed measurement underestimates trains actual speed \\\hline
+ODO-3 & Incorrect actual physical speed direction \\\hline  
+ODO-4 & The confidence interval for distance measurement does not include the real position of the train \\\hline
+KERNEL-1 & Balise linking consistency checking failure \\\hline
+KERNEL-2 & Balise group message consistency checking failure \\\hline
+KERNEL-3 & Failure of radio message correctness check \\\hline
+KERNEL-4 & Radio sequencing checking failure \\\hline
+KERNEL-5 & Radio link supervision function failure \\\hline
+KERNEL-6 & Manage communication session failure \\\hline
+KERNEL-7 & Incorrect LRBG \\\hline
+KERNEL-8 & Emergency Message Acknowledgement Failure \\\hline
+KERNEL-9 & Speed calculation underestimates train speed\\\hline
+KERNEL-10 & Functional failure of standstill detection \\\hline
+KERNEL-11 & Incorrect traction/braking model (e.g. brake use restrictions) \\\hline
+KERNEL-12 & Failure of standstill supervision \\\hline
+KERNEL-13 & Failure of backward distance monitoring \\\hline
+KERNEL-14 & Failure of reverse movement protection\\\hline
+KERNEL-15 & Incorrect cab status (TIU failure) \\\hline
+KERNEL-16 & Incorrect train status TIU sleeping/cab status \\\hline
+KERNEL-17 & Wrong Acceptance of MA \\\hline
+KERNEL-18 & Failure to manage RBC/RBC \\\hline
+KERNEL-19 & Failure of train trip supervision in OS, LS and FS \\\hline
+KERNEL-20 & Failure of train trip supervision, shunting and SR \\\hline
+KERNEL-21 & Incorrect supervision of stop in SR \\\hline
+KERNEL-22 & Incorrect current EoA \\\hline
+KERNEL-23 & Incorrect train position / train data sent from on-board to trackside \\\hline
+KERNEL-24 & Failure of message acknowledgement \\\hline
+KERNEL-25 & Incorrect traction/braking model (Accelera-tion only) \\\hline
+KERNEL-26 & Deleted \\\hline
+KERNEL-27 & Incorrect System Data (e.g. current level) \\\hline
+KERNEL-28 & Incorrect confidence interval \\\hline
+KERNEL-29 & Failure to shorten MA \\\hline
+KERNEL-30 & Incorrect shortening of MA \\\hline
+KERNEL-31 & Deleted \\\hline
+KERNEL-32 & Failure of loop message consistency checking \\\hline
+KERNEL-33 & Wrong processing of MA information \\\hline
+KERNEL-34 & Incorrect supervision of MA time-outs (sections and overlaps) \\\hline
+TI-1 & Service brake / emergency brake not commanded when required\\\hline
+TI-2 & Service brake / emergency brake release commanded when not required\\\hline
+TI-3 & Inappropriate sleeping request\\\hline
+TI-4 & Incorrect brake status (TIU failure)\\\hline
+TI-5 & Incorrect direction controller position report (TIU failure)\\\hline
+TI-6a & Loss of Cabin Active signal\\\hline
+TI-6b & Wrong Cabin considered as Active\\\hline
+EUB-H1 & A balise group is not detected, due to fail-ure of a balise group to transmit a detectable signal\\\hline
+EUB-H4 & Transmission of an erroneous telegram interpretable as correct, due to failure within a Balise\\\hline
+EUB-H7 & Erroneous localisation of a Balise Group, with reception of valid telegrams, due to failure within Balises (too strong up-link signal)\\\hline
+EUB-H8 & The order of reported Balises, with reception of valid telegram, is erroneous due to failure within a Balise (too strong up-link signal)\\\hline
+EUB-H9 & Erroneous reporting of a Balise Group in a different track, with reception of valid telegrams, due to failures within Balises (too strong up-link signal)\\\hline
+BTM-H1 & A balise group is not detected, due to failure within the onboard BTM function\\\hline
+BTM-H4 & Transmission to the on-board kernel of an erroneous telegram, interpretable as correct, due to failure within the onboard BTM function\\\hline
+BTM-H7 & Erroneous localisation of a Balise Group, with reception of valid telegrams, due to failure within the on-board BTM function (erroneous threshold function or significantly excessive Tele-powering signal)\\\hline
+BTM-H8 &The order of reported Balises, with reception of valid telegrams, is erroneous due to failure within the on-board BTM function (erroneous threshold function or significantly excessive Tele-powering signal) \\\hline
+BTM-H9 & Erroneous reporting of a Balise Group in a different track, with reception of valid telegrams, due to failure within the on-board BTM function (erroneous threshold function or significantly excessive Tele-powering signal)\\\hline
+OB-EUR-H4 & Radio message corrupted in onboard Euroradio, such that the message appears as consistent\\\hline
+TR-EUR-H4 & Radio message corrupted in trackside Euroradio, such that the message appears as consistent\\\hline
+LEU-H4 & Transmission of an erroneous telegram / telegrams interpretable as correct, due to failure within the LEU function\\\hline
+EUL-H4 & Transmission of an erroneous telegram / telegrams interpretable as correct, due to failure within a Loop\\\hline
+LTM-H4 & Transmission of an erroneous telegram / telegrams, interpretable as correct, due to failure within the on-board LTM function\\\hline
+RBC-2 & Incorrect radio message sent from RBC Kernel, such that the message appears as consistent\\\hline
+RBC-3 & Incorrect radio message from an adjacent RBC, causing incorrect message to ETCS onboard\\\hline
+\end{longtable}
+\end{center}
+
 
 \newpage
 \begin{landscape}
