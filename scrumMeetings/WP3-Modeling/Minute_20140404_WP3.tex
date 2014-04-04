@@ -1,0 +1,109 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS WP3 Meeting Minutes\end{center}}
+\section{Meeting Information}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & WP3 Weekly Scrum: Modelling\\
+%9:30-10:00 and 
+Date \& time & 2014-03-21, 9:30-10:30 and 10:30h--10:45h\\
+Location & Telco and Goto-Meeting\\
+Called up by & Bernd Hekele\\
+Participants &
+%Mathilde Arnaud,
+Benjamin Beichler,
+%Marc Behrens,
+Cecile Braunstein,
+%Alessandro Cimatti (only 9:30 slot),
+Lukasz Fronc,
+%Baseliyos Jacob,
+%Klaus-R\"udiger Hase,
+Bernd Hekele,
+%Jonas Helming,
+%Hardi Hungar,
+%Michael Jastram,
+%Peter Mahlmann,
+%Alexander Nitsch,
+%Huu-Nghia Nguyen,
+%Vincent Nuhaan,
+Matthieu Perin,
+Marielle Petit-Doche,
+%Alexander Stante,
+Stefan Rieger,
+%Christian Stahl,
+Uwe Steinke,
+%Izaskun de la Torre,
+Giovanni Trotta,
+Jan Welte,
+%Jan Welvaarts
+%Giovanni Zanelli,
+%Silvano dal Zilio
+\\
+
+Minutes by & Bernd Hekele\\
+%\hline
+\end{supertabular}
+\renewcommand{\arraystretch}{1.0}
+
+%\line(1,0){440}
+
+\section{{Agenda}}
+\begin{itemize}
+\item tool-issues, SysML Structure Checker + Training
+\item each partner: impediments, progress
+\item walk throu the model: interfaces and functions
+\item data dictionary changes and requirements
+\item a.o.b.
+
+\end{itemize}
+
+\section{Discussion}
+\begin{itemize}
+\item tool-issues, SysML Structure Checker + Training\\
+Tool issues have been clarified now. With regard of Papyrus the openETCS release has the same status as Kepler. There is stil a critical issue open in Papyrus \url{https://github.com/openETCS/toolchain/issues/316}. The issue is under investigation at CEA, a correction is worked on in the Luna Release of Papyrus. CEA is also investigating whther the back-poring of the correction to Kepler is possible. A desciption on how to avois the problem will be documented in the Papyrus openETCS userguide. The description is planned for Friday, 11th of April and will be published in the openETCS modelling project.
+
+Recommendation: to contribute, use the openETCS latest release and take care the work is frequently saved. Don't use nesting of blocks.
+
+Alexander is offering a framweork for checks on the SysML model. A training how to implement own checks is beeing prepared. Use this wiki to indicate your participation: \url{https://github.com/openETCS/toolchain/wiki/Writing-Constraints-for-SysML-Model-Checks}
+
+\item each partner: impediments, progress\\
+Status is updated in SRS-Analysis and in the modelling repository. Progress is visible in the dataDictionary and some of the models of sub-functions.
+
+\item walk throu the model: interfaces and functions\\
+The interfaces were discussed. Results will be implemented in the model.
+
+\item data dictionary changes and requirements\\
+The structure of the architecture is not yet visible. After having fully  documented the interfaces  work will proceed with modelling the architecture inside the dataDictionary.
+
+\item a.o.b.
+
+
+\end{itemize}
+
+\section{Notes}
+\begin{itemize}
+
+\item Note: Location of Meeting Minutes\\
+You can find these minutes here: \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/WP3-Modeling/Minute_20140404_WP3.pdf}. Please, use the issue tracker for findings in the minutes.
+
+\end{itemize}
+
+
+\end{document}
