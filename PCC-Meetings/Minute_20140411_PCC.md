@@ -29,12 +29,18 @@
   1. Update on Issue "Dealing with defaulting parties according to Sect. 10.4, PCA V1"
 
 # Findings:
-1. Project Change Request
+1. Project Change Request  
+A change request is planned to extend the duration of the project. It was discussed whther the extension of half year is sufficent or whther the extension shoult be 1 year. In the conclusion the extension of half year was decided.
+
 1. Full Project Proposal Update
-1. openETCS Project Group Charta
-1. A.O.B.
+The full project proposal has been updated and send for review. Comments received during the review peruiod have been incorporated resp. answered. We received a late review comment by Alstom yesterday. Those comments have been discussed also in the meeting. The FPP with the changes (without remarks by Alstom) has been accepted by the partners participating the PCC. The addition comments by Alstom have been clasified wiether as questions or as remarks for details in the daily work. 
+
+A vote was made on the FPP and on the proposal to extend the project by half year. The vote was accepted by all partners participating in the meeting.
 
 1. openETCS Charta  
 is provided as a document on Github in [Charta](https://github.com/openETCS/Charta/tree/master/Proposal). Klaus-Rüdiger is the owner of the document. Revision and contribution of other partners is welcome. A review is planned for the next PCC meeting.
 
-Next PCC is scheduled for May.
+Next PCC is scheduled for May, 15th.
+
+1. A.O.B.  
+The issue related to the absence of Alstom in the project has been solved. Alstom plans to continue with the activities as planned. (No more dafaulting party).
