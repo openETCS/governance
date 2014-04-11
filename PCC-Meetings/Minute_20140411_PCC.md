@@ -37,10 +37,10 @@ The full project proposal has been updated and send for review. Comments receive
 
 A vote was made on the FPP and on the proposal to extend the project by half year. The vote was accepted by all partners participating in the meeting.
 
-1. openETCS Charta  
+3. openETCS Charta  
 is provided as a document on Github in [Charta](https://github.com/openETCS/Charta/tree/master/Proposal). Klaus-Rüdiger is the owner of the document. Revision and contribution of other partners is welcome. A review is planned for the next PCC meeting.
 
 Next PCC is scheduled for May, 15th.
 
-1. A.O.B.  
+4. A.O.B.  
 The issue related to the absence of Alstom in the project has been solved. Alstom plans to continue with the activities as planned. (No more dafaulting party).
