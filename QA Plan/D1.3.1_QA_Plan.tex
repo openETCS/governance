@@ -820,7 +820,33 @@ Compliance to SCRUM Requirements is achieved by means of
 \end{itemize}
 
 \textcolor{red}{include scrum process description}
+\textbf{SCRUM PROCESS}
 
+Scrum process starts with a Product Backlog, this product backlog contains an ordered list of requirements that is maintained for a product. The product backlog items (PBIs) are ordered by the Product Owner based on considerations like risk, business value, date needed, etc. The product Owner is the responsible of the product backlog and the priorizations of PBIs.
+
+After definition of Product Backlog the next task is to create the spring planning meeting, this meeting is organized at the beginning of the sprint cycle. The objective of this meeting is to define the PBIs to be done in following sprint. The Sprint is the time period in which development occurs on a set of backlog items that the team has committed to (also commonly referred to as iteration). 
+The result of PBIs selected for implement in one spring is called the sprint backlog. The sprint backlog is the list of work the Development Team must address during the next sprint. The list is derived by selecting product backlog items from the top of the product backlog until the Development Team feels it has enough work to fill the sprint.
+
+Each day during the sprint, a project team communication meeting occurs. This is called a daily scrum meeting and has specific guidelines. The scrum meeting is organized by the scrum master and the participants respond to three questions: What have you done since yesterday? What are you planning to do today? And Any impediments/stumbling blocks?.
+
+At the end of the spring, the result of the PBIs implemented is called the increment (or potentially shippable increment), this is the sum of all the Product Backlog items completed during a sprint and all previous sprints. The increment must be in a usable condition regardless of whether the Product Owner decides to actually release it.
+
+At the end of spring cycle or iteration, two meetings are held; the spring review meeting and spring retrospective. The approximate duration of the spring review meeting will be no more than 4 hours and will be moderate by the scrum master in this meeting two main activities will be take, one is to review the work completed and the planned work that wasn´t and the other is to presented to the Product owner the work done (demo). The other meeting after iteration is the spring retrospective, it will be managed by the scrum master and the main objective of this meeting is to use as process continuous improvements. Two main questions are asked to all participants in this meeting; what went well during the sprint? What could be improved in the next sprint?
+
+\textbf{OPENETCS SCRUM PROCESS}
+
+In OpenETCS there are 3 types of SCRUM process:
+\begin{itemize}
+\item The first level is the OpenETCS Project level, where Project Coordinator is the Product Owner. In this level the SCRUM meetings are organized every Friday.
+\item The second level is the Work Package level, where Work Package Leader is the Product Owner. In this level SCRUM meeting depends on WP, but at least two SCRUM meetings are organized every week.
+\item The last level is the Task level, where the Task Leader is the Product Owner. In this level SCRUM meeting period is variable and depends on the task.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{./figures/openetcs__scrum.png}
+\caption{OpenETCS Project Structure}
+\end{figure}
 
 \subsubsection{Compliance with software management and organisation according to EN50128:2011}
 In principle, two of the OpenETCS project results (Software and Tool Chain) are to be CENELEC \gls{SIL} 4 certifiable. These are two of the results from WP3 and WP7. The following mechanisms, at organizational level, will help the corresponding project leader to provide evidence of compliance with chapters 5.1 and 5.2. Anyhow, evidence that requirements imposed are met will have to be provided for each of the two software projects on a project by project basis. 
@@ -1410,6 +1436,209 @@ As a \gls{SIL}4 software, the documentation structure has to comply with CENELEC
 \textcolor{red}{Map the documents with the current openETCS documents and lifecycle}
 
 \begin{center}
+\begin{longtable}{|m{2cm}|m{1.5cm}|m{7cm}|m{3cm}|}
+\caption{Documentation Structure}\\
+
+\hline \rowcolor{myblue} \multicolumn{4}{|c|}{\textbf{Documentation Structure within the development process of the openETCS Software}} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{\textbf{Phase}} & \multicolumn{1}{c|}{\textbf{SIL4}} & \multicolumn{1}{c|}{\textbf{Document}} & \multicolumn{1}{c|}{\textbf{Responsible}}\\ \hline 
+\endfirsthead
+
+\multicolumn{3}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\rowcolor{myblue} \multicolumn{4}{|c|}{\textbf{Documentation Structure within the development process of the openETCS Software}} \\
+\rowcolor{lightgray} \multicolumn{1}{|c|}{\textbf{Phase}} & \multicolumn{1}{c|}{\textbf{SIL4}} & \multicolumn{1}{c|}{\textbf{Document}} & \multicolumn{1}{c|}{\textbf{Responsible}}\\ \hline 
+\endhead
+
+\hline \multicolumn{4}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
+Planning &
+\centering \gls{HR} &
+Software Quality Assurance Plan (D1.3.1)
+
+Software Quality Assurance Verification Report
+
+Software Configuration Management Plan (SCMP)
+
+Software Verification and Validation Plan (D4.1)
+
+Hazard and Risk Analysis Methodology (D4.2.3)
+
+Dissemination Plan (D6.1)&
+Izaskun de la Torre
+
+Todo
+
+Peer Jacobsen
+
+Hardi Hungar
+
+Jan Welte
+
+Stefan Rieger
+\\ \hline
+Software Requirements &
+\centering \gls{HR} &
+Software Requirements Specification (D2.6\_9 Requirements for openETCS)
+
+\textcolor{red}{ETCS\_OBU\_FunctionalStructure -Uwe Steinke-}
+Software Requirements Test Specification
+
+Software Requirements Verification Report 
+&
+Sylvain Baro and Jan Welte
+
+todo
+
+todo
+\\\hline
+Software Architecture Modeling &
+\centering \gls{HR} &
+\textcolor{red}{System Specification Model (D3.5)}
+
+\textcolor{red}{Functional Model (D3.6)}
+
+\textcolor{red}{System Architecture Model with physical allocation (D3.7)-Alstom??-}
+
+\textcolor{red}{Data Dictionary -Bernd Hekele-}
+
+\textcolor{red}{Data Dictionary Design Specification =Data Dictionary Tool Development???- Cecile Braunstein-}
+
+\textcolor{red}{Internal Data Structure -Jan Welvaarts-}
+
+\textcolor{red}{Data Dictionary Data Catalog -Bernd Hekele-}
+
+\textcolor{red}{Data Model Description -Marielle Petit Doche-}
+
+\textcolor{red}{OpenETCS API Document -Alstom-(D2.7?)}
+
+\textcolor{red}{OpenETCS SSRS Interface Document}
+
+\textcolor{red}{EVC External Interfaces-Baseliyos Jacob-}
+
+\textcolor{red}{SRS analysis and functions -Bernd Hekele-}
+
+Software Architecture Specification
+
+Software Design Specification
+
+Software Interface Specification
+ 
+Software Integration Test Specification
+
+Software/Hardware Integration Test Specification
+ 
+Software Architecture and design verification report &
+\\\hline
+Component Design &
+\centering \gls{HR} &
+Software Component design specification
+
+Software Component Test Specification
+
+Software Component design verification report &
+\\\hline
+Component Implementation and Testing &
+\centering \gls{HR} &
+Software source code and supporting documentation
+
+Software source code verification report
+
+Software Component Test Report &
+\\\hline
+Integration &
+\centering \gls{HR} &
+Software Integration Test Report
+
+Software/Hardware Integration Test Report
+
+Software Integration Verification Report &
+\\\hline
+Overall Software Testing/Final validation &
+\centering \gls{HR} &
+Overall Software Test Report
+
+Software Validation Report
+
+Tools Validation Report
+ 
+Release Note &
+\\\hline
+Systems configured by Application Data/ algorithms &
+\centering \gls{HR} &
+Application Requirements Specification
+
+Application Preparation Plan
+
+Application Test Specification
+ 
+Application Architecture and Design
+ 
+Application Preparation Verification Report
+ 
+Application Test Report
+
+Source Code of Application Data/Algorithms
+ 
+Application Data/Algorithms Verification Report &
+\\\hline
+Software Deployment &
+\centering \gls{HR} &
+Software Release and Deployment Plan
+
+Software Deployment Manual
+
+Release Notes
+ 
+Deployment Records
+
+Deployment Verification Report &
+Bernd Hekele
+\\\hline
+Software Maintenance &
+\centering \gls{HR} &
+Software Maintenance Plan
+
+Software Change Records
+
+Software Maintenance Records
+ 
+Software Maintenance Verification Report &
+todo
+\\\hline
+Software Assessment &
+\centering \gls{HR} &
+Software Assessment Plan \textcolor{red}{(Internal Assessment Plan D4.5.1)}
+ 
+Software Assessment Report &
+Cyril Cornu
+\\\hline
+\end{longtable}
+\end{center}
+
+
+
+\subsection{Documentation Structure within the development process of the openETCS Tools chain}
+
+CENELEC Standard requires that all the off-line support tools have a manual as  minimun required documentation. The Standard also established that tools in classes T2 and T3 should have documentation that defines the behaviour of the tools together with instructions and constrains on its use. This documentation should be a justification for use, a potencial failures identification and the ways to avoid or mitigate them, manuals and use restrictions. It is also required that tools to be assessed with the aim to determine the level of reliance that shall be placed on the tool, and potential failure mechanisms that may affect the executable software (T3 only).
+
+For T3 class applications, evidence shall be available that the tool conforms to its specification or manual, so called tool assessment. Such tool assessment shall cover:
+\begin{itemize}
+\item A chronological record of the validation activities
+\item The version of the tool product manual being used
+\item The tool functions being validated
+\item Tools and equipment used
+\item The results of the validation activity; the documented results of validation shall state either that the software has passed the validation or the reasons for its failure
+\item Test cases and their results for subsequent analysis
+\item Discrepancies between expected and actual results
+\end{itemize}
+
+It is important to add, that every new version of a support tool shall be certified. This may rely on evidence provided for earlier versions if sufficient evidence provides that the modifications do not affect tool compatibility with the rest of the tools in the integrated tool chain and that the new version is unlikely to contain significant new, unknown faults.
+
+\textcolor{red}{create a similar table than in section 6.1 for the tool chain documentation}
+\begin{center}
 \begin{longtable}{|m{2cm}|m{1.5cm}|m{7cm}|m{2cm}|}
 \caption{Documentation Structure}\\
 
@@ -1430,13 +1659,28 @@ As a \gls{SIL}4 software, the documentation structure has to comply with CENELEC
 
 Planning &
 \centering \gls{HR} &
-Software Quality Assurance Plan
+Software Quality Assurance Plan (D1.3.1)
 
 Software Quality Assurance Verification Report
 
-Software Configuration Management Plan
+Software Configuration Management Plan (SCMP)
 
-Software Verification and Validation Plan &
+Software Verification and Validation Plan (D4.1)
+
+Hazard and Risk Analysis Methodology (D4.2.3)
+
+Dissemination Plan (D6.1)&
+Izaskun de la Torre
+
+Todo
+
+Peer Jacobsen
+
+Hardi Hungar
+
+Jan Welte
+
+Stefan Rieger
 \\ \hline
 Software Requirements &
 \centering \gls{HR} &
@@ -1448,6 +1692,11 @@ Software Requirements Verification Report &
 \\\hline
 Architecture and design &
 \centering \gls{HR} &
+
+\textcolor{red}{Requirements Modeling for SSRS Activities with ProR -Michael Jastram-}
+
+\textcolor{red}{Tool chain Design Specification- Cecile Braunstein and Jan Peleska-}
+
 Software Architecture Specification
 
 Software Design Specification
@@ -1542,26 +1791,6 @@ Software Assessment Report &
 \\\hline
 \end{longtable}
 \end{center}
-
-
-\subsection{Documentation Structure within the development process of the openETCS Tools chain}
-
-CENELEC Standard requires that all the off-line support tools have a manual as  minimun required documentation. The Standard also established that tools in classes T2 and T3 should have documentation that defines the behaviour of the tools together with instructions and constrains on its use. This documentation should be a justification for use, a potencial failures identification and the ways to avoid or mitigate them, manuals and use restrictions. It is also required that tools to be assessed with the aim to determine the level of reliance that shall be placed on the tool, and potential failure mechanisms that may affect the executable software (T3 only).
-
-For T3 class applications, evidence shall be available that the tool conforms to its specification or manual, so called tool assessment. Such tool assessment shall cover:
-\begin{itemize}
-\item A chronological record of the validation activities
-\item The version of the tool product manual being used
-\item The tool functions being validated
-\item Tools and equipment used
-\item The results of the validation activity; the documented results of validation shall state either that the software has passed the validation or the reasons for its failure
-\item Test cases and their results for subsequent analysis
-\item Discrepancies between expected and actual results
-\end{itemize}
-
-It is important to add, that every new version of a support tool shall be certified. This may rely on evidence provided for earlier versions if sufficient evidence provides that the modifications do not affect tool compatibility with the rest of the tools in the integrated tool chain and that the new version is unlikely to contain significant new, unknown faults.
-
-\textcolor{red}{create a similar table than in section 6.1 for the tool chain documentation}
 
 \subsection{Quality Control and Monitoring Activities}
 The monitoring activities of the Documentation Structure control involves a development of  criteria, reviews and documentation audits to determine if the overall structure of the documentation is correctly followed. As well as assuring the compliance with CENELEC standard for a SIL 4 product.
