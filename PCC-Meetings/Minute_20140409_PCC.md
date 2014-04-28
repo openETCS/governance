@@ -1,7 +1,7 @@
 **PCC Project Coordination Meeting Minutes**
 
 * Meeting called by Klaus-Rüdiger Hase
-* When: Wednesday, 15th of April, 13:30 - 16:00
+* When: Wednesday, 9 th of April, 13:30 - 16:00
 * Where: Munich, Völckerstrasse 5
 * Minutes taken by Bernd Hekele
 * Participants on site: 
