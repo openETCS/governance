@@ -1,0 +1,176 @@
+\documentclass{template/openetcs_article}
+% Use the option "nocc" if the document is not licensed under Creative Commons
+%\documentclass[nocc]{template/openetcs_article}
+\usepackage{lipsum,url}
+\usepackage{supertabular}
+\usepackage{multirow}
+\usepackage{color, colortbl}
+\definecolor{gray}{rgb}{0.8,0.8,0.8}
+\usepackage[modulo]{lineno}
+\graphicspath{{./template/}{.}{./images/}}
+
+%New omponents for supporting #Glossary#
+%\makeglossaries
+%Glossary terms
+%\loadglsentries{./glossary/openETCS-Latex-Glossary.tex}
+
+\begin{document}
+\frontmatter
+\project{openETCS}
+
+%Please do not change anything above this line
+%============================
+
+
+
+% The document metadata is defined below
+
+%assign a report number here
+\reportnum{OETCS/WP1/D0?}
+
+%define your workpackage here
+\wp{Work-Package 1: ``Governance''}
+
+%set a title here
+\title{openETCS Release Template (Modelling Results)}
+
+%set a subtitle here
+
+%set the date of the report here
+\date{May 2014}
+
+%define a list of authors and their affiliation here
+
+\author{Hekele Bernd}
+
+\affiliation{Deutsche Bahn AG / DB Netz AG\\
+  openETCS Project Group \\
+  V\"olckerstrasse 5\\
+  80939 Muenchen, Germany \\
+  \\
+  eMail: bernd.hekele@deutschebahn.com \\
+  WebSite: www.openETCS.org}
+
+
+% define the coverart
+\coverart[width=350pt]{openETCS_EUPL}
+
+%define the type of report
+\reporttype{Process Template}
+
+\begin{abstract}
+%define an abstract here
+%  \lipsum[12-13]
+This document introduces a template which is to be used in openETCS releases of the modelling work-package. Details of the process are defined in the openETCS Software Release and Deployment plan.
+
+You can find the template in this location: \url{} 
+  
+\end{abstract}
+
+%=============================
+\maketitle
+
+%Modification history
+%if you do not need a modification history table for your document simply comment out the eight lines below
+%=============================
+\section*{Modification History}
+\tablefirsthead{
+\hline 
+\rowcolor{gray} 
+Version & Section & Modification / Description & Author \\\hline}
+\begin{supertabular}{| m{1.2cm} | m{1.2cm} | m{6.6cm} | m{4cm} |}
+0.1 & All Parts & New Document & Bernd Hekele\\
+ & & & \\\hline
+\end{supertabular}
+
+
+\tableofcontents
+\listoffiguresandtables
+\newpage
+%=============================
+
+%Uncomment the next line if you need line numbers for tracebility when the document is in review
+%\linenumbers
+%=============================
+
+
+% The actual document starts below this line
+%=============================
+%The following subsections list the important glossary terms and the abbreviations used in %this document. 
+
+
+\section{Introduction}
+The template is to be taken for the openETCS modelling releases. It has to be filled with details of the release by the production owner. The completed form has to be filed in the openETCS modelling repository. Purpose of the plan is to give guidance on\\
+\begin{itemize}
+\item \textbf{the contents}: where do I find the artefacts, what is included, what was the selection criteria for the release content,
+\item \textbf{quality}: which quality assurance steps have been executed as a part of the validation of release components.
+\end{itemize}
+
+You can find the form in section "the form" of this document. A definition of terms may give you some guidance on how to fill the form. 
+
+\newpage
+
+\section{The Template}
+
+\subsection{The Form}
+\begin{enumerate}
+\item \textbf{Release Name}:
+\item \textbf{Release Date}:
+\item \textbf{Release Scope}:
+\item \textbf{Author}:
+\item \textbf{Author Organisation}:
+\item \textbf{Release Content (Selection Criteria)}:
+\item \textbf{Release Content (link to input artefacts)}:
+\item \textbf{Release Content (link to production output)}:
+\item \textbf{Release Content (link to validation result)}:
+\item \textbf{Release Findings (link to issue list of release)}:
+\end{enumerate}
+
+\subsection{Definition of Terms}
+\begin{itemize}
+\item \textbf{Release Name}:\\
+Gives a unique identifier for the release. The release follows the following convention:\\
+\textbf{D3.6\_i.s.n}, where
+\begin{itemize}
+\item \textbf{i} is the name of the iteration
+\item \textbf{s} is the name of the sprint in the iteration
+\item \textbf{n} is a sequential number
+\end{itemize}
+\item \textbf{Release Date}: Date and Time when the product was made available for the users.
+\item \textbf{Release Scope}: can be one of the following options:
+\begin{itemize}
+\item \textbf{Daily Build}:
+\item \textbf{Sprint Release}: Result of a sprint release, includes features and corrections. The scope is documented in the sprint backlog.
+\item \textbf{Iteration Release}: Result of a iteration release, includes features and corrections. The scope is documented in the iteration backlog.
+\end{itemize}
+
+\item \textbf{Author}: Author of the release.
+\item \textbf{Author Organisation}: Organisation of the Author.
+\item \textbf{Release Content (Selection Criteria)}: 
+\begin{itemize}
+\item \textbf{No Restriction}
+\item \textbf{Features Only}
+\item \textbf{Corrections Only}
+\item \textbf{Selected Corrections Only}
+\end{itemize}
+\end{itemize}
+
+\subsection{References}
+\begin{itemize}
+\item \textbf{D1.n}: Software Release and Deployment Plan
+\end{itemize}
+
+%===================================================
+%Do NOT change anything below this line
+
+%\subsubsection{Glossary}
+
+%\glossarystyle{long}
+%\printglossary[title=]
+
+
+%\subsubsection{Abbreviations}
+%\printglossary[type=\acronymtype,title=]
+
+
+\end{document}
