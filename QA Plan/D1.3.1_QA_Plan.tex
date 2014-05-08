@@ -67,7 +67,7 @@
 
 \makeglossaries
 %Glossary terms
-\loadglsentries{./glossary/openETCS-Latex-Glossary.tex}
+\loadglsentries{glossary/OpenETCS-Latex-Glossary.tex}
 
 \begin{document}
 \frontmatter
@@ -1460,8 +1460,8 @@ Notes:
 \begin{itemize}
 \item Eclipse (eclipse Kepler SR1 IDE): tool platform (Eclipse with the modeling framework (EMF))
 \item Papyrus/SysML to cover the highest level of the OpenETCS V cycle
-\item ProR
-\item SCADE
+\item ProR: requirement manager
+\item SCADE: Low level description and code generation
 \item EFS to support V\&V activities.
 \item Git: configuration management
 \end{itemize}
@@ -1480,9 +1480,7 @@ Notes:
 Name &
 Metrics 
 \\\hline
-ProR & \\\hline
-Papyrus & \\\hline
-SysML & \\\hline
+ProR & requirements management\\\hline
 Git & Software Configuration Management\\\hline
 \end{tabular}
 \caption{T1 Tools}
@@ -1511,7 +1509,9 @@ Metrics
 Name &
 Metrics 
 \\\hline
- & \\\hline
+Papyrus & System level description\\\hline
+SCADE & Software level description\\\hline
+
 \end{tabular}
 \caption{T3 Tools}
 \end{table}
