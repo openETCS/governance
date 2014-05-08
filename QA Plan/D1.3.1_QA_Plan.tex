@@ -3148,6 +3148,8 @@ Understanding the requirements of EN 50128}
 \section{Methods \& Tools for Application Software}
 \label{ref:MethodS}
 %BH: section updated to cover Modeling needs (16.04.2014)
+%BH: section updated to cover extensions on Modeling needs (08.05.2014)
+
 \begin{table}[H]
 \tablefirsthead{\hline
 \rowcolor{myblue}
@@ -3179,6 +3181,7 @@ Structured Methodology &
 HR &
 \centering
 No &
+Not relevant since we are using Formal Methods and Modelling.
 \\\hline
 \centering 4 &
 Decision Table &
@@ -3186,6 +3189,7 @@ Decision Table &
 HR &
 \centering
 No &
+Not relevant since we are using Formal Methods and Modelling.
 \\\hline
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
@@ -3241,13 +3245,15 @@ Error Detecting Codes &
 HR &
 \centering
 No &
+Error Detecting codes are not relevant in the scope of the openETCS Application. They might be implemented in a product being based around openETCS.
 \\\hline
 \centering 5 &
 Assertion Programming &
 \centering
 HR &
 \centering
-No &
+Yes &
+Handling of assertions will be part of the scade model.
 \\\hline
 \centering 6 &
 Safety Bag Techniques &
@@ -3262,6 +3268,7 @@ Diverse Programming &
 HR &
 \centering
 No &
+Diverse Programming is an option for a real openETCS product. Since it as to be supported by the architecture of the product the method can not be implemented in the generic approach of openETCS.
 \\\hline
 \centering 8 &
 Recovery Block &
@@ -3297,6 +3304,7 @@ Memorising Executed Cases &
 HR &
 \centering
 No &
+Graceful degradation is an option for a real openETCS product. Since it as to be supported by the architecture of the product the method can not be implemented in the generic approach of openETCS.
 \\\hline
 \centering 13 &
 Artificial Intelligence - Fault Correction &
@@ -3318,6 +3326,7 @@ Software Error Effect Analysis &
 HR &
 \centering
 No &
+SEEA is not superior compared to the chosen formal approach of openETCS.
 \\\hline
 \centering 16 &
 Graceful Degradation &
@@ -3339,6 +3348,7 @@ Information Encapsulation &
 HR &
 \centering
 Yes &
+Information Encapsulation is covered by the modelling guideline.
 \\\hline
 \centering 19 &
 Fully Defined Interface &
@@ -3370,6 +3380,7 @@ Structured Methodology &
 HR &
 \centering
 No &
+Not relevant since we are using Formal Methods and Modelling.
 \\\hline
 \centering 23 &
 Modelling supported by computer aided design
@@ -3426,6 +3437,7 @@ Structured Methodology &
 HR &
 \centering
 No &
+Not relevant since we are using Formal Methods and Modelling.
 \\\hline
 \centering 4 &
 Modular Approach &
@@ -3456,7 +3468,8 @@ Analysable Programs &
 \centering
 HR &
 \centering
-No &
+Yes &
+Static Analysis is supported by the Scade Suite Code generator and is part of the development guideline.
 \\\hline
 \centering 8 &
 Strongly Typed Programming Language &
@@ -3471,7 +3484,8 @@ Structured Programming &
 \centering
 HR &
 \centering
-No &
+Yes &
+The Scade Suite encourages for a reduction of complexity in modelling (1 page approach). The structure of the code is as such is made by the Scade code generator. The modeller has an indirect impact on the generation.
 \\\hline
 \centering 10 &
 Programming Language &
