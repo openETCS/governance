@@ -18,6 +18,7 @@
 \usepackage{breakurl}
 \usepackage[titletoc]{appendix}
 \usepackage{lipsum}
+\usepackage[normalem]{ulem}
 \makeatletter
 \newcommand\arraybslash{\let\\\@arraycr}
 \makeatother
@@ -819,7 +820,6 @@ Compliance to SCRUM Requirements is achieved by means of
 \item A SCRUM master (WP1) is responsible for supporting the teams.
 \end{itemize}
 
-\textcolor{red}{include scrum process description}
 \textbf{SCRUM PROCESS}
 
 Scrum process starts with a Product Backlog, this product backlog contains an ordered list of requirements that is maintained for a product. The product backlog items (PBIs) are ordered by the Product Owner based on considerations like risk, business value, date needed, etc. The product Owner is the responsible of the product backlog and the priorizations of PBIs.
@@ -1164,21 +1164,167 @@ The tool chain lifecycle is depicted figure  \ref{fig:TC_lifecycle}
 
 \todo[color=yellow!20, inline]{IT: necessary to cover the activities (be sure that are compliant with the Plans), the input and output of each activity and its criteria, entity in charge of each activity and quality activities}
 
-\textcolor{red}{The following activities will be covered  by the tool chain development.
+\begin{description}
+\item \textbf{Tool chain Requirements}
+
+\underline{\textit{Inputs}}
 \begin{itemize}
-\item openETCS tool chain architecture specification\\
-Definition of the tool chain composition (covers by T7.1 \cite{D7.1}
-and T7.2 \cite{D7.2})
-\item openETCS tool chain design specification \\
-Definition of how the tool chain is implemented including the
-definition of the interoperability mechanism
-\item Software development\\
-Implementation of the tool chain in particular for the need of tool interoperability
-\item Test and verification plan\\
-Definition of how to test the tool chain.
-\item Agile software development guidelines\\
-Guidelines on how to use the tool chain in an agile development.
-\end{itemize}}
+\item D2.3
+\item D2.4
+\item D2.5
+\end{itemize}
+
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\item \textbf{Tool chain Architecture and Design}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item Tool chain Design Specification
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\item \textbf{Tool chain Components Selections}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item Primary Tool chain Evaluation: Evaluation of the models and tools against the WP2 requirements
+\item Primary Tool chain Evaluation: Evaluation of the tool platform against the WP2
+requirements
+\item D7.1 Report on the Final Choice of the Primary Toolchain
+\item Secondary Tools Evaluations
+\begin{itemize}
+\item O7-2-1 Management
+\item O7-2-1 Safety
+\item O7-2-1 VnV
+\item O7-2-1 Transformation
+\item D7.2 Report on all aspects of secondary tooling
+\end{itemize}
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\item \textbf{Tool chain Components Implementation and Testing}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item \textcolor{red}{Test and Verification Plan}
+\end{itemize}
+
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item Tools
+\item Tools User Manual 
+\item Tool chain Components Test Report
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\item \textbf{Tool chain Components Integration}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\item \textbf{Tool chain Validation}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item Tool chain Validation Reports
+\item Tool chain guidelines
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\item \textbf{Data Transformation}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\item \textbf{Tool chain Maintenance}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{description}
 
 \subsection{QA Management }
 The Software quality assurance will assure that any deviations during the project and product life-cycle from plans and standards are detected, recorded, evaluated, tracked, and resolved.
@@ -1433,10 +1579,8 @@ For each TP/\gls{WP} the relation of existing documents is provided in the form 
 \subsection{Documentation Structure within the development process of the openETCS Software}
 As a \gls{SIL}4 software, the documentation structure has to comply with CENELEC requirements. The following table shows the document structure required by CENELEC for a \gls{SIL} 4 development and the corresponding documents produced in the OpenETCS project.
 
-\textcolor{red}{Map the documents with the current openETCS documents and lifecycle}
-
 \begin{center}
-\begin{longtable}{|m{2cm}|m{1.5cm}|m{7cm}|m{3cm}|}
+\begin{longtable}{|m{2cm}|m{1.5cm}|m{8cm}|m{3cm}|}
 \caption{Documentation Structure}\\
 
 \hline \rowcolor{myblue} \multicolumn{4}{|c|}{\textbf{Documentation Structure within the development process of the openETCS Software}} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{\textbf{Phase}} & \multicolumn{1}{c|}{\textbf{SIL4}} & \multicolumn{1}{c|}{\textbf{Document}} & \multicolumn{1}{c|}{\textbf{Responsible}}\\ \hline 
@@ -1484,6 +1628,7 @@ Software Requirements &
 Software Requirements Specification (D2.6\_9 Requirements for openETCS)
 
 \textcolor{red}{ETCS\_OBU\_FunctionalStructure -Uwe Steinke-}
+
 Software Requirements Test Specification
 
 Software Requirements Verification Report 
@@ -1528,7 +1673,7 @@ Software Interface Specification
  
 Software Integration Test Specification
 
-Software/Hardware Integration Test Specification
+\sout{Software/Hardware Integration Test Specification}
  
 Software Architecture and design verification report &
 \\\hline
@@ -1542,17 +1687,25 @@ Software Component design verification report &
 \\\hline
 Component Implementation and Testing &
 \centering \gls{HR} &
+\textcolor{red}{1st V\&V report on model (D4.2.1)}
+
+\textcolor{red}{1st V\&V report on implementation/ code (D4.2.2)}
+
 Software source code and supporting documentation
 
 Software source code verification report
 
 Software Component Test Report &
+Ana Cavalli, João Santos, Huu-Nghia Nguyen, Stefan Rieger, Cécile Braunstein, Uwe Steinke, Benoît Lucet, Matthias Güdemann, Brice Gombault, Marielle Petit-Doche, Alexander Nitsch and Benjamin Beichler
+
+Marc Behrens, Jens Gerlach, Kim Völlinger, Andreas Carben
+and Izaskun de la Torre
 \\\hline
 Integration &
 \centering \gls{HR} &
 Software Integration Test Report
 
-Software/Hardware Integration Test Report
+\sout{Software/Hardware Integration Test Report}
 
 Software Integration Verification Report &
 \\\hline
@@ -1637,9 +1790,8 @@ For T3 class applications, evidence shall be available that the tool conforms to
 
 It is important to add, that every new version of a support tool shall be certified. This may rely on evidence provided for earlier versions if sufficient evidence provides that the modifications do not affect tool compatibility with the rest of the tools in the integrated tool chain and that the new version is unlikely to contain significant new, unknown faults.
 
-\textcolor{red}{create a similar table than in section 6.1 for the tool chain documentation}
 \begin{center}
-\begin{longtable}{|m{2cm}|m{1.5cm}|m{7cm}|m{2cm}|}
+\begin{longtable}{|m{2cm}|m{1.5cm}|m{8cm}|m{3cm}|}
 \caption{Documentation Structure}\\
 
 \hline \rowcolor{myblue} \multicolumn{4}{|c|}{\textbf{Documentation Structure within the development process of the openETCS Software}} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{\textbf{Phase}} & \multicolumn{1}{c|}{\textbf{SIL4}} & \multicolumn{1}{c|}{\textbf{Document}} & \multicolumn{1}{c|}{\textbf{Responsible}}\\ \hline 
@@ -1669,7 +1821,11 @@ Software Verification and Validation Plan (D4.1)
 
 Hazard and Risk Analysis Methodology (D4.2.3)
 
-Dissemination Plan (D6.1)&
+Dissemination Plan (D6.1)
+
+\textcolor{red}{Tool Chain Development Plan} 
+
+\textcolor{red}{Tool chain Qualification Process Description} &
 Izaskun de la Torre
 
 Todo
@@ -1681,6 +1837,10 @@ Hardi Hungar
 Jan Welte
 
 Stefan Rieger
+
+Cecile Braunstein and Jan Peleska
+
+Cecile Braunstein, Jan Peleska and Stefan Rieger
 \\ \hline
 Software Requirements &
 \centering \gls{HR} &
@@ -1705,7 +1865,7 @@ Software Interface Specification
  
 Software Integration Test Specification
 
-Software/Hardware Integration Test Specification
+\sout{Software/Hardware Integration Test Specification}
  
 Software Architecture and design verification report &
 \\\hline
@@ -1729,7 +1889,7 @@ Integration &
 \centering \gls{HR} &
 Software Integration Test Report
 
-Software/Hardware Integration Test Report
+\sout{Software/Hardware Integration Test Report}
 
 Software Integration Verification Report &
 \\\hline
