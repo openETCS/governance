@@ -342,6 +342,19 @@ Izaskun de la Torre (SQS)
 Appendix E &
 Methods and Tools Update to cover Modeling needs &
 Bernd Hekele (DB)
+\\\hline
+0.10.7 &
+08.05.2014 &
+5.2.2.1 5.2.2.2 &
+Add information about tools in the tool chain &
+C\'ecile Braunstein (Uni Bremen)
+\\\hline
+0.10.7 &
+14.05.2014 &
+3.2.2 &
+Complete the  openETCS tool chain lifecycle &
+C\'ecile Braunstein (Uni Bremen)
+
 \end{longtable}
 \end{center}
 
@@ -1157,7 +1170,7 @@ The tool chain lifecycle is depicted figure  \ref{fig:TC_lifecycle}
 
 \begin{figure}[H]
 \centering
-  \includegraphics[width= \textwidth]{./figures/toolchain_lifecycle}
+  \includegraphics[width=\textwidth]{./figures/toolchain_lifecycle}
   \caption{The OpenETCS tool chain life cycle}
   \label{fig:TC_lifecycle}
 \end{figure}
@@ -1165,7 +1178,75 @@ The tool chain lifecycle is depicted figure  \ref{fig:TC_lifecycle}
 \todo[color=yellow!20, inline]{IT: necessary to cover the activities (be sure that are compliant with the Plans), the input and output of each activity and its criteria, entity in charge of each activity and quality activities}
 
 \begin{description}
-\item \textbf{Tool chain Requirements}
+\item \textbf{OpenETCS Software Requirements}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item D2.6-9
+\end{itemize}
+
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item D2.3
+\item D2.4
+\item D2.5
+\end{itemize}
+
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item Specific requirements for the selection and the development of
+  tools and the tool chain development.
+\end{itemize}
+
+\item \textbf{OpenETCS Development Planning}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item D2.6-9
+\item D2.3-5
+\end{itemize}
+
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item Development Plan
+\item Roadmap definition
+\item Overview Diagram
+\item Release process
+\end{itemize}
+
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item Elaborate guidelines to develop the tool chain in an agile
+  development.
+\end{itemize}
+
+\item \textbf{OpenETCS Tool chain Test Plan}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item D2.6-9
+\item D2.3-5
+\end{itemize}
+
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item Test Lab definition
+\item Integration  tests
+\item Performance tests
+\end{itemize}
+
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item Elaborate test plans of the tool chain.
+\end{itemize}
+
+\item \textbf{OpenETCS Tool chain Architecture and Design}
 
 \underline{\textit{Inputs}}
 \begin{itemize}
@@ -1174,47 +1255,33 @@ The tool chain lifecycle is depicted figure  \ref{fig:TC_lifecycle}
 \item D2.5
 \end{itemize}
 
-
 \underline{\textit{Outputs}}
 \begin{itemize}
-\item 
+\item D7.1  Report on all aspects of secondary toolin
+\item tool chain Design Specification
 \end{itemize}
 
 \underline{\textit{Tasks}}
 \begin{itemize}
-\item 
+\item Selection of the tool chain design.
+\item Definition of how the tool chain is implemented.
 \end{itemize}
 
-\item \textbf{Tool chain Architecture and Design}
+\item \textbf{OpenETCS Components Selections}
 
 \underline{\textit{Inputs}}
 \begin{itemize}
-\item 
+\item D2.3
+\item D2.4
+\item D2.5
+\item Feature requests
 \end{itemize}
 
 
 \underline{\textit{Outputs}}
 \begin{itemize}
-\item Tool chain Design Specification
-\end{itemize}
-
-\underline{\textit{Tasks}}
-\begin{itemize}
-\item Definition of how the tool chain is implemented including the definition of the interoperability mechanism
-\end{itemize}
-
-\item \textbf{Tool chain Components Selections}
-
-\underline{\textit{Inputs}}
-\begin{itemize}
-\item 
-\end{itemize}
-
-
-\underline{\textit{Outputs}}
-\begin{itemize}
-\item Primary Tool chain Evaluation: Evaluation of the models and tools against the WP2 requirements
-\item Primary Tool chain Evaluation: Evaluation of the tool platform against the WP2
+\item Primary Tools: Evaluation of the models and tools against the WP2 requirements
+\item Primary Tool platform  Evaluation: Evaluation of the tool platform against the WP2
 requirements
 \item D7.1 Report on the Final Choice of the Primary Toolchain
 \item Secondary Tools Evaluations
@@ -1229,14 +1296,18 @@ requirements
 
 \underline{\textit{Tasks}}
 \begin{itemize}
-\item 
+\item Evaluation and selection of tools according to the different
+  development phases.
+\item Selection of the tool platform for the tool integration.
+\item Evaluation and selection of tools to answer features requests.
 \end{itemize}
 
-\item \textbf{Tool chain Components Implementation and Testing}
+\item \textbf{Tool chain Components Implementation}
 
 \underline{\textit{Inputs}}
 \begin{itemize}
-\item \textcolor{red}{Test and Verification Plan}
+\item D7.1
+\item D7.2
 \end{itemize}
 
 
@@ -1244,89 +1315,133 @@ requirements
 \begin{itemize}
 \item Tools
 \item Tools User Manual 
-\item Tool chain Components Test Report
 \end{itemize}
 
 \underline{\textit{Tasks}}
 \begin{itemize}
-\item Implementation of the tool chain in particular for the need of tool interoperability
-\item Definition of how to test the tool chain
-\item Execution of the tools test cases
+\item Implementation of the tools to be integrated into the tool chain
 \end{itemize}
 
 \item \textbf{Tool chain Components Integration}
 
 \underline{\textit{Inputs}}
 \begin{itemize}
-\item 
+\item  D7.1
+\item D7.2
 \end{itemize}
 
 
 \underline{\textit{Outputs}}
 \begin{itemize}
-\item 
+\item Tool chain  Releases
+\item D7.4
+\item Release note
+\item Tool chain Guideline
 \end{itemize}
 
 \underline{\textit{Tasks}}
 \begin{itemize}
-\item 
+\item Integrate tools.
+\item Develop glue to make tools talk to each other.
+\item Define how to use the tool chain.
 \end{itemize}
 
-\item \textbf{Tool chain Validation}
+\item \textbf{OpenETCS  Component  Tests}
 
 \underline{\textit{Inputs}}
 \begin{itemize}
-\item 
+\item Test Plan
+\item Tools
+\item D7.2
 \end{itemize}
 
 
 \underline{\textit{Outputs}}
 \begin{itemize}
-\item Tool chain Validation Reports
-\item Tool chain guidelines
+\item Tools Test report
 \end{itemize}
 
 \underline{\textit{Tasks}}
 \begin{itemize}
-\item Elaborate guidelines on how to use the tool chain in an agile development
+\item Definition of how to test the tool chain
+\item Execution of the tools test cases
 \end{itemize}
 
-\item \textbf{Data Transformation}
+\item \textbf{OpenETCS Tool chain Test}
 
 \underline{\textit{Inputs}}
 \begin{itemize}
-\item 
+\item Test plan
+\item Test lab
+\item Tools
+\item Tool chain releases 
+\item D7.2
 \end{itemize}
 
 
 \underline{\textit{Outputs}}
 \begin{itemize}
-\item 
+\item Tool chain Test report
+\item Bug report
+\item Feature request
 \end{itemize}
 
 \underline{\textit{Tasks}}
 \begin{itemize}
-\item 
+\item Integration tests
+\item Functional tests
+\item Data artifacts  integrity tests
+\item Non-regression tests
+\item Performance Test
 \end{itemize}
 
 \item \textbf{Tool chain Maintenance}
 
 \underline{\textit{Inputs}}
 \begin{itemize}
-\item 
+\item Bug report
+\item Feature request
 \end{itemize}
 
 
 \underline{\textit{Outputs}}
 \begin{itemize}
-\item 
+\item New Tool Selection
+\item Bug fixes
 \end{itemize}
 
 \underline{\textit{Tasks}}
 \begin{itemize}
-\item 
+\item Report bug in tools or in the tool chain
+\item Report missing or wishing feature for the tool chain
+\end{itemize}
+
+\item \textbf{OpenETCS Tool Chain Documentation}
+
+\underline{\textit{Inputs}}
+\begin{itemize}
+\item Tool chain release
+\item Release notes
+\item Tools selection
+\end{itemize}
+
+
+\underline{\textit{Outputs}}
+\begin{itemize}
+\item Tool chain guidelines
+\item Tool chain users documentation
+\item Tool chain developer documentation
+\end{itemize}
+
+\underline{\textit{Tasks}}
+\begin{itemize}
+\item Document the development process
+\item Document the use of the tool chain
+\item Define the tool chain guidelines and best practice
+\item Report missing or wishing feature for the tool chain
 \end{itemize}
 \end{description}
+
 
 \subsection{QA Management }
 The Software quality assurance will assure that any deviations during the project and product life-cycle from plans and standards are detected, recorded, evaluated, tracked, and resolved.
