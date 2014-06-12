@@ -861,6 +861,10 @@ In OpenETCS there are 3 types of SCRUM process:
 \caption{OpenETCS Project Structure}
 \end{figure}
 
+The Scrum Team consists of a Product Owner, the Development Team, and a Scrum Master where the Scrum Master is selected by the Team.
+
+The flow below shows how the openETCS process is. 
+
 \subsubsection{Compliance with software management and organisation according to EN50128:2011}
 In principle, two of the OpenETCS project results (Software and Tool Chain) are to be CENELEC \gls{SIL} 4 certifiable. These are two of the results from WP3 and WP7. The following mechanisms, at organizational level, will help the corresponding project leader to provide evidence of compliance with chapters 5.1 and 5.2. Anyhow, evidence that requirements imposed are met will have to be provided for each of the two software projects on a project by project basis. 
 
@@ -947,15 +951,35 @@ In general long time maintenance is a key concept of these products but it can n
 \subsubsection{Life Cycle of the OpenETCS Software}
 The software development life-cycle of the OpenETCS project should be complied with CEN50128. Requirements imposed by the standard are analyzed and shown in detail in D2.2, while the software development life cycle applied in this project is described in Deliverable 2.3 and D2.4. The Test and Validation activities are presented in D4.2. The integration, the assessment and any maintenance is only defined in relation to the demonstrator implementation as no further phase can are planed in depth at this point.
 
-\textcolor{red}{Create an image only taking the left side of the below picture}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\linewidth]{./figures/WholeSafetyProcess}
-\caption[Overall safety process]{Overall safety process}
-\label{fig:SafetyProcess}
+\includegraphics[width=0.7\linewidth]{./figures/openETCS-Software-Development.png}
+\caption[Overall safety process]{Overall openETCS development Process}
+\label{fig:DevelopmentProcess}
 \end{figure}
 
 \todo[color=yellow!20, inline]{IT: necessary to cover the activities (be sure that are compliant with the Plans), the input and output of each activity and its criteria, entity in charge of each activity and quality activities}
+
+\textcolor{red}{Check the coherence in all the deliverables where the openETCS life cycle is explained. There are some incoherences between them related to the phases. Analyse during telco what the final version will be.}
+
+\textcolor{red}{D4.2.3}
+\begin{table}[htbp]
+  \centering
+  
+  \caption{Phases openETCS software development process}
+\begin{tabular}{|p{1cm}|p{2cm}|p{7.5cm}|p{2.5cm}|}
+\hline \textbf{Phase} & \textbf{Name} & \textbf{Description} & \textbf{Main Tool component} \\ 
+\hline P1 & Software Requirement Phase & Requirement input documents converted to a ReqIF format and informally analyses. The analysis specifies relationships between requirements and revises parts of the requirements to obtain a detail and atomic abstraction level usable for moralization. To support thus the requirements are categorized and grouped. & ProR \\ 
+\hline P2 & Software Architecture Modeling Phase & Building a SysML based on the informal analysis using the categorization of requirements. The architecture model focuses on functional blocks and data flows. & SysML Papyrus \\ 
+\hline P3 & Software Behavior Modeling Phase & Building the SCADE model for the separated basic functional blocks. The SCADE model describes the detailed behavior for the function using the data flows. & SCADE Suite \\ 
+\hline P4 & Code Generation Phase & Based on the SCADE Behavior Model C code will be automatically generated. This C code is than compiled to executable code which runs on the EVC. & SCADE Suite + C Code compiler\\
+\hline P5 & Formal Validation phase & Using test models and model checking techniques, to validate the correct model behavior.  & Various tools \\ 
+\hline 
+\end{tabular} 
+\label{tab:DevelopmentPhases}
+\end{table}
+
+\textcolor{red}{D2.3, V\&V Plan, WP7 Development Plan}
 
 \begin{description}
 \item \textbf{System Phase: SSRS}
@@ -1175,7 +1199,7 @@ The tool chain lifecycle is depicted figure  \ref{fig:TC_lifecycle}
   \label{fig:TC_lifecycle}
 \end{figure}
 
-\todo[color=yellow!20, inline]{IT: necessary to cover the activities (be sure that are compliant with the Plans), the input and output of each activity and its criteria, entity in charge of each activity and quality activities}
+At following, a more detailed overview of the toolchain life cycle is provided. Each life cycle stage includes its input, output and the activities to be done.
 
 \begin{description}
 \item \textbf{OpenETCS Software Requirements}
@@ -1199,6 +1223,7 @@ The tool chain lifecycle is depicted figure  \ref{fig:TC_lifecycle}
 \item Specific requirements for the selection and the development of
   tools and the tool chain development.
 \end{itemize}
+
 
 \item \textbf{OpenETCS Development Planning}
 
@@ -1571,9 +1596,8 @@ Following CENELEC criteria, each tool belongs to one of the following classes: T
 %The document D7.3 provides a description of the Tool Chain architecture, jointly with a description of the constituent tools.
 
 \subsubsection{Selected Tools}
-\textcolor{red}{See D7.1}
+Nowdays, by looking different aspects of the possible tools for the toochain like the strengths, weaknesses, opportunities, features and threats, the selection of the below tools is done.
 
-Notes:
 \begin{itemize}
 \item Eclipse (eclipse Kepler SR1 IDE): tool platform (Eclipse with the modeling framework (EMF))
 \item Papyrus/SysML to cover the highest level of the OpenETCS V cycle
@@ -1583,8 +1607,7 @@ Notes:
 \item Git: configuration management
 \end{itemize}
 
-
-\textcolor{red}{What is the current status of this? SYSML$\backslash$EFS$\backslash$Eclipse Polarsys and SYSML$\backslash$Classical B for final decision on OpenETCS Tools Chain not late than January 2014}
+Decision has been made to start WP3 and WP4 activities based on SysML/Scade basis, which are involved in the toolchain. However, work to define an alternative fully open source chain to provide SIL4 software is encouraged. On going work is thus provided around SysML/ Classical B.
 
 \subsubsection{Metrics Covered by tools}
 
@@ -1633,6 +1656,7 @@ SCADE & Software level description\\\hline
 \caption{T3 Tools}
 \end{table}
 
+\todo[color=yellow!20, inline]{IT: analyse with VnV actors the tools classifications taking into account the feedback of issue 87 of governance}
 
 \subsection{Quality Control and Monitoring Activities}
 The monitoring activities of the selected Tools, Methods and Techniques implicates a development of criteria, reviews and audits to determine if the overall tools and methods \& Techniques selection and implementation is correctly develop and maintain. As well as assuring the compliance with the CENELEC standard.
@@ -1889,7 +1913,6 @@ Cyril Cornu
 \end{center}
 
 
-
 \subsection{Documentation Structure within the development process of the openETCS Tools chain}
 
 CENELEC Standard requires that all the off-line support tools have a manual as  minimun required documentation. The Standard also established that tools in classes T2 and T3 should have documentation that defines the behaviour of the tools together with instructions and constrains on its use. This documentation should be a justification for use, a potencial failures identification and the ways to avoid or mitigate them, manuals and use restrictions. It is also required that tools to be assessed with the aim to determine the level of reliance that shall be placed on the tool, and potential failure mechanisms that may affect the executable software (T3 only).
@@ -1940,9 +1963,9 @@ Hazard and Risk Analysis Methodology (D4.2.3)
 
 Dissemination Plan (D6.1)
 
-\textcolor{red}{Tool Chain Development Plan} 
+Tool chain Qualification Process Description
 
-\textcolor{red}{Tool chain Qualification Process Description} &
+&
 Izaskun de la Torre
 
 Todo
@@ -1955,119 +1978,125 @@ Jan Welte
 
 Stefan Rieger
 
-Cecile Braunstein and Jan Peleska
-
 Cecile Braunstein, Jan Peleska and Stefan Rieger
 \\ \hline
-Software Requirements &
+OpenETCS Software Requirements &
 \centering \gls{HR} &
-Software Requirements Specification
+Software Requirements Specification (D2.6\_9 Requirements for openETCS)
 
-Software Requirements Test Specification
+D2.3 Process Definiition
 
-Software Requirements Verification Report &
+D2.4 Methods Definition
+
+D2.5 Description of ETCS using those methodologies
+
+Requirements Modeling for SSRS Activities with ProR
+ &
+Sylvain Baro and Jan Welte
+
+Marielle Petit-Doche and Matthias Güdemann
+
+Marielle Petit-Doche, David Mentre and Matthias Güdemann
+
+David Mentre, Stanislas Pinte, Guillaume Pottier
+
+Michael Jastram
 \\\hline
-Architecture and design &
+OpenETCS Development Planning &
 \centering \gls{HR} &
+Tool Chain Development Plan 
 
-\textcolor{red}{Requirements Modeling for SSRS Activities with ProR -Michael Jastram-}
+Roadmap definition 
 
-\textcolor{red}{Tool chain Design Specification- Cecile Braunstein and Jan Peleska-}
+Release Process &
+Cecile Braunstein and Jan Peleska
 
-Software Architecture Specification
+Cecile Braunstein
 
-Software Design Specification
-
-Software Interface Specification
- 
-Software Integration Test Specification
-
-\sout{Software/Hardware Integration Test Specification}
- 
-Software Architecture and design verification report &
+ToDo
 \\\hline
-Component Design &
+OpenETCS Tool chain Test Plan &
 \centering \gls{HR} &
-Software Component design specification
+Tool Chain Test Plans 
 
-Software Component Test Specification
-
-Software Component design verification report &
+Test Lab definition
+&
+ToDo
 \\\hline
-Component Implementation and Testing &
+OpenETCS tool chain Architecture and design &
 \centering \gls{HR} &
-Software source code and supporting documentation
-
-Software source code verification report
-
-Software Component Test Report &
+Tool chain Design Specification
+&
+Cecile Braunstein and Jan Peleska
 \\\hline
-Integration &
+OpenETCS Components Selections &
 \centering \gls{HR} &
-Software Integration Test Report
+D7.1 Report on the Final Choice of the Primary Toolchain
 
-\sout{Software/Hardware Integration Test Report}
+Evaluation of the models and tools against the WP2 requirements 
 
-Software Integration Verification Report &
+Evaluation of the tool platform against the WP2
+requirements
+
+D7.2 Report on all aspects of secondary tooling
+
+Secondary Tools Evaluations (O7-2-1 Management, Safety, V\&V, Transformation)
+&
+Michael Jastram
+
+Marielle Petit-Doche
+
+Cecile Braunstein
+
+Marielle Petit-Doche
+
+Marielle Petit-Doche
 \\\hline
-Overall Software Testing/Final validation &
+Tool chain Components Implementation &
 \centering \gls{HR} &
-Overall Software Test Report
+Tools and supporting documentation (User Manual, developer documentation)
+ &
+\\\hline
+OpenETCS Component Tests &
+\centering \gls{HR} &
+Tools Test Reports
+ &
+\\\hline
+Tool chain Components Integration &
+\centering \gls{HR} &
+Tool chain Releases
 
-Software Validation Report
+Tool chain Release note
+
+Tool chain Guideline
+
+Tool chain Integration Test Report
+&
+\\\hline
+Overall OpenETCS Tool chain Test Testing/Final validation &
+\centering \gls{HR} &
+Overall Tool chain Test report
+
+Tool chain Validation Report
 
 Tools Validation Report
  
 Release Note &
 \\\hline
-Systems configured by Application Data/ algorithms &
+Tool chain Maintenance &
 \centering \gls{HR} &
-Application Requirements Specification
+Tool chain Maintenance Plan
 
-Application Preparation Plan
+Tool chain Change Records
 
-Application Test Specification
- 
-Application Architecture and Design
- 
-Application Preparation Verification Report
- 
-Application Test Report
+Tool chain Maintenance Records
 
-Source Code of Application Data/Algorithms
- 
-Application Data/Algorithms Verification Report &
-\\\hline
-Software Deployment &
-\centering \gls{HR} &
-Software Release and Deployment Plan
-
-Software Deployment Manual
-
-Release Notes
- 
-Deployment Records
-
-Deployment Verification Report &
-\\\hline
-Software Maintenance &
-\centering \gls{HR} &
-Software Maintenance Plan
-
-Software Change Records
-
-Software Maintenance Records
- 
-Software Maintenance Verification Report &
-\\\hline
-Software Assessment &
-\centering \gls{HR} &
-Software Assessment Plan
- 
-Software Assessment Report &
+Tool chain Maintenance Verification Report
+&
 \\\hline
 \end{longtable}
 \end{center}
+
 
 \subsection{Quality Control and Monitoring Activities}
 The monitoring activities of the Documentation Structure control involves a development of  criteria, reviews and documentation audits to determine if the overall structure of the documentation is correctly followed. As well as assuring the compliance with CENELEC standard for a SIL 4 product.
