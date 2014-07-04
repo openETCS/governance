@@ -1,0 +1,175 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS Scrum Meeting Minutes\end{center}}
+\section{Meeting Organisation}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & Weekly Scrum of Scrums\\
+Organised by & Bernd Hekele\\
+Minutes by & Bernd Hekele\\
+When & July 4th, 2014, 10:00 - 11:30\\
+Location & Telco and Goto-Meeting\\
+%9:30-10:00 and 
+%\hline
+\end{supertabular}
+
+\renewcommand{\arraystretch}{1.0}
+\section{Meeting:}
+
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{Slot} &  \textbf{Called By} & \textbf{Workpackage} \\
+\hline  
+%10:00 - 10:15 & Stefan Rieger & WP6: Dissemination \\\hline  
+10:15 - 10:30 & Nicolas van Landeghem & WP5: Demonstration \\\hline  
+10:30 - 10:45 & Marc Behrens & WP4: Verification \& Validation \\\hline  
+10:45 - 11:00 & Fausto Cocchetti & WP3: Modelling \\\hline  
+11:00 - 11:15 & Michael Jastram & WP7: Toolchain \\\hline
+%11:15 - 11:30 & Baseliyos Jacob & WP2: API Requirements \\\hline  
+11:15 - 11:30 & Klaus-R\"udiger Hase & PMB: Project Management Board \\\hline  
+\end{tabular}
+
+\section{Participants in Meeting:}
+
+\begin{tabular}{|l|c|c|c||c|c|c||c|c|c|}
+\hline
+\textbf{Participant} & \textbf{WP6} &  \textbf{WP5} & \textbf{WP4}&  \textbf{WP3} & \textbf{WP7}&  \textbf{PMB} \\\hline
+% Name                  6   5   4   3   7   P
+Alexander Nitsch     &   & x & x & x & x & x \\\hline  
+%Alexander Stante     &   &   &   &   & x &   \\\hline 
+%Baseliyos Jacob      &   & x & x & x & x & x \\\hline 
+Bernd Hekele         &   & x & x & x & x & x \\\hline
+Cecile Braunstein    &   &   & x & x & x &   \\\hline
+%Christian Giraud     &   &   &   &   &   &   \\\hline
+Christian Stahl      &   &   &   & x &   &   \\\hline
+%David Mentre         &   &   &   &   &   &   \\\hline
+Fausto Cochetti      &   &   & x & x & x &   \\\hline
+%Hardi Hungar         &   &   & x &   &   &   \\\hline
+%Huu-Nghia Nguyen     &   &   &   &   &   &   \\\hline
+%Izaskun de la Torre  &   &   &   & x & x &   \\\hline
+Jan Welte            &   &   & x & x & x & x \\\hline
+%Jan Welvaarts        &   &   &   & x &   &   \\\hline
+%Jens Gerlach         &   &   & x &   &   &   \\\hline
+%Jonas Helming        &   &   &   &   &   &   \\\hline
+%Klaus-R\"udiger Hase &   & x & x & x & x & x \\\hline
+%Laurent Ferier       &   &   &   & x & x & x \\\hline
+%Lukasz Fronc         &   &   &   &   &   &   \\\hline
+Marc Behrens         &   & x & x & x & x & x \\\hline
+Marielle Petit-Doche &   & x & x & x & x & x \\\hline
+%Mathilde Arnaud      &   &   &   &   &   &   \\\hline
+%Matthieu Perin       &   &   &   &   & x &   \\\hline
+Michael Jastram      &   & x & x & x & x & x \\\hline
+Nicolas van Landeghem&   & x & x &   &   &   \\\hline
+Peter Mahlmann       &   & x & x & x & x & x \\\hline
+Peyman Farhangi      &   & x & x & x & x & x \\\hline
+Pierre-Yves Le Morvan&   & x & x & x & x & x \\\hline
+%Silvano dal Zilio    &   &   & x & x & x & x \\\hline
+Stefan Rieger        &   & x & x & x & x & x \\\hline
+%Uwe Steinke          &   & x & x & x & x & x \\\hline
+Veronique Gontier    &   & x & x & x & x & x \\\hline
+Vincent Nuhaan       &   &   &   & x &   &   \\\hline
+% Name                  6   5   4   3   7   P  \\\hline
+\end{tabular}
+
+%\line(1,0){440}
+
+\section{Scrum Meetings}
+
+\subsection{WP6: Dissemination}
+
+No meeting this week.
+
+\subsection{WP5: Demonstration}
+\begin{itemize}
+\item Update on Activities\\
+
+D5.1: The review of the functional specification is still ongoing. The review period will by extended by a few days in order to catch more feedback. \url{https://github.com/openETCS/demonstrator/issues/8}.
+
+M5.1 and M5.3: the binaries for the demonstrator are now availble. The Guideline how to install is part of the deployment guideline and is available on Github. Also the testenvironment userguide is in review. \url{https://github.com/openETCS/demonstrator/issues/12}.
+
+On behalf of the toolchain Stefan will review the documents. The handling of the demonstrator in the context of the tool-chain was discussed. The need to cover the demonstrator by the tool-chain was seen as an opportunity. Tool-chain will analyse the situation and give feedback to WP5.
+
+\end{itemize}
+
+
+\subsection{WP4: Validation \& Verification}
+\begin{itemize}
+\item actual activities\\
+LAAS and INPT have uploaded their VnV user story which can be found on github.
+
+The  Telco On Testing took place going into details of braking curves calculation and a scenario for ceiling speed monitoring.
+
+The current state of the scrum work distribution list found here: \url{https://github.com/openETCS/validation/blob/master/DescriptionOfWork/openETCS_testmodel_scrum_workdistribution.ods?raw=true}
+
+\end{itemize}
+
+\subsection{WP3: Modelling}
+
+\begin{itemize}
+\item Activities\\
+The document on Train-Position by Jan was shortly discussed. Vincent has completed his tool to calculate the positions according to the document. The tool is based on Matlab. Vincent will put an executable on Github. WP4 is interested in the tool as well and will discuss how to use and publish it.
+
+\item Updated Version of the Alstom API document announced\\
+Alstom announced  to release the version 1.3 of the API document soon. In the docuemnt accepted findings of the review meeting are to be closed.
+
+\item New Version of SRS available
+Version 3.4 of the SRS subset 26 has been made available by ERA (besides other document updates. The document does not have a legal mstatus yet, but it i recommended to be used.
+\url{http://www.era.europa.eu/Core-Activities/ERTMS/Pages/Recommendations.aspx}
+
+\end{itemize}
+
+\subsection{WP7: Toolchain}
+
+\begin{itemize}
+\item Activities\\
+The current sprint is ending today. 
+The backlog and the resource plan have been updated.
+
+The first version of the openETCS PDF Handbook is now available \url{https://github.com/openETCS/toolchain/wiki/Simple-Scrum-Process}.
+
+The trainings could not be staffed with trainers. Partners are asked to support.
+\end{itemize}
+
+\subsection{WP2: Requirements}
+
+%\begin{itemize}
+
+No meeting this week.
+
+%\end{itemize}
+
+\subsection{PMB: Project Management Board}
+\begin{itemize}
+\item a.o.b.\\
+The dissemination document is due. Contribution from partners are collected now.
+
+ITEA has updated the form for the regular reports. Peter will check the form and will inform partners.
+
+\end{itemize}
+
+\section{Notes}
+\begin{itemize}
+
+\item Note: Location of Meeting Minutes\\
+You can find these minutes here: \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/Minutes/Minute_20140704.pdf}. Please, use the issue tracker for findings with the minutes.
+
+\end{itemize}
+
+\end{document}
