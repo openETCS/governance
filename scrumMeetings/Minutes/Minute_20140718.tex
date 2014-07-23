@@ -1,0 +1,183 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS Scrum Meeting Minutes\end{center}}
+\section{Meeting Organisation}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & Weekly Scrum of Scrums\\
+Organised by & Bernd Hekele\\
+Minutes by & Bernd Hekele\\
+When & July 18th, 2014, 10:00 - 11:45\\
+Location & Telco and Goto-Meeting\\
+%9:30-10:00 and 
+%\hline
+\end{supertabular}
+
+\renewcommand{\arraystretch}{1.0}
+\section{Meeting:}
+
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{Slot} &  \textbf{Called By} & \textbf{Workpackage} \\
+\hline  
+10:00 - 10:15 & Stefan Rieger & WP6: Dissemination \\\hline  
+10:15 - 10:30 & Nicolas van Landeghem & WP5: Demonstration \\\hline  
+10:30 - 10:45 & Marc Behrens & WP4: Verification \& Validation \\\hline  
+10:45 - 11:00 & Fausto Cochetti & WP3: Modelling \\\hline  
+%10:45 - 11:00 & Bernd Hekele & WP3: Modelling \\\hline  
+11:00 - 11:15 & Michael Jastram & WP7: Toolchain \\\hline
+%11:15 - 11:30 & Baseliyos Jacob & WP2: API Requirements \\\hline  
+11:15 - 11:45 & Klaus-R\"udiger Hase & PMB: Project Management Board \\\hline  
+%11:15 - 11:45 & Bernd Hekele & PMB: Project Management Board \\\hline  
+\end{tabular}
+
+\section{Participants in Meeting:}
+
+\begin{tabular}{|l|c|c|c||c|c|c||c|c|c|}
+\hline
+\textbf{Participant} & \textbf{WP6} &  \textbf{WP5} & \textbf{WP4}&  \textbf{WP3} & \textbf{WP7}&  \textbf{PMB} \\\hline
+% Name                  6   5   4   3   7   P
+Alexander Nitsch     & x & x & x & x & x & x \\\hline  
+%Alexander Stante     &   &   &   &   & x &   \\\hline 
+Baseliyos Jacob      & x & x & x & x & x & x \\\hline 
+%Bernd Gonska         &   &   & x &   &   &   \\\hline
+Bernd Hekele         & x & x & x & x & x & x \\\hline
+Cecile Braunstein    &   &   &   &   & x &   \\\hline
+%Christian Giraud     &   &   &   &   &   &   \\\hline
+Christian Stahl      &   &   &   & x &   &   \\\hline
+%David Mentre         &   &   &   &   &   &   \\\hline
+Fausto Cochetti      &   &   &   & x &   &   \\\hline
+Hardi Hungar         &   &   & x &   &   &   \\\hline
+Huu-Nghia Nguyen     & x & x & x & x & x &   \\\hline
+%Izaskun de la Torre  &   &   &   & x & x &   \\\hline
+Jan Welte            & x & x & x & x & x & x \\\hline
+Jan Welvaarts        & x & x & x & x &   &   \\\hline
+%Jens Gerlach         &   &   & x &   &   &   \\\hline
+%Jonas Helming        &   &   &   &   &   &   \\\hline
+Klaus-R\"udiger Hase & x & x & x & x & x & x \\\hline
+%Laurent Ferier       &   &   &   & x & x & x \\\hline
+%Lukasz Fronc         &   &   &   &   &   &   \\\hline
+Marc Behrens         &   & x & x & x & x & x \\\hline
+Marielle Petit-Doche &   & x & x & x & x & x \\\hline
+%Mathilde Arnaud      &   &   &   &   &   &   \\\hline
+Matthieu Perin       &   &   & x & x & x & x \\\hline
+Michael Jastram      &   &   &   & x & x & x \\\hline
+Nicolas van Landeghem& x & x & x & x & x & x \\\hline
+%Peter Mahlmann       &   & x & x & x & x & x \\\hline
+%Peyman Farhangi      &   & x & x & x & x & x \\\hline
+Pierre-Yves Le Morvan&   & x & x & x & x & x \\\hline
+%Silvano dal Zilio    &   &   & x & x & x & x \\\hline
+Stefan Rieger        & x & x & x & x & x & x \\\hline
+Uwe Steinke          & x & x & x & x & x & x \\\hline
+Veronique Gontier    & x & x & x & x & x & x \\\hline
+%Vincent Nuhaan       &   &   &   & x &   &   \\\hline
+% Name                  6   5   4   3   7   P  \\\hline
+\end{tabular}
+
+%\line(1,0){440}
+
+\section{Scrum Meetings}
+
+\subsection{WP6: Dissemination}
+
+DB announced they would most likely not present openETCS at Innotrans. The decision is driven by marketing strategy. The presentation reflecting the situation is available here: \url{https://github.com/openETCS/Dissemination/blob/master/WP6_Presentations/2014-07-18_InnoTrans_Preparation.pdf}. 
+
+Other members of openETCS or the openIT4SR project are kindly asked to step in. 
+
+\subsection{WP5: Demonstration}
+\begin{itemize}
+\item Update on Activities\\
+
+ERSA started to work on an architecture model of the EVC and an M5.1 library. This library is linked to the API activities.
+
+\end{itemize}
+
+
+\subsection{WP4: Validation \& Verification}
+\begin{itemize}
+\item actual activities\\
+The scrum-of-scrum has been established in the WP4: \url{https://github.com/openETCS/validation/wiki/Agile-Verification-and-Validation}. 
+
+A Braunschweig-small-cluster meeting took place at Siemens. Focus of the meeting was on the OBU-Testcase activities.
+
+\end{itemize}
+
+\subsection{WP3: Modelling}
+
+\begin{itemize}
+\item Activities\\
+First feedback has been received from Veronique Gontier for the Document Train Position and Locations document v0.0.16 from NS/ LR (author Jan Welwaarts, reviewer Vincent Nuhaan) 
+
+The API document v 1.3 announced for update on github.
+
+The site for next WP3 Workshop is under discussion. (Pierre-Jean Ginoux SNCF will be invited).
+
+If you plan to participate, please make use of this doodle: \url{http://doodle.com/cm3kpzi9smecrpcz}
+
+The document on database by Chrstian Giraud is available in version 9. It has been distributed via mail.
+
+We plan to take the next Tuesday meeting (22/07, (proposed gotomeeting from 9:00 to 10:00) for a discussion on architecture.
+
+Vincents tool for calculating train positions is now on github: \url{https://github.com/openETCS/SRS-Analysis/blob/master/System%20Analysis/WorkingRepository/GroupDB/Train%20Position%20and%20Locations.zip}.
+
+Upcoming events: the modelling team will meet in Braunschweig again August 5th. 
+
+\end{itemize}
+
+\subsection{WP7: Toolchain}
+
+\begin{itemize}
+\item Activities\\
+The requirements on the data dictionary have been discussed in detail. The feature will be taken as a prototype for introducing the Scrum-Of-Scrum process.
+
+Progress is updated in the sprint activity backlog.
+
+\end{itemize}
+
+\subsection{WP2: Requirements}
+
+%\begin{itemize}
+
+No meeting this week.
+
+%\end{itemize}
+
+\subsection{PMB: Project Management Board}
+\begin{itemize}
+\item a.o.b.\\
+For the update on the openETCS at Innotrans refer to the WP6 section of the minutes.
+
+First comments to the Charta are now being posted. \url{https://github.com/openETCS/Charta/issues/2}. The charta-review will be continued after Klaus-R\"udigers summer-holidays ended. 
+
+The charta will be topic at a PCC (to be scheduled to take place after the holiday season is ended.
+
+The proceeding with the scrum-of-scrum has been discussed in a separate meeting. The process will be prototyped on behalf of the feature dataDictionary.
+
+\end{itemize}
+
+\section{Notes}
+\begin{itemize}
+
+\item Note: Location of Meeting Minutes\\
+You can find these minutes here: \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/Minutes/Minute_20140718.pdf}. Please, use the issue tracker for findings with the minutes.
+
+\end{itemize}
+
+\end{document}
