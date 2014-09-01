@@ -1,0 +1,138 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS Scrum Meeting Minutes\end{center}}
+\section{Meeting Organisation}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & Weekly Scrum of Scrums\\
+Organised by & Peter Mahlmann\\
+Minutes by & Peter Mahlmann\\
+When & August, 29th, 2014, 10:00 - 11:45\\
+Location & Telco and Goto-Meeting\\
+%9:30-10:00 and 
+%\hline
+\end{supertabular}
+
+\renewcommand{\arraystretch}{1.0}
+\section{Meeting:}
+
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{Slot} &  \textbf{Called By} & \textbf{Workpackage} \\
+\hline  
+%10:00 - 10:15 & Stefan Rieger & WP6: Dissemination \\\hline  
+%10:15 - 10:30 & Nicolas van Landeghem & WP5: Demonstration \\\hline  
+10:30 - 11:00 & Marc Behrens & WP4: Verification \& Validation \\\hline  
+%10:45 - 11:00 & Fausto Cochetti & WP3: Modelling \\\hline  
+10:45 - 11:00 & Peter Mahlmann & WP3: Modelling \\\hline  
+11:00 - 11:15 & Michael Jastram & WP7: Toolchain \\\hline
+%11:15 - 11:30 & Baseliyos Jacob & WP2: API Requirements \\\hline  
+11:15 - 11:45 & Klaus-R\"udiger Hase & PMB: Project Management Board \\\hline  
+%11:15 - 11:45 & Bernd Hekele & PMB: Project Management Board \\\hline  
+\end{tabular}
+
+\section{Participants in Meeting:}
+
+\begin{tabular}{|l|c|c|c||c|c|c||c|c|c|}
+\hline
+\textbf{Participant} & \textbf{WP6} &  \textbf{WP5} & \textbf{WP4}&  \textbf{WP3} & \textbf{WP7}&  \textbf{PMB} \\\hline
+% Name                  6   5   4   3   7   P
+%Alexander Nitsch     & x & x & x & x & x & x \\\hline  
+%Alexander Stante     &   &   &   &   & x &   \\\hline 
+Baseliyos Jacob      &   &   &   &  &  & x \\\hline 
+%Bernd Gonska         &   &   & x &   &   &   \\\hline
+%Bernd Hekele         & x &   & x & x & x & x \\\hline
+Benjamin Beichler    &  &   & x & x & x &  \\\hline
+%Cecile Braunstein    &   &   & x & x & x &   \\\hline
+%Christian Giraud     &   &   &   &   &   &   \\\hline
+%Christian Stahl      &   &   &   & x &   &   \\\hline
+%David Mentre         &   &   &   &   &   &   \\\hline
+%Fausto Cochetti      &   &   &   & x & x & x \\\hline
+Hardi Hungar         &   &   & x &  x & x  & x  \\\hline
+%Jos Holtzer         & x &   &   &   &   &   \\\hline
+%Huu-Nghia Nguyen     & x &   & x & x & x &   \\\hline
+%Izaskun de la Torre  &   &   &   & x & x &   \\\hline
+Jan Welte            &   &  & x & x & x & x \\\hline
+Jan Welvaarts        &  &  & x & x  & &   \\\hline
+%Jens Gerlach         & x & x & x & x &   &   \\\hline
+%Jonas Helming        &   &   &   &   &   &   \\\hline
+Klaus-R\"udiger Hase &  &   &  &  &  & x \\\hline
+%Laurent Ferier       &   &   &   & x & x & x \\\hline
+%Lukasz Fronc         &   &   &   &   & x & x \\\hline
+%Marc Behrens         &   &  & x &  & x &  \\\hline
+Marielle Petit-Doche &   &  & x & x & x & x \\\hline
+%Mathilde Arnaud      &   &   &   &   &   &   \\\hline
+%Matthieu Perin       &   &   & x & x & x & x \\\hline
+Michael Jastram      &   &   & x  &  & x & x \\\hline
+%Nicolas van Landeghem& x & x & x & x & x & x \\\hline
+Peter Mahlmann       &   &   & x & x & x & x \\\hline
+%Peyman Farhangi      &   &   & x &   & x & x \\\hline
+Pierre-Yves Le Morvan&   &  & x & x & x & x \\\hline
+Silvano dal Zilio    &   &   & x & x & x &  \\\hline
+%Stefan Rieger        & x & x & x & x & x & x \\\hline
+Uwe Steinke          &  &  & x & x & x & x \\\hline
+Veronique Gontier    &  &  & x & x & x & x \\\hline
+Vincent Nuhaan       &   &   & x & x &   &   \\\hline
+% Name                  6   5   4   3   7   P  \\\hline
+\end{tabular}
+
+%\line(1,0){440}
+
+\section{Scrum Meetings}
+
+
+
+\subsection{WP4: Validation \& Verification}
+\begin{itemize}
+\item The calculate train position document is currently part of V\& V activities. In particular the document is currently under review by DLR.
+\item The follow-up meeting of the internal assessment with AEbt has been scheduled for September 16th in Braunschweig, Germany. Goal of the workshop is to discuss CENELEC compliance of the openETCS process. Participants will be key contacts from WP1, WP3, WP4, and WP7.
+
+\end{itemize}
+
+\subsection{WP3: Modelling}
+\begin{itemize}
+\item The work on the openETCS API is not yet finished due to the holiday season.
+\item Feedback on the documents about calculating the train position by DLR is expected soon.
+\item SQS will not be able to attend the WP3 workshop in September in Brussels.
+\item SQS needs training in SysML in order to contribute. Here, it will be tried to organize this training internally at SQS.
+\end{itemize}
+
+\subsection{WP7: Toolchain}
+
+\begin{itemize}
+\item Sprint 18 has been extended and will end on September 19.
+\item The test plan has been reviewed and a revised version will be available on Sebptember 5.
+\item The problems concerning the target platform and integration of Scade libraries will be solved within the next weeks.
+\end{itemize}
+
+\subsection{PMB: Project Management Board}
+\begin{itemize}
+\item Discussion of sections 5 "Plus/minus report" and 6 "Risk Analysis" of the ITEA PPR 2014 S1. A revised version will be prepared by Peter Mahlmann. The PPR will be submitted to ITEA on September 5.
+\end{itemize}
+
+\section{Notes}
+\begin{itemize}
+
+\item Note: Location of Meeting Minutes\\
+You can find these minutes here: \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/Minutes/Minute_20140829.pdf}. Please, use the issue tracker for findings with the minutes.
+
+\end{itemize}
+
+\end{document}
