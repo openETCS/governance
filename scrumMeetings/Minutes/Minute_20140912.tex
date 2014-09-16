@@ -1,0 +1,184 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS Scrum Meeting Minutes\end{center}}
+\section{Meeting Organisation}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & Weekly Scrum of Scrums\\
+Organised by &Klaus-R\"udiger Hase\\
+Minutes by & Bernd Hekele\\
+When & September, 5th, 2014, 10:15 - 11:45\\
+Location & Telco and Goto-Meeting\\
+%9:30-10:00 and 
+%\hline
+\end{supertabular}
+
+\renewcommand{\arraystretch}{1.0}
+\section{Meeting:}
+
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{Slot} &  \textbf{Called By} & \textbf{Workpackage} \\
+\hline  
+10:00 - 10:15 & Stefan Rieger & WP6: Dissemination \\\hline  
+%10:15 - 10:30 & Nicolas van Landeghem & WP5: Demonstration \\\hline  
+10:30 - 11:00 & Marc Behrens & WP4: Verification \& Validation \\\hline  
+10:45 - 11:00 & Fausto Cochetti & WP3: Modelling \\\hline  
+%10:45 - 11:00 & Peter Mahlmann & WP3: Modelling \\\hline  
+11:00 - 11:15 & Michael Jastram & WP7: Toolchain \\\hline
+%11:15 - 11:30 & Baseliyos Jacob & WP2: API Requirements \\\hline  
+11:15 - 11:45 & Klaus-R\"udiger Hase & PMB: Project Management Board \\\hline  
+%11:15 - 11:45 & Bernd Hekele & PMB: Project Management Board \\\hline  
+\end{tabular}
+
+\section{Participants in Meeting:}
+
+\begin{tabular}{|l|c|c|c||c|c|c||c|c|c|}
+\hline
+\textbf{Participant} & \textbf{WP6} &  \textbf{WP5} & \textbf{WP4}&  \textbf{WP3} & \textbf{WP7}&  \textbf{PMB} \\\hline
+% Name                  6   5   4   3   7   P
+%Alexander Nitsch     & x & x & x & x & x & x \\\hline  
+Alexander Stante     &   &   &   &   & x &   \\\hline 
+Baseliyos Jacob      & x &   & x & x & x &   \\\hline 
+%Bernd Gonska         &   &   & x &   &   &   \\\hline
+Bernd Hekele         & x &   & x & x & x & x \\\hline
+%Benjamin Beichler    &   &   & x & x & x &   \\\hline
+%Cecile Braunstein    &   &   & x & x & x &   \\\hline
+%Christian Giraud     &   &   &   &   &   &   \\\hline
+%Christian Stahl      &   &   &   & x &   &   \\\hline
+%David Mentre         &   &   &   &   &   &   \\\hline
+Fausto Cochetti      &   &   &   & x & x &   \\\hline
+Hardi Hungar         &   &   &   &   & x &   \\\hline
+%Huu-Nghia Nguyen     & x &   & x & x & x &   \\\hline
+%Ion I. Uribe         &   &   & x &   &   &   \\\hline
+%Izaskun de la Torre  &   &   &   & x & x &   \\\hline
+Jan Welte            & x &   & x & x & x & x \\\hline
+%Jakob Gaertner       &   &   &   & x & x &   \\\hline
+%Jan Welvaarts        &   &   &   & x &   &   \\\hline
+Jaime Paniagua       &   &   & x &   &   &   \\\hline
+%Jens Gerlach         & x & x & x & x &   &   \\\hline
+%Jonas Helming        &   &   &   &   &   &   \\\hline
+Jos Holtzer          & x &   &   &   &   &   \\\hline
+Karsten Falk         &   &   & x & x &   &   \\\hline
+%Klaus-R\"udiger Hase &  & x & x & x & x & x \\\hline
+%Laurent Ferier       &   &   &   & x & x & x \\\hline
+%Lukasz Fronc         &   &   &   &   & x & x \\\hline
+Marc Behrens         &   &   & x & x & x & x \\\hline
+Marielle Petit-Doche & x &   & x & x & x & x \\\hline
+%Mathilde Arnaud      &   &   &   &   &   &   \\\hline
+%Matthieu Perin       &   &   & x & x & x & x \\\hline
+Michael Jastram      &   &   & x & x & x & x \\\hline
+%Nicolas van Landeghem&   & x &   &   &   &   \\\hline
+%Peter Mahlmann       &   & x & x & x & x & x \\\hline
+Peyman Farhangi      &   &   &   & x &   &   \\\hline
+Pierre-Yves Le Morvan&   &  & x & x & x & x \\\hline
+%Silvano dal Zilio    &   &   & x & x & x &  \\\hline
+Stefan Rieger        & x &   & x & x & x & x \\\hline
+Uwe Steinke          & x &   & x & x & x & x \\\hline
+%Veronique Gontier    &   &   & x & x & x & x \\\hline
+Vincent Nuhaan       &   &   &   & x &   &   \\\hline
+% Name                  6   5   4   3   7   P  \\\hline
+\end{tabular}
+
+%\line(1,0){440}
+
+\section{Scrum Meetings}
+
+\subsection{WP6: Dissemination}
+\begin{itemize}
+\item openETCS@Innotrans\\
+The openETCS@Innotrans preparation is proceeding as planned. No issues open. The invitation to externals to visit the workshop has been sent. The electronic copy of the flyer is available here: \url{https://github.com/openETCS/Dissemination/blob/master/InnoTrans%202014/InvitationFlyer.pdf?raw=true}\\
+A poster is shown e.g., at the ERSA booth.
+
+\item openETCS Publications\\
+Please, report your openETCS publications for the upcoming report.
+
+\end{itemize}
+
+\subsection{WP5: Demonstration}
+%\begin{itemize}
+No meeting.
+%\end{itemize}
+
+\subsection{WP4: Validation \& Verification}
+\begin{itemize}
+\item Review of Calculate Train Position document\\
+The verification results to the train positioning design has been done by DLR (Bernd Gonska). It has been uploaded linked to the Issue \url{https://github.com/openETCS/validation/issues/227}.
+
+\item Activities\\
+The last week Wednesday the Telco On Testing took place on closing issues of the Backlog to D4.2.x.
+
+The next telco on testing will focus on the WP3 Brussels workshop.
+
+\item The follow-up meeting of the internal assessment with AEbt\\
+has been re-scheduled in order to take place after the Innotrans-Event.
+
+Next Wednesday, the 17th a special session on coding rules is planned. Please join \url{https://global.gotomeeting.com/join/334291797}.
+
+\end{itemize}
+
+\subsection{WP3: Modelling}
+\begin{itemize}
+
+\item WP3 workshop\\
+Last week Tuesday and Wednesday a WP3 workshop took place in Brussels. The results can be found here \url{https://github.com/openETCS/SRS-Analysis/tree/master/Meetings/Team-meeting_Brussels_2014-09-09}.
+
+The API document v1.4 is now available. The document is an update of the API document from Alstom in order to be compliant to Baseline3. Major changes are: \\
+For a summary, the main modifications are:
+\begin{itemize}
+\item DMI interface (telegrams between the EVC and the DMI have been updated).
+\item The radio interface (the radio API has been updated).
+\end{itemize}
+ 
+\item Convergence Workshops\\
+The differences of the various architecture proposals existing in openETCS is proposed to be tackled in a convergence workshop. Details to be planned.
+
+\item Architecture Team by DB\\
+DB will take responsibility of the Architecture task. First team meeting scheduled for Monday, 14:00.
+
+\end{itemize}
+
+\subsection{WP7: Toolchain}
+
+\begin{itemize}
+\item A WP7 team meeting is planned to take place in Munich: \url{https://github.com/openETCS/toolchain/wiki/WP7-Workshop-Fall-2014}. The agenda is currently under construction.
+\end{itemize}
+
+\subsection{PMB: Project Management Board}
+\begin{itemize}
+\item Scrum Of Scrum\\
+Second half of September Peter will start to organize follow-up sessions to continue working on the openETCS backlog.\\
+
+\item \textbf{No PCC Scheduled}\\
+Currently, there is no plan to have a PCC in mid October. 
+
+However, we have the option to use the reserved facilities in  Munich for another meeting. Proposals are welcome.
+
+\end{itemize}
+
+\section{Notes}
+\begin{itemize}
+
+\item Note: Location of Meeting Minutes\\
+You can find these minutes here: \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/Minutes/Minute_20140912.pdf}. Please, use the issue tracker for findings with the minutes.
+
+\end{itemize}
+
+\end{document}
