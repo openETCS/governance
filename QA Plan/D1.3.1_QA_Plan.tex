@@ -3339,7 +3339,7 @@ Not relevant since we are using Formal Methods and Modelling.
 \\\hline
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
+\multicolumn{5}{|l|}{\textit{OpenETCS uses a combination of natural language Software Requirement Specifications, which are derived from the SUBSET-26 SRS, and Modelling of these Requirements in SysML and SCADE. Thereby, the approach fulfils the EN 50128 Table A.2 requirements for Techniques for  Software Requirements Specification}}\\\hline
 \end{supertabular}
 \caption{Software Requirements Specification Phase}
 \end{table}
@@ -3421,7 +3421,8 @@ Recovery Block &
 \centering
 R &
 \centering
-No &
+No & 
+Recovery Block is an option for a real openETCS product. Since it as to be supported by the implementation approach the method can not be implemented in the generic approach of openETCS.
 \\\hline
 \centering 9 &
 Backward Recovery &
@@ -3429,6 +3430,7 @@ Backward Recovery &
 NR &
 \centering
 No &
+Not suited for openETCS.
 \\\hline
 \centering 10 &
 Forward Recovery &
@@ -3436,13 +3438,15 @@ Forward Recovery &
 NR &
 \centering
 No &
+Not suited for openETCS.
 \\\hline
 \centering 11 &
-Re-try Fault Recovery Mechanisms &
+Retry Fault Recovery Mechanisms &
 \centering
 R &
 \centering
 No &
+Retry Fault Recovery Mechanisms is an option for a real openETCS product. Since it as to be supported by the implementation approach the method can not be implemented in the generic approach of openETCS.
 \\\hline
 \centering 12 &
 Memorising Executed Cases &
@@ -3535,11 +3539,11 @@ and specification tools &
 HR &
 \centering
 Yes &
-I'm not sure whether Scade and Papyrus qualify for CAD?!
+The openETCS toolchain include  interfaced design and specification tools.
 \\\hline
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
+\multicolumn{5}{|l|}{\textit{Techniques use in openETCS cover all relevant architecture and design issues, but due to the generic concept of openETCS Recovery issues are not covered by any methodology. The applied combination of Modelling and Formal Methods guaranties a design consistency and completeness.}}\\\hline
 \end{longtable}
 \end{center}
 
@@ -3567,7 +3571,7 @@ Formal Methods &
 HR &
 \centering
 Yes &
-According to the openETCS project proposal formal methods are a the main part part of the concept for safety critical software. However, not the full scope will be possible to implement in the Framework of the Itea project. A proof of concept is required for this option.
+In openETCS formal methods are a the main methodology to design safety critical software. However, not the full scope will be possible to implement in the Framework of the Itea project. A proof of concept is required for this option.
 \\\hline
 \centering 2 &
 Modelling &
@@ -3575,7 +3579,7 @@ Modelling &
 HR &
 \centering
 Yes &
-The design model is to be implemented in Scade.
+The design model is implemented in Scade.
 \\\hline
 \centering 3 &
 Structured Methodology &
@@ -3591,7 +3595,7 @@ Modular Approach &
 M &
 \centering
 Yes &
-Well supported with Scade. Rules requested by CENELEC! t.b.p.
+Well supported with Scade. Different Moduls are designed and implement as independent blocks based on the overall architecture.
 \\\hline
 \centering 5 &
 Components &
@@ -3599,7 +3603,7 @@ Components &
 HR &
 \centering
 Yes &
-Well supported with Scade. Rules  t.b.p.
+Well supported with Scade. All internal interfaces are fully defined and the data access is limited due to data flows.
 \\\hline
 \centering 6 &
 Design and Coding Standards &
@@ -3673,7 +3677,7 @@ No &
 \\\hline
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
+\multicolumn{5}{|l|}{\textit{The openETCS techniques based on use of a structured, strongly typed programming language in SCADE fulfils design and implementation requirements.}}\\\hline
 \end{longtable}
 \end{center}
 
@@ -3701,73 +3705,73 @@ Formal Proof &
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Various formal methods are used to check the SysML and SCADE modells and to prove required properties. Specifics are documented in he V\&V plan and all corresponding reports.\\\hline
 \centering 2 &
 Static Analysis &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Static checks covering consistency of interfaces and data types are implemented in Papyrus. Further static analysis as boundary checks and data flow analysis are covered during the SCADE design. Details are presented in the V\&V plan\\\hline
 \centering 3 &
 Dynamic Analysis and Testing &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+openETCS uses a variety of dynamic analysis and testing approach mainly on SCADE modell and C-Code level e.g. Test cases from boundary Values and Performance Modelling. Details are presented in the V\&V plan.\\\hline
 \centering 4 &
 Metrics &
 \centering
 R &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Various metrics are evaluated on the C-Code level. Further metrics are already addressed during the SCADE modelling. \\\hline
 \centering 5 &
 Traceability &
 \centering
 M &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Traceability between all abstraction levels is covered by tool supported traces and manual traceability reviews.\\\hline
 \centering 6 &
 Software Error Effect Analysis &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+The Error Analysis is performed during the modelling process on various levels using the modell-based approach for related component analysis.\\\hline
 \centering 7 &
 Test Coverage for code &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+As openETCS uses a modell based test generation the coverage follows a complete coverage principal for all relevant data flows. Details are given in the V\&V plan.\\\hline
 \centering 8 &
 Functional/ Black-box Testing &
 \centering
 M &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Functional test are the main focus for all parts, which are not covered by formal proofs. Black-box test are performed for validation aspects. Details are given in the V\&V plan.\\\hline
 \centering 9 &
 Performance Testing &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Performance test mainly response timing are checked where generic timing constrains can be identified. Due to the generic concept of openETCS further tests are required to demonstrated a sufficient implementation.\\\hline
 \centering 10 &
 Interface Testing &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Interface tests are performed on various levels to ensure consistence and correctness. Hardware tests are not part of openETCS.\\\hline
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
+\multicolumn{5}{|l|}{The openETCS methodology covers at least in parts all relevant verification techniques. Due to the geniric concept of openETCS hardware related tests are not part of openETCS. Several tests will only be implemented on parts of the systems as a proof of concept. }\\\hline
 \end{longtable}
 \end{center}
 
