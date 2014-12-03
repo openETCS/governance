@@ -3339,7 +3339,7 @@ Not relevant since we are using Formal Methods and Modelling.
 \\\hline
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
+\multicolumn{5}{|l|}{\textit{OpenETCS uses a combination of natural language Software Requirement Specifications, which are derived from the SUBSET-26 SRS, and Modelling of these Requirements in SysML and SCADE. Thereby, the approach fulfils the EN 50128 Table A.2 requirements for Techniques for  Software Requirements Specification}}\\\hline
 \end{supertabular}
 \caption{Software Requirements Specification Phase}
 \end{table}
@@ -3421,7 +3421,8 @@ Recovery Block &
 \centering
 R &
 \centering
-No &
+No & 
+Recovery Block is an option for a real openETCS product. Since it as to be supported by the implementation approach the method can not be implemented in the generic approach of openETCS.
 \\\hline
 \centering 9 &
 Backward Recovery &
@@ -3429,6 +3430,7 @@ Backward Recovery &
 NR &
 \centering
 No &
+Not suited for openETCS.
 \\\hline
 \centering 10 &
 Forward Recovery &
@@ -3436,13 +3438,15 @@ Forward Recovery &
 NR &
 \centering
 No &
+Not suited for openETCS.
 \\\hline
 \centering 11 &
-Re-try Fault Recovery Mechanisms &
+Retry Fault Recovery Mechanisms &
 \centering
 R &
 \centering
 No &
+Retry Fault Recovery Mechanisms is an option for a real openETCS product. Since it as to be supported by the implementation approach the method can not be implemented in the generic approach of openETCS.
 \\\hline
 \centering 12 &
 Memorising Executed Cases &
@@ -3535,11 +3539,11 @@ and specification tools &
 HR &
 \centering
 Yes &
-I'm not sure whether Scade and Papyrus qualify for CAD?!
+The openETCS toolchain include  interfaced design and specification tools.
 \\\hline
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
+\multicolumn{5}{|l|}{\textit{Techniques use in openETCS cover all relevant architecture and design issues, but due to the generic concept of openETCS Recovery issues are not covered by any methodology. The applied combination of Modelling and Formal Methods guaranties a design consistency and completeness.}}\\\hline
 \end{longtable}
 \end{center}
 
@@ -3567,7 +3571,7 @@ Formal Methods &
 HR &
 \centering
 Yes &
-According to the openETCS project proposal formal methods are a the main part part of the concept for safety critical software. However, not the full scope will be possible to implement in the Framework of the Itea project. A proof of concept is required for this option.
+In openETCS formal methods are a the main methodology to design safety critical software. However, not the full scope will be possible to implement in the Framework of the Itea project. A proof of concept is required for this option.
 \\\hline
 \centering 2 &
 Modelling &
@@ -3575,7 +3579,7 @@ Modelling &
 HR &
 \centering
 Yes &
-The design model is to be implemented in Scade.
+The design model is implemented in Scade.
 \\\hline
 \centering 3 &
 Structured Methodology &
@@ -3591,7 +3595,7 @@ Modular Approach &
 M &
 \centering
 Yes &
-Well supported with Scade. Rules requested by CENELEC! t.b.p.
+Well supported with Scade. Different Moduls are designed and implement as independent blocks based on the overall architecture.
 \\\hline
 \centering 5 &
 Components &
@@ -3599,7 +3603,7 @@ Components &
 HR &
 \centering
 Yes &
-Well supported with Scade. Rules  t.b.p.
+Well supported with Scade. All internal interfaces are fully defined and the data access is limited due to data flows.
 \\\hline
 \centering 6 &
 Design and Coding Standards &
@@ -3673,7 +3677,7 @@ No &
 \\\hline
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
+\multicolumn{5}{|l|}{\textit{The openETCS techniques based on use of a structured, strongly typed programming language in SCADE fulfils design and implementation requirements.}}\\\hline
 \end{longtable}
 \end{center}
 
@@ -3701,73 +3705,73 @@ Formal Proof &
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Various formal methods are used to check the SysML and SCADE modells and to prove required properties. Specifics are documented in he V\&V plan and all corresponding reports.\\\hline
 \centering 2 &
 Static Analysis &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Static checks covering consistency of interfaces and data types are implemented in Papyrus. Further static analysis as boundary checks and data flow analysis are covered during the SCADE design. Details are presented in the V\&V plan\\\hline
 \centering 3 &
 Dynamic Analysis and Testing &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+openETCS uses a variety of dynamic analysis and testing approach mainly on SCADE modell and C-Code level e.g. Test cases from boundary Values and Performance Modelling. Details are presented in the V\&V plan.\\\hline
 \centering 4 &
 Metrics &
 \centering
 R &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Various metrics are evaluated on the C-Code level. Further metrics are already addressed during the SCADE modelling. \\\hline
 \centering 5 &
 Traceability &
 \centering
 M &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Traceability between all abstraction levels is covered by tool supported traces and manual traceability reviews.\\\hline
 \centering 6 &
 Software Error Effect Analysis &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+The Error Analysis is performed during the modelling process on various levels using the modell-based approach for related component analysis.\\\hline
 \centering 7 &
 Test Coverage for code &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+As openETCS uses a modell based test generation the coverage follows a complete coverage principal for all relevant data flows. Details are given in the V\&V plan.\\\hline
 \centering 8 &
 Functional/ Black-box Testing &
 \centering
 M &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Functional test are the main focus for all parts, which are not covered by formal proofs. Black-box test are performed for validation aspects. Details are given in the V\&V plan.\\\hline
 \centering 9 &
 Performance Testing &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Performance test mainly response timing are checked where generic timing constrains can be identified. Due to the generic concept of openETCS further tests are required to demonstrated a sufficient implementation.\\\hline
 \centering 10 &
 Interface Testing &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Interface tests are performed on various levels to ensure consistence and correctness. Hardware tests are not part of openETCS.\\\hline
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
+\multicolumn{5}{|l|}{The openETCS methodology covers at least in parts all relevant verification techniques. Due to the generic concept of openETCS hardware related tests are not part of openETCS. Several tests will only be implemented on parts of the systems as a proof of concept. }\\\hline
 \end{longtable}
 \end{center}
 
@@ -3794,18 +3798,18 @@ Functional and Black-box Testing &
 \centering
 HR &
 \centering
-Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+No &
+Due to the generic approach of openETCS implementation is only done in a demonstrator context, which does not satesfy any needs for systematic implementation tests.\\\hline
 \centering 2 &
 Performance Testing &
 \centering
 HR &
 \centering
-Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+No &
+Due to the generic approach of openETCS implementation is only done in a demonstrator context, which does not satesfy any needs for systematic implementation tests.\\\hline
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
+\multicolumn{5}{|l|}{Implementation is only part of the generic functional openETCS development up to the API level. A follow-up product has to deal with all aspects required to proof its specific hardware/software implementation.}\\\hline
 \end{longtable}
 \end{center}
 
@@ -3833,32 +3837,32 @@ Performance Testing &
 M &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Performance test mainly response timing are checked where generic timing constrains can be identified. Due to the generic concept of openETCS further tests are required to demonstrated a sufficient implementation.\\\hline
 \centering 2 &
 Functional and Black-box Testing &
 \centering
 M &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Functional test are the main focus for all parts, which are not covered by formal proofs. Black-box test are performed for validation aspects. Details are given in the V\&V plan.\\\hline
 \centering 3 &
 Modelling &
 \centering
 R &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+As the openETCS software development is based on SysML and SCADE modells, overall software tests are also performed based on test modells. Therefore, various methods are used to address different validation aspects. Deatils are given in the V\&V plan.\\\hline
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
+\multicolumn{5}{|l|}{The openETCS project uses different modell-based testing approaches for validation in combination with performance and functional tests. Due to the development constraints not all ETCS parts will be completely validated during the project.}\\\hline
 \end{longtable}
 \end{center}
 
 \begin{center}
 \begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\caption{Software Analysis Techniques Phase}\\
+\caption{Software Analysis Techniques}\\
 
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Analysis Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Analysis Techniques } \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endfirsthead
 
 \multicolumn{5}{c}%
@@ -3878,46 +3882,46 @@ Static Software Analysis &
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Static Software Analysis performed based on SysML and SCADE modells. Details are presented in the V\&V plan.\\\hline
 \centering 2 &
 Dynamic Software Analysis &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Dynamic Software Analysis performed by tests and simulation of SCADE modells. Details are presented in the V\&V plan.\\\hline
 \centering 3 &
 Cause Consequence Diagrams &
 \centering
 R &
 \centering
-Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+No &
+Indirectly covered by SysML and SCADE modell analysis\\\hline
 \centering 4 &
 Event Tree Analysis &
 \centering
 R &
 \centering
-Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+No &
+Indirectly covered by SysML and SCADE modell analysis\\\hline
 \centering 5 &
 Software Error Effect Analysis &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+The Error Analysis is performed during the modelling process on various levels using the modell-based approach for related component analysis.\\\hline
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
+\multicolumn{5}{|l|}{Software Analysis is performed based on SysMl and SCADe modells and additional model-based tests.}\\\hline
 \end{longtable}
 \end{center}
 
 \begin{center}
 \begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\caption{Software Quality Assurance Phase}\\
+\caption{Software Quality Assurance Techniques}\\
 
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Quality Assurance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Quality Assurance Techniques} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endfirsthead
 
 \multicolumn{5}{c}%
@@ -3936,60 +3940,60 @@ Accredited to EN ISO 9001 &
 \centering
 HR &
 \centering
-Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+No &
+The openETCS project itself can not be accredited, but most partners are.\\\hline
 \centering 2 &
 Compliant with EN ISO 9001 &
 \centering
 M &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Overall project process follow those basic guidelines.\\\hline
 \centering 3 &
 Compliant with ISO/IEC 90003 &
 \centering
 R &
 \centering
-Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+No &
+Standard cn not be applied directly to research projects as openETCS.\\\hline
 \centering 4 &
 Company Quality System &
 \centering
 M &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+openETCS has defined project specific quality principals and uses various review systems to enforce these rules.\\\hline
 \centering 5 &
 Software Configuration Management &
 \centering
 M &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Has been specified in detail in the Configuration Management plan\\\hline
 \centering 6 &
 Checklists &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Checklists are use in certain phases during the development, but due to the modelling do not present the main work documentation.\\\hline
 \centering 7 &
 Traceability &
 \centering
 M &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Traceability is ensured between all development phases by the use of different traces implemented in the openETCS toolchain and manual traceability reviews.\\\hline
 \centering 8 &
 Data Recording and Analysis &
 \centering
 M &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+All development activities are performed and respectively recorded via the github system.\\\hline
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
+\multicolumn{5}{|l|}{As openETCS is a research project specific quality processes and tools have been applied to ensure respective standards.}\\\hline
 \end{longtable}
 \end{center}
 
@@ -4014,25 +4018,25 @@ Impact Analysis &
 M &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Performed during every mayor software iteration.\\\hline
 \centering 2 &
 Data Recording and Analysis &
 \centering
 M &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Performed via github.\\\hline
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
+\multicolumn{5}{|l|}{Due to the agile work in openETCS via github maintenance is performed during every iteration and controlled via standard change control.}\\\hline
 \end{longtable}
 \end{center}
 
 \begin{center}
 \begin{longtable}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
-\caption{Data Preparation Techniques Phase}\\
+\caption{Data Preparation Techniques}\\
 
-\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Data Preparation Techniques Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
+\hline \rowcolor{myblue} \multicolumn{5}{|c|}{Data Preparation Techniques} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endfirsthead
 
 \multicolumn{5}{c}%
@@ -4051,67 +4055,67 @@ Tabular Specification Methods &
 \centering
 R &
 \centering
-Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+No &
+As ETCS is a dynamic system with complex data relations tables provide only limited options for data specifications.\\\hline
 \centering 2 &
 Application specific language &
 \centering
 R &
 \centering
-Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+No &
+Not relevant in the openETCS model-based development process based on SCADE modells.\\\hline
 \centering 3 &
 Simulation &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Using SCADE modells and further validation modells.\\\hline
 \centering 4 &
 Functional testing &
 \centering
 M &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Using SCADE modells and further validation modells.\\\hline
 \centering 5 &
 Checklists &
 \centering
 M &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Depending on typ of input and configuration data.\\\hline
 \centering 6 &
 Fagan inspection &
 \centering
 R &
 \centering
-Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+No &
+Traditional review process are used in openETCS.\\\hline
 \centering 7 &
 Formal design reviews &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Based on formal modells used.\\\hline
 \centering 8 &
 Formal proof of correctness (of data) &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Based on formal modells used.\\\hline
 \centering 9 &
 Walkthrough &
 \centering
 HR &
 \centering
 Yes &
-\textit{Include details and references to external documents when if necessary}\\\hline
+Applied in different variations of the review process.\\\hline
 \rowcolor{lightgray}
 \multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{Justification how Methods \& Techniques are compliance with CENELEC}}\\\hline
+\multicolumn{5}{|l|}{As openETCS is a genric research project data is only prepared for specific aspects. Details are defined in the corresponding sections of the V\&V reports. }\\\hline
 \end{longtable}
 \end{center}
 
