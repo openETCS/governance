@@ -2,7 +2,7 @@ governance
 ==========
 
 part of WP1: information needed to run project management in openETCS, e.g., 
-* quality assurance plan, 
+* [quality assurance plan](https://github.com/openETCS/governance/tree/master/QA%20Plan) 
 * [scrum meeting minutes](https://github.com/openETCS/governance/tree/master/scrumMeetings)
 * Full Project Proposal (FPP) --> https://github.com/openETCS/management/blob/master/FPP/11025_openETCS_FPP_Annex_v302.pdf
 * Project Cooperation Agreement --> https://github.com/openETCS/management/blob/master/PCA/openETCS_PCA_v0202.pdf
