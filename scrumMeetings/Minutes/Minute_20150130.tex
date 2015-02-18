@@ -1,0 +1,196 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS Scrum Meeting Minutes\end{center}}
+\section{Meeting Organisation}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & Weekly Scrum of Scrums\\
+%Organised by &Klaus-R\"udiger Hase\\
+Organised by &Bernd Hekele\\
+Minutes by & Bernd Hekele\\
+When & January, 30th, 2015, 09:45 - 11:05\\
+Location & Telco and Goto-Meeting\\
+%9:30-10:00 and 
+%\hline
+\end{supertabular}
+
+\renewcommand{\arraystretch}{1.0}
+\section{Meeting:}
+
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{Slot} &  \textbf{Called By} & \textbf{Workpackage} \\
+\hline  
+9:45 - 10:00 & Peter Mahlmann & openETCS Backlog Grooming  \\\hline
+10:00 - 10:15 & Stefan Rieger & WP6: Dissemination \\\hline  
+10:15 - 10:30 & Nicolas van Landeghem & WP5: Demonstration \\\hline  
+%10:30 - 11:00 & Jan Welte & WP4: Verification \& Validation \\\hline  
+10:30 - 11:00 & Marc Behrens & WP4: Verification \& Validation \\\hline  
+%10:45 - 11:00 & Fausto Cochetti & WP3: Modelling \\\hline  
+%10:45 - 11:00 & Peter Mahlmann & WP3: Modelling \\\hline  
+10:45 - 11:00 & Bernd Hekele & WP3: Modelling \\\hline  
+11:00 - 11:15 & Alexander Stante  & WP7: Toolchain \\\hline
+%11:15 - 11:30 & Baseliyos Jacob & WP2: API Requirements \\\hline  
+11:15 - 11:30 & Klaus-R\"udiger Hase & PMB: Project Management Board \\\hline  
+%11:15 - 11:45 & Bernd Hekele & PMB: Project Management Board \\\hline  
+\end{tabular}
+
+\section{Participants in Meeting:}
+
+\begin{tabular}{|l|c|c|c|c||c|c|c||c|c|c|}
+\hline
+\textbf{Participant}  & \textbf{G} & \textbf{WP6} &  \textbf{WP5} & \textbf{WP4}&  \textbf{WP3} & \textbf{WP7}&  \textbf{PMB} \\\hline
+% Name               G   6   5   4   3   7   P
+%Alexander Nitsch    &   &   &   &   &   &   &   \\\hline  
+%Alexander Stante     &  &   &   &   &   & x & x \\\hline 
+Baseliyos Jacob       & x & x & x & x & x & x & x \\\hline 
+%Bernd Gonska         & &   &   & x &   &   &   \\\hline
+Bernd Hekele         & x & x & x & x & x & x & x \\\hline
+Benjamin Beichler    & x & x & x & x & x &   &   \\\hline
+Cecile Braunstein    & x &   &   & x & x & x & x \\\hline
+%Christian Giraud     &   &   &   &   &   &   &   \\\hline
+Christian Stahl      &   &   &   &   & x &   &   \\\hline
+%David Mentre         &  &   &   &   &   &   &   \\\hline
+%Fausto Cochetti      &  &   & x & x & x & x &   \\\hline
+Hardi Hungar         &  &   &   & x &   & x &   \\\hline
+%Huu-Nghia Nguyen     &  & x &   & x & x & x &   \\\hline
+%Ion I. Uribe         &  &   &   & x &   &   &   \\\hline
+Izaskun de la Torre  &  & x & x & x & x & x &   \\\hline
+%Jan Welte            &  & x & x & x & x & x & x \\\hline
+%Jaime Paniagua       &  &   &   &   & x &   &   \\\hline
+%Jakob Gaertner       &  &   &   &   & x & x &   \\\hline
+%Jan Welvaarts        &  &   & x & x & x &   &   \\\hline
+Jan Welte            & x & x & x & x & x &   &   \\\hline
+%Jens Gerlach         &   &   &   & x & x &   &   \\\hline
+%Jonas Helming        &   &   &   &   &   &   &   \\\hline
+%Jos Holtzer          &   & x &   &   &   &   &   \\\hline
+%Karsten Falk         &   &   &   & x & x & x & x \\\hline
+%Klaus-R\"udiger Hase & x & x & x & x & x & x & x \\\hline
+%Laurent Ferier       &   &   &   &   & x & x & x \\\hline
+%Lukasz Fronc         &   &   &   &   &   & x & x \\\hline
+Marc Behrens         & x & x & x & x & x & x & x \\\hline
+Marielle Petit-Doche &   &   &   & x & x & x & x \\\hline
+%Mathilde Arnaud      &   &   &   &   &   &   &   \\\hline
+Matthieu Perin       &   &   &   & x & x & x &   \\\hline
+%Michael Jastram      &   &   & x & x & x & x & x \\\hline
+%Nicolas van Landeghem &   & x & x & x &   &   &   \\\hline
+Peter Mahlmann       & x & x & x & x & x & x & x \\\hline
+%Peyman Farhangi      &   &   & x & x & x & x & x \\\hline
+Pierre-Yves Le Morvan &   & x & x & x & x &   &   \\\hline
+%Silvano dal Zilio    &   &   &   & x & x & x &  \\\hline
+Stefan Karg          &   & x & x & x & x & x &   \\\hline
+Stefan Rieger        &   & x & x & x & x & x &   \\\hline
+Uwe Steinke          &   & x & x & x & x & x &   \\\hline
+Valerio D'Angelo     &   & x & x & x & x & x &   \\\hline
+%Veronique Gontier    &   &   & x & x & x & x &   \\\hline
+%Vincent Nuhaan       &   &   &   &   & x &   &   \\\hline
+% Name               G   6   5   4   3   7   P  \\\hline
+\end{tabular}
+
+%\line(1,0){440}
+
+\section{Scrum Meetings}
+
+\subsection{openETCS Grooming}
+\begin{itemize}
+\item Backlog Grooming Session\\
+happened. The online backlog has been updated.
+\end{itemize}
+
+\subsection{WP6: Dissemination}
+\begin{itemize}
+\item Activities\\
+The link to the Itea Co-Summit event is visible in the Wiki:
+\url{https://github.com/openETCS/Dissemination/wiki/ITEA-ARTEMIS-Co-Summit-2015}.\\
+
+\item D6.4 Review of Deliverable Exploitation Plan\\
+The exploitation plan is ready for review. Izaskun confirmed to pick this activity. Due date is January 16th.
+
+\end{itemize}
+
+\subsection{WP5: Demonstration}
+\begin{itemize}
+\item Activities\\
+Technical issues have been reported for the (CORBA based) platform.  Problems are under investigation.
+
+WP4 activities are started for providing scenarios for Utrecht Amsterdam to be used with the ERSA tool.
+
+WP5 needs the definition of the API for being able to progress with the interfaces to the WP3 results. A session is requested to clarify the status and decisions and to agree on the next an implementation strategy.
+\end{itemize}
+
+\subsection{WP4: Validation \& Verification}
+\begin{itemize}
+\item Activities\\
+Systerel plans to demonstrate formal verification at parts of the openETCS Scade models. Work at the WP4 deliverables is progressing. 
+
+First iteration release grooming at WP4 took place. Works has been distributed to WP4 partners. 
+
+\end{itemize}
+
+\subsection{WP3: Modelling}
+
+
+\begin{itemize}
+\item WP3 Activities\\
+Modelling work is progressing.
+Integration of the models will start next week in Braunschweig, Berlin and Munich. The team 1 will have a team meeting in Berlin as well.
+
+\end{itemize}
+
+\subsection{WP7: Toolchain}
+
+\begin{itemize}
+\item WP7 Leadership\\
+Alexander Stante will jumpo in for the WP7 leadership until Michael is back in the openETCS team. Only small resources are available at the partners for 2015.
+
+\end{itemize}
+
+\subsection{PMB: Project Management Board}
+\begin{itemize}
+\item ITEA/Artemis Co-summit (March 10th - 11th)\\
+will be combined with the first rehearsal of the ITEA review meeting (March 12th, 8-13h)
+
+\item ITEA review meeting in Paris\\
+will be combined with the final rehearsal, a workshop and a PCC meeting. Details can be found in the management wiki \url{https://github.com/openETCS/management/wiki/ITEA-Review-2015}.\\
+Please indicate your participation by filling this doodle: \url{http://doodle.com/45krxsz6v6rew8vq}.\\
+Current planning:\\
+
+\begin{itemize}
+\item March 24th:\\
+8-13h rehearsal of the review meeting\\
+14-17h PCC meeting\\
+\item March 25th:\\
+8-13h review meeting\\
+14-17h combined WP3 \& WP4 workshop \\
+\end{itemize}
+\item Advisory Board Meeting\\
+will take place on March 26th in Brussels
+
+\end{itemize}
+
+\section{Notes}
+\begin{itemize}
+
+\item Note: Location of Meeting Minutes\\
+You can find these minutes here: \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/Minutes/\jobname}. Please, use the issue tracker for findings with the minutes.
+
+\end{itemize}
+
+\end{document}
