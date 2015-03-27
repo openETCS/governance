@@ -1,4 +1,4 @@
-# PCC Project Coordination Meeting Minutes
+# Project Coordination Committee (PCC) Meeting Minutes
 
 * Meeting called by Klaus-Rüdiger Hase
 * When: Tuesday, March 24th, 15:30 - 17:00
