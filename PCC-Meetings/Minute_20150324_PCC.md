@@ -27,4 +27,4 @@
 4. Role of openETCS Foundation for the duration of the project and thereafter.
 5. The openETCS Charta
 
-##### Findings:  
+#### Findings:  
