@@ -29,16 +29,16 @@
   - It is mentioned by DB that there is an obligation against the funding authority to spent planned resources. If a party does not plan to spend the originally planned ressources the corresponding funding athority has to be informed immediately.
   
 ## 2. Status update on "Delaulting Party" Issue / Update in PCA Signatures
-- Alstom will commit the remainind planned ressources
-- SNCF indicates that obligation to spent effort needs to be clarified
-  - DB proposes to adjust planned effort with the upcomming change request
-  - It is clarified that no party can be forced to commit resources by any other project partner
-## 3. Demo deliverables and over-all goal to be reached by the end of this year.
-- The overall goal, i.e. ETCS OBU model able to run on Utrecht-Amsterdam line, will be topic of the WP3/WP4 workshop on March 25th.
+- Alstom will commit the remaining planned ressources
+- SNCF indicates that the obligation to spent remaining effort needs to be clarified
+  - DB proposes to adjust planned effort with the upcomming change request if there have been changes
+  - It is clarified that no party can be forced to commit resources by any other project member
+## 3. Demo deliverables and overall goal to be reached by the end of this year.
+- The overall goal, i.e. an ETCS OBU model able to run on Utrecht-Amsterdam line, will be topic of the WP3/WP4 workshop on March 25th.
 
 ## 4. Role of openETCS Foundation for the duration of the project and thereafter.
-- openETCS foundations will take care of managerial tasks
-- Esterel will hace special licence offers for members of the openETCS foundation
+- The openETCS foundations will take care of managerial tasks
+- Esterel will have special licence offers for members of the openETCS foundation
 - The openETCS foundation will try to provide free SCADE licences to members that are not ETCS equipment vendors
 
 ## 5. The openETCS Charta
@@ -49,6 +49,5 @@
 - A dedicated meeting for the planning on the next steps on the charta will be called
 - 
 ## 6. Other Topics
-- WP7 indicates the need of clarifying the license terms of the SCADE API
-- Klaus-Ruediger Hase will take care of this issue
+- WP7 indicates the need of clarifying concerning the licence of the SCADE API. Klaus-Ruediger Hase will take care of this issue.
 - The next PCC meetng is scheduled for July 2nd, 2pm
