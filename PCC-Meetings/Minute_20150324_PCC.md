@@ -41,3 +41,13 @@
 - The openETCS foundation will try to provide free SCADE licences to members that are not ETCS equipment vendors
 
 # 5. The openETCS Charta
+- All partners are asked to contribute to the charta
+- Issues on the issue tracker shall be processed by all partners
+- The consortium will try to finalize the charta by mid 2015
+- A core team of 5-6 people will be established
+- A dedicated meeting for the planning on the next steps on the charta will be called
+- 
+# 6. Other Topics
+- WP7 indicates the need of clarifying the license terms of the SCADE API
+- Klaus-Ruediger Hase will take care of this issue
+- The next PCC meetng is scheduled for July 2nd, 2pm
