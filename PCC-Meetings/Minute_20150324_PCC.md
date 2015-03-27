@@ -33,6 +33,7 @@
 - SNCF indicates that the obligation to spent remaining effort needs to be clarified
   - DB proposes to adjust planned effort with the upcomming change request if there have been changes
   - It is clarified that no party can be forced to commit resources by any other project member
+
 ### 3. Demo deliverables and overall goal to be reached by the end of this year.
 - The overall goal, i.e. an ETCS OBU model able to run on Utrecht-Amsterdam line, will be topic of the WP3/WP4 workshop on March 25th.
 
