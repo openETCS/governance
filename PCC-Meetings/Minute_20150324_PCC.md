@@ -13,6 +13,7 @@
   * DLR: Marc Behrens
   * ERSA: Alain Barrat, Didier Weckmann
   * Fraunhofer Fokus: Alexander Stante
+  * Siemens: Uwe Steinke
   * SNCF: Pierre-Jean Ginoux, Sylvain Baro
   * SQS: Izaskun de la Torre
   * Systerel: Marrielle Petit-Doche
