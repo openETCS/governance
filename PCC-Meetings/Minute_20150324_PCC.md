@@ -25,8 +25,8 @@
 ## 1. Status update on openETCS contributions and remaining resources efficiently spend
 - The remaining ressources per partner were presented (planned effort according to ITEA change request no. 2, spent effort as of 1/1/2015, i.e. PPR 2014 S2)
 - Remaining ressources should be spent by all partners
-- The question wehter there is an obligation to spent remaining effort is discussed
-  - It is mentioned by DB that there is an obligation against the funding authority to spent the planned resources. If a party will not spent the originally planned ressources the corresponding funding athority has to be informed immediately.
+- The question wether there is an obligation to spent remaining effort is discussed
+  - It is mentioned by DB that there is an obligation against the funding authority to spent planned resources. If a party does not plan to spend the originally planned ressources the corresponding funding athority has to be informed immediately.
   
 ## 2. Status update on "Delaulting Party" Issue / Update in PCA Signatures
 - Alstom will commit the remainind planned ressources
