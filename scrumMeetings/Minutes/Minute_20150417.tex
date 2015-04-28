@@ -1,0 +1,170 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS Scrum Meeting Minutes\end{center}}
+\section{Meeting Organisation}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & Weekly Scrum of Scrums\\
+%Organised by &Klaus-R\"udiger Hase\\
+Organised by &Bernd Hekele\\
+Minutes by & Bernd Hekele\\
+When & April, 17th, 2015, 10:30 - 11:30\\
+Location & Telco and Goto-Meeting\\
+%9:30-10:00 and 
+%\hline
+\end{supertabular}
+
+\renewcommand{\arraystretch}{1.0}
+\section{Meeting:}
+
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{Slot} &  \textbf{Called By} & \textbf{Workpackage} \\
+\hline  
+9:45 - 10:00 & Peter Mahlmann & openETCS Backlog Grooming  \\\hline
+%10:00 - 10:15 & Stefan Rieger & WP6: Dissemination \\\hline  
+10:15 - 10:30 & Didier Weckmann & WP5: Demonstration \\\hline  
+%10:30 - 11:00 & Jan Welte & WP4: Verification \& Validation \\\hline  
+10:30 - 10:45 & Marc Behrens & WP4: Verification \& Validation \\\hline  
+10:45 - 11:00 & Bernd Hekele & Modelling \\\hline  
+%10:45 - 11:00 & Peter Mahlmann & WP3: Modelling \\\hline  
+%10:45 - 11:00 & Bernd Hekele & WP3: Modelling \\\hline  
+11:00 - 11:15 & Michael Jastram  & WP7: Toolchain \\\hline
+%11:15 - 11:30 & Baseliyos Jacob & WP2: API Requirements \\\hline  
+11:15 - 11:30 & Klaus-R\"udiger Hase & PMB: Project Management Board \\\hline  
+%11:15 - 11:45 & Klaus-Ru\"diger Hase &oject Management Board \\\hline  
+\end{tabular}
+
+\section{Participants in Meeting:}
+
+\begin{tabular}{|l|c|c|c|c||c|c|c||c|c|c|}
+\hline
+\textbf{Participant}  & \textbf{G} & \textbf{WP6} &  \textbf{WP5} & \textbf{WP4}&  \textbf{WP3} & \textbf{WP7}&  \textbf{PMB} \\\hline
+% Name                  G   6   5   4   3   7   P
+Abdelnasir Mohamed    & x &   & x & x & x & x & x \\\hline 
+Alexander Probst      & x &   & x & x & x & x &   \\\hline  
+%Alexander Stante     &   &   &   &   & x & x & x \\\hline 
+Baseliyos Jacob       & x &   & x & x & x & x & x \\\hline 
+%Bernd Gonska         & &   &   & x &   &   &   \\\hline
+Bernd Hekele          & x &   & x & x & x & x & x \\\hline
+%Benjamin Beichler     &   &   &   & x & x & x &   \\\hline
+%Christian Giraud     &   &   &   &   &   &   &   \\\hline
+%Christian Stahl      &   &   & x & x & x &   &   \\\hline
+David Mentre         &  &   &   &   &   &   &   \\\hline
+Didier Weckmann      & x &   & x & x & x & x & x \\\hline
+Fausto Cochetti      &   &   &   & x & x & x & x \\\hline
+%Hardi Hungar         &  &   &   & x &   & x &   \\\hline
+Ingo Weigelt         & x  &   & x & x & x & x &   \\\hline
+%Ion I. Uribe         &  &   &   & x &   &   &   \\\hline
+%Izaskun de la Torre  &  &   &   &   &   & x & x \\\hline
+%Jakob Gaertner       &   &   & x & x & x &   &   \\\hline
+%Jan Welvaarts        &  &   & x & x & x &   &   \\\hline
+Jan Welte            & x &   & x & x & x & x & x \\\hline
+%Jens Gerlach         &   &   & x & x & x &   &   \\\hline
+%Karsten Falk         &   &   &   & x & x & x & x \\\hline
+Klaus-R\"udiger Hase & x &   & x & x & x & x & x \\\hline
+%Laurent Ferier       &   &   &   &   & x & x & x \\\hline
+%Lukasz Fronc         &   &   &   &   &   & x & x \\\hline
+Marc Behrens         & x &   & x & x & x & x & x \\\hline
+Marielle Petit-Doche &   &   &   & x & x & x & x \\\hline
+%Mathilde Arnaud      &   &   &   &   &   &   &   \\\hline
+%Matthieu Perin       &   &   &   & x & x & x &   \\\hline
+Michael Jastram      & x &   & x & x & x & x & x  \\\hline
+Peter Mahlmann       & x &   & x & x & x & x & x \\\hline
+%Peyman Farhangi      &   &   & x & x & x & x &   \\\hline
+Pierre-Yves Le Morvan &   &   & x & x & x &   &   \\\hline
+%Silvano dal Zilio    &   &   &   & x & x & x &  \\\hline
+%Stefan Karg          &   &   &   & x & x & x & x \\\hline
+%Stefan Rieger        &   & x & x & x & x & x & x \\\hline
+%Thorsten Scholz      &   &   & x & x & x & x & x \\\hline
+%Uwe Schulze          &   &   &   & x & x & x &   \\\hline
+Uwe Steinke          & x &   & x & x & x & x & x \\\hline
+Valerio D'Angelo     & x &   & x & x  & x & x & x \\\hline
+%Veronique Gontier    &   &   & x & x & x & x & x \\\hline
+%Vincent Nuhaan       &   &   &   &   & x &   &   \\\hline
+% Name                  G   6   5   4   3   7   P \\\hline
+\end{tabular}
+
+%\line(1,0){440}
+
+\section{Scrum Meetings}
+
+\subsection{openETCS Grooming}
+\begin{itemize}
+\item Backlog Grooming Session\\
+Grooming took place. Results are visible in the updated backlog:\\
+\url{https://github.com/openETCS/product-backlog}
+
+\end{itemize}
+
+\subsection{WP6: Dissemination}
+\begin{itemize}
+
+\item No meeting today.
+\end{itemize}
+
+\subsection{WP5: Demonstration}
+
+\begin{itemize}
+\item Activities\\
+ERSA starts to look into the Scade model interfaces in order to connect to thenm with the test environement.
+
+\end{itemize}
+
+\subsection{WP4: Validation \& Verification}
+\begin{itemize}
+\item Activities\\
+WP4 has implemented the structures for an agile way of verification in WP3. Logs are available for all model parts. 
+Systerel presentzed the concept of a system verification model for modes and levels.
+\end{itemize}
+
+\subsection{WP3: Modelling}
+
+\begin{itemize}
+\item WP3 Activities\\
+Re-Engineering of the balise channel is still ongoing.
+Other updates in WP3 consist of providing  traceability and improving documentation.
+
+\end{itemize}
+
+\subsection{WP7: Toolchain}
+
+\begin{itemize}
+\item Acivities\\
+WP4 starts a new meeting series for grooming and other technical discussions. The new slot is  Thursday's 9:00. 
+\item WP7 workshop\\
+WP7 plans to host a workshop for planning the last part of the project. Dates aend of June or Beginning of July would meet the needs. 
+\end{itemize}
+
+\subsection{PMB: Project Management Board}
+
+The change request for changing the effort distribution in the German cluster is ongoing (shifting from EclipseSource to FormalMind). In this context projectOffice requested the update of planned efforts at Itea.
+
+The coverage of efforts related to the full runt-time-system had been discussed. In order to get a clear picture on availability of resources a call for contribution will be made.
+
+\section{Notes}
+\begin{itemize}
+
+\item Note: Location of Meeting Minutes\\
+You can find these minutes here: \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/Minutes/\jobname}. Please, use the issue tracker for findings with the minutes.
+
+\end{itemize}
+
+\end{document}
