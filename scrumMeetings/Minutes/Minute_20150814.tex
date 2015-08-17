@@ -1,0 +1,170 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS Scrum Meeting Minutes\end{center}}
+\section{Meeting Organisation}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & Weekly Scrum of Scrums\\
+%Organised by &Klaus-R\"udiger Hase\\
+Organised by & Peter Mahlmann\\
+%Organised by & Baseliyos Jacob\\
+Minutes by & Peter Mahlmann\\
+When & August, 14th, 2015, 09:45 - 11:45\\
+Location & Telco and Goto-Meeting\\
+\end{supertabular}
+
+\renewcommand{\arraystretch}{1.0}
+\section{Meeting:}
+
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{Slot} &  \textbf{Called By} & \textbf{Workpackage} \\
+\hline  
+9:45 - 10:00 & Peter Mahlmann & openETCS Backlog Grooming  \\\hline
+%9:45 - 10:00 & Baseliyos Jacob & openETCS Backlog Grooming  \\\hline
+%10:00 - 10:15 & Stefan Rieger & WP6: Dissemination \\\hline  
+10:15 - 10:30 & Matthieu Poirot & WP5: Demonstration \\\hline  
+%10:00 - 10:00 & Matthieu POIROT & WP5: Demonstration \\\hline
+10:15 - 10:30 & Marc Behrens & WP4: Verification \& Validation \\\hline 
+10:30 - 10:45 & Bernd Hekele & Modelling \\\hline
+11:00 - 11:15 & Michael Jastram  & WP7: Toolchain \\\hline
+11:15 - 11:45 & Klaus-R\"udiger Hase & PMB: Project Management Board \\\hline  
+\end{tabular}
+
+\section{Participants in Meeting:}
+
+\begin{tabular}{|l|c|c|c|c||c|c|c||c|c|c|}
+\hline
+\textbf{Participant}  & \textbf{G} & \textbf{WP6} &  \textbf{WP5} & \textbf{WP4}&  \textbf{WP3} & \textbf{WP7}&  \textbf{PMB} \\\hline
+% Name                  G   6   5   4   3   7   P
+Abdelnasir Mohamed    &  &   & x & x  & x &x  &x  \\\hline 
+%Alexander Probst      &  x &   & x  & x  & x & x &x  \\\hline  
+Alexander Pinnau      &   &   &   & x & x &  &  \\\hline  
+%Alexander Stante     &   &   & x  & x  & x & x &x  \\\hline 
+Baseliyos Jacob       & x & x & x & x & x & x &  \\\hline 
+%Bernd Gonska         & &   &   & x &   &   &   \\\hline
+Bernd Hekele          & x & x & x & x & x & x & x \\\hline
+%Benjamin Beichler     &   &   &   & x & x &  &   \\\hline
+%Christian Giraud     &   &   &   &   &   &   &   \\\hline
+%Christian Stahl      &   &   &  &  & x & x  &   \\\hline
+Dario Mercuri         &   &   & x & x & x &  &   \\\hline
+David Mentre          & x & x & x & x & x & x & x \\\hline
+%Didier Weckmann      & x &   & x & x & x & x &  \\\hline
+%Fausto Cochetti      &  x &   &  x & x & x & x & x \\\hline
+%Frederique Vallee      & x  &   &  x & x & x & x &  \\\hline
+%Hardi Hungar         &  &   &   & x &   & x &   \\\hline
+Ingo Weigelt          & x & x & x & x & x & x &   \\\hline
+%Ion I. Uribe         &  &   &   & x &   &   &   \\\hline
+%Izaskun de la Torre  &  &   &   &   &   & x & x \\\hline
+%Jakob Gaertner       &   &   &  & x & x &x   &   \\\hline
+%Jan Welvaarts        &  &   & x & x & x &   &   \\\hline
+Jan Welte             & x & x & x & x & x & x &   \\\hline
+Jens Gerlach          &   &   &   & x &  &  &   \\\hline
+%Karsten Falk         &   &   &   & x & x & x & x \\\hline
+Klaus-R\"udiger Hase & x & x & x & x & x & x & x \\\hline
+%Kolja Muchow  & x &   & x & x & x & x & x \\\hline
+%Laurent Ferier       &   &   &   &   & x & x & x \\\hline
+%Lukasz Fronc         &   &   &   &   &   & x & x \\\hline
+Marc Behrens         & x & x & x & x & x & x & x  \\\hline
+%Marielle Petit-Doche & x  &   & x & x & x & x &  \\\hline
+%Mathilde Arnaud      &   &   &   &   &   &   &   \\\hline
+%Matthieu Perin       &   &   &   & x & x & x &   \\\hline
+Matthieu Poirot       & x & x & x & x & x & x & x  \\\hline
+Michael Jastram       & x & x & x & x & x & x & x  \\\hline
+Peter Mahlmann        & x & x & x & x & x & x & x \\\hline
+%Peyman Farhangi      & x  &   & x & x & x & x & x  \\\hline
+%Pierre-Yves Le Morvan &   &   & x & x & x &   &   \\\hline
+%Silvano dal Zilio    &   &   &   &  &  & x &  \\\hline
+Stefan Karg          & x  & x & x  & x & x & x & x \\\hline
+%Stefan Rieger        &   &  & x & x & x & x &x  \\\hline
+Thorsten Schulz      &   &   &  &  & x & x & x \\\hline
+%Uwe Schulze          &   &   &   & x & x & x &   \\\hline
+Uwe Steinke          & x & x & x & x & x & x & x \\\hline
+%Valerio D'Angelo     & x &   & x & x  & x & x & x \\\hline
+%Veronique Gontier    &   &   & x & x & x & x & x \\\hline
+%Vincent Nuhaan       &   &   &   &   & x &   &   \\\hline
+% Name                  G   6   5   4   3   7   P \\\hline
+\end{tabular}
+
+%\line(1,0){440}
+
+\section{Scrum Meetings}
+
+\subsection{openETCS Grooming}
+\begin{itemize}
+\item Product backlog grooming\\
+The product backlog is available to the public via 
+\url{https://github.com/openETCS/product-backlog}. For the results of grooming session we refer to the waffle.io scrum board \url{https://waffle.io/openETCS/product-backlog} (free registration for waffle.io needed).
+
+\end{itemize}
+
+\subsection{WP6: Dissemination}
+
+The WP6 meeting was canceled.
+ 
+\subsection{WP5: openETCS Demonstrator}
+
+\begin{itemize}
+\item GE demonstrator documentation has been uploaded to WP5 repository.
+\item Hardware will be shipped from DE to DLR today.
+\item A meeting between MERCE and ERSA is planned for the end of the month.
+\end{itemize}
+
+\subsection{WP4: Validation \& Verification}
+\begin{itemize}
+\item TUBS is currently working on SCADE traceability, for details see \url{https://github.com/openETCS/validation/wiki/Traceability-in-SCADE-Suite-Models}.\
+\item It is requested that top-level components have the requirements they cover annotated in the SCADE comments at least.
+\item The current state of the automatic error reports has been presented.
+\end{itemize}
+
+\subsection{WP3: Modelling}
+
+\begin{itemize}
+\item This week a meeting between ERSA and DB for further coordination took place at the site of ERSA France.
+\item Lifecycle of data has been briefly discussed and will be topic for the next iteration.
+\item The information filter module is currently in review by DB.
+\item A new release with additional functionality is scheduled for today. The overall state is that the WP3 team is close to a release covering user story 7.
+\item Documentation (D3.6.3/ADD, SysML models) is currently ongoing and coordinated by DB. All partners should deliver their input by August 18th.
+\item Up to date SCADE code documentation (automatically generated) is needed by WP4.
+\end{itemize}
+
+\subsection{WP7: openETCS Tool Chain}
+
+\begin{itemize}
+\item The test plan has been presented by SQS. A recording of the gotomeeting session will be uploaded to the openETCS YouTube channel.
+\item The roadmap how to transfer the openETCS resutls to a fully open tool chain has been discussed. A corresponding user story has been created in the product backlog.
+\end{itemize}
+
+\subsection{PMB: Project Management Board}
+
+\begin{itemize}
+\item All project partners should focus their effort and resources to the highest priority items in the product backlog.
+\item For the german cluster the report to the project management agency in the DLR is due by tomorrow. A copy of the individual reports has to be sent to DB (electronically is sufficient).
+\item The input to the ITEA PPR 2015 S1 is due by next Friday.
+\end{itemize}
+
+\section{Notes}
+
+
+\begin{itemize}
+\item You can find these minutes online at \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/Minutes/\jobname}. Please, use the issue tracker for findings and corrections within the minutes.
+\end{itemize}
+
+\end{document}
