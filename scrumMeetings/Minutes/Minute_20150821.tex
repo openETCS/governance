@@ -11,6 +11,7 @@
 \usepackage{array}
 \usepackage{hhline}
 \usepackage{hyperref}
+\usepackage{booktabs}
 \hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
 
 
@@ -21,14 +22,14 @@
 \renewcommand{\arraystretch}{1.5}
 \begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
 %\hline
-Subject & Weekly Scrum of Scrums\\
+Subject & Weekly Scrum Meetings\\
 Minutes by & Peter Mahlmann\\
 When & August, 21th, 2015, 09:45 - 11:45\\
 Location & Telco and Goto-Meeting\\
 \end{supertabular}
 
 \renewcommand{\arraystretch}{1.0}
-\section{Meeting:}
+\section{Meeting Agenda:}
 
 \begin{tabular}{|c|l|l|}
 \hline
@@ -44,63 +45,40 @@ Location & Telco and Goto-Meeting\\
 11:15 - 11:45 & Klaus-R\"udiger Hase & PMB: Project Management Board \\\hline  
 \end{tabular}
 
-\section{Participants in Meeting:}
+\section{List of Attendees}
 
-\begin{tabular}{|l|c|c|c|c|c|c|c||c|c|}
-\hline
-\textbf{Participant}  & \textbf{G} & \textbf{WP6} &  \textbf{WP5} & \textbf{WP4}&  \textbf{WP3} & \textbf{WP7}&  \textbf{PMB} \\\hline
-% Name                  G   6   5   4   3   7   P
-Abdelnasir Mohamed    &   &   & x & x & x & x & x \\\hline 
-Alexander Pinnau      &   &   &   & x & x &   &   \\\hline  
-%Alexander Stante     &   &   & x  & x  & x & x &x  \\\hline 
-Baseliyos Jacob       & x &   & x & x & x & x & x \\\hline 
-Bernd Hekele          &   &   & x & x & x & x & x \\\hline
-Janathan Ghiglia      &   &   &   &   &   &   &   \\\hline
-%Benjamin Beichler     &   &   &   & x & x &  &   \\\hline
-%Christian Giraud     &   &   &   &   &   &   &   \\\hline
-%Christian Stahl      &   &   &  &  & x & x  &   \\\hline
-%Dario Mercuri         &   &   & x & x & x &  &   \\\hline
-David Mentre          &   &   &   & x & x & x & x \\\hline
-%Didier Weckmann      & x &   & x & x & x & x &  \\\hline
-%Fausto Cochetti      &  x &   &  x & x & x & x & x \\\hline
-%Frederique Vallee      & x  &   &  x & x & x & x &  \\\hline
-%Hardi Hungar         &  &   &   & x &   & x &   \\\hline
-%Ion I. Uribe         &  &   &   & x &   &   &   \\\hline
-%Izaskun de la Torre  &  &   &   &   &   & x & x \\\hline
-%Jakob Gaertner       &   &   &  & x & x &x   &   \\\hline
-%Jan Welvaarts        &  &   & x & x & x &   &   \\\hline
-Jan Welte             & x &   & x & x & x & x &   \\\hline
-Jens Gerlach          &   &   &   & x &  &  &   \\\hline
-%Karsten Falk         &   &   &   & x & x & x & x \\\hline
-%Klaus-R\"udiger Hase & x & x & x & x & x & x & x \\\hline
-%Kolja Muchow  & x &   & x & x & x & x & x \\\hline
-%Laurent Ferier       &   &   &   &   & x & x & x \\\hline
-%Lukasz Fronc         &   &   &   &   &   & x & x \\\hline
-Marc Behrens          &   &   & x & x & x & x & x  \\\hline
-%Marielle Petit-Doche & x  &   & x & x & x & x &  \\\hline
-%Mathilde Arnaud      &   &   &   &   &   &   &   \\\hline
-%Matthieu Perin       &   &   &   & x & x & x &   \\\hline
-Matthieu Poirot       & x &   & x & x & x & x & x  \\\hline
-Michael Jastram       & x &   & x & x & x & x & x  \\\hline
-Peter Mahlmann        & x &   & x & x & x & x & x \\\hline
-%Peyman Farhangi      & x  &   & x & x & x & x & x  \\\hline
-%Silvano dal Zilio    &   &   &   &  &  & x &  \\\hline
-Stefan Karg           & x &   & x  & x & x & x & x \\\hline
-%Stefan Rieger        &   &  & x & x & x & x &x  \\\hline
-Thorsten Schulz       &   &   &   &  & x & x & x \\\hline
-%Uwe Schulze          &   &   &   & x & x & x &   \\\hline
-Uwe Steinke           & x &   & x & x & x & x & x \\\hline
-Ingo Weigelt          &   &   &   &   &   & x & x  \\\hline
-%Veronique Gontier    &   &   & x & x & x & x & x \\\hline
-%Vincent Nuhaan       &   &   &   &   & x &   &   \\\hline
-% Name                  G   6   5   4   3   7   P \\\hline
-\end{tabular}
+\begin{table}[htbp]
+    \begin{tabular}{rrr}
+    \toprule
+    \textbf{Name} & \textbf{Join Time} & \textbf{Leave Time} \\
+    \midrule
+    Alexander Pinnau (ICS) & 10:30 AM & 11:12 AM \\
+    Baseliyos Jacob & 9:52 AM & 11:20 AM \\
+    Behrens, Marc & 10:28 AM & 11:20 AM \\
+    Bernd Hekele (DB) & 10:17 AM & 11:20 AM \\
+    Ghiglia, Jonathan R (GE Transportation) & 10:06 AM & 10:22 AM \\
+    Ingo Weigelt & 10:46 AM & 11:20 AM \\
+    Jan Welte (TU-BS) & 9:46 AM & 11:19 AM \\
+    Jens Gerlach & 10:28 AM & 10:45 AM \\
+    Matthieu POIROT -ERSA & 9:46 AM & 11:19 AM \\
+    Michael Jastram & 9:47 AM & 11:19 AM \\
+    Nasir Mohamed (AEbt) & 9:54 AM & 11:20 AM \\
+    Peter Mahlmann & 9:46 AM & 11:20 AM \\
+    Thorsten Schulz (Uni Ro) & 10:41 AM & 11:19 AM \\
+    Uwe Steinke (Siemens) & 9:46 AM & 11:20 AM \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
 
-%\line(1,0){440}
 
-\section{Scrum Meetings}
 
-\subsection{openETCS Grooming}
+
+
+
+\section{Minutes}
+
+\subsection{Product Backlog Grooming}
 \begin{itemize}
 \item Product backlog grooming\\
 The product backlog is available to the public via 
