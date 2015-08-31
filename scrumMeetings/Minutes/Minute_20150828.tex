@@ -1,0 +1,135 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS Scrum Meeting Minutes\end{center}}
+
+\section{Meeting Organisation}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & Weekly Scrum Meetings\\
+Minutes by & Peter Mahlmann (DB Netz AG)\\
+When & August 28th, 2015, 9:45 AM -- 11:45 AM\\
+Location & Telco and GoToMeeting\newline \url{https://global.gotomeeting.com/meeting/join/493963173}\\
+\end{supertabular}
+
+\renewcommand{\arraystretch}{1.0}
+\section{Meeting Agenda}
+
+\begin{tabular}{cll}
+\toprule
+\textbf{Slot} &  \textbf{Chair} & \textbf{Workpackage} \\
+\midrule 
+9:45 AM -- 10:15 AM & Peter Mahlmann & Product Backlog Grooming  \\
+10:15 AM -- 10:30 AM & Matthieu Poirot & WP5 openETCS Demonstrator \\  
+10:30 AM -- 10:45 AM & Marc Behrens & WP4 Validation \& Verification \\
+10:45 AM -- 11:00 AM & Bernd Hekele & WP3 Modeling \\
+11:00 AM -- 11:15 AM & Michael Jastram  & WP7 openETCS Tool Chain \\
+11:15 AM -- 11:45 AM & Klaus-R\"udiger Hase & Project Management Board \\
+\bottomrule
+\end{tabular}
+
+\section{List of Attendees}
+
+\begin{table}[htbp]
+    \begin{tabular}{rrr}
+    \toprule
+    \textbf{Name} & \textbf{Join Time} & \textbf{Leave Time} \\
+    \midrule
+    Alexander Pinnau (ICS) & 10:32 AM & 11:05 AM \\
+    Baseliyos Jacob & 9:51 AM & 11:16 AM \\
+    COCHETTI Fausto & 10:46 AM & 11:00 AM \\
+    Hardi Hungar (DLR) & 10:28 AM & 11:03 AM \\
+    Ingo Weigelt & 9:45 AM & 11:16 AM \\
+    Jan Welte (TU-BS) & 10:10 AM & 11:03 AM \\
+    Jens Gerlach & 10:31 AM & 10:44 AM \\
+    Klaus-R\"udiger Hase & 10:38 AM & 11:16 AM \\
+    Marielle Petit-Doche & 10:34 AM & 11:15 AM \\
+    Matthieu POIROT -ERSA & 10:16 AM & 11:16 AM \\
+    Nasir Mohamed (AEbt) & 10:06 AM & 11:16 AM \\
+    Nasir Mohamed (AEbt) & 9:51 AM & 9:55 AM \\
+    Peter Mahlmann (DB) & 9:44 AM & 11:16 AM \\
+    Thorsten Schulz (Uni Ro) & 10:28 AM & 11:15 AM \\
+    Uwe Steinke (Siemens) & 9:46 AM & 11:16 AM \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+
+
+\section{Minutes}
+
+\subsection{Product Backlog Grooming}
+\begin{itemize}
+\item The product backlog is available to the public via 
+\url{https://github.com/openETCS/product-backlog}. 
+\item For the results of grooming session we refer to the waffle.io scrum board \url{https://waffle.io/openETCS/product-backlog} (free registration for waffle.io needed).
+\end{itemize}
+
+\subsection{WP6: Dissemination}
+\begin{itemize}
+\item The WP6 meeting was canceled, the WP6 slot has been used for product backlog grooming.
+\end{itemize}
+
+\subsection{WP5 openETCS Demonstrator}
+\begin{itemize}
+\item A meeting for discussion about the generic openETCS API between ERSA and MERCE is scheduled for next week. According to ERSA, MERCE will support the API development.
+\item It has to be checked if the WP5 API can be used in WP3.
+\item DLR and GE are currently working on the hardware integration.
+\end{itemize}
+
+\subsection{WP4 Validation \& Verification}
+\begin{itemize}
+\item The integration of GE hardware in the DLR labs is currently stalled due to missing software permissions from GE. Moreover, the integration turned out to be more difficult than originally expected.
+\item TUBS is currently working on the track integration model and preparing tests.
+\item The kick-off meeting for the internal assessment took place this week (participants: AEbt, All4tec,DLR). The next meeting is planned for next tuesday. Major goal of this meeting will be the assignment of responsibilities.
+\item Currently a two-day WP3/WP4 workshop is ongoing at the site of DLR in Brunswick. Goal of the workshop is to integrate and interface the WP3 model and visualize the activities inside the EVC.
+\end{itemize}
+
+\subsection{WP3 Modelling}
+\begin{itemize}
+\item The WP3 code currently does not compile due to wrong type definitions. First actions have been taken on this issue already.
+\item WP3/WP4 workshop is ongoing (c.f.~previous section).
+\item Concerning the overall progress it is noted that currently 7 out of the 16 user stories needed to be able to run a train on the Amsterdam Utrecht line are covered by the model.
+\item Systerel will take action on the contribution to the ADD document (D3.5.3) next week.
+\end{itemize}
+
+\subsection{WP7 openETCS Tool Chain}
+
+\begin{itemize}
+\item The process proposal for the master-branch-error-free issue has been completed and needs review (c.f. \url{https://github.com/openETCS/toolchain/issues/498}).
+\item Formal Mind took over the US-User-Docu user story since SQS is practically no more availble in the project.
+\item INPT is trying to subcontract Samares to activate additional resources. Project office recommended to contact the french funding authority directly.
+\item CNRS LAAS took over the development of a roadmap concept how to convert SCADE Suite artefacts to an open tool chain. So far, no team member from LAAS has been assigned.
+\end{itemize}
+
+\subsection{Project Management Board}
+\begin{itemize}
+\item A balance between creating a simulation environment (to allow demonstration and visualization) and model development (i.e. implementing more functionality) has to be find. Discussions on this topic and priorities will follow after the scrum meetings.
+\end{itemize}
+
+
+\section{General Remarks}
+
+\begin{itemize}
+\item Please find these minutes online at \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/Minutes/\jobname.pdf}. Please, use the github issue tracker for findings and corrections within the minutes.
+\end{itemize}
+
+\end{document}
