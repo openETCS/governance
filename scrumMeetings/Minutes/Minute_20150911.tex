@@ -1,0 +1,122 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS Scrum Meeting Minutes\end{center}}
+
+\section{Meeting Organisation}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & Weekly Scrum Meetings\\
+Minutes by & Peter Mahlmann (DB Netz AG)\\
+When & September 11th, 2015, 9:45 AM -- 11:45 AM\\
+Location & Telco and GoToMeeting\newline \url{https://global.gotomeeting.com/meeting/join/493963173}\\
+\end{supertabular}
+
+\renewcommand{\arraystretch}{1.0}
+\section{Meeting Agenda}
+
+\begin{tabular}{lll}
+\toprule
+\textbf{Slot} &  \textbf{Chair} & \textbf{Work P ackage} \\
+\midrule 
+9:45 AM -- 10:15 AM & Peter Mahlmann & Product Backlog Grooming  \\
+10:15 AM -- 10:30 AM & Matthieu Poirot & WP5 openETCS Demonstrator \\  
+10:30 AM -- 10:45 AM & Marc Behrens & WP4 Validation \& Verification \\
+10:45 AM -- 11:00 AM & Bernd Hekele & WP3 Modeling \\
+11:00 AM -- 11:15 AM & Michael Jastram  & WP7 openETCS Tool Chain \\
+11:15 AM -- 11:45 AM & Klaus-R\"udiger Hase & Project Management Board \\
+\bottomrule
+\end{tabular}
+
+\section{List of Attendees}
+
+\begin{table}[htbp]
+    \begin{tabular}{rrr}
+    \toprule
+    \textbf{Name} & \textbf{Join Time} & \textbf{Leave Time} \\
+    \midrule
+    Ingo Weigelt & 10:09 AM & 11:05 AM \\
+    Jan Welte & 10:30 AM & 11:05 AM \\
+    Johannes Kastner (ICS) & 9:57 AM & 11:04 AM \\
+    Marc Behrens & 10:10 AM & 11:04 AM \\
+    Mercuri, Dario (GE Transportation) & 9:39 AM & 10:32 AM \\
+    Klaus-R\"udiger Hase (DB) & 9:50 AM & 11:12 AM \\
+    Peter Mahlmann (DB) & 9:35 AM & 11:12 AM \\
+    Stefan Karg (LEA Railergy) & 10:02 AM & 11:04 AM \\
+    Uwe Steinke (Siemens) & 9:45 AM & 11:05 AM \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+
+
+
+\section{Minutes}
+
+\subsection{Product Backlog Grooming}
+\begin{itemize}
+\item The product backlog is available to the public via 
+\url{https://github.com/openETCS/product-backlog}. 
+\item For the results of grooming session we refer to the waffle.io scrum board \url{https://waffle.io/openETCS/product-backlog} (free GitHub account needed).
+\end{itemize}
+
+\subsection{WP6: Dissemination}
+\begin{itemize}
+\item The WP6 meeting was canceled, the WP6 slot has been used for product backlog grooming.
+\end{itemize}
+
+\subsection{WP5 openETCS Demonstrator}
+\begin{itemize}
+\item The integration of GE hardware is stalling due to holidays and missing software. In particular compiler settings for code generation are needed from GE. 
+\item ERSA is still working the wrapper respectively glue code  to make the openETCS OBU model work with the ERSA environment.
+\end{itemize}
+
+\subsection{WP4 Validation \& Verification}
+\begin{itemize}
+\item A telco on V\&V results took place this week. The very good exchange between developers and the V\&V team on the findings is mentioned. First actions on the the findings of the V\&V team have been taken already in case of the checkBGConsistency component.
+\item AEbt and All4tec are going to write the internal assessment report. As a first step, the report will report on the CENELEC conformance of the planning documents.
+\item The team of DB subcontractor ICS has been asked to join the test plan meetings on Thursdays to align V\&V activities between the various partners.
+\end{itemize}
+
+\subsection{WP3 Modeling}
+\begin{itemize}
+\item The focus of the WP3 team between creating a simulation environment (to allow demonstration and visualization) model development (i.e. implementing additional functionality), and documentation has been discussed.
+\end{itemize}
+
+\subsection{WP7 openETCS Tool Chain}
+\begin{itemize}
+\item The WP7 meeting was canceld due to GoToMeeting issues.
+\end{itemize}
+
+\subsection{Project Management Board}
+\begin{itemize}
+\item No PMB meeting was required this week.
+\end{itemize}
+
+
+\section{General Remarks}
+
+\begin{itemize}
+\item Please find these minutes online at \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/Minutes/\jobname.pdf}. Please, use the github issue tracker for findings and corrections within the minutes.
+\item Participation in todays meeting was relatively low due to technical issues with GoToMeeting, i.e. several partners were not able to join the meeting due to server issues.
+\end{itemize}
+
+\end{document}
