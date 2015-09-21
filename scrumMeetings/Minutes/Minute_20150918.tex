@@ -1,0 +1,134 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS Scrum Meeting Minutes\end{center}}
+
+\section{Meeting Organisation}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & Weekly Scrum Meetings\\
+Minutes by & Peter Mahlmann (DB Netz AG)\\
+When & September 18th, 2015, 9:45 AM -- 11:45 AM\\
+Location & Telco and GoToMeeting\newline \url{https://global.gotomeeting.com/meeting/join/493963173}\\
+\end{supertabular}
+
+\renewcommand{\arraystretch}{1.0}
+\section{Meeting Agenda}
+
+\begin{tabular}{lll}
+\toprule
+\textbf{Slot} &  \textbf{Chair} & \textbf{Work P ackage} \\
+\midrule 
+9:45 AM -- 10:15 AM & Peter Mahlmann & Product Backlog Grooming  \\
+10:15 AM -- 10:30 AM & Matthieu Poirot & WP5 openETCS Demonstrator \\  
+10:30 AM -- 10:45 AM & Marc Behrens & WP4 Validation \& Verification \\
+10:45 AM -- 11:00 AM & Bernd Hekele & WP3 Modeling \\
+11:00 AM -- 11:15 AM & Michael Jastram & WP7 openETCS Tool Chain \\
+11:15 AM -- 11:45 AM & Klaus-R\"udiger Hase & Project Management Board \\
+\bottomrule
+\end{tabular}
+
+\section{List of Attendees}
+
+\begin{table}[htbp]
+    \begin{tabular}{rrr}
+    \toprule
+    \textbf{Name} & \textbf{Join Time} & \textbf{Leave Time} \\
+    \midrule
+    Alexander Pinnau (ICS) & 10:27 AM & 11:01 AM \\
+    Baseliyos Jacob & 10:19 AM & 11:01 AM \\
+    Behrens, Marc & 10:26 AM & 11:01 AM \\
+    Bernd Hekele & 9:51 AM & 11:01 AM \\
+    Christian Stahl & 10:43 AM & 10:55 AM \\
+    Ingo Weigelt & 9:53 AM & 11:01 AM \\
+    Jan Welte (TU-BS) & 9:51 AM & 11:01 AM \\
+    Marielle Petit-Doche & 10:35 AM & 10:58 AM \\
+    Matthieu Poirot (ERSA) & 9:52 AM & 10:22 AM \\
+    Mercuri, Dario (GE) & 10:05 AM & 10:30 AM \\
+    Klaus-R\"udiger HAse (DB) & 9:51 AM & 11:01 AM \\
+    Peter Mahlmann (DB) & 9:42 AM & 11:01 AM \\
+    Stefan Karg (LEA Railergy) & 10:02 AM & 11:01 AM \\
+    Stefan Rieger & 10:41 AM & 11:00 AM \\
+    Thorsten Schulz (Uni Ro) & 10:38 AM & 11:01 AM \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+
+
+
+\section{Minutes}
+
+\subsection{Product Backlog Grooming}
+\begin{itemize}
+\item The product backlog is available via 
+\url{https://github.com/openETCS/product-backlog}. 
+\item For the results of the grooming session we refer to the corresponding waffle.io scrum board available via \url{https://waffle.io/openETCS/product-backlog} (free GitHub account needed).
+\end{itemize}
+
+\subsection{WP6: Dissemination}
+\begin{itemize}
+\item The WP6 meeting was canceled, the slot of this meeting has been used for product backlog grooming instead.
+\end{itemize}
+
+\subsection{WP5 openETCS Demonstrator}
+\begin{itemize}
+\item REMARK: Unfortunately, WP5 leader ERSA was not available in this meeting due to technical issues at the ERSA office.
+\item Regarding the integration of GE hardware into the DLR lab GE did deliver the missing software package and compiler settings that were missing so far to DLR.
+\item As reported during the product backlog grooming, ERSA is still working on the wrapper respectively glue code to make the openETCS OBU model work with the ERSA environment. ERSA expects to be deliver a draft within the next two weeks.
+\end{itemize}
+
+\subsection{WP4 Validation \& Verification}
+\begin{itemize}
+\item The test plan has been groomed this week and will be drafted in LaTeX now (cf. \url{https://github.com/openETCS/validation/issues/307}).
+\item The architecture verification is ongoing. It is planned to finish this task within one month.
+\item Trackside data needs to be qualified. Here, the trackside model and actual Utrecht-Amsterdam track data will be compared.
+\end{itemize}
+
+\subsection{WP3 Modeling}
+\begin{itemize}
+\item It is noted that there has been limited progress on modeling side this week due to several side activities.
+\item Problems with level changes haven been addressed (cf. \url{https://github.com/openETCS/modeling/issues/745}).
+\item There are currently issues with the TrackAtlas component which need to be addressed by partner LEA next week.
+\item A technical meeting on the information filter component between Fraunhofer, TWT, and DB took place this week. TWT will take over the maintenance and further development of this component from Fraunhofer.
+\item Test automation has been reported to be available soon.
+\item The release process proposed by WP7 has to reviewed by the WP3 developers.
+\end{itemize}
+
+\subsection{WP7 openETCS Tool Chain}
+\begin{itemize}
+\item Samares Engineering joined the WP7 team officially and started to work on traceability.
+\item Concerning the US-Master-Branch-Error-Free proposal comments from the side of DB are expected for next week.
+\end{itemize}
+
+\subsection{Project Management Board}
+\begin{itemize}
+\item There were no topics or issues to be addressed in the PMB meeting this week.
+\end{itemize}
+
+
+\section{General Remarks}
+
+\begin{itemize}
+\item Please find these minutes online at \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/Minutes/\jobname.pdf}. Please, use the github issue tracker for findings and corrections within the minutes.
+\end{itemize}
+
+\end{document}
