@@ -1,0 +1,135 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS Scrum Meeting Minutes\end{center}}
+
+\section{Meeting Organisation}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & Weekly Scrum Meetings\\
+Minutes by & Peter Mahlmann (DB Netz AG)\\
+When & September 25th, 2015, 9:45 AM -- 11:45 AM\\
+Location & Telco and GoToMeeting\newline \url{https://global.gotomeeting.com/meeting/join/493963173}\\
+\end{supertabular}
+
+\renewcommand{\arraystretch}{1.0}
+\section{Meeting Agenda}
+
+\begin{tabular}{lll}
+\toprule
+\textbf{Slot} &  \textbf{Chair} & \textbf{Work Package} \\
+\midrule 
+9:45 AM -- 10:15 AM & Peter Mahlmann & Product Backlog Grooming  \\
+10:15 AM -- 10:30 AM & Matthieu Poirot & WP5 openETCS Demonstrator \\  
+10:30 AM -- 10:45 AM & Marc Behrens & WP4 Validation \& Verification \\
+10:45 AM -- 11:00 AM & Bernd Hekele & WP3 Modeling \\
+11:00 AM -- 11:15 AM & Michael Jastram & WP7 openETCS Tool Chain \\
+11:15 AM -- 11:45 AM & Klaus-R\"udiger Hase & Project Management Board \\
+\bottomrule
+\end{tabular}
+
+\section{List of Attendees}
+
+\begin{table}[htbp]
+    \begin{tabular}{rrr}
+    \toprule
+    \textbf{Name} & \textbf{Join Time} & \textbf{Leave Time} \\
+    \midrule
+     Baseliyos Jacob (DB) & 9:51 AM & 11:03 AM \\
+     Behrens, Marc (DLR) & 10:17 AM & 11:10 AM \\
+     Bernd Hekele (DB) & 9:46 AM & 11:10 AM \\
+     Ingo Weigelt & 10:41 AM & 11:10 AM \\
+     Jan Welte (TU-BS) & 10:10 AM & 10:58 AM \\
+     Johannes Kastner (ICS) & 10:13 AM & 11:10 AM \\
+     Klaus-R\"udiger Hase (DB) & 9:45 AM & 11:10 AM \\
+     Marielle Petit-Doche & 10:36 AM & 11:09 AM \\
+     Matthieu POIROT (ERSA) & 9:47 AM & 11:10 AM \\
+     Mercuri, Dario (GE Transportation) & 10:08 AM & 10:35 AM \\
+     Michael Jastram & 9:48 AM & 11:10 AM \\
+     Peter Mahlmann (DB) & 9:43 AM & 11:10 AM \\
+     Peyman Farhangi (DB) & 9:43 AM & 11:10 AM \\
+     Stefan Karg (LEA Railergy) & 10:01 AM & 11:10 AM \\
+     Thorsten Schulz (Uni Ro) & 10:27 AM & 11:10 AM \\
+     Uwe Steinke (Siemens) & 9:45 AM & 11:10 AM \\
+     \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+
+
+
+\section{Minutes}
+
+\subsection{Product Backlog Grooming}
+\begin{itemize}
+\item The product backlog is available via 
+\url{https://github.com/openETCS/product-backlog}. 
+\item For the results of the grooming session we refer to the corresponding waffle.io scrum board available via \url{https://waffle.io/openETCS/product-backlog} (free GitHub account needed).
+\end{itemize}
+
+\subsection{WP6: Dissemination}
+\begin{itemize}
+\item The WP6 meeting was canceled, the slot of this meeting has been used for product backlog grooming instead.
+\end{itemize}
+
+\subsection{WP5 openETCS Demonstrator}
+\begin{itemize}
+
+\item ERSA is working on the generic API. Here, after a previous postponements, ERSA will deliver a first version by October 2nd.
+\item With respect to the GE hardware integration in the DLR labs the tool chain is set up and can be compiled now. The current state is that after 30s a system hold caused by the two out of two system occurs. DLR and GE are in contact to solve this issue.
+\end{itemize}
+
+\subsection{WP4 Validation \& Verification}
+\begin{itemize}
+\item Partner ICS did contribute to the test automation. In particular test scripts have been developed. Currently the generated output is in hypertext format. Next step will be to have printable test case descriptions generated using LaTeX.
+\item Concerning the hazard and risk analysis TUBS is waiting for the high level SysML description to be completed. DB already took actions on this and coordinates the completion of the SysML model, a draft is expected to be available by the end of next week.
+\item WP4 priority currently lies on the verification of the WP3 model. In particular actions on the mode and level component developed developed by Systerel will be taken next week.
+\end{itemize}
+
+\subsection{WP3 Modeling}
+\begin{itemize}
+\item DB is working on the implementation of a release process and setting up the corresponding infrastructure.
+\item Issues in track and track messages components have been solved this week.
+\item Concerning the model development the focus this week has been on the track atlas, level management, and the DMI (i.e.~the planning area).
+\item Problems with SCADE Suite (repeated crashes) have been reported by Systerel.
+\item Substantial progress has been made with respect to the architecture and design description (ADD, c.f. \url{https://github.com/openETCS/modeling/tree/master/openETCS%20ArchitectureAndDesign/D3.5.3}) and the SysML model.
+\end{itemize}
+
+\subsection{WP7 openETCS Tool Chain}
+\begin{itemize}
+\item An important WP7 backlog item is the migration of the modeling results to an open source tool chain. LAAS will take action on this, a project plan has been implemented by WP7 management for this, c.f. \url{https://github.com/openETCS/toolchain/issues/500}.
+\item Work on the user documentation has been started.Other WPs may take advantage of the documentation infrastructure, if they want to.
+\item Regarding traceability new partner Samares is now getting up to speed and getting familiar with the infrastructure and the project.
+\end{itemize}
+
+\subsection{Project Management Board}
+\begin{itemize}
+\item Ways of calculating the SRS coverage of the openETCS OBU model automatically have been discussed.
+\end{itemize}
+
+
+\section{General Remarks}
+
+\begin{itemize}
+\item Please find these minutes online at \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/Minutes/\jobname.pdf}. Please, use the github issue tracker for findings and corrections within the minutes.
+\end{itemize}
+
+\end{document}
