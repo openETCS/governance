@@ -1,0 +1,139 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS Scrum Meeting Minutes\end{center}}
+
+\section{Meeting Organisation}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & Weekly Scrum Meetings\\
+Minutes by & Peter Mahlmann (DB Netz AG)\\
+When & October 23rd, 2015, 9:45 AM -- 11:45 AM\\
+Location & Telco and GoToMeeting\newline \url{https://global.gotomeeting.com/meeting/join/493963173}\\
+\end{supertabular}
+
+\renewcommand{\arraystretch}{1.0}
+\section{Meeting Agenda}
+
+\begin{tabular}{lll}
+\toprule
+\textbf{Slot} &  \textbf{Chair} & \textbf{Work Package} \\
+\midrule 
+9:45 AM -- 10:15 AM & Peter Mahlmann & Product Backlog Grooming  \\
+10:15 AM -- 10:30 AM & Matthieu Poirot & WP5 openETCS Demonstrator \\  
+10:30 AM -- 10:45 AM & Marc Behrens & WP4 Validation \& Verification \\
+10:45 AM -- 11:00 AM & Bernd Hekele & WP3 Modeling \\
+11:00 AM -- 11:15 AM & Michael Jastram & WP7 openETCS Tool Chain \\
+11:15 AM -- 11:45 AM & Klaus-R\"udiger Hase & Project Management Board \\
+\bottomrule
+\end{tabular}
+
+\section{List of Attendees}
+
+\begin{table}[htbp]
+    \begin{tabular}{rrr}
+    \toprule
+    \textbf{Name} & \textbf{Join Time} & \textbf{Leave Time} \\
+    \midrule
+    Bernd Hekele (DB) & 10:32 AM & 11:14 AM \\
+    Christian Stahl & 10:46 AM & 10:49 AM \\
+    COCHETTI Fausto & 11:13 AM & 11:18 AM \\
+    FAUDOU raphael & 11:00 AM & 11:13 AM \\
+    Ghiglia, Jonathan R (GE Transportation) & 10:13 AM & 10:21 AM \\
+    Ingo Weigelt & 10:56 AM & 11:13 AM \\
+    Jan Welte (TU-BS) & 10:11 AM & 10:41 AM \\
+    Jens Gerlach & 10:29 AM & 10:37 AM \\
+    Johannes Kastner (ICS) & 10:20 AM & 11:13 AM \\
+    Klaus-R\"udiger HASE & 9:42 AM & 1:34 PM \\
+    Matthieu Poirot - Ersa & 9:49 AM & 11:13 AM \\
+    Michael Jastram & 10:52 AM & 11:14 AM \\
+    Nasir Mohamed (AEbt) & 10:50 AM & 11:13 AM \\
+    Peter Mahlmann (DB) & 9:44 AM & 11:13 AM \\
+    Peyman Farhangi & 9:42 AM & 11:17 AM \\
+    Uwe Steinke (Siemens) & 9:44 AM & 12:04 PM \\
+
+
+     \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+
+
+
+\section{Minutes}
+
+\subsection{Product Backlog Grooming}
+\begin{itemize}
+\item The product backlog is available via 
+\url{https://github.com/openETCS/product-backlog}. 
+\item For the results of the grooming session we refer to the corresponding waffle.io scrum board available via \url{https://waffle.io/openETCS/product-backlog} (free GitHub account needed).
+\end{itemize}
+
+\subsection{WP6: Dissemination}
+\begin{itemize}
+\item The WP6 meeting was canceled, the slot of this meeting has been used for product backlog grooming instead.
+\end{itemize}
+
+\subsection{WP5 openETCS Demonstrator}
+\begin{itemize}
+\item ERSA is currently working on the next iteration of the API, which will include radio communication, balises and automatic drive.
+\item The integration of GE hardware into the non-vital demonstrator is ongoing at DLR.
+\item THe progress and availability of the deliverables according to the FPP has been discussed. WP leader ERSA is confident that all deliverables will be available for the final ITEA review.
+\end{itemize}
+
+\subsection{WP4 Validation \& Verification}
+\begin{itemize}
+\item Verification of user story 14 is ongoing; a data set for testing has been generated.
+\item At the small cluster meeting in Braunschweig it has been discussed how model based testing can be integrated into verification.
+\item Verification of user story 9 has been closed.
+\item Verification of the openETCS architecture is ongoing.
+\item The QA plan is being prepared for the overall assessment. Here, the description of the agile process is still missing.
+\item The Bitwalker is being prepared for EVC integration.
+\end{itemize}
+
+\subsection{WP3 Modeling}
+\begin{itemize}
+\item Major changes in interfaces and the bus integration has been completed this week. Regression testing is ongoing.
+\item Currently, the TrackAtlas component is not working as intended. Analysis is ongoing.
+\item ICS is working on the separation of the DMI from the model.
+\item The 16 user stories are further analysed and improved currently.
+\item The current status of the ADD document has been presented. Chapters 1, 2, and 5.1 need to be revised next week. The assessment of the ADD document will start at the beginning of November.
+\end{itemize}
+
+\subsection{WP7 openETCS Tool Chain}
+\begin{itemize}
+\item Concerning the migration path to an open source tool chain a first draft is expected for next week. The document will be reviewed by DB and DLR.
+\item Work on traceability architecture is ongoing.
+\end{itemize}
+
+\subsection{Project Management Board}
+\begin{itemize}
+\item The option to have a final workshop at December 17th (the day after the review) has been discussed. It was proposed to organize this workshop as an unconference.
+\item Details on the ITEA review preparation will be available by next week.
+\end{itemize}
+
+\section{General Remarks}
+
+\begin{itemize}
+\item Please find these minutes online at \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/Minutes/\jobname.pdf}. Please, use the github issue tracker for findings and corrections within the minutes.
+\end{itemize}
+
+\end{document}
