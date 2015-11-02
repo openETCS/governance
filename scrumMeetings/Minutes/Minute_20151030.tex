@@ -1,0 +1,145 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS Scrum Meeting Minutes\end{center}}
+
+\section{Meeting Organisation}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & Weekly Scrum Meetings\\
+Minutes by & Peter Mahlmann (DB Netz AG)\\
+When & October 30th, 2015, 9:45 AM -- 11:45 AM\\
+Location & Telco and GoToMeeting\newline \url{https://global.gotomeeting.com/meeting/join/493963173}\\
+\end{supertabular}
+
+\renewcommand{\arraystretch}{1.0}
+\section{Meeting Agenda}
+
+\begin{tabular}{lll}
+\toprule
+\textbf{Slot} &  \textbf{Chair} & \textbf{Work Package} \\
+\midrule 
+9:45 AM -- 10:15 AM & Peter Mahlmann & Product Backlog Grooming  \\
+10:15 AM -- 10:30 AM & Matthieu Poirot & WP5 openETCS Demonstrator \\  
+10:30 AM -- 10:45 AM & Marc Behrens & WP4 Validation \& Verification \\
+10:45 AM -- 11:00 AM & Bernd Hekele & WP3 Modeling \\
+11:00 AM -- 11:15 AM & Michael Jastram & WP7 openETCS Tool Chain \\
+11:15 AM -- 11:45 AM & Klaus-R\"udiger Hase & Project Management Board \\
+\bottomrule
+\end{tabular}
+
+\section{List of Attendees}
+
+\begin{table}[htbp]
+    \begin{tabular}{rrr}
+    \toprule
+    \textbf{Name} & \textbf{Join Time} & \textbf{Leave Time} \\
+    \midrule
+	Bernd Hekele & 9:44 AM & 11:20 AM \\
+    Sylvano Dalzilio & 10:52 AM & 11:11 AM \\
+    FAUDOU raphael & 10:09 AM & 11:20 AM \\
+    Frederique Vallée (All4tec) & 10:31 AM & 11:20 AM \\
+    Ghiglia, Jonathan R (GE) & 10:09 AM & 10:21 AM \\
+    Hardi Hungar (DLR) & 10:28 AM & 10:56 AM \\
+    Hardi Hungar (DLR) & 9:43 AM & 10:06 AM \\
+    Jens Gerlach & 10:29 AM & 10:45 AM \\
+    Johannes Kastner (ICS) & 10:07 AM & 11:11 AM \\
+    Klaus-R\"udiger HASE & 9:28 AM & 1:31 PM \\
+    Marielle Petit-Doche & 10:16 AM & 11:20 AM \\
+    Matthieu Poirot - Ersa & 9:49 AM & 11:19 AM \\
+    Michael Jastram & 10:44 AM & 11:21 AM \\
+    Peter Mahlmann (DB) & 9:44 AM & 11:20 AM \\
+    Thorsten Schulz (Uni Ro) & 10:32 AM & 11:20 AM \\
+
+     \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+
+
+
+\section{Minutes}
+
+\subsection{Product Backlog Grooming}
+\begin{itemize}
+\item The product backlog is available via 
+\url{https://github.com/openETCS/product-backlog}. 
+\item For the results of the grooming session we refer to the corresponding waffle.io scrum board available via \url{https://waffle.io/openETCS/product-backlog} (free GitHub account needed).
+\end{itemize}
+
+\subsection{WP6: Dissemination}
+\begin{itemize}
+\item The WP6 meeting was canceled, the slot of this meeting has been used for product backlog grooming instead.
+\end{itemize}
+
+\subsection{WP5 openETCS Demonstrator}
+\begin{itemize}
+\item The work on the generic openETCS API is ongoing and currently mainly driven by ERSA. Here, the integration of further items is still ongoing. The urgent need of documentation has been brought up in the meeting. A draft of the API documentation should be available within the two weeks. The final API will be a composition of the ERSA and the Alstom API.
+\end{itemize}
+
+\subsection{WP4 Validation \& Verification}
+\begin{itemize}
+\item The preparation of US14 for testing in SCADE is ongoing.
+\item An updated version of the traceability architecture document has been prepared by Samares Engineering.
+\item The Hazard and Risk Analysis may start next week.
+\item D2.3a has been updated by DLR. The integration into the existing D2.3 will be discussed between DLR and Systerel.
+\item A new version of the Bitwalker has been released today by Fraunhofer. A meeting for integration of the Bitwalker is planned for next week in Brunswick at the site of DLR.
+\end{itemize}
+
+\subsection{WP3 Modeling}
+\begin{itemize}
+\item The current state of the modeling progress has been discussed. Currently, it is possible to run the Utrecht-Amsterdam line completely. However, there are still some issues, i.e.~behaviour of the OBU not as expected, that need to be addressed.
+\item A release of the third iteration, i.e.~D3.5.3 and D3.6.3 is planned for next week. However, some chapters of the ADD document (D3.5.3) need to be completed by DB and LEA before the release can be done.
+\item A grooming session with participation of DB, LEA, and ICS will take place on Monday, November 2nd, in Munich.
+\end{itemize}
+
+\subsection{WP7 openETCS Tool Chain}
+\begin{itemize}
+\item An updated version of the traceability architecture document has been released and is ready for review.
+\item The first draft of the document describing the migration path to an open tool chain has been published by CNRS-LAAS and is ready for review.
+\item A new tool chain build is available via CloudBees. This build includes ACCeleo and RMF 0.14.0. A clean release of this build is planned for next week.
+\end{itemize}
+
+\subsection{Project Management Board}
+\begin{itemize}
+\item The timeline for the final ITEA review and accompanying workshops, in particular the November workshop, has been presented.
+\item Final ITEA review (December 16th):
+\begin{itemize} 
+\item Timeline is available: \url{https://github.com/openETCS/management/wiki/Timeline-final-ITEA-review} 
+\item Agenda is available: \url{https://github.com/openETCS/management/wiki/ITEA-final-Review}
+\item Please register: \url{http://doodle.com/poll/6vcikrxdfggvygma}
+\end{itemize}
+\item Review preparation and exploitation workshop (November 23/24): 
+\begin{itemize}
+\item Preliminary agenda available: \url{https://github.com/openETCS/management/wiki/Review-preparation-and-exploitation-workshop}
+\item Individual sessions will be organized by the WP leaders 
+\item Please register: \url{http://doodle.com/poll/ftfpbcvbfwt3u3th}
+\end{itemize}
+\end{itemize}
+
+
+\section{General Remarks}
+
+\begin{itemize}
+\item Please find these minutes online at \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/Minutes/\jobname.pdf}. Please, use the github issue tracker for findings and corrections within the minutes.
+\end{itemize}
+
+\end{document}
