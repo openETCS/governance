@@ -1,0 +1,140 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS Scrum Meeting Minutes\end{center}}
+
+\section{Meeting Organisation}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & Weekly Scrum Meetings\\
+Minutes by & Peter Mahlmann (DB Netz AG)\\
+When & November 6th, 2015, 9:45 AM -- 11:45 AM\\
+Location & Telco and GoToMeeting\newline \url{https://global.gotomeeting.com/meeting/join/493963173}\\
+\end{supertabular}
+
+\renewcommand{\arraystretch}{1.0}
+\section{Meeting Agenda}
+
+\begin{tabular}{lll}
+\toprule
+\textbf{Slot} &  \textbf{Chair} & \textbf{Work Package} \\
+\midrule 
+9:45 AM -- 10:15 AM & Peter Mahlmann & Product Backlog Grooming  \\
+10:15 AM -- 10:30 AM & Matthieu Poirot & WP5 openETCS Demonstrator \\  
+10:30 AM -- 10:45 AM & Marc Behrens & WP4 Validation \& Verification \\
+10:45 AM -- 11:00 AM & Bernd Hekele & WP3 Modeling \\
+11:00 AM -- 11:15 AM & Michael Jastram & WP7 openETCS Tool Chain \\
+11:15 AM -- 11:45 AM & Klaus-R\"udiger Hase & Project Management Board \\
+\bottomrule
+\end{tabular}
+
+\section{List of Attendees}
+
+\begin{table}[htbp]
+    \begin{tabular}{rrr}
+    \toprule
+    \textbf{Name} & \textbf{Join Time} & \textbf{Leave Time} \\
+    \midrule
+    Baseliyos Jacob & 9:52 AM & 1:56 PM \\
+    Behrens, Marc & 10:03 AM & 12:15 PM \\
+    Bernd Hekele (DB) & 9:43 AM & 11:19 AM \\
+    Silvano Dalzilio & 10:54 AM & 11:16 AM \\
+    FAUDOU Raphael & 9:53 AM & 11:19 AM \\
+    Frederique Vallee (All4tec) & 10:31 AM & 10:49 AM \\
+    Ingo Weigelt & 10:49 AM & 11:19 AM \\
+    Jakob G\"artner & 9:53 AM & 1:56 PM \\
+    Jan Welte (TU-BS) & 9:53 AM & 11:19 AM \\
+    Jens Gerlach & 10:28 AM & 10:49 AM \\
+    Johannes Kastner (ICS) & 10:16 AM & 11:16 AM \\
+    Klaus-R\"udiger Hase & 9:37 AM & 9:47 AM \\
+    Lampatzer, Rainer & 10:51 AM & 11:18 AM \\
+    Linda Bawa( LEA Railergy) & 9:56 AM & 10:43 AM \\
+    Marielle Petit-Doche & 10:33 AM & 11:19 AM \\
+    Matthieu Poirot - Ersa & 9:46 AM & 11:19 AM \\
+    Michael Jastram & 10:38 AM & 11:26 AM \\
+    Nasir Mohamed (AEbt) & 10:02 AM & 11:19 AM \\
+    Peter Mahlmann (DB) & 9:44 AM & 11:19 AM \\
+    Stefan Karg (LEA Railergy) & 9:55 AM & 12:58 PM \\
+    Thorsten Schulz (Uni Ro) & 10:29 AM & 11:19 AM \\
+
+
+     \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+
+
+
+\section{Minutes}
+
+\subsection{Product Backlog Grooming}
+\begin{itemize}
+\item The product backlog is available via 
+\url{https://github.com/openETCS/product-backlog}. 
+\item For the results of the grooming session we refer to the corresponding waffle.io scrum board available via \url{https://waffle.io/openETCS/product-backlog} (free GitHub account needed).
+\end{itemize}
+
+\subsection{WP6: Dissemination}
+\begin{itemize}
+\item The WP6 meeting was canceled, the slot of this meeting has been used for product backlog grooming instead.
+\end{itemize}
+
+\subsection{WP5 openETCS Demonstrator}
+\begin{itemize}
+\item Integration of the openETCS SCADE model into the demonstrator is ongoing and should be available at the November workshop. ERSA will contact DB if WP3 support for the integration is needed.
+\item ERSA proposed to organize a small workshop for connecting the GE hardware to the test runner in the middle of November.
+\end{itemize}
+
+\subsection{WP4 Validation \& Verification}
+\begin{itemize}
+\item Traceability: Configuration of Reqcycle tool is needed by WP4, Samares will take action on this.
+\item The architecture verification will start with the SysML model and Reqcycle.
+\item The organization of the upcoming November workshop has been discussed.
+\end{itemize}
+
+\subsection{WP3 Modeling}
+\begin{itemize}
+\item The third iteration of the OBU model (D3.5.3 and D3.6.3) has been released this week.
+\item Current state of the model: The OBU model is able to run the Utrecht-Amsterdam track completely now. However, some behavior is not as expected and needs to be fixed.
+\item The DMI executable model with TCP/IP interface is available.
+\item The track viewer (developed by ICS) has been introduced.
+\item The organization of the upcoming November workshop has been discussed.
+\end{itemize}
+
+\subsection{WP7 openETCS Tool Chain}
+\begin{itemize}
+\item An update of the ongoing document reviews related to the SCADE-to-open and Traceability user stories has been given.
+\item The organization of the upcoming November workshop has been discussed.
+\end{itemize}
+
+\subsection{Project Management Board}
+\begin{itemize}
+\item Partners have been reminded that the ERTP (Exploitable Results by Third Parties) documents are due by November 16th.
+\end{itemize}
+
+
+\section{General Remarks}
+
+\begin{itemize}
+\item Please find these minutes online at \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/Minutes/\jobname.pdf}. Please, use the github issue tracker for findings and corrections within the minutes.
+\end{itemize}
+
+\end{document}
