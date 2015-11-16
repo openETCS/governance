@@ -1,0 +1,134 @@
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{supertabular}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage {geometry}
+\geometry{a4paper,top=25mm,left=30mm,right=25mm,bottom=30mm}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+
+
+\begin{document}
+{\begin{center}\huge\bf openETCS Scrum Meeting Minutes\end{center}}
+
+\section{Meeting Organisation}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{supertabular}{m{.2\textwidth}m{.8\textwidth}}
+%\hline
+Subject & Weekly Scrum Meetings\\
+Minutes by & Peter Mahlmann (DB Netz AG)\\
+When & November 13th, 2015, 9:45 AM -- 11:45 AM\\
+Location & Telco and GoToMeeting\newline \url{https://global.gotomeeting.com/meeting/join/493963173}\\
+\end{supertabular}
+
+\renewcommand{\arraystretch}{1.0}
+\section{Meeting Agenda}
+
+\begin{tabular}{lll}
+\toprule
+\textbf{Slot} &  \textbf{Chair} & \textbf{Work Package} \\
+\midrule 
+9:45 AM -- 10:15 AM & Peter Mahlmann & Product Backlog Grooming  \\
+10:15 AM -- 10:30 AM & Matthieu Poirot & WP5 openETCS Demonstrator \\  
+10:30 AM -- 10:45 AM & Marc Behrens & WP4 Validation \& Verification \\
+10:45 AM -- 11:00 AM & Bernd Hekele & WP3 Modeling \\
+11:00 AM -- 11:15 AM & Michael Jastram & WP7 openETCS Tool Chain \\
+11:15 AM -- 11:45 AM & Klaus-R\"udiger Hase & Project Management Board \\
+\bottomrule
+\end{tabular}
+
+\section{List of Attendees}
+
+\begin{table}[htbp]
+    \begin{tabular}{rrr}
+    \toprule
+    \textbf{Name} & \textbf{Join Time} & \textbf{Leave Time} \\
+    \midrule
+    Bernd Hekele (DB) & 10:13 AM & 11:03 AM \\
+    Silvano Dalzilio & 10:17 AM & 11:02 AM \\
+    Frederique Vallee & 10:33 AM & 10:46 AM \\
+    Hardi Hungar (DLR) & 10:30 AM & 10:54 AM \\
+    Hardi Hungar (DLR) & 9:45 AM & 10:00 AM \\
+    Ingo Weigelt & 10:11 AM & 11:04 AM \\
+    Jan Welte (TU-BS) & 9:45 AM & 11:04 AM \\
+    Jens Gerlach & 10:12 AM & 10:54 AM \\
+    Johannes Kastner (ICS) & 10:11 AM & 11:02 AM \\
+    Klaus-Rüdiger HASE & 10:43 AM & 1:52 PM \\
+    Marielle Petit-Doche & 10:27 AM & 11:03 AM \\
+    Matthieu Poirot - Ersa & 10:01 AM & 10:30 AM \\
+    Nasir Mohamed (AEbt) & 11:02 AM & 11:04 AM \\
+    Peter Mahlmann (DB)& 9:44 AM & 11:04 AM \\
+    Raphael Faudou (Samares) & 10:26 AM & 11:04 AM \\
+    Stefan Karg (LEA Railergy) & 9:25 AM & 11:04 AM \\
+    Thorsten Schulz (Uni Ro) & 10:16 AM & 11:03 AM \\
+
+     \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+
+
+
+\section{Minutes}
+
+\subsection{Product Backlog Grooming}
+\begin{itemize}
+\item The product backlog is available via 
+\url{https://github.com/openETCS/product-backlog}. 
+\item For the results of the grooming session we refer to the corresponding waffle.io scrum board available via \url{https://waffle.io/openETCS/product-backlog} (free GitHub account needed).
+\end{itemize}
+
+\subsection{WP6: Dissemination}
+\begin{itemize}
+\item The WP6 meeting was canceled, the slot of this meeting has been used for product backlog grooming instead.
+\end{itemize}
+
+\subsection{WP5 openETCS Demonstrator}
+\begin{itemize}
+\item Integration of the openETCS SCADE model into the demonstrator is still ongoing. Currently there is an open issue on how to send binary messages to the SCADE model (cf. \url{https://github.com/openETCS/modeling/issues/893})
+\item A meeting between ERSA and DLR is scheduled for next week in Brunswick.
+\item WP4 members asked for test specifications from WP5.
+\end{itemize}
+
+\subsection{WP4 Validation \& Verification}
+\begin{itemize}
+\item Version 3 of the V\&V plan is in preparation. The template for describing V\&V activities has been introduced in detail.
+\end{itemize}
+
+\subsection{WP3 Modeling}
+\begin{itemize}
+\item The preparation of the WP3 slot at the openETCS exploitation and review preparation workshop has been discussed.
+\item Test activities are ongoing. 
+\item The WP3 focus is on product improvement and bug fixing currently.
+\item Another code release is planned for next week.
+\item WP4 members asked for test specifications from WP3. Currently no test specifications are available.
+\end{itemize}
+
+\subsection{WP7 openETCS Tool Chain}
+\begin{itemize}
+\item The Scade-to-Open document review has been closed and the document is considered as completed.
+\item The traceability documentation is not considered to be complete by WP4.
+\end{itemize}
+
+\subsection{Project Management Board}
+\begin{itemize}
+\item Partners have been reminded that the ERTP (Exploitable Results by Third Parties) documents are due by November 16th.
+\end{itemize}
+
+
+\section{General Remarks}
+
+\begin{itemize}
+\item Please find these minutes online at \url{https://github.com/openETCS/governance/blob/master/scrumMeetings/Minutes/\jobname.pdf}. Please, use the github issue tracker for findings and corrections within the minutes.
+\end{itemize}
+
+\end{document}
