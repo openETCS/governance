@@ -3304,7 +3304,14 @@ Understanding the requirements of EN 50128}
 \tablehead{\hline
 \rowcolor{myblue}
 \multicolumn{5}{|c|}{Software Requirements Specification Phase}\\}
-\begin{supertabular}[H]{|m{1cm}|m{5cm}|m{1cm}|m{2cm}|m{5cm}|}
+\tabletail{
+\rowcolor{lightgray}
+\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
+\multicolumn{5}{|p{\textwidth}|}{\textit{OpenETCS uses a combination of natural language Software Requirement Specifications, which are derived from the SUBSET-26 SRS, and Modelling of these Requirements in SysML and SCADE. Thereby, the approach fulfils the EN 50128 Table A.2 requirements for Techniques for  Software Requirements Specification}}\\\hline
+}
+
+
+\begin{supertabular}[H]{|p{1cm}|p{5cm}|p{1cm}|p{2cm}|p{5cm}|}
 \hline
 \centering 1 &
 Formal Methods &
@@ -3337,9 +3344,7 @@ HR &
 No &
 Not relevant since we are using Formal Methods and Modelling.
 \\\hline
-\rowcolor{lightgray}
-\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{OpenETCS uses a combination of natural language Software Requirement Specifications, which are derived from the SUBSET-26 SRS, and Modelling of these Requirements in SysML and SCADE. Thereby, the approach fulfils the EN 50128 Table A.2 requirements for Techniques for  Software Requirements Specification}}\\\hline
+
 \end{supertabular}
 \caption{Software Requirements Specification Phase}
 \end{table}
@@ -3359,7 +3364,10 @@ Not relevant since we are using Formal Methods and Modelling.
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
 \endfoot
 
-\hline \hline
+\hline 
+\rowcolor{lightgray}
+\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
+\multicolumn{5}{|p{\textwidth}|}{\textit{Techniques use in openETCS cover all relevant architecture and design issues, but due to the generic concept of openETCS Recovery issues are not covered by any methodology. The applied combination of Modelling and Formal Methods guaranties a design consistency and completeness.}}\\\hline
 \endlastfoot
 
 \centering 1 &
@@ -3541,9 +3549,6 @@ HR &
 Yes &
 The openETCS toolchain include  interfaced design and specification tools.
 \\\hline
-\rowcolor{lightgray}
-\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{Techniques use in openETCS cover all relevant architecture and design issues, but due to the generic concept of openETCS Recovery issues are not covered by any methodology. The applied combination of Modelling and Formal Methods guaranties a design consistency and completeness.}}\\\hline
 \end{longtable}
 \end{center}
 
@@ -3562,7 +3567,10 @@ The openETCS toolchain include  interfaced design and specification tools.
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
 \endfoot
 
-\hline \hline
+\hline 
+\rowcolor{lightgray}
+\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
+\multicolumn{5}{|p{\textwidth}|}{\textit{The openETCS techniques based on use of a structured, strongly typed programming language in SCADE fulfils design and implementation requirements.}}\\\hline
 \endlastfoot
 
 \centering 1 &
@@ -3675,9 +3683,6 @@ R &
 \centering
 No &
 \\\hline
-\rowcolor{lightgray}
-\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{\textit{The openETCS techniques based on use of a structured, strongly typed programming language in SCADE fulfils design and implementation requirements.}}\\\hline
 \end{longtable}
 \end{center}
 
@@ -3696,7 +3701,10 @@ No &
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
 \endfoot
 
-\hline \hline
+\hline 
+\rowcolor{lightgray}
+\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
+\multicolumn{5}{|p{\textwidth}|}{The openETCS methodology covers at least in parts all relevant verification techniques. Due to the generic concept of openETCS hardware related tests are not part of openETCS. Several tests will only be implemented on parts of the systems as a proof of concept. }\\\hline
 \endlastfoot
 
 \centering 1 &
@@ -3769,9 +3777,6 @@ HR &
 \centering
 Yes &
 Interface tests are performed on various levels to ensure consistence and correctness. Hardware tests are not part of openETCS.\\\hline
-\rowcolor{lightgray}
-\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{The openETCS methodology covers at least in parts all relevant verification techniques. Due to the generic concept of openETCS hardware related tests are not part of openETCS. Several tests will only be implemented on parts of the systems as a proof of concept. }\\\hline
 \end{longtable}
 \end{center}
 
@@ -3790,7 +3795,10 @@ Interface tests are performed on various levels to ensure consistence and correc
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
 \endfoot
 
-\hline \hline
+\hline 
+\rowcolor{lightgray}
+\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
+\multicolumn{5}{|p{\textwidth}|}{Implementation is only part of the generic functional openETCS development up to the API level. A follow-up product has to deal with all aspects required to proof its specific hardware/software implementation.}\\\hline
 \endlastfoot
 
 \centering 1 &
@@ -3807,9 +3815,6 @@ HR &
 \centering
 No &
 Due to the generic approach of openETCS implementation is only done in a demonstrator context, which does not satesfy any needs for systematic implementation tests.\\\hline
-\rowcolor{lightgray}
-\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{Implementation is only part of the generic functional openETCS development up to the API level. A follow-up product has to deal with all aspects required to proof its specific hardware/software implementation.}\\\hline
 \end{longtable}
 \end{center}
 
@@ -3828,7 +3833,10 @@ Due to the generic approach of openETCS implementation is only done in a demonst
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
 \endfoot
 
-\hline \hline
+\hline 
+\rowcolor{lightgray}
+\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
+\multicolumn{5}{|p{\textwidth}|}{The openETCS project uses different modell-based testing approaches for validation in combination with performance and functional tests. Due to the development constraints not all ETCS parts will be completely validated during the project.}\\\hline
 \endlastfoot
 
 \centering 1 &
@@ -3851,10 +3859,7 @@ Modelling &
 R &
 \centering
 Yes &
-As the openETCS software development is based on SysML and SCADE modells, overall software tests are also performed based on test modells. Therefore, various methods are used to address different validation aspects. Deatils are given in the V\&V plan.\\\hline
-\rowcolor{lightgray}
-\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{The openETCS project uses different modell-based testing approaches for validation in combination with performance and functional tests. Due to the development constraints not all ETCS parts will be completely validated during the project.}\\\hline
+As the openETCS software development is based on SysML and SCADE modells, overall software tests are also performed based on test modells. Therefore, various methods are used to address different validation aspects. Details are given in the V\&V plan.\\\hline
 \end{longtable}
 \end{center}
 
@@ -3873,7 +3878,10 @@ As the openETCS software development is based on SysML and SCADE modells, overal
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
 \endfoot
 
-\hline \hline
+\hline 
+\rowcolor{lightgray}
+\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
+\multicolumn{5}{|p{\textwidth}|}{Software Analysis is performed based on SysMl and SCADe modells and additional model-based tests.}\\\hline
 \endlastfoot
 
 \centering 1 &
@@ -3911,9 +3919,6 @@ HR &
 \centering
 Yes &
 The Error Analysis is performed during the modelling process on various levels using the modell-based approach for related component analysis.\\\hline
-\rowcolor{lightgray}
-\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{Software Analysis is performed based on SysMl and SCADe modells and additional model-based tests.}\\\hline
 \end{longtable}
 \end{center}
 
@@ -3932,7 +3937,10 @@ The Error Analysis is performed during the modelling process on various levels u
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
 \endfoot
 
-\hline \hline
+\hline 
+\rowcolor{lightgray}
+\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
+\multicolumn{5}{|p{\textwidth}|}{As openETCS is a research project specific quality processes and tools have been applied to ensure respective standards.}\\\hline
 \endlastfoot
 
 \centering 1 &
@@ -3991,9 +3999,6 @@ M &
 \centering
 Yes &
 All development activities are performed and respectively recorded via the github system.\\\hline
-\rowcolor{lightgray}
-\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{As openETCS is a research project specific quality processes and tools have been applied to ensure respective standards.}\\\hline
 \end{longtable}
 \end{center}
 
@@ -4009,7 +4014,10 @@ All development activities are performed and respectively recorded via the githu
 \hline \rowcolor{myblue} \multicolumn{5}{|c|}{Software Maintenance Phase} \\ \rowcolor{lightgray} \multicolumn{1}{|c|}{Code} & \multicolumn{1}{|c|}{Method/Technique} & \multicolumn{1}{|c|}{SIL 4} & \multicolumn{1}{|c|}{Applied (Yes/No)} & \multicolumn{1}{|c|}{Details and References} \\ \hline 
 \endhead
 
-\hline \hline
+\hline 
+\rowcolor{lightgray}
+\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
+\multicolumn{5}{|p{\textwidth}|}{Due to the agile work in openETCS via github maintenance is performed during every iteration and controlled via standard change control.}\\\hline
 \endlastfoot
 
 \centering 1 &
@@ -4026,9 +4034,6 @@ M &
 \centering
 Yes &
 Performed via github.\\\hline
-\rowcolor{lightgray}
-\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{Due to the agile work in openETCS via github maintenance is performed during every iteration and controlled via standard change control.}\\\hline
 \end{longtable}
 \end{center}
 
@@ -4047,7 +4052,10 @@ Performed via github.\\\hline
 \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
 \endfoot
 
-\hline \hline
+\hline 
+\rowcolor{lightgray}
+\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
+\multicolumn{5}{|p{\textwidth}|}{As openETCS is a genric research project data is only prepared for specific aspects. Details are defined in the corresponding sections of the V\&V reports. }\\\hline
 \endlastfoot
 
 \centering 1 &
@@ -4113,9 +4121,6 @@ HR &
 \centering
 Yes &
 Applied in different variations of the review process.\\\hline
-\rowcolor{lightgray}
-\multicolumn{5}{|l|}{Justification: \textbf{(To be fulfilled)}}\\\hline
-\multicolumn{5}{|l|}{As openETCS is a genric research project data is only prepared for specific aspects. Details are defined in the corresponding sections of the V\&V reports. }\\\hline
 \end{longtable}
 \end{center}
 
